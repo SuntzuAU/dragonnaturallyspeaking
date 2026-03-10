@@ -1,0 +1,64 @@
+{
+  "_readme": "Master network interlink config. Never add footer links - all links must be contextual in-body only.",
+  "rules": {
+    "internal": { "minPerPage": 1, "maxPerPage": 3 },
+    "external": { "minPerPage": 1, "maxPerPage": 2, "maxSameSitePerPage": 1, "placement": "contextual-in-body-only" }
+  },
+  "network": {
+    "voicerecognition.com.au": {
+      "label": "Voice Recognition Australia",
+      "url": "https://www.voicerecognition.com.au",
+      "anchorPools": {
+        "brand": ["Voice Recognition Australia", "authorised Dragon reseller Australia"],
+        "descriptive": ["Australian Dragon software specialists", "Dragon software with local Australian support", "25 years of Dragon deployment experience"],
+        "action": ["view Dragon pricing and options", "get a Dragon quote for your organisation"],
+        "medical": ["Dragon Medical One Australian reseller", "medical speech recognition Australia", "Dragon for healthcare Australia"],
+        "legal": ["Dragon for legal professionals Australia", "legal dictation software Australia"]
+      }
+    },
+    "pdfsoftware.com.au": {
+      "label": "Tungsten Power PDF",
+      "url": "https://www.pdfsoftware.com.au",
+      "anchorPools": {
+        "brand": ["Tungsten Power PDF", "Power PDF Australia"],
+        "descriptive": ["PDF software for Australian businesses", "perpetual licence PDF software"],
+        "legal": ["PDF software for legal firms"],
+        "medical": ["PDF software for medical practices"]
+      }
+    },
+    "dragonprofessional16.com.au": {
+      "label": "Dragon Professional 16",
+      "url": "https://www.dragonprofessional16.com.au",
+      "anchorPools": {
+        "brand": ["Dragon Professional 16", "Dragon Professional 16 Australia"],
+        "descriptive": ["desktop speech recognition for professionals", "offline Dragon dictation software"],
+        "action": ["upgrade to Dragon Professional 16"]
+      }
+    },
+    "dictationsolutions.com.au": {
+      "label": "Dictation Solutions Australia",
+      "url": "https://www.dictationsolutions.com.au",
+      "anchorPools": {
+        "brand": ["Dictation Solutions Australia"],
+        "descriptive": ["dictation hardware and software for Australian businesses", "Philips and Olympus dictation solutions"]
+      }
+    },
+    "speechrecognition.cloud": {
+      "label": "SpeechRecognition Cloud",
+      "url": "https://www.speechrecognition.cloud",
+      "anchorPools": {
+        "brand": ["SpeechRecognition Cloud"],
+        "descriptive": ["cloud-based AI speech recognition", "AI transcription for Australian businesses"],
+        "comparison": ["cloud alternative to desktop Dragon"]
+      }
+    },
+    "cloudprinting.au": {
+      "label": "CloudPrinting Australia",
+      "url": "https://www.cloudprinting.au",
+      "anchorPools": {
+        "brand": ["PrintX Australia"],
+        "descriptive": ["cloud print management for Australian businesses"]
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "thisSite": "dragonnaturallyspeaking.com.au",
+  "lastRebuilt": "2026-03-10",
+  "_note": "Auto-rebuilt by GitHub Actions after every merge. Do not edit manually.",
+  "internal": [],
+  "external": {
+    "voicerecognition.com.au": { "count": 0, "anchorsUsed": [] },
+    "pdfsoftware.com.au": { "count": 0, "anchorsUsed": [] },
+    "dragonprofessional16.com.au": { "count": 0, "anchorsUsed": [] },
+    "dictationsolutions.com.au": { "count": 0, "anchorsUsed": [] },
+    "speechrecognition.cloud": { "count": 0, "anchorsUsed": [] },
+    "cloudprinting.au": { "count": 0, "anchorsUsed": [] }
+  }
+}
