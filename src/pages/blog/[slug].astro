@@ -1,0 +1,121 @@
+---
+import { getCollection } from 'astro:content';
+import site from '../../site.config.json';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.filter(p => p.slug !== '_placeholder').map(post => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const R2_BASE = (import.meta.env.PUBLIC_R2_BASE ?? 'https://pub-c7a09e1ddb7c45e6a38fcdca1e4b6897.r2.dev').replace(/\/$/, '');
+const imgSrc = (key) => key ? `${R2_BASE}/${key}` : '';
+
+const year = new Date().getFullYear();
+const formattedDate = new Date(post.data.date).toLocaleDateString('en-AU', {
+  day: 'numeric', month: 'long', year: 'numeric'
+});
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{post.data.title} -- {site.siteName}</title>
+    <meta name="description" content={post.data.metaDescription} />
+    <link rel="canonical" href={`${site.domain}/blog/${post.slug}`} />
+    <meta property="og:title" content={post.data.title} />
+    <meta property="og:description" content={post.data.metaDescription} />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={`${site.domain}/blog/${post.slug}`} />
+    {post.data.heroImage && <meta property="og:image" content={imgSrc(post.data.heroImage)} />}
+    <style is:inline>
+      *,*::before,*::after{box-sizing:border-box}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#fff;color:#0f172a;line-height:1.7}
+      header{border-bottom:1px solid #e2e8f0;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+      header a.logo img{height:40px;width:auto;display:block}
+      header a.back{font-size:14px;color:#0d1b2a;text-decoration:none;font-weight:600}
+      header a.back:hover{text-decoration:underline}
+      .hero-img{width:100%;max-height:480px;overflow:hidden;background:#f1f5f9}
+      .hero-img img{width:100%;height:480px;object-fit:cover;display:block}
+      .article{max-width:760px;margin:0 auto;padding:48px 24px 80px}
+      .meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;flex-wrap:wrap}
+      .meta-date,.meta-site{font-size:13px;color:#94a3b8}
+      h1{font-size:36px;letter-spacing:-0.02em;line-height:1.15;margin:0 0 24px;color:#0f172a}
+      .img-break{margin:32px 0;border-radius:14px;overflow:hidden;background:#f1f5f9}
+      .img-break img{width:100%;max-height:360px;object-fit:cover;display:block}
+      .prose{font-size:16px;color:#334155;line-height:1.8}
+      .prose p{margin:0 0 18px}
+      .prose h2{font-size:22px;font-weight:700;color:#0d1b2a;margin:40px 0 16px;letter-spacing:-0.01em}
+      .prose h3{font-size:17px;font-weight:700;color:#0f172a;margin:24px 0 10px}
+      .prose ul,.prose ol{padding-left:24px;margin:0 0 18px}
+      .prose li{margin-bottom:6px}
+      .prose a{color:#0097a7}
+      .prose strong{color:#0f172a}
+      .prose blockquote{border-left:3px solid #0097a7;margin:24px 0;padding:12px 20px;background:#e0f7fa;border-radius:0 8px 8px 0}
+      .prose blockquote p{margin:0;color:#006064;font-style:italic}
+      .cta-strip{background:#0d1b2a;border-radius:14px;padding:32px;margin:48px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+      .cta-strip p{margin:0;color:#cbd5e1;font-size:15px;max-width:500px}
+      .cta-strip a{display:inline-block;background:#0097a7;color:#ffffff;font-weight:700;font-size:14px;padding:12px 24px;border-radius:8px;text-decoration:none;white-space:nowrap}
+      .cta-strip a:hover{background:#00838f}
+      footer{border-top:1px solid #e2e8f0;padding:24px;text-align:center;font-size:13px;color:#94a3b8}
+      footer a{color:#0d1b2a;text-decoration:none}
+      @media(max-width:600px){
+        h1{font-size:24px}
+        .hero-img img{height:220px}
+        .cta-strip{flex-direction:column;text-align:center}
+        .article{padding:28px 16px 60px}
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="/"><img src="/logo.png" alt={site.siteName} onerror="this.style.display='none'" /></a>
+      <a class="back" href="/blog">All articles</a>
+    </header>
+
+    {post.data.heroImage && (
+      <div class="hero-img">
+        <img src={imgSrc(post.data.heroImage)} alt={post.data.heroImageAlt ?? post.data.title} loading="eager" decoding="async" />
+      </div>
+    )}
+
+    <article class="article">
+      <div class="meta">
+        <span class="meta-date">{formattedDate}</span>
+        <span class="meta-site">{site.siteName}</span>
+      </div>
+      <h1>{post.data.title}</h1>
+
+      {post.data.breakImage1 && (
+        <div class="img-break">
+          <img src={imgSrc(post.data.breakImage1)} alt={post.data.breakImage1Alt ?? ''} loading="lazy" decoding="async" />
+        </div>
+      )}
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      {post.data.breakImage2 && (
+        <div class="img-break">
+          <img src={imgSrc(post.data.breakImage2)} alt={post.data.breakImage2Alt ?? ''} loading="lazy" decoding="async" />
+        </div>
+      )}
+
+      <div class="cta-strip">
+        <p>Ready to explore Dragon speech recognition for your organisation? Get a free trial and tailored recommendation.</p>
+        <a href="/#final-cta">Enquire Now</a>
+      </div>
+    </article>
+
+    <footer>
+      <a href="/">{site.siteName}</a> --
+      <a href="/blog">Blog</a> --
+      <a href="/privacy">Privacy</a> --
+      &copy; {year} Voice Recognition Australia
+    </footer>
+  </body>
+</html>

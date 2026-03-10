@@ -17,11 +17,12 @@ function imgAlt(key) {
 const c = site.colours;
 const formId = site.form.id;
 
+// SVG icons keyed by position -- teal accent for Dragon site
 const benefitIcons = [
   `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#ccf2f4"/><path d="M16 8a8 8 0 1 1 0 16A8 8 0 0 1 16 8zm0 2a6 6 0 1 0 0 12A6 6 0 0 0 16 10zm1 2v5.17l3.41 3.42-1.41 1.41L15 18.59V12h2z" fill="#0097a7"/></svg>`,
   `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#ccf2f4"/><path d="M22 9H10a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V11a2 2 0 0 0-2-2zm0 12H10V11h12v10zm-9-8h6v2h-6v-2zm0 4h4v2h-4v-2z" fill="#0097a7"/></svg>`,
   `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#ccf2f4"/><path d="M21 10H11a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zm-5 9a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="#0097a7"/></svg>`,
-  `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#ccf2f4"/><path d="M23 9h-4.18A3 3 0 0 0 13 9H9a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1zm-7-1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm6 13H10V11h3.26a3 3 0 0 0 5.48 0H22v10z" fill="#0097a7"/></svg>`
+  `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#ccf2f4"/><path d="M23 9h-4.18A3 3 0 0 0 13 9H9a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1zm-7-1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm6 13H10V11h3.26a3 3 0 0 0 5.48 0H22v10z" fill="#0097a7"/></svg>`,
 ];
 ---
 
@@ -35,42 +36,43 @@ const benefitIcons = [
     <link rel="canonical" href={site.domain} />
 
     {site.googleAnalyticsId && (
-      <>
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsId}`}></script>
-        <script define:vars={{ gaId: site.googleAnalyticsId }}>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){'{'dataLayer.push(arguments);'}'}
-          gtag('js', new Date());
-          gtag('config', gaId);
-        </script>
-      </>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsId}`}></script>
+      <script define:vars={{ gaId: site.googleAnalyticsId }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', gaId);
+      </script>
     )}
 
     <script define:vars={{ c, formId }}>
-      const css = [
-        `body { background: ${c.background}; color: ${c.text}; }`,
-        `.nav-links a:hover { color: ${c.accent}; }`,
-        `.btn-primary { background: ${c.accent}; border-color: ${c.accent}; color: #ffffff; }`,
-        `.btn-primary:hover { background: ${c.accentHover}; border-color: ${c.accentHover}; }`,
-        `.btn-secondary { color: #94a3b8; border-color: #334155; }`,
-        `.btn-secondary:hover { border-color: ${c.accent}; color: ${c.accent}; }`,
-        `.neutral-bg { background: ${c.neutral}; }`,
-        `.dark-bg { background: ${c.primary}; color: white; }`,
-        `.stats-bar { background: ${c.primary}; }`,
-        `.stats-savings { color: ${c.accent}; }`,
-        `.sh p { color: ${c.muted}; }`,
-        `.card p { color: ${c.muted}; }`,
-        `.benefit-card p { color: ${c.muted}; }`,
-        `.hero p { color: ${c.muted}; }`,
-        `.pricing-card.highlight { border-color: ${c.accent}; box-shadow: 0 8px 32px rgba(0,151,167,.15); }`,
-        `.pricing-badge { background: ${c.accent}; color: #ffffff; }`,
-        `.pricing-price { color: ${c.primary}; }`,
-        `.tco-table tr.winner td { background: #e0f7fa; font-weight: 700; color: ${c.primary}; }`,
-        `.step-num { background: ${c.accent}; color: #ffffff; }`,
-        `.edition-name { color: ${c.accent}; font-weight: 700; margin-bottom: 4px; font-size: 15px; }`,
-        `._submit { background: ${c.accent}; color: #ffffff; }`,
-        `._submit:hover { background: ${c.accentHover}; }`
-      ].join('\n');
+      const css = `
+        body { background: ${c.background}; color: ${c.text}; }
+        .nav-links a:hover { color: ${c.accent}; }
+        .btn-primary { background: ${c.accent}; border-color: ${c.accent}; color: #ffffff; }
+        .btn-primary:hover { background: ${c.accentHover}; border-color: ${c.accentHover}; }
+        .btn-secondary { color: ${c.primary}; }
+        .btn-secondary:hover { border-color: ${c.primary}; }
+        .neutral-bg { background: ${c.neutral}; }
+        .dark-bg { background: ${c.primary}; color: white; }
+        .stats-bar { background: ${c.primary}; }
+        .stats-savings { color: ${c.accent}; }
+        .video-section { background: ${c.neutral}; }
+        .sh p { color: ${c.muted}; }
+        .card p { color: ${c.muted}; }
+        .benefit-card p { color: ${c.muted}; }
+        .hero p { color: ${c.muted}; }
+        .pricing-card.highlight { border-color: ${c.accent}; box-shadow: 0 8px 32px rgba(0,151,167,.15); }
+        .pricing-badge { background: ${c.accent}; color: #ffffff; }
+        .pricing-price { color: ${c.primary}; }
+        .tco-table tr.winner td { background: #e0f7fa; font-weight: 700; color: ${c.primary}; }
+        .step-num { background: ${c.accent}; color: #ffffff; }
+        .edition-name { color: ${c.accent}; font-weight: 700; margin-bottom: 4px; font-size: 15px; }
+        ._submit { background: ${c.accent}; color: #ffffff; }
+        ._submit:hover { background: ${c.accentHover}; }
+        .mobile-nav-open { background: ${c.primary}; }
+        .mobile-nav-open a { color: white; }
+      `;
       const el = document.createElement('style');
       el.textContent = css;
       document.head.appendChild(el);
@@ -78,23 +80,23 @@ const benefitIcons = [
 
     <style is:inline>
       *,*::before,*::after{box-sizing:border-box}
-      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0f172a;line-height:1.6}
       a{color:inherit;text-decoration:none}
       img{max-width:100%;display:block}
       .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-      header{position:sticky;top:0;background:#0d1b2a;border-bottom:1px solid #1e3a5f;z-index:100}
+      header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #e2e8f0;z-index:100}
       .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:16px}
-      .logo img{height:40px;width:auto;filter:brightness(0) invert(1)}
-      .nav-links{display:flex;gap:18px;font-size:14px;font-weight:500}
-      .nav-links a{color:#94a3b8}
+      .logo img{height:40px;width:auto}
+      .nav-links{display:flex;gap:18px;font-size:14px;font-weight:500;color:#334155}
       .nav-ctas{display:flex;gap:10px;align-items:center;flex-shrink:0}
       .btn{display:inline-block;padding:10px 20px;border-radius:8px;font-weight:700;font-size:14px;border:2px solid transparent;cursor:pointer;transition:all .15s;white-space:nowrap}
-      .btn-secondary{background:transparent;border-color:#334155;color:#94a3b8}
+      .btn-secondary{background:white;border-color:#cbd5e1}
       .btn-lg{padding:14px 28px;font-size:16px;border-radius:10px}
       .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-      .hamburger span{display:block;width:22px;height:2px;background:#94a3b8;border-radius:2px}
-      .mobile-nav{display:none;padding:12px 0 8px;border-top:1px solid #1e3a5f}
-      .mobile-nav a{display:block;padding:10px 0;font-size:15px;font-weight:500;color:#94a3b8;border-bottom:1px solid #1e3a5f}
+      .hamburger span{display:block;width:22px;height:2px;background:#334155;border-radius:2px}
+      .mobile-nav{display:none;padding:12px 0 8px;border-top:1px solid #e2e8f0}
+      .mobile-nav a{display:block;padding:10px 0;font-size:15px;font-weight:500;color:#334155;border-bottom:1px solid #f1f5f9}
+      .mobile-nav a:last-child{border-bottom:none}
       section{padding:64px 0}
       .hero{padding:72px 0 56px}
       .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
@@ -102,8 +104,16 @@ const benefitIcons = [
       .hero h1{font-size:42px;line-height:1.1;margin:0 0 16px;letter-spacing:-0.03em}
       .hero p{font-size:17px;margin:0 0 28px;line-height:1.7}
       .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-      .hero-img{border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#1e3a5f;box-shadow:0 24px 64px rgba(0,0,0,.18)}
+      .hero-img{border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#e2e8f0;box-shadow:0 24px 64px rgba(0,0,0,.18)}
       .hero-img img{width:100%;height:100%;object-fit:cover}
+      .video-section{padding:32px 0}
+      .video-outer{max-width:800px;margin:0 auto}
+      .yt-facade{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 24px 64px rgba(0,0,0,.15);cursor:pointer;background:#000}
+      .yt-facade img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:16px;display:block}
+      .yt-facade .yt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:#ff0000;border-radius:12px;display:flex;align-items:center;justify-content:center;transition:background .15s,transform .15s}
+      .yt-facade:hover .yt-play{background:#cc0000;transform:translate(-50%,-50%) scale(1.08)}
+      .yt-facade .yt-play svg{width:24px;height:24px;fill:white;margin-left:4px}
+      .yt-facade iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:16px}
       .sh{margin-bottom:40px}
       .sh h2{font-size:32px;letter-spacing:-0.02em;margin:0 0 10px}
       .sh p{font-size:17px;margin:0;max-width:600px}
@@ -132,6 +142,7 @@ const benefitIcons = [
       .tco-table th{text-align:left;padding:12px 16px;font-size:13px;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc}
       .tco-table td{padding:14px 16px;font-size:15px;border-bottom:1px solid #f1f5f9}
       .tco-note{font-size:13px;color:#94a3b8;margin-top:12px}
+      .tco-disclaimer{font-size:12px;color:#94a3b8;margin-top:8px;font-style:italic}
       .step-num{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;font-weight:800;font-size:16px;margin-bottom:14px}
       .edition{background:rgba(255,255,255,.08);border-radius:12px;padding:16px;margin-bottom:10px}
       .edition-desc{font-size:14px;color:#cbd5e1;line-height:1.5}
@@ -145,11 +156,42 @@ const benefitIcons = [
       .footer-links{display:flex;gap:20px}
       .footer-links a:hover{color:white}
       .stat-check{display:inline-block;width:14px;height:14px;margin-right:4px;vertical-align:middle;flex-shrink:0}
-      @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero h1{font-size:32px}.c6,.c4,.c7,.c5{grid-column:span 12}.sh h2{font-size:26px}}
-      @media(max-width:600px){.nav-links{display:none}.nav-ctas .btn-secondary{display:none}.nav-ctas .btn-primary{padding:8px 16px;font-size:13px}.hamburger{display:flex}section{padding:40px 0}.hero{padding:36px 0 28px}.hero h1{font-size:26px}.hero p{font-size:15px}.sh h2{font-size:22px}.sh p{font-size:15px}.sh{margin-bottom:24px}.hero-btns{flex-direction:column}.hero-btns .btn-lg{width:100%;text-align:center;padding:13px 20px}.card{padding:18px}.benefit-card{padding:20px}.pricing-card{padding:20px}.formbox{padding:20px}.tco-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px}.tco-table th,.tco-table td{padding:10px 12px;font-size:12px;white-space:nowrap}.stats-items{flex-direction:column;gap:8px;align-items:center}.footer-inner{flex-direction:column;align-items:center;text-align:center}.footer-links{justify-content:center}}
+
+      @media(max-width:900px){
+        .hero-inner{grid-template-columns:1fr}
+        .hero h1{font-size:32px}
+        .c6,.c4,.c7,.c5{grid-column:span 12}
+        .sh h2{font-size:26px}
+      }
+
+      @media(max-width:600px){
+        .nav-links{display:none}
+        .nav-ctas .btn-secondary{display:none}
+        .nav-ctas .btn-primary{padding:8px 16px;font-size:13px}
+        .hamburger{display:flex}
+        section{padding:40px 0}
+        .hero{padding:36px 0 28px}
+        .hero h1{font-size:26px}
+        .hero p{font-size:15px}
+        .sh h2{font-size:22px}
+        .sh p{font-size:15px}
+        .sh{margin-bottom:24px}
+        .hero-btns{flex-direction:column}
+        .hero-btns .btn-lg{width:100%;text-align:center;padding:13px 20px}
+        .card{padding:18px}
+        .benefit-card{padding:20px}
+        .pricing-card{padding:20px}
+        .formbox{padding:20px}
+        .tco-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px}
+        .tco-table th,.tco-table td{padding:10px 12px;font-size:12px;white-space:nowrap}
+        .stats-items{flex-direction:column;gap:8px;align-items:center}
+        .footer-inner{flex-direction:column;align-items:center;text-align:center}
+        .footer-links{justify-content:center}
+      }
     </style>
   </head>
   <body>
+
     <header>
       <div class="wrap">
         <div class="nav">
@@ -174,6 +216,7 @@ const benefitIcons = [
     </header>
 
     <main>
+
       <section class="hero">
         <div class="wrap">
           <div class="hero-inner">
@@ -189,7 +232,7 @@ const benefitIcons = [
             <div class="hero-img">
               {imgSrc("hero")
                 ? <img src={imgSrc("hero")} alt={imgAlt("hero")} loading="eager" decoding="async" />
-                : <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:14px;min-height:200px">Hero image</div>
+                : <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:14px">Hero image</div>
               }
             </div>
           </div>
@@ -198,16 +241,16 @@ const benefitIcons = [
 
       <div class="stats-bar" style="padding:13px 0">
         <div class="wrap">
-          <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px">
             <div class="stats-savings" style="font-size:15px;font-weight:800;text-align:center">{site.branding.statsMessage}</div>
             <div class="stats-items" style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
               {site.stats?.map((s) => (
                 <div style="font-size:13px;color:#94a3b8;display:flex;align-items:center;gap:4px">
-                  <svg class="stat-check" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="7" cy="7" r="7" fill="#0097a7" fill-opacity="0.3"/>
+                  <svg class="stat-check" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="7" cy="7" r="7" fill="#0097a7" fill-opacity="0.2"/>
                     <path d="M3.5 7l2.5 2.5 4.5-5" stroke="#0097a7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span style="color:white;font-weight:600">{s.value}</span>&nbsp;{s.label}
+                  <span style="color:white;font-weight:600">{s.value}</span> {s.label}
                 </div>
               ))}
             </div>
@@ -215,9 +258,45 @@ const benefitIcons = [
         </div>
       </div>
 
+      {site.heroVideo?.enabled && (
+        <section class="video-section">
+          <div class="wrap">
+            <div class="video-outer">
+              <div class="yt-facade" data-ytid={site.heroVideo.youtubeId}>
+                <img
+                  src={`https://i.ytimg.com/vi/${site.heroVideo.youtubeId}/maxresdefault.jpg`}
+                  alt="Play video"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="yt-play">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <script>
+              document.querySelectorAll('.yt-facade').forEach(function(el) {
+                el.addEventListener('click', function() {
+                  var id = el.dataset.ytid;
+                  var iframe = document.createElement('iframe');
+                  iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+                  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                  iframe.allowFullscreen = true;
+                  el.innerHTML = '';
+                  el.appendChild(iframe);
+                });
+              });
+            </script>
+          </div>
+        </section>
+      )}
+
       <section id="benefits">
         <div class="wrap">
-          <div class="sh"><h2>{site.branding.benefitsHeading}</h2><p>{site.branding.benefitsSubheading}</p></div>
+          <div class="sh">
+            <h2>{site.branding.benefitsHeading}</h2>
+            <p>{site.branding.benefitsSubheading}</p>
+          </div>
           <div class="grid">
             {site.benefits?.map((b, i) => (
               <div class="benefit-card c6">
@@ -232,7 +311,10 @@ const benefitIcons = [
 
       <section id="pricing" class="neutral-bg">
         <div class="wrap">
-          <div class="sh"><h2>{site.branding.pricingHeading}</h2><p>{site.branding.pricingSubheading}</p></div>
+          <div class="sh">
+            <h2>{site.branding.pricingHeading}</h2>
+            <p>{site.branding.pricingSubheading}</p>
+          </div>
           <div class="grid">
             {site.pricing?.map((p) => (
               <div class={`pricing-card c4${p.highlight ? " highlight" : ""}`}>
@@ -241,7 +323,9 @@ const benefitIcons = [
                 <div class="pricing-platform">{p.platform}</div>
                 <div class="pricing-price">{p.price}</div>
                 <div class="pricing-note">{p.priceNote}</div>
-                <ul class="pricing-features">{p.features?.map((f) => <li>{f}</li>)}</ul>
+                <ul class="pricing-features">
+                  {p.features?.map((f) => <li>{f}</li>)}
+                </ul>
                 <a class="btn btn-primary" href="#final-cta" style="text-align:center">{site.primaryCTA.text}</a>
               </div>
             ))}
@@ -250,17 +334,26 @@ const benefitIcons = [
             <h3 style="margin:0 0 4px">{site.tco?.heading}</h3>
             <div class="tco-table-wrap">
               <table class="tco-table">
-                <thead><tr><th>Scenario</th><th>Impact</th><th>Method</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>Scenario</th>
+                    <th>Impact</th>
+                    <th>Method</th>
+                  </tr>
+                </thead>
                 <tbody>
                   {site.tco?.rows?.map((r, i) => (
                     <tr class={i === 0 ? "winner" : ""}>
-                      <td>{r.product}</td><td>{r.cost}</td><td>{r.type}</td>
+                      <td>{r.product}</td>
+                      <td>{r.cost}</td>
+                      <td>{r.type}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <p class="tco-note">{site.tco?.note}</p>
+            <p class="tco-disclaimer">Comparisons are based on publicly available information. Prices and offerings may change. Verify current details directly with each vendor before making purchasing decisions.</p>
           </div>
         </div>
       </section>
@@ -293,7 +386,10 @@ const benefitIcons = [
 
       <section id="how-it-works" class="neutral-bg">
         <div class="wrap">
-          <div class="sh"><h2>How it works</h2><p>{site.branding.howItWorksSubheading}</p></div>
+          <div class="sh">
+            <h2>How it works</h2>
+            <p>{site.branding.howItWorksSubheading}</p>
+          </div>
           <div class="grid">
             {site.steps?.map((s, i) => (
               <div class="card c4">
@@ -308,7 +404,10 @@ const benefitIcons = [
 
       <section id="features">
         <div class="wrap">
-          <div class="sh"><h2>{site.branding.featuresHeading}</h2><p>{site.branding.featuresSubheading}</p></div>
+          <div class="sh">
+            <h2>{site.branding.featuresHeading}</h2>
+            <p>{site.branding.featuresSubheading}</p>
+          </div>
           <div class="grid">
             {site.features?.map((f, i) => (
               <div class="card c6">
@@ -324,10 +423,15 @@ const benefitIcons = [
 
       <section id="faq" class="neutral-bg">
         <div class="wrap">
-          <div class="sh"><h2>Frequently asked questions</h2></div>
+          <div class="sh">
+            <h2>Frequently asked questions</h2>
+          </div>
           <div class="grid">
             {site.faqs?.map((f) => (
-              <div class="card c6"><h3>{f.q}</h3><p>{f.a}</p></div>
+              <div class="card c6">
+                <h3>{f.q}</h3>
+                <p>{f.a}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -358,12 +462,24 @@ const benefitIcons = [
                   <input type="hidden" name="v" value="2" />
                   <input type="hidden" name="or" value={site.form.hiddenOr} />
                   <div class="_form-content">
-                    <div class="_form_element"><input type="text" name="firstname" placeholder="Your Name" required /></div>
-                    <div class="_form_element"><input type="text" name="email" placeholder="Your Email" required /></div>
-                    <div class="_form_element"><input type="text" name="phone" placeholder="Your Phone Number" /></div>
-                    <div class="_form_element"><input type="text" name="field[21]" placeholder="Number of Users" /></div>
-                    <div class="_form_element"><input type="text" name="field[35]" placeholder="Company / Organisation" /></div>
-                    <div class="_form_element"><textarea name="field[18]" placeholder="Your profession and current dictation setup"></textarea></div>
+                    <div class="_form_element">
+                      <input type="text" name="firstname" placeholder="Your Name" required />
+                    </div>
+                    <div class="_form_element">
+                      <input type="text" name="email" placeholder="Your Email" required />
+                    </div>
+                    <div class="_form_element">
+                      <input type="text" name="phone" placeholder="Your Phone Number" />
+                    </div>
+                    <div class="_form_element">
+                      <input type="text" name="field[21]" placeholder="Number of Users" />
+                    </div>
+                    <div class="_form_element">
+                      <input type="text" name="field[35]" placeholder="Company / Organisation" />
+                    </div>
+                    <div class="_form_element">
+                      <textarea name="field[18]" placeholder="Your profession and current dictation setup"></textarea>
+                    </div>
                     <button class="_submit" type="submit">{site.form.submitText}</button>
                   </div>
                   <div class="_form-thank-you" style="display:none;"></div>
@@ -373,16 +489,22 @@ const benefitIcons = [
           </div>
         </div>
       </section>
+
     </main>
 
     <footer>
       <div class="wrap">
         <div class="footer-inner">
           <div>&#169; {year} {site.siteName}</div>
-          <div class="footer-links">{site.footerLinks?.map((l) => <a href={l.url}>{l.label}</a>)}</div>
+          <div class="footer-links">
+            {site.footerLinks?.map((l) => <a href={l.url}>{l.label}</a>)}
+          </div>
         </div>
-        <div class="footer-disclaimer">{site.branding.footerDisclaimer}</div>
+        <div class="footer-disclaimer">
+          {site.branding.footerDisclaimer}
+        </div>
       </div>
     </footer>
+
   </body>
 </html>
