@@ -121,18 +121,19 @@ const formId = site.form.id;
       .benefit-icon{flex-shrink:0;width:44px;height:44px;background:#e0f7fa;border-radius:10px;display:flex;align-items:center;justify-content:center}
       .benefit-text h3{margin:0 0 4px;font-size:15px;font-weight:700}
       .benefit-text p{margin:0;font-size:14px;color:#475569;line-height:1.5}
-      .pricing-card{background:#fff;border:2px solid #e2e8f0;border-radius:20px;padding:24px;display:flex;flex-direction:column}
+      .pricing-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+      .pricing-card{background:#fff;border:2px solid #e2e8f0;border-radius:20px;padding:20px;display:flex;flex-direction:column}
       .pricing-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
-      .pricing-name{font-size:18px;font-weight:700;margin:0 0 2px}
-      .pricing-platform{font-size:12px;color:#64748b;margin:0 0 12px}
-      .pricing-price{font-size:32px;font-weight:800;line-height:1;margin:0 0 2px}
-      .pricing-price-text{font-size:20px;font-weight:800;line-height:1;margin:0 0 2px}
-      .pricing-note{font-size:12px;color:#64748b;margin:0 0 16px}
-      .pricing-features{list-style:none;padding:0;margin:0 0 20px;flex:1}
-      .pricing-features li{padding:5px 0;border-bottom:1px solid #f1f5f9;font-size:13px;color:#334155;display:flex;gap:6px;align-items:flex-start}
+      .pricing-name{font-size:16px;font-weight:700;margin:0 0 2px}
+      .pricing-platform{font-size:11px;color:#64748b;margin:0 0 10px}
+      .pricing-price{font-size:24px;font-weight:800;line-height:1;margin:0 0 2px}
+      .pricing-price-text{font-size:18px;font-weight:800;line-height:1;margin:0 0 2px}
+      .pricing-note{font-size:11px;color:#64748b;margin:0 0 14px}
+      .pricing-features{list-style:none;padding:0;margin:0 0 16px;flex:1}
+      .pricing-features li{padding:4px 0;border-bottom:1px solid #f1f5f9;font-size:12px;color:#334155;display:flex;gap:5px;align-items:flex-start}
       .pricing-features li::before{content:"\2713";color:#0097a7;font-weight:700;flex-shrink:0}
-      .pricing-btns{display:flex;flex-direction:column;gap:8px}
-      .pricing-btns .btn{text-align:center;font-size:13px;padding:10px 16px}
+      .pricing-btns{display:flex;flex-direction:column;gap:6px}
+      .pricing-btns .btn{text-align:center;font-size:12px;padding:8px 12px}
       .tco-table{width:100%;border-collapse:collapse;margin-top:20px}
       .tco-table th{text-align:left;padding:10px 14px;font-size:12px;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc}
       .tco-table td{padding:12px 14px;font-size:14px;border-bottom:1px solid #f1f5f9}
@@ -176,7 +177,7 @@ const formId = site.form.id;
         .hero-btns{flex-direction:column}
         .hero-btns .btn-lg{width:100%;text-align:center;padding:12px 20px}
         .card{padding:16px}
-        .pricing-card{padding:18px}
+        .pricing-card{padding:16px}
         .formbox{padding:18px}
         .tco-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px}
         .tco-table th,.tco-table td{padding:8px 10px;font-size:11px;white-space:nowrap}
@@ -293,7 +294,7 @@ const formId = site.form.id;
             <h2>{site.branding.pricingHeading}</h2>
             <p>{site.branding.pricingSubheading}</p>
           </div>
-          <div class="pricing-grid-5" style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px">
+          <div class="pricing-grid-5">
             <div class="pricing-card">
               <div class="pricing-name">Dragon Medical One</div>
               <div class="pricing-platform">Cloud - subscription</div>
@@ -338,7 +339,7 @@ const formId = site.form.id;
                 <li>Mobile app included</li>
               </ul>
               <div class="pricing-btns">
-                <a class="btn btn-primary" href="https://www.voicerecognition.com.au/products/dragon-professional-anywhere" target="_blank" rel="noopener">Enquire</a>
+                <a class="btn btn-primary" href="https://www.voicerecognition.com.au/products/dragon-professional-anywhere" target="_blank" rel="noopener">Buy now</a>
                 <a class="btn btn-secondary" href="/dragon-professional-anywhere">Learn more</a>
               </div>
             </div>
@@ -354,7 +355,7 @@ const formId = site.form.id;
                 <li>Centralised admin</li>
               </ul>
               <div class="pricing-btns">
-                <a class="btn btn-primary" href="#final-cta">Enquire</a>
+                <a class="btn btn-primary" href="https://www.voicerecognition.com.au/products/dragon-legal-anywhere" target="_blank" rel="noopener">Buy now</a>
                 <a class="btn btn-secondary" href="/dragon-legal">Learn more</a>
               </div>
             </div>
