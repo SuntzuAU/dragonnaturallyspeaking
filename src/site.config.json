@@ -5,15 +5,15 @@
   "branding": {
     "industry": "Medical, Legal and Enterprise",
     "region": "Australia",
-    "headline": "Dragon Speech Recognition for Australian Professionals",
-    "subheadline": "From Dragon Medical One for clinicians to Dragon Professional for business and legal teams - Australia's most trusted Dragon reseller with 25 years of local deployment experience.",
-    "statsMessage": "Dictate 3x faster than typing with up to 99% accuracy - trusted by Australian medical, legal and enterprise professionals",
-    "benefitsHeading": "Why Australian professionals choose Dragon",
+    "headline": "Dragon NaturallySpeaking Australia - Authorised Dragon Reseller",
+    "subheadline": "Looking for Dragon NaturallySpeaking or Dragon Dictate? The Dragon product range has evolved - Dragon Professional 16, Dragon Medical One and Dragon Professional Anywhere are the current solutions. Voice Recognition Australia has been Australia's authorised Dragon reseller for 25 years.",
+    "statsMessage": "Dragon NaturallySpeaking has evolved - dictate 3x faster than typing with up to 99% accuracy across medical, legal and enterprise",
+    "benefitsHeading": "Why Australian professionals choose Dragon NaturallySpeaking products",
     "benefitsSubheading": "Purpose-built speech recognition for professionals who cannot afford documentation errors.",
     "pricingHeading": "Dragon products for every professional",
     "pricingSubheading": "Desktop and cloud options for individuals, teams and enterprise. Contact us for volume and medical pricing.",
-    "aboutHeading": "25 years deploying Dragon in Australia.",
-    "aboutBody": "Voice Recognition Australia has been the trusted Dragon reseller for Australian medical practices, law firms, government agencies and enterprises since 1999. We provide local onboarding, training, and ongoing support - not just a licence key.",
+    "aboutHeading": "25 years deploying Dragon NaturallySpeaking in Australia",
+    "aboutBody": "Voice Recognition Australia has been the trusted Dragon NaturallySpeaking reseller for Australian medical practices, law firms, government agencies and enterprises since 1999. From the original Dragon Dictate to today's Dragon Professional and Dragon Medical One, we provide local onboarding, training and ongoing support.",
     "howItWorksSubheading": "From enquiry to dictating in days - we handle licensing, setup and training locally.",
     "featuresHeading": "Purpose-built for demanding professional environments",
     "featuresSubheading": "Specialist vocabulary, cloud flexibility and enterprise-grade security - built for Australian healthcare and legal workflows.",
@@ -25,7 +25,31 @@
       "Number of users and deployment environment",
       "Current dictation or typing workflow"
     ],
-    "footerDisclaimer": "Dragon is a registered trademark of Microsoft Corporation. This website is independently operated by Voice Recognition Australia, an authorised Dragon reseller. Not affiliated with or endorsed by Microsoft or Nuance Communications."
+    "footerDisclaimer": "Dragon and Dragon NaturallySpeaking are registered trademarks of Microsoft Corporation. This website is independently operated by Voice Recognition Australia, an authorised Dragon reseller. Not affiliated with or endorsed by Microsoft or Nuance Communications.",
+    "legacyHeading": "Looking for Dragon NaturallySpeaking?",
+    "legacyBody": "Dragon NaturallySpeaking and Dragon Dictate were the original product names used by Nuance Communications for over two decades. Many Australian professionals still search for Dragon NaturallySpeaking when looking for speech recognition software. The product range has been updated and rebranded - but the technology is better than ever.",
+    "legacyProducts": [
+      {
+        "old": "Dragon NaturallySpeaking Professional",
+        "new": "Dragon Professional 16",
+        "url": "/dragon-professional-16"
+      },
+      {
+        "old": "Dragon NaturallySpeaking Home",
+        "new": "Dragon Professional 16 (Home edition discontinued)",
+        "url": "/dragon-professional-16"
+      },
+      {
+        "old": "Dragon Medical Practice Edition",
+        "new": "Dragon Medical One",
+        "url": "/dragon-medical-one"
+      },
+      {
+        "old": "Dragon Dictate (Mac)",
+        "new": "Discontinued - see cloud alternatives",
+        "url": "/dragon-professional-anywhere"
+      }
+    ]
   },
   "form": {
     "id": "281",
@@ -81,7 +105,7 @@
   "benefits": [
     {
       "title": "Dictate 3x faster than typing",
-      "body": "Dragon converts speech to text at up to 160 words per minute with 99% accuracy from first use. Clinicians, lawyers and business professionals reduce documentation time by 50% or more."
+      "body": "Dragon NaturallySpeaking products convert speech to text at up to 160 words per minute with 99% accuracy from first use. Clinicians, lawyers and business professionals reduce documentation time by 50% or more."
     },
     {
       "title": "Specialist vocabulary built in",
@@ -93,7 +117,7 @@
     },
     {
       "title": "Local Australian support",
-      "body": "Voice Recognition Australia has deployed Dragon in Australian medical practices, law firms and government agencies for 25 years. We provide hands-on onboarding, training and ongoing support - in your timezone."
+      "body": "Voice Recognition Australia has deployed Dragon NaturallySpeaking products in Australian medical practices, law firms and government agencies for 25 years. We provide hands-on onboarding, training and ongoing support - in your timezone."
     }
   ],
   "pricing": [
@@ -176,7 +200,7 @@
     }
   ],
   "proofPoints": [
-    "Authorised Dragon reseller since 1999",
+    "Authorised Dragon NaturallySpeaking reseller since 1999",
     "Deployed in Australian hospitals, law firms and government",
     "Local onboarding, training and support",
     "Medical, Legal, Enterprise and Accessibility specialists"
@@ -209,6 +233,14 @@
   ],
   "faqs": [
     {
+      "q": "Is Dragon NaturallySpeaking still available?",
+      "a": "Dragon NaturallySpeaking and Dragon Dictate were the original product names. The current product range includes Dragon Professional 16 (desktop), Dragon Professional Anywhere (cloud), Dragon Medical One (medical) and Dragon Legal Anywhere. All are available through Voice Recognition Australia and we can help you identify which current product matches your previous Dragon NaturallySpeaking version."
+    },
+    {
+      "q": "What happened to Dragon Dictate?",
+      "a": "Dragon Dictate was the Mac version of Dragon NaturallySpeaking. Nuance discontinued Dragon Dictate for Mac. Current alternatives include Dragon Professional Anywhere (cloud-based, works via browser) and Speech Recognition Cloud. Contact us to discuss the best replacement for your Mac workflow."
+    },
+    {
       "q": "What is the difference between Dragon Professional 16 and Dragon Professional Anywhere?",
       "a": "Dragon Professional 16 is a locally installed desktop application - it runs fully offline once activated, ideal for users who need command and control or work in secure environments. Dragon Professional Anywhere is cloud-based, always updated, and ideal for virtual desktops and distributed teams."
     },
@@ -223,14 +255,6 @@
     {
       "q": "Can I trial Dragon before purchasing?",
       "a": "Yes - free trials are available for Dragon Professional 16 and Dragon Professional Anywhere. For Dragon Medical One, we can arrange a demonstration and trial in your clinical environment. Contact our Australian team to arrange access."
-    },
-    {
-      "q": "Is Dragon NaturallySpeaking still available?",
-      "a": "Dragon NaturallySpeaking was the historic product name. The current product range is Dragon Professional (desktop and cloud), Dragon Medical One, and Dragon Legal. All are available through Voice Recognition Australia. We can help you identify which product matches your previous Dragon version."
-    },
-    {
-      "q": "What support do you provide after purchase?",
-      "a": "Voice Recognition Australia provides local Australian onboarding, training and ongoing support. We are based in Australia, available in your timezone, and have 25 years of Dragon deployment experience across medical, legal and enterprise environments."
     }
   ],
   "footerLinks": [
