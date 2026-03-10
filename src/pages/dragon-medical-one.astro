@@ -18,16 +18,20 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dragon Medical One Australia | Cloud Speech Recognition for Clinicians</title>
-    <meta name="description" content="Dragon Medical One - cloud-based medical speech recognition with 80+ specialty vocabularies. Used by Australian GPs, specialists and hospitals. Contact Voice Recognition Australia for pricing and demonstration." />
+    <meta name="description" content="Dragon Medical One - cloud-based medical speech recognition with 80+ specialty vocabularies. Used by Australian GPs, specialists and hospitals. Free trial available. Contact Voice Recognition Australia." />
     <link rel="canonical" href={`${site.domain}/dragon-medical-one`} />
     <script define:vars={{ c }}>
       const css = `
         .btn-primary { background: ${c.accent}; border-color: ${c.accent}; color: #fff; }
         .btn-primary:hover { background: ${c.accentHover}; border-color: ${c.accentHover}; }
+        .btn-trial { background: #0d1b2a; border-color: #0d1b2a; color: #fff; }
+        .btn-trial:hover { background: #1e3a5f; border-color: #1e3a5f; }
         .dark-bg { background: ${c.primary}; color: white; }
         .neutral-bg { background: ${c.neutral}; }
         .feature-check { color: ${c.accent}; }
         .spec-badge { background: ${c.accent}; color: #fff; }
+        .nav-links a:hover, .dropdown-toggle:hover { color: ${c.accent}; }
+        .dropdown-menu { border-top: 2px solid ${c.accent}; }
       `;
       const el = document.createElement('style');
       el.textContent = css;
@@ -42,7 +46,15 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
       header{position:sticky;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid #e2e8f0;z-index:100}
       .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:16px}
       .logo img{height:40px;width:auto}
-      .nav-links{display:flex;gap:18px;font-size:14px;font-weight:500;color:#334155}
+      .nav-links{display:flex;gap:18px;font-size:14px;font-weight:500;color:#334155;align-items:center}
+      .dropdown{position:relative}
+      .dropdown-toggle{cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap}
+      .dropdown-toggle svg{transition:transform .15s}
+      .dropdown:hover .dropdown-toggle svg{transform:rotate(180deg)}
+      .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,.1);min-width:240px;padding:8px 0 6px;z-index:200}
+      .dropdown:hover .dropdown-menu{display:block}
+      .dropdown-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:500;color:#334155;transition:background .1s}
+      .dropdown-menu a:hover{background:#e0f7fa;color:#006064}
       .nav-ctas{display:flex;gap:10px;align-items:center;flex-shrink:0}
       .btn{display:inline-block;padding:10px 20px;border-radius:8px;font-weight:700;font-size:14px;border:2px solid transparent;cursor:pointer;transition:all .15s;white-space:nowrap}
       .btn-lg{padding:14px 28px;font-size:16px;border-radius:10px}
@@ -50,51 +62,50 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
       .hamburger span{display:block;width:22px;height:2px;background:#334155;border-radius:2px}
       .mobile-nav{display:none;padding:12px 0 8px;border-top:1px solid #e2e8f0}
       .mobile-nav a{display:block;padding:10px 0;font-size:15px;font-weight:500;color:#334155;border-bottom:1px solid #f1f5f9}
-      section{padding:64px 0}
-      .breadcrumb{font-size:13px;color:#64748b;margin-bottom:20px}
+      section{padding:48px 0}
+      .breadcrumb{font-size:13px;color:#64748b;margin-bottom:18px}
       .breadcrumb a{color:#0097a7;font-weight:500}
-      .product-hero{padding:48px 0 40px}
-      .product-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-      .product-hero h1{font-size:36px;line-height:1.1;margin:0 0 14px;letter-spacing:-0.03em}
-      .product-hero p{font-size:16px;line-height:1.7;margin:0 0 24px;color:#475569}
-      .spec-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.05em}
-      .hero-img{border-radius:16px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 16px 48px rgba(0,0,0,.12)}
+      .product-hero{padding:40px 0 36px}
+      .product-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+      .product-hero h1{font-size:32px;line-height:1.1;margin:0 0 12px;letter-spacing:-0.03em}
+      .product-hero p{font-size:15px;line-height:1.7;margin:0 0 20px;color:#475569}
+      .spec-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em}
+      .hero-img{border-radius:14px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 12px 40px rgba(0,0,0,.12)}
       .hero-img img{width:100%;height:100%;object-fit:cover}
-      .spec-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:16px}
-      .spec-card{text-align:center;padding:14px;background:#f0f9ff;border-radius:10px}
-      .spec-val{font-size:18px;font-weight:800;color:#0d1b2a}
-      .spec-label{font-size:12px;color:#64748b}
-      .sh{margin-bottom:32px}
-      .sh h2{font-size:28px;letter-spacing:-0.02em;margin:0 0 8px}
-      .sh p{font-size:16px;margin:0;color:#475569}
-      .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+      .spec-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+      .spec-card{text-align:center;padding:12px;background:#f0f9ff;border-radius:10px}
+      .spec-val{font-size:16px;font-weight:800;color:#0d1b2a}
+      .spec-label{font-size:11px;color:#64748b}
+      .sh{margin-bottom:28px}
+      .sh h2{font-size:26px;letter-spacing:-0.02em;margin:0 0 6px}
+      .sh p{font-size:15px;margin:0;color:#475569}
+      .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
       .c6{grid-column:span 6}
       .c4{grid-column:span 4}
       .c7{grid-column:span 7}
       .c5{grid-column:span 5}
-      .c12{grid-column:span 12}
-      .card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:24px}
-      .card h3{margin:0 0 8px;font-size:17px}
-      .card p{color:#475569}
+      .card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px}
+      .card h3{margin:0 0 6px;font-size:16px}
+      .card p{color:#475569;font-size:14px}
       .feature-list{list-style:none;padding:0;margin:0}
-      .feature-list li{padding:9px 0;border-bottom:1px solid #f1f5f9;font-size:15px;display:flex;gap:10px;align-items:flex-start}
+      .feature-list li{padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:14px;display:flex;gap:8px;align-items:flex-start}
       .feature-list li:last-child{border-bottom:none}
-      .feature-check{font-weight:700;flex-shrink:0;font-size:16px}
-      .faq-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:22px}
-      .faq-card h3{margin:0 0 8px;font-size:16px}
-      .faq-card p{margin:0;font-size:15px;color:#475569}
-      .formbox{background:#fff;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px}
-      ._form_element{margin-bottom:12px}
+      .feature-check{font-weight:700;flex-shrink:0;font-size:15px}
+      .faq-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px}
+      .faq-card h3{margin:0 0 6px;font-size:15px}
+      .faq-card p{margin:0;font-size:14px;color:#475569}
+      .formbox{background:#fff;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px}
+      ._form_element{margin-bottom:10px}
       ._form_element input,._form_element textarea{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;color:#0f172a;font-size:14px;font-family:system-ui,-apple-system,sans-serif;padding:10px 12px;width:100%}
       ._submit{border:none;border-radius:8px;font-weight:700;font-size:15px;padding:12px 20px;width:100%;margin-top:8px;cursor:pointer;background:#0097a7;color:#fff}
       ._submit:hover{background:#00838f}
-      footer{background:#0f172a;color:#64748b;padding:28px 0;font-size:14px}
+      footer{background:#0f172a;color:#64748b;padding:24px 0;font-size:13px}
       .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
-      .footer-links{display:flex;gap:20px}
+      .footer-links{display:flex;gap:18px}
       .footer-links a:hover{color:white}
-      .footer-disclaimer{font-size:11px;color:#475569;line-height:1.6;margin-top:12px;padding-top:12px;border-top:1px solid #1e293b}
-      @media(max-width:900px){.product-hero-inner{grid-template-columns:1fr}.c6,.c4,.c7,.c5{grid-column:span 12}.sh h2{font-size:24px}}
-      @media(max-width:600px){.nav-links{display:none}.hamburger{display:flex}section{padding:40px 0}.product-hero{padding:28px 0}.product-hero h1{font-size:26px}.card,.faq-card,.formbox{padding:18px}.spec-grid{grid-template-columns:1fr}.footer-inner{flex-direction:column;align-items:center;text-align:center}.footer-links{justify-content:center}}
+      .footer-disclaimer{font-size:11px;color:#475569;line-height:1.6;margin-top:10px;padding-top:10px;border-top:1px solid #1e293b}
+      @media(max-width:900px){.product-hero-inner{grid-template-columns:1fr}.c6,.c4,.c7,.c5{grid-column:span 12}.sh h2{font-size:22px}}
+      @media(max-width:600px){.nav-links{display:none}.hamburger{display:flex}section{padding:36px 0}.product-hero{padding:24px 0}.product-hero h1{font-size:24px}.card,.faq-card,.formbox{padding:16px}.spec-grid{grid-template-columns:1fr}.footer-inner{flex-direction:column;align-items:center;text-align:center}.footer-links{justify-content:center}}
     </style>
   </head>
   <body>
@@ -103,11 +114,18 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
         <div class="nav">
           <div class="logo"><a href="/"><img src="/logo.png" alt={site.siteName} onerror="this.style.display='none'" /></a></div>
           <nav class="nav-links" aria-label="Primary">
-            <a href="/">Home</a>
-            <a href="/comparison">Comparison</a>
-            <a href="/news">News</a>
-            <a href="/#faq">FAQ</a>
-            <a href="/#final-cta">Contact</a>
+            {site.navDropdown && (
+              <div class="dropdown">
+                <span class="dropdown-toggle">
+                  {site.navDropdown.label}
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <div class="dropdown-menu">
+                  {site.navDropdown.items?.map((item) => <a href={item.url}>{item.label}</a>)}
+                </div>
+              </div>
+            )}
+            {site.navItems?.map((item) => <a href={item.url}>{item.label}</a>)}
           </nav>
           <div class="nav-ctas">
             <a class="btn btn-primary" href="#cta">Get a Quote</a>
@@ -116,11 +134,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
         </div>
         <nav class="mobile-nav" aria-label="Mobile">
           <a href="/">Home</a>
-          <a href="/dragon-medical-one">Dragon Medical One</a>
-          <a href="/dragon-professional-16">Dragon Professional 16</a>
-          <a href="/dragon-professional-anywhere">Dragon Professional Anywhere</a>
-          <a href="/dragon-legal">Dragon Legal</a>
-          <a href="/dragon-education">Education</a>
+          {site.navDropdown?.items?.map((item) => <a href={item.url}>{item.label}</a>)}
           <a href="/comparison">Comparison</a>
           <a href="/news">News</a>
         </nav>
@@ -133,16 +147,16 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
           <div class="breadcrumb"><a href="/">Home</a> > <a href="/comparison">Products</a> > Dragon Medical One</div>
           <div class="product-hero-inner">
             <div>
-              <div class="spec-badge">Cloud - Medical</div>
-              <h1>Dragon Medical One - Cloud Speech Recognition for Clinicians</h1>
-              <p>The cloud-based medical speech recognition platform trusted by clinicians worldwide. 80+ built-in medical specialty vocabularies. No voice profile training needed. Dictate from any device, anywhere. Hosted on Microsoft Azure with HIPAA-aligned security.</p>
-              <div style="margin-bottom:8px">
-                <div style="font-size:36px;font-weight:800;color:#0d1b2a">Contact us for pricing</div>
-                <div style="font-size:14px;color:#64748b">Subscription - volume discounts available for practices and hospitals</div>
+              <div class="spec-badge">Cloud - Medical Speech Recognition</div>
+              <h1>Dragon Medical One - Cloud Speech Recognition for Australian Clinicians</h1>
+              <p>The cloud-based medical speech recognition platform trusted by clinicians worldwide. 80+ built-in medical specialty vocabularies. No voice profile training needed. Dictate from any device, anywhere. Hosted on Microsoft Azure.</p>
+              <div style="margin-bottom:6px">
+                <div style="font-size:32px;font-weight:800;color:#0d1b2a">Contact us for pricing</div>
+                <div style="font-size:13px;color:#64748b">Subscription - volume discounts for practices and hospitals</div>
               </div>
-              <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
-                <a class="btn btn-primary btn-lg" href="#cta">Request a Demonstration</a>
-                <a class="btn" href="/comparison" style="border-color:#cbd5e1;color:#334155">Compare Products</a>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+                <a class="btn btn-trial btn-lg" href="https://www.voicerecognition.com.au/pages/dragon-medical-one" target="_blank" rel="noopener">Free Trial</a>
+                <a class="btn btn-primary btn-lg" href="#cta">Get a Quote</a>
               </div>
             </div>
             <div>
@@ -150,7 +164,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
                 <div class="hero-img">
                   <img src={imgSrc("feature-medical")} alt={imgAlt("feature-medical")} loading="eager" decoding="async" />
                 </div>
-              ) : <div class="hero-img" style="background:#e0f7fa;display:flex;align-items:center;justify-content:center;color:#006064;font-size:14px;min-height:300px">Dragon Medical One</div>}
+              ) : <div class="hero-img" style="background:#e0f7fa;display:flex;align-items:center;justify-content:center;color:#006064;font-size:14px;min-height:260px">Dragon Medical One</div>}
               <div class="spec-grid">
                 <div class="spec-card"><div class="spec-val">80+</div><div class="spec-label">Medical specialties</div></div>
                 <div class="spec-card"><div class="spec-val">Cloud</div><div class="spec-label">Any device, anywhere</div></div>
@@ -165,10 +179,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
         <div class="wrap">
           <div class="grid">
             <div class="c7">
-              <div class="sh">
-                <h2>What Dragon Medical One includes</h2>
-                <p>Purpose-built for clinicians who need accurate, fast documentation.</p>
-              </div>
+              <div class="sh"><h2>What Dragon Medical One includes</h2><p>Purpose-built for clinicians who need accurate, fast documentation.</p></div>
               <div class="card">
                 <ul class="feature-list">
                   <li><span class="feature-check">&#10003;</span>80+ built-in medical specialty vocabularies (cardiology, radiology, pathology, oncology, general practice and more)</li>
@@ -177,7 +188,6 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
                   <li><span class="feature-check">&#10003;</span>EHR and clinical system integration (Best Practice, Medical Director, hospital systems)</li>
                   <li><span class="feature-check">&#10003;</span>AutoText and custom commands for clinical templates and common phrases</li>
                   <li><span class="feature-check">&#10003;</span>Automatic updates - always the latest vocabulary and accuracy improvements</li>
-                  <li><span class="feature-check">&#10003;</span>Hosted on Microsoft Azure with HIPAA-aligned security controls</li>
                   <li><span class="feature-check">&#10003;</span>Centralised administration for practices and hospital departments</li>
                   <li><span class="feature-check">&#10003;</span>Dragon Anywhere Mobile companion app for dictation on the go</li>
                 </ul>
@@ -185,7 +195,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
             </div>
             <div class="c5">
               {imgSrc("hero") && (
-                <div style="border-radius:14px;overflow:hidden;margin-top:52px;box-shadow:0 8px 24px rgba(0,0,0,.08)">
+                <div style="border-radius:14px;overflow:hidden;margin-top:48px;box-shadow:0 8px 24px rgba(0,0,0,.08)">
                   <img src={imgSrc("hero")} alt={imgAlt("hero")} loading="lazy" decoding="async" />
                 </div>
               )}
@@ -196,10 +206,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
 
       <section>
         <div class="wrap">
-          <div class="sh">
-            <h2>Medical specialties covered</h2>
-            <p>Dragon Medical One includes vocabularies for these specialties and many more.</p>
-          </div>
+          <div class="sh"><h2>Medical specialties covered</h2><p>Dragon Medical One includes vocabularies for these specialties and many more.</p></div>
           <div class="grid">
             <div class="card c4"><h3>General Practice</h3><p>Comprehensive GP vocabulary covering consultations, referrals, prescriptions and clinical notes.</p></div>
             <div class="card c4"><h3>Cardiology</h3><p>Cardiology-specific terminology including procedures, diagnostics and treatment protocols.</p></div>
@@ -213,23 +220,20 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
 
       <section class="neutral-bg">
         <div class="wrap">
-          <div class="sh">
-            <h2>Dragon Medical One vs Dragon Medical Practice Edition</h2>
-            <p>Dragon Medical Practice Edition (DMPE) has been discontinued. Dragon Medical One is the current medical speech recognition platform.</p>
-          </div>
-          <div class="card c12" style="max-width:100%">
-            <table style="width:100%;border-collapse:collapse">
-              <thead><tr><th style="text-align:left;padding:12px 16px;font-size:13px;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc">Feature</th><th style="text-align:left;padding:12px 16px;font-size:13px;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc">Dragon Medical One</th><th style="text-align:left;padding:12px 16px;font-size:13px;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc">DMPE (discontinued)</th></tr></thead>
+          <div class="sh"><h2>Dragon Medical One vs Dragon Medical Practice Edition</h2><p>Dragon Medical Practice Edition (DMPE) has been discontinued. Dragon Medical One is the current medical speech recognition platform.</p></div>
+          <div class="card" style="max-width:100%;overflow-x:auto">
+            <table style="width:100%;border-collapse:collapse;min-width:500px">
+              <thead><tr><th style="text-align:left;padding:10px 14px;font-size:12px;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc">Feature</th><th style="text-align:left;padding:10px 14px;font-size:12px;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc">Dragon Medical One</th><th style="text-align:left;padding:10px 14px;font-size:12px;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc">DMPE (discontinued)</th></tr></thead>
               <tbody>
-                <tr><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9">Deployment</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-weight:600;color:#006064">Cloud-based</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9">Locally installed</td></tr>
-                <tr><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9">Voice training required</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-weight:600;color:#006064">No - accurate from first use</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9">Yes - required per user</td></tr>
-                <tr><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9">Updates</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-weight:600;color:#006064">Automatic, continuous</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9">Manual, infrequent</td></tr>
-                <tr><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9">Multi-device</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-weight:600;color:#006064">Any device, anywhere</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9">Single PC only</td></tr>
-                <tr><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9">Licence</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-weight:600;color:#006064">Subscription</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9">Perpetual (no longer sold)</td></tr>
-                <tr><td style="padding:12px 16px">Status</td><td style="padding:12px 16px;font-weight:600;color:#006064">Current - actively developed</td><td style="padding:12px 16px;color:#94a3b8">Discontinued</td></tr>
+                <tr><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px">Deployment</td><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px;font-weight:600;color:#006064">Cloud-based</td><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px">Locally installed</td></tr>
+                <tr><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px">Voice training required</td><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px;font-weight:600;color:#006064">No - accurate from first use</td><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px">Yes - required per user</td></tr>
+                <tr><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px">Updates</td><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px;font-weight:600;color:#006064">Automatic, continuous</td><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px">Manual, infrequent</td></tr>
+                <tr><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px">Multi-device</td><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px;font-weight:600;color:#006064">Any device, anywhere</td><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px">Single PC only</td></tr>
+                <tr><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px">Licence</td><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px;font-weight:600;color:#006064">Subscription</td><td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;font-size:14px">Perpetual (no longer sold)</td></tr>
+                <tr><td style="padding:10px 14px;font-size:14px">Status</td><td style="padding:10px 14px;font-size:14px;font-weight:600;color:#006064">Current - actively developed</td><td style="padding:10px 14px;font-size:14px;color:#94a3b8">Discontinued</td></tr>
               </tbody>
             </table>
-            <p style="font-size:13px;color:#94a3b8;margin-top:12px">If you are currently using Dragon Medical Practice Edition, Voice Recognition Australia can assist with migration to Dragon Medical One.</p>
+            <p style="font-size:12px;color:#94a3b8;margin-top:10px">If you are currently using Dragon Medical Practice Edition, Voice Recognition Australia can assist with migration to Dragon Medical One.</p>
           </div>
         </div>
       </section>
@@ -241,23 +245,23 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
             <div class="faq-card c6"><h3>Is Dragon Medical One suitable for Australian GPs?</h3><p>Yes. Dragon Medical One is used extensively by Australian GPs, specialists, and hospital clinicians. It includes specialty vocabularies for general practice, cardiology, radiology, oncology and many more. Contact us for a demonstration with your specific clinical software.</p></div>
             <div class="faq-card c6"><h3>Does it integrate with Best Practice and Medical Director?</h3><p>Dragon Medical One integrates with major Australian clinical software including Best Practice, Medical Director and hospital EHR systems. Contact us to confirm compatibility with your specific setup.</p></div>
             <div class="faq-card c6"><h3>How is Dragon Medical One different from Dragon Professional?</h3><p>Dragon Medical One is cloud-based with 80+ medical specialty vocabularies built in. Dragon Professional 16 is a locally installed desktop product designed for general professional use. Medical One requires no voice training and includes medical-specific EHR integrations.</p></div>
-            <div class="faq-card c6"><h3>What happened to Dragon Medical Practice Edition?</h3><p>Dragon Medical Practice Edition (DMPE) has been discontinued by Nuance/Microsoft. Dragon Medical One is the current replacement. It offers significant improvements including cloud access, no voice training, and automatic updates. VRA can help migrate from DMPE.</p></div>
-            <div class="faq-card c6"><h3>Can I trial Dragon Medical One?</h3><p>Yes. Voice Recognition Australia can arrange a demonstration and trial of Dragon Medical One in your clinical environment, including integration testing with your EHR system. Contact us to arrange access.</p></div>
-            <div class="faq-card c6"><h3>What are the security and compliance considerations?</h3><p>Dragon Medical One is hosted on Microsoft Azure. The platform includes HIPAA-aligned security controls. For Australian healthcare organisations, discuss specific compliance requirements with our team during the evaluation process.</p></div>
+            <div class="faq-card c6"><h3>What happened to Dragon Medical Practice Edition?</h3><p>Dragon Medical Practice Edition (DMPE) has been discontinued by Nuance/Microsoft. Dragon Medical One is the current replacement with significant improvements including cloud access, no voice training, and automatic updates. VRA can help migrate from DMPE.</p></div>
+            <div class="faq-card c6"><h3>Can I trial Dragon Medical One?</h3><p>Yes. Voice Recognition Australia offers a free trial of Dragon Medical One. We can arrange a demonstration in your clinical environment, including integration testing with your EHR system.</p></div>
+            <div class="faq-card c6"><h3>What are the security considerations?</h3><p>Dragon Medical One is hosted on Microsoft Azure. For Australian healthcare organisations, discuss specific compliance requirements with our team during the evaluation process.</p></div>
           </div>
         </div>
       </section>
 
       <section class="neutral-bg">
         <div class="wrap">
-          <div class="sh"><h2>Other Dragon products</h2><p>Compare all Dragon products to find the right fit.</p></div>
-          <div style="display:flex;flex-wrap:wrap;gap:10px">
-            <a href="/dragon-professional-16" style="padding:8px 16px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:600;color:#334155">Dragon Professional 16</a>
-            <a href="/dragon-professional-anywhere" style="padding:8px 16px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:600;color:#334155">Dragon Professional Anywhere</a>
-            <a href="/dragon-legal" style="padding:8px 16px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:600;color:#334155">Dragon Legal</a>
-            <a href="/dragon-education" style="padding:8px 16px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:600;color:#334155">Dragon for Education</a>
+          <div class="sh"><h2>Other Dragon products</h2></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <a href="/dragon-professional-16" style="padding:8px 14px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:600;color:#334155;transition:all .15s">Dragon Professional 16</a>
+            <a href="/dragon-professional-anywhere" style="padding:8px 14px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:600;color:#334155">Dragon Professional Anywhere</a>
+            <a href="/dragon-legal" style="padding:8px 14px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:600;color:#334155">Dragon Legal</a>
+            <a href="/dragon-education" style="padding:8px 14px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:600;color:#334155">Dragon for Education</a>
           </div>
-          <div style="margin-top:16px"><a class="btn btn-primary" href="/comparison">Compare all products</a></div>
+          <div style="margin-top:14px"><a class="btn btn-primary" href="/comparison">Compare all products</a></div>
         </div>
       </section>
 
@@ -265,19 +269,20 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
         <div class="wrap">
           <div class="grid">
             <div class="c7">
-              <h2 style="color:white;font-size:28px;margin:0 0 12px">Ready to see Dragon Medical One in your practice?</h2>
-              <p style="color:#94a3b8;margin:0 0 20px">Voice Recognition Australia has deployed Dragon Medical One in Australian GP practices, specialist clinics and hospital departments. Tell us about your clinical environment and we will arrange a demonstration.</p>
-              <ul style="color:#94a3b8;margin:0;padding-left:20px;line-height:2.2;font-size:15px">
+              <h2 style="color:white;font-size:26px;margin:0 0 10px">Ready to see Dragon Medical One in your practice?</h2>
+              <p style="color:#94a3b8;margin:0 0 16px;font-size:14px">Voice Recognition Australia has deployed Dragon Medical One in Australian GP practices, specialist clinics and hospital departments. Tell us about your clinical environment and we will arrange a demonstration.</p>
+              <ul style="color:#94a3b8;margin:0;padding-left:20px;line-height:2;font-size:14px">
                 <li>Your specialty or clinical setting</li>
                 <li>EHR system (Best Practice, Medical Director, other)</li>
                 <li>Number of clinicians</li>
                 <li>Current documentation workflow</li>
               </ul>
+              <div style="margin-top:18px"><a class="btn btn-trial btn-lg" href="https://www.voicerecognition.com.au/pages/dragon-medical-one" target="_blank" rel="noopener">Start Free Trial</a></div>
             </div>
             <div class="c5">
               <div class="formbox">
-                <div style="font-weight:800;font-size:20px;color:#0f172a">Request a demonstration</div>
-                <div style="color:#475569;font-size:15px;margin-bottom:4px">Local Australian support. Fast response.</div>
+                <div style="font-weight:800;font-size:18px;color:#0f172a">Request a demonstration</div>
+                <div style="color:#475569;font-size:14px;margin-bottom:2px">Local Australian support. Fast response.</div>
                 <form method="POST" action="https://voicerecognition.activehosted.com/proc.php" novalidate>
                   <input type="hidden" name="u" value={site.form.hiddenU} />
                   <input type="hidden" name="f" value={site.form.hiddenF} />

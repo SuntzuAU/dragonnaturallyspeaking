@@ -16,14 +16,6 @@ function imgAlt(key) {
 
 const c = site.colours;
 const formId = site.form.id;
-
-// SVG icons keyed by position -- teal accent for Dragon site
-const benefitIcons = [
-  `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#ccf2f4"/><path d="M16 8a8 8 0 1 1 0 16A8 8 0 0 1 16 8zm0 2a6 6 0 1 0 0 12A6 6 0 0 0 16 10zm1 2v5.17l3.41 3.42-1.41 1.41L15 18.59V12h2z" fill="#0097a7"/></svg>`,
-  `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#ccf2f4"/><path d="M22 9H10a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V11a2 2 0 0 0-2-2zm0 12H10V11h12v10zm-9-8h6v2h-6v-2zm0 4h4v2h-4v-2z" fill="#0097a7"/></svg>`,
-  `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#ccf2f4"/><path d="M21 10H11a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zm-5 9a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="#0097a7"/></svg>`,
-  `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#ccf2f4"/><path d="M23 9h-4.18A3 3 0 0 0 13 9H9a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1zm-7-1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm6 13H10V11h3.26a3 3 0 0 0 5.48 0H22v10z" fill="#0097a7"/></svg>`,
-];
 ---
 
 <!doctype html>
@@ -31,7 +23,7 @@ const benefitIcons = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{site.siteName}</title>
+    <title>{site.siteName} | Dragon Speech Recognition - Medical, Legal, Enterprise</title>
     <meta name="description" content={site.branding.subheadline} />
     <link rel="canonical" href={site.domain} />
 
@@ -48,8 +40,9 @@ const benefitIcons = [
     <script define:vars={{ c, formId }}>
       const css = `
         body { background: ${c.background}; color: ${c.text}; }
-        .nav-links a:hover { color: ${c.accent}; }
-        .btn-primary { background: ${c.accent}; border-color: ${c.accent}; color: #ffffff; }
+        .nav-links a:hover, .dropdown-toggle:hover { color: ${c.accent}; }
+        .dropdown-menu { border-top: 2px solid ${c.accent}; }
+        .btn-primary { background: ${c.accent}; border-color: ${c.accent}; color: #fff; }
         .btn-primary:hover { background: ${c.accentHover}; border-color: ${c.accentHover}; }
         .btn-secondary { color: ${c.primary}; }
         .btn-secondary:hover { border-color: ${c.primary}; }
@@ -57,21 +50,17 @@ const benefitIcons = [
         .dark-bg { background: ${c.primary}; color: white; }
         .stats-bar { background: ${c.primary}; }
         .stats-savings { color: ${c.accent}; }
-        .video-section { background: ${c.neutral}; }
         .sh p { color: ${c.muted}; }
         .card p { color: ${c.muted}; }
-        .benefit-card p { color: ${c.muted}; }
         .hero p { color: ${c.muted}; }
         .pricing-card.highlight { border-color: ${c.accent}; box-shadow: 0 8px 32px rgba(0,151,167,.15); }
-        .pricing-badge { background: ${c.accent}; color: #ffffff; }
+        .pricing-badge { background: ${c.accent}; color: #fff; }
         .pricing-price { color: ${c.primary}; }
         .tco-table tr.winner td { background: #e0f7fa; font-weight: 700; color: ${c.primary}; }
-        .step-num { background: ${c.accent}; color: #ffffff; }
+        .step-num { background: ${c.accent}; color: #fff; }
         .edition-name { color: ${c.accent}; font-weight: 700; margin-bottom: 4px; font-size: 15px; }
-        ._submit { background: ${c.accent}; color: #ffffff; }
+        ._submit { background: ${c.accent}; color: #fff; }
         ._submit:hover { background: ${c.accentHover}; }
-        .mobile-nav-open { background: ${c.primary}; }
-        .mobile-nav-open a { color: white; }
       `;
       const el = document.createElement('style');
       el.textContent = css;
@@ -84,10 +73,18 @@ const benefitIcons = [
       a{color:inherit;text-decoration:none}
       img{max-width:100%;display:block}
       .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-      header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #e2e8f0;z-index:100}
+      header{position:sticky;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid #e2e8f0;z-index:100}
       .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:16px}
       .logo img{height:40px;width:auto}
-      .nav-links{display:flex;gap:18px;font-size:14px;font-weight:500;color:#334155}
+      .nav-links{display:flex;gap:18px;font-size:14px;font-weight:500;color:#334155;align-items:center}
+      .dropdown{position:relative}
+      .dropdown-toggle{cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap}
+      .dropdown-toggle svg{transition:transform .15s}
+      .dropdown:hover .dropdown-toggle svg{transform:rotate(180deg)}
+      .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,.1);min-width:240px;padding:8px 0 6px;z-index:200}
+      .dropdown:hover .dropdown-menu{display:block}
+      .dropdown-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:500;color:#334155;transition:background .1s}
+      .dropdown-menu a:hover{background:#e0f7fa;color:#006064}
       .nav-ctas{display:flex;gap:10px;align-items:center;flex-shrink:0}
       .btn{display:inline-block;padding:10px 20px;border-radius:8px;font-weight:700;font-size:14px;border:2px solid transparent;cursor:pointer;transition:all .15s;white-space:nowrap}
       .btn-secondary{background:white;border-color:#cbd5e1}
@@ -97,55 +94,52 @@ const benefitIcons = [
       .mobile-nav{display:none;padding:12px 0 8px;border-top:1px solid #e2e8f0}
       .mobile-nav a{display:block;padding:10px 0;font-size:15px;font-weight:500;color:#334155;border-bottom:1px solid #f1f5f9}
       .mobile-nav a:last-child{border-bottom:none}
-      section{padding:64px 0}
-      .hero{padding:72px 0 56px}
-      .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-      .hero-pill{display:inline-flex;align-items:center;background:#e0f7fa;border:1px solid #b2ebf2;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;color:#006064;margin-bottom:18px}
-      .hero h1{font-size:42px;line-height:1.1;margin:0 0 16px;letter-spacing:-0.03em}
-      .hero p{font-size:17px;margin:0 0 28px;line-height:1.7}
+      section{padding:48px 0}
+      .hero{padding:56px 0 40px}
+      .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+      .hero-pill{display:inline-flex;align-items:center;background:#e0f7fa;border:1px solid #b2ebf2;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;color:#006064;margin-bottom:14px}
+      .hero h1{font-size:38px;line-height:1.1;margin:0 0 14px;letter-spacing:-0.03em}
+      .hero p{font-size:16px;margin:0 0 24px;line-height:1.7}
       .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
       .hero-img{border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#e2e8f0;box-shadow:0 24px 64px rgba(0,0,0,.18)}
       .hero-img img{width:100%;height:100%;object-fit:cover}
-      .video-section{padding:32px 0}
-      .video-outer{max-width:800px;margin:0 auto}
-      .yt-facade{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 24px 64px rgba(0,0,0,.15);cursor:pointer;background:#000}
-      .yt-facade img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:16px;display:block}
-      .yt-facade .yt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:#ff0000;border-radius:12px;display:flex;align-items:center;justify-content:center;transition:background .15s,transform .15s}
-      .yt-facade:hover .yt-play{background:#cc0000;transform:translate(-50%,-50%) scale(1.08)}
-      .yt-facade .yt-play svg{width:24px;height:24px;fill:white;margin-left:4px}
-      .yt-facade iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:16px}
-      .sh{margin-bottom:40px}
-      .sh h2{font-size:32px;letter-spacing:-0.02em;margin:0 0 10px}
-      .sh p{font-size:17px;margin:0;max-width:600px}
+      .sh{margin-bottom:28px}
+      .sh h2{font-size:28px;letter-spacing:-0.02em;margin:0 0 8px}
+      .sh p{font-size:16px;margin:0;max-width:600px}
       .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
       .c6{grid-column:span 6}
       .c4{grid-column:span 4}
+      .c3{grid-column:span 3}
       .c7{grid-column:span 7}
       .c5{grid-column:span 5}
       .card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:24px}
-      .card-img{border-radius:10px;overflow:hidden;aspect-ratio:16/9;background:#e2e8f0;margin-bottom:16px}
+      .card-img{border-radius:10px;overflow:hidden;aspect-ratio:16/9;background:#e2e8f0;margin-bottom:14px}
       .card-img img{width:100%;height:100%;object-fit:cover}
-      .card h3{margin:0 0 8px;font-size:17px}
-      .benefit-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px}
-      .benefit-card h3{margin:8px 0 10px;font-size:18px}
-      .card-icon{margin-bottom:14px;line-height:1}
-      .pricing-card{background:#fff;border:2px solid #e2e8f0;border-radius:20px;padding:28px;display:flex;flex-direction:column}
-      .pricing-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em}
-      .pricing-name{font-size:20px;font-weight:700;margin:0 0 4px}
-      .pricing-platform{font-size:13px;color:#64748b;margin:0 0 16px}
-      .pricing-price{font-size:40px;font-weight:800;line-height:1;margin:0 0 4px}
-      .pricing-note{font-size:13px;color:#64748b;margin:0 0 20px}
-      .pricing-features{list-style:none;padding:0;margin:0 0 24px;flex:1}
-      .pricing-features li{padding:7px 0;border-bottom:1px solid #f1f5f9;font-size:14px;color:#334155;display:flex;gap:8px;align-items:flex-start}
+      .card h3{margin:0 0 6px;font-size:16px}
+      .benefit-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+      .benefit-item{display:flex;gap:14px;padding:20px;background:#fff;border:1px solid #e2e8f0;border-radius:14px}
+      .benefit-icon{flex-shrink:0;width:44px;height:44px;background:#e0f7fa;border-radius:10px;display:flex;align-items:center;justify-content:center}
+      .benefit-text h3{margin:0 0 4px;font-size:15px;font-weight:700}
+      .benefit-text p{margin:0;font-size:14px;color:#475569;line-height:1.5}
+      .pricing-card{background:#fff;border:2px solid #e2e8f0;border-radius:20px;padding:24px;display:flex;flex-direction:column}
+      .pricing-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
+      .pricing-name{font-size:18px;font-weight:700;margin:0 0 2px}
+      .pricing-platform{font-size:12px;color:#64748b;margin:0 0 12px}
+      .pricing-price{font-size:32px;font-weight:800;line-height:1;margin:0 0 2px}
+      .pricing-note{font-size:12px;color:#64748b;margin:0 0 16px}
+      .pricing-features{list-style:none;padding:0;margin:0 0 20px;flex:1}
+      .pricing-features li{padding:5px 0;border-bottom:1px solid #f1f5f9;font-size:13px;color:#334155;display:flex;gap:6px;align-items:flex-start}
       .pricing-features li::before{content:"\2713";color:#0097a7;font-weight:700;flex-shrink:0}
-      .tco-table{width:100%;border-collapse:collapse;margin-top:24px}
-      .tco-table th{text-align:left;padding:12px 16px;font-size:13px;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc}
-      .tco-table td{padding:14px 16px;font-size:15px;border-bottom:1px solid #f1f5f9}
-      .tco-note{font-size:13px;color:#94a3b8;margin-top:12px}
-      .tco-disclaimer{font-size:12px;color:#94a3b8;margin-top:8px;font-style:italic}
-      .step-num{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;font-weight:800;font-size:16px;margin-bottom:14px}
-      .edition{background:rgba(255,255,255,.08);border-radius:12px;padding:16px;margin-bottom:10px}
-      .edition-desc{font-size:14px;color:#cbd5e1;line-height:1.5}
+      .pricing-btns{display:flex;flex-direction:column;gap:8px}
+      .pricing-btns .btn{text-align:center;font-size:13px;padding:10px 16px}
+      .tco-table{width:100%;border-collapse:collapse;margin-top:20px}
+      .tco-table th{text-align:left;padding:10px 14px;font-size:12px;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc}
+      .tco-table td{padding:12px 14px;font-size:14px;border-bottom:1px solid #f1f5f9}
+      .tco-note{font-size:12px;color:#94a3b8;margin-top:10px}
+      .tco-disclaimer{font-size:11px;color:#94a3b8;margin-top:6px;font-style:italic}
+      .step-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-weight:800;font-size:15px;margin-bottom:12px}
+      .edition{background:rgba(255,255,255,.08);border-radius:12px;padding:14px;margin-bottom:8px}
+      .edition-desc{font-size:13px;color:#cbd5e1;line-height:1.5}
       .formbox{background:#fff;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px}
       ._form_element{margin-bottom:12px}
       ._form_element input,._form_element textarea{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;color:#0f172a;font-size:14px;font-family:system-ui,-apple-system,sans-serif;padding:10px 12px;width:100%}
@@ -159,9 +153,10 @@ const benefitIcons = [
 
       @media(max-width:900px){
         .hero-inner{grid-template-columns:1fr}
-        .hero h1{font-size:32px}
-        .c6,.c4,.c7,.c5{grid-column:span 12}
-        .sh h2{font-size:26px}
+        .hero h1{font-size:30px}
+        .c6,.c4,.c3,.c7,.c5{grid-column:span 12}
+        .sh h2{font-size:24px}
+        .benefit-row{grid-template-columns:1fr}
       }
 
       @media(max-width:600px){
@@ -169,22 +164,21 @@ const benefitIcons = [
         .nav-ctas .btn-secondary{display:none}
         .nav-ctas .btn-primary{padding:8px 16px;font-size:13px}
         .hamburger{display:flex}
-        section{padding:40px 0}
-        .hero{padding:36px 0 28px}
-        .hero h1{font-size:26px}
-        .hero p{font-size:15px}
+        section{padding:32px 0}
+        .hero{padding:28px 0 20px}
+        .hero h1{font-size:24px}
+        .hero p{font-size:14px}
         .sh h2{font-size:22px}
-        .sh p{font-size:15px}
-        .sh{margin-bottom:24px}
+        .sh p{font-size:14px}
+        .sh{margin-bottom:20px}
         .hero-btns{flex-direction:column}
-        .hero-btns .btn-lg{width:100%;text-align:center;padding:13px 20px}
-        .card{padding:18px}
-        .benefit-card{padding:20px}
-        .pricing-card{padding:20px}
-        .formbox{padding:20px}
+        .hero-btns .btn-lg{width:100%;text-align:center;padding:12px 20px}
+        .card{padding:16px}
+        .pricing-card{padding:18px}
+        .formbox{padding:18px}
         .tco-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px}
-        .tco-table th,.tco-table td{padding:10px 12px;font-size:12px;white-space:nowrap}
-        .stats-items{flex-direction:column;gap:8px;align-items:center}
+        .tco-table th,.tco-table td{padding:8px 10px;font-size:11px;white-space:nowrap}
+        .stats-items{flex-direction:column;gap:6px;align-items:center}
         .footer-inner{flex-direction:column;align-items:center;text-align:center}
         .footer-links{justify-content:center}
       }
@@ -195,10 +189,19 @@ const benefitIcons = [
     <header>
       <div class="wrap">
         <div class="nav">
-          <div class="logo">
-            <img src="/logo.png" alt={site.siteName} onerror="this.style.display='none'" />
-          </div>
+          <div class="logo"><a href="/"><img src="/logo.png" alt={site.siteName} onerror="this.style.display='none'" /></a></div>
           <nav class="nav-links" aria-label="Primary">
+            {site.navDropdown && (
+              <div class="dropdown">
+                <span class="dropdown-toggle">
+                  {site.navDropdown.label}
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <div class="dropdown-menu">
+                  {site.navDropdown.items?.map((item) => <a href={item.url}>{item.label}</a>)}
+                </div>
+              </div>
+            )}
             {site.navItems?.map((item) => <a href={item.url}>{item.label}</a>)}
           </nav>
           <div class="nav-ctas">
@@ -210,6 +213,8 @@ const benefitIcons = [
           </div>
         </div>
         <nav class="mobile-nav" aria-label="Mobile navigation">
+          <a href="/">Home</a>
+          {site.navDropdown?.items?.map((item) => <a href={item.url}>{item.label}</a>)}
           {site.navItems?.map((item) => <a href={item.url}>{item.label}</a>)}
         </nav>
       </div>
@@ -239,13 +244,13 @@ const benefitIcons = [
         </div>
       </section>
 
-      <div class="stats-bar" style="padding:13px 0">
+      <div class="stats-bar" style="padding:12px 0">
         <div class="wrap">
-          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px">
-            <div class="stats-savings" style="font-size:15px;font-weight:800;text-align:center">{site.branding.statsMessage}</div>
-            <div class="stats-items" style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+            <div class="stats-savings" style="font-size:14px;font-weight:800;text-align:center">{site.branding.statsMessage}</div>
+            <div class="stats-items" style="display:flex;gap:18px;flex-wrap:wrap;justify-content:center">
               {site.stats?.map((s) => (
-                <div style="font-size:13px;color:#94a3b8;display:flex;align-items:center;gap:4px">
+                <div style="font-size:12px;color:#94a3b8;display:flex;align-items:center;gap:4px">
                   <svg class="stat-check" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <circle cx="7" cy="7" r="7" fill="#0097a7" fill-opacity="0.2"/>
                     <path d="M3.5 7l2.5 2.5 4.5-5" stroke="#0097a7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -258,51 +263,21 @@ const benefitIcons = [
         </div>
       </div>
 
-      {site.heroVideo?.enabled && (
-        <section class="video-section">
-          <div class="wrap">
-            <div class="video-outer">
-              <div class="yt-facade" data-ytid={site.heroVideo.youtubeId}>
-                <img
-                  src={`https://i.ytimg.com/vi/${site.heroVideo.youtubeId}/maxresdefault.jpg`}
-                  alt="Play video"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div class="yt-play">
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
-            </div>
-            <script>
-              document.querySelectorAll('.yt-facade').forEach(function(el) {
-                el.addEventListener('click', function() {
-                  var id = el.dataset.ytid;
-                  var iframe = document.createElement('iframe');
-                  iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
-                  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-                  iframe.allowFullscreen = true;
-                  el.innerHTML = '';
-                  el.appendChild(iframe);
-                });
-              });
-            </script>
-          </div>
-        </section>
-      )}
-
       <section id="benefits">
         <div class="wrap">
           <div class="sh">
             <h2>{site.branding.benefitsHeading}</h2>
-            <p>{site.branding.benefitsSubheading}</p>
           </div>
-          <div class="grid">
-            {site.benefits?.map((b, i) => (
-              <div class="benefit-card c6">
-                <div class="card-icon" set:html={benefitIcons[i] ?? benefitIcons[0]} />
-                <h3>{b.title}</h3>
-                <p>{b.body}</p>
+          <div class="benefit-row">
+            {site.benefits?.map((b) => (
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#0097a7" fill-opacity="0.15"/><path d="M6 11l3.5 3.5 6.5-7" stroke="#0097a7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="benefit-text">
+                  <h3>{b.title}</h3>
+                  <p>{b.body}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -315,45 +290,105 @@ const benefitIcons = [
             <h2>{site.branding.pricingHeading}</h2>
             <p>{site.branding.pricingSubheading}</p>
           </div>
-          <div class="grid">
-            {site.pricing?.map((p) => (
-              <div class={`pricing-card c4${p.highlight ? " highlight" : ""}`}>
-                {p.highlight && <div class="pricing-badge">Most popular</div>}
-                <div class="pricing-name">{p.name}</div>
-                <div class="pricing-platform">{p.platform}</div>
-                <div class="pricing-price">{p.price}</div>
-                <div class="pricing-note">{p.priceNote}</div>
-                <ul class="pricing-features">
-                  {p.features?.map((f) => <li>{f}</li>)}
-                </ul>
-                <a class="btn btn-primary" href="#final-cta" style="text-align:center">{site.primaryCTA.text}</a>
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px">
+            <div class="pricing-card">
+              <div class="pricing-name">Dragon Medical One</div>
+              <div class="pricing-platform">Cloud - subscription</div>
+              <div class="pricing-price">Contact us</div>
+              <div class="pricing-note">Volume discounts available</div>
+              <ul class="pricing-features">
+                <li>80+ medical specialties</li>
+                <li>Cloud - any device</li>
+                <li>No voice training needed</li>
+                <li>EHR integration</li>
+              </ul>
+              <div class="pricing-btns">
+                <a class="btn btn-primary" href="https://www.voicerecognition.com.au/pages/dragon-medical-one" target="_blank" rel="noopener">Free Trial</a>
+                <a class="btn btn-secondary" href="/dragon-medical-one">Learn more</a>
               </div>
-            ))}
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-name">Dragon Professional 16</div>
+              <div class="pricing-platform">Windows desktop - perpetual</div>
+              <div class="pricing-price">$994</div>
+              <div class="pricing-note">AUD inc GST - one-time</div>
+              <ul class="pricing-features">
+                <li>Works offline</li>
+                <li>Voice commands and macros</li>
+                <li>Transcribe recordings</li>
+                <li>Install on up to 2 PCs</li>
+              </ul>
+              <div class="pricing-btns">
+                <a class="btn btn-primary" href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-download" target="_blank" rel="noopener">Buy now</a>
+                <a class="btn btn-secondary" href="/dragon-professional-16">Learn more</a>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-name">Dragon Anywhere</div>
+              <div class="pricing-platform">Cloud - subscription</div>
+              <div class="pricing-price">Contact us</div>
+              <div class="pricing-note">Per user per year</div>
+              <ul class="pricing-features">
+                <li>Cloud-based, always updated</li>
+                <li>Virtual desktop and Citrix</li>
+                <li>Centralised admin (NMC)</li>
+                <li>Mobile app included</li>
+              </ul>
+              <div class="pricing-btns">
+                <a class="btn btn-primary" href="https://www.voicerecognition.com.au/products/dragon-professional-anywhere" target="_blank" rel="noopener">Enquire</a>
+                <a class="btn btn-secondary" href="/dragon-professional-anywhere">Learn more</a>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-name">Dragon Legal</div>
+              <div class="pricing-platform">Cloud - subscription</div>
+              <div class="pricing-price">Contact us</div>
+              <div class="pricing-note">Legal vocabulary built in</div>
+              <ul class="pricing-features">
+                <li>Legal terminology</li>
+                <li>Cloud-based</li>
+                <li>Law firm deployment</li>
+                <li>Centralised admin</li>
+              </ul>
+              <div class="pricing-btns">
+                <a class="btn btn-primary" href="#final-cta">Enquire</a>
+                <a class="btn btn-secondary" href="/dragon-legal">Learn more</a>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-name">Dragon Education</div>
+              <div class="pricing-platform">Windows desktop - perpetual</div>
+              <div class="pricing-price">$545</div>
+              <div class="pricing-note">AUD inc GST - student price</div>
+              <ul class="pricing-features">
+                <li>Full Dragon Professional 16</li>
+                <li>Accessibility and assistive</li>
+                <li>NDIS eligible</li>
+                <li>Own it forever</li>
+              </ul>
+              <div class="pricing-btns">
+                <a class="btn btn-primary" href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-educational-student" target="_blank" rel="noopener">Buy now</a>
+                <a class="btn btn-secondary" href="/dragon-education">Learn more</a>
+              </div>
+            </div>
           </div>
-          <div class="card" style="margin-top:32px">
-            <h3 style="margin:0 0 4px">{site.tco?.heading}</h3>
+          <p style="font-size:12px;color:#94a3b8;margin-top:14px;text-align:center">All prices AUD inc GST as published by Voice Recognition Australia. Verify current pricing before purchase.</p>
+
+          <div class="card" style="margin-top:28px">
+            <h3 style="margin:0 0 4px;font-size:17px">{site.tco?.heading}</h3>
             <div class="tco-table-wrap">
               <table class="tco-table">
-                <thead>
-                  <tr>
-                    <th>Scenario</th>
-                    <th>Impact</th>
-                    <th>Method</th>
-                  </tr>
-                </thead>
+                <thead><tr><th>Scenario</th><th>Impact</th><th>Method</th></tr></thead>
                 <tbody>
                   {site.tco?.rows?.map((r, i) => (
                     <tr class={i === 0 ? "winner" : ""}>
-                      <td>{r.product}</td>
-                      <td>{r.cost}</td>
-                      <td>{r.type}</td>
+                      <td>{r.product}</td><td>{r.cost}</td><td>{r.type}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <p class="tco-note">{site.tco?.note}</p>
-            <p class="tco-disclaimer">Comparisons are based on publicly available information. Prices and offerings may change. Verify current details directly with each vendor before making purchasing decisions.</p>
           </div>
         </div>
       </section>
@@ -363,16 +398,16 @@ const benefitIcons = [
           <div class="grid">
             <div class="card c7">
               {imgSrc("about-banner") && <div class="card-img"><img src={imgSrc("about-banner")} alt={imgAlt("about-banner")} loading="lazy" decoding="async" /></div>}
-              <h3>{site.branding.aboutHeading}</h3>
+              <h3 style="font-size:20px">{site.branding.aboutHeading}</h3>
               <p>{site.branding.aboutBody}</p>
-              <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:8px">
+              <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:6px">
                 {site.proofPoints?.map((p) => (
-                  <div style="background:#e0f7fa;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;color:#006064">&#10003; {p}</div>
+                  <div style="background:#e0f7fa;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#006064">&#10003; {p}</div>
                 ))}
               </div>
             </div>
             <div class="card c5" style={`background:${c.primary};color:white;border-color:${c.primary}`}>
-              <h3 style="color:white;margin:0 0 16px">Dragon product range</h3>
+              <h3 style="color:white;margin:0 0 14px;font-size:17px">Dragon product range</h3>
               {site.aboutEditions?.map((e) => (
                 <div class="edition">
                   <div class="edition-name">{e.name}{e.highlight ? " - Recommended" : ""}</div>
@@ -409,10 +444,9 @@ const benefitIcons = [
             <p>{site.branding.featuresSubheading}</p>
           </div>
           <div class="grid">
-            {site.features?.map((f, i) => (
+            {site.features?.map((f) => (
               <div class="card c6">
                 {imgSrc(f.key) && <div class="card-img"><img src={imgSrc(f.key)} alt={imgAlt(f.key)} loading="lazy" decoding="async" /></div>}
-                <div class="card-icon" set:html={benefitIcons[i + 2] ?? benefitIcons[0]} />
                 <h3>{f.title}</h3>
                 <p>{f.body}</p>
               </div>
@@ -423,15 +457,10 @@ const benefitIcons = [
 
       <section id="faq" class="neutral-bg">
         <div class="wrap">
-          <div class="sh">
-            <h2>Frequently asked questions</h2>
-          </div>
+          <div class="sh"><h2>Frequently asked questions</h2></div>
           <div class="grid">
             {site.faqs?.map((f) => (
-              <div class="card c6">
-                <h3>{f.q}</h3>
-                <p>{f.a}</p>
-              </div>
+              <div class="card c6"><h3 style="font-size:15px">{f.q}</h3><p style="font-size:14px">{f.a}</p></div>
             ))}
           </div>
         </div>
@@ -441,17 +470,17 @@ const benefitIcons = [
         <div class="wrap">
           <div class="grid">
             <div class="c7">
-              {imgSrc("cta-banner") && <div style="border-radius:16px;overflow:hidden;aspect-ratio:16/9;margin-bottom:24px"><img src={imgSrc("cta-banner")} alt={imgAlt("cta-banner")} loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>}
-              <h2 style="color:white;font-size:28px;margin:0 0 12px">{site.branding.ctaHeading}</h2>
-              <p style="color:#94a3b8;margin:0 0 20px">{site.branding.ctaBody}</p>
-              <ul style="color:#94a3b8;margin:0;padding-left:20px;line-height:2.2;font-size:15px">
+              {imgSrc("cta-banner") && <div style="border-radius:14px;overflow:hidden;aspect-ratio:16/9;margin-bottom:20px"><img src={imgSrc("cta-banner")} alt={imgAlt("cta-banner")} loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>}
+              <h2 style="color:white;font-size:26px;margin:0 0 10px">{site.branding.ctaHeading}</h2>
+              <p style="color:#94a3b8;margin:0 0 16px;font-size:15px">{site.branding.ctaBody}</p>
+              <ul style="color:#94a3b8;margin:0;padding-left:20px;line-height:2;font-size:14px">
                 {site.branding.ctaBullets?.map((b) => <li>{b}</li>)}
               </ul>
             </div>
             <div class="c5">
               <div class="formbox">
                 <div style="font-weight:800;font-size:20px;color:#0f172a">Get in touch</div>
-                <div style="color:#475569;font-size:15px;margin-bottom:4px">Local Australian support. Fast response.</div>
+                <div style="color:#475569;font-size:14px;margin-bottom:4px">Local Australian support. Fast response.</div>
                 <form method="POST" action="https://voicerecognition.activehosted.com/proc.php" id={`_form_${formId}_`} class="_form _inline-form" novalidate>
                   <input type="hidden" name="u" value={site.form.hiddenU} />
                   <input type="hidden" name="f" value={site.form.hiddenF} />
@@ -462,24 +491,12 @@ const benefitIcons = [
                   <input type="hidden" name="v" value="2" />
                   <input type="hidden" name="or" value={site.form.hiddenOr} />
                   <div class="_form-content">
-                    <div class="_form_element">
-                      <input type="text" name="firstname" placeholder="Your Name" required />
-                    </div>
-                    <div class="_form_element">
-                      <input type="text" name="email" placeholder="Your Email" required />
-                    </div>
-                    <div class="_form_element">
-                      <input type="text" name="phone" placeholder="Your Phone Number" />
-                    </div>
-                    <div class="_form_element">
-                      <input type="text" name="field[21]" placeholder="Number of Users" />
-                    </div>
-                    <div class="_form_element">
-                      <input type="text" name="field[35]" placeholder="Company / Organisation" />
-                    </div>
-                    <div class="_form_element">
-                      <textarea name="field[18]" placeholder="Your profession and current dictation setup"></textarea>
-                    </div>
+                    <div class="_form_element"><input type="text" name="firstname" placeholder="Your Name" required /></div>
+                    <div class="_form_element"><input type="text" name="email" placeholder="Your Email" required /></div>
+                    <div class="_form_element"><input type="text" name="phone" placeholder="Your Phone Number" /></div>
+                    <div class="_form_element"><input type="text" name="field[21]" placeholder="Number of Users" /></div>
+                    <div class="_form_element"><input type="text" name="field[35]" placeholder="Company / Organisation" /></div>
+                    <div class="_form_element"><textarea name="field[18]" placeholder="Your profession and current dictation setup"></textarea></div>
                     <button class="_submit" type="submit">{site.form.submitText}</button>
                   </div>
                   <div class="_form-thank-you" style="display:none;"></div>
@@ -496,13 +513,9 @@ const benefitIcons = [
       <div class="wrap">
         <div class="footer-inner">
           <div>&#169; {year} {site.siteName}</div>
-          <div class="footer-links">
-            {site.footerLinks?.map((l) => <a href={l.url}>{l.label}</a>)}
-          </div>
+          <div class="footer-links">{site.footerLinks?.map((l) => <a href={l.url}>{l.label}</a>)}</div>
         </div>
-        <div class="footer-disclaimer">
-          {site.branding.footerDisclaimer}
-        </div>
+        <div class="footer-disclaimer">{site.branding.footerDisclaimer}</div>
       </div>
     </footer>
 
