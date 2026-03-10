@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Generator - Dragon NaturallySpeaking</title>
+<style>
+  body { font-family: Arial; background:#f4f4f4; padding:20px; max-width:900px; margin:auto; }
+  textarea, button, input, select { width:100%; margin-top:10px; padding:12px; font-size:16px; box-sizing:border-box; }
+  button { background:#0097a7; color:white; border:none; cursor:pointer; border-radius:6px; font-weight:bold; }
+  button:hover { background:#00838f; }
+  button:disabled { background:#ccc; cursor:not-allowed; }
+  img { margin-top:20px; max-width:100%; border:1px solid #ccc; display:block; border-radius:8px; }
+  .result { background:white; border:1px solid #ddd; border-radius:8px; padding:16px; margin-top:16px; font-size:14px; white-space:pre-wrap; word-break:break-all; }
+  .label { font-weight:bold; margin-top:16px; display:block; font-size:14px; color:#333; }
+  .row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  h2 { color:#0d1b2a; }
+  .status { padding:12px; border-radius:6px; margin-top:12px; font-weight:bold; }
+  .status.ok { background:#e0f7fa; color:#006064; }
+  .status.err { background:#fde8e8; color:#991b1b; }
+  .status.wait { background:#fef3c7; color:#92400e; }
+</style>
+</head>
+<body>
+
+<h2>VRA Image Generator</h2>
+<p>Generates images via Gemini Pro, saves as JPEG to R2. All settings are automatic - just enter a prompt and hit generate.</p>
+
+<span class="label">Prompt (required)</span>
+<textarea id="prompt" rows="4">Premium software product box for Dragon Medical One on a polished wooden desk, dramatic natural light streaming through a window casting soft shadows, medical stethoscope beside the box, clean commercial product photography, teal and white packaging with medical cross symbol, shallow depth of field, warm morning light</textarea>
+
+<div class="row">
+  <div>
+    <span class="label">SEO filename</span>
+    <input id="name" type="text" value="dragon-medical-one-product-box">
+  </div>
+  <div>
+    <span class="label">Site folder</span>
+    <input id="site" type="text" value="dragonnaturallyspeaking">
+  </div>
+</div>
+
+<button id="genBtn" onclick="generate()">Generate Image</button>
+
+<div id="statusBox"></div>
+<div id="resultBox"></div>
+<img id="img" style="display:none" />
+
+<script>
+const WORKER_URL = "https://master-image-generator.speech-recognition-cloud.workers.dev/generate";
+const R2_BASE = "https://pub-c7a09e1ddb7c45e6a38fcdca1e4b6897.r2.dev";
+
+async function generate() {
+  const btn = document.getElementById("genBtn");
+  const statusBox = document.getElementById("statusBox");
+  const resultBox = document.getElementById("resultBox");
+  const imgEl = document.getElementById("img");
+
+  const prompt = document.getElementById("prompt").value.trim();
+  if (!prompt) { alert("Enter a prompt"); return; }
+
+  const body = { prompt };
+  const name = document.getElementById("name").value.trim();
+  if (name) body.name = name;
+  const site = document.getElementById("site").value.trim();
+  if (site) body.site = site;
+
+  btn.disabled = true;
+  btn.textContent = "Generating... please wait 30-60 seconds";
+  statusBox.innerHTML = '<div class="status wait">Calling Gemini Pro via Worker... this takes 30-60 seconds. Do not close this page.</div>';
+  resultBox.innerHTML = "";
+  imgEl.style.display = "none";
+
+  try {
+    const res = await fetch(WORKER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+
+    const data = await res.json();
+
+    if (data.ok) {
+      const imageUrl = R2_BASE + "/" + data.r2.key;
+      statusBox.innerHTML = '<div class="status ok">Image generated and saved to R2</div>';
+      resultBox.innerHTML = '<div class="result">' +
+        '<strong>R2 Key:</strong> ' + data.r2.key + '\n' +
+        '<strong>Filename:</strong> ' + data.r2.filename + '\n' +
+        '<strong>Format:</strong> ' + data.r2.contentType + '\n' +
+        '<strong>Size:</strong> ' + Math.round(data.r2.bytes / 1024) + ' KB\n' +
+        '<strong>Original:</strong> ' + Math.round(data.r2.originalBytes / 1024) + ' KB\n' +
+        '<strong>Saved:</strong> ' + data.r2.savedPercent + '\n' +
+        '<strong>Alt text:</strong> ' + data.seo.altText + '\n\n' +
+        '<strong>Image URL:</strong>\n<a href="' + imageUrl + '" target="_blank">' + imageUrl + '</a>\n\n' +
+        '<strong>Full response:</strong>\n' + JSON.stringify(data, null, 2) +
+        '</div>';
+      imgEl.src = imageUrl;
+      imgEl.style.display = "block";
+    } else {
+      statusBox.innerHTML = '<div class="status err">Error from Worker</div>';
+      resultBox.innerHTML = '<div class="result">' + JSON.stringify(data, null, 2) + '</div>';
+    }
+  } catch (err) {
+    statusBox.innerHTML = '<div class="status err">Request failed: ' + err.message + '</div>';
+  }
+
+  btn.disabled = false;
+  btn.textContent = "Generate Image";
+}
+</script>
+
+</body>
+</html>
