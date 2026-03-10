@@ -23,8 +23,8 @@ const formId = site.form.id;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{site.siteName} | Dragon Speech Recognition - Medical, Legal, Enterprise</title>
-    <meta name="description" content={site.branding.subheadline} />
+    <title>Dragon NaturallySpeaking Australia | Dragon Dictate Software | Authorised Reseller</title>
+    <meta name="description" content="Dragon NaturallySpeaking and Dragon Dictate are now Dragon Professional. Buy the latest Dragon speech recognition software from Australia's authorised reseller with 25 years local support." />
     <link rel="canonical" href={site.domain} />
 
     {site.googleAnalyticsId && (
@@ -121,6 +121,17 @@ const formId = site.form.id;
       .benefit-icon{flex-shrink:0;width:44px;height:44px;background:#e0f7fa;border-radius:10px;display:flex;align-items:center;justify-content:center}
       .benefit-text h3{margin:0 0 4px;font-size:15px;font-weight:700}
       .benefit-text p{margin:0;font-size:14px;color:#475569;line-height:1.5}
+      .legacy-section{padding:40px 0;border-bottom:1px solid #e2e8f0}
+      .legacy-inner{max-width:800px}
+      .legacy-inner h2{font-size:26px;letter-spacing:-0.02em;margin:0 0 12px;color:#0d1b2a}
+      .legacy-inner>p{font-size:15px;color:#475569;line-height:1.7;margin:0 0 24px}
+      .legacy-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+      .legacy-card{background:#f0f9ff;border:1px solid #e0f2fe;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px}
+      .legacy-old{font-size:13px;color:#64748b}
+      .legacy-arrow{font-size:11px;color:#0097a7;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+      .legacy-new{font-size:15px;font-weight:700;color:#0d1b2a}
+      .legacy-new a{color:#0097a7;text-decoration:none}
+      .legacy-new a:hover{text-decoration:underline}
       .pricing-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
       .pricing-card{background:#fff;border:2px solid #e2e8f0;border-radius:20px;padding:20px;display:flex;flex-direction:column}
       .pricing-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
@@ -160,6 +171,7 @@ const formId = site.form.id;
         .sh h2{font-size:24px}
         .benefit-row{grid-template-columns:1fr}
         .pricing-grid-5{grid-template-columns:repeat(2,1fr)}
+        .legacy-grid{grid-template-columns:1fr}
       }
 
       @media(max-width:600px){
@@ -266,6 +278,25 @@ const formId = site.form.id;
           </div>
         </div>
       </div>
+
+      <!-- LEGACY BRAND SECTION - captures Dragon NaturallySpeaking and Dragon Dictate search intent -->
+      <section class="legacy-section">
+        <div class="wrap">
+          <div class="legacy-inner">
+            <h2>{site.branding.legacyHeading}</h2>
+            <p>{site.branding.legacyBody}</p>
+            <div class="legacy-grid">
+              {site.branding.legacyProducts?.map((p) => (
+                <div class="legacy-card">
+                  <div class="legacy-old">{p.old}</div>
+                  <div class="legacy-arrow">Is now</div>
+                  <div class="legacy-new"><a href={p.url}>{p.new}</a></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="benefits">
         <div class="wrap">
