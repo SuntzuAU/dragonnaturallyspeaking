@@ -55,18 +55,28 @@
   ],
   "navItems": [
     { "label": "Benefits", "url": "#benefits" },
-    { "label": "Products", "url": "#pricing" },
-    { "label": "Medical", "url": "#features" },
+    { "label": "Comparison", "url": "/comparison" },
+    { "label": "News", "url": "/news" },
     { "label": "FAQ", "url": "#faq" },
     { "label": "Contact", "url": "#final-cta" }
   ],
+  "navDropdown": {
+    "label": "Products",
+    "items": [
+      { "label": "Dragon Medical One", "url": "/dragon-medical-one" },
+      { "label": "Dragon Professional 16", "url": "/dragon-professional-16" },
+      { "label": "Dragon Professional Anywhere", "url": "/dragon-professional-anywhere" },
+      { "label": "Dragon Legal", "url": "/dragon-legal" },
+      { "label": "Dragon for Education", "url": "/dragon-education" }
+    ]
+  },
   "primaryCTA": {
     "text": "Enquire Now",
     "url": "#final-cta"
   },
   "secondaryCTA": {
-    "text": "Free Trial",
-    "url": "#final-cta"
+    "text": "Compare Products",
+    "url": "/comparison"
   },
   "benefits": [
     {
@@ -93,6 +103,7 @@
       "price": "From $559",
       "priceNote": "AUD inc GST - one-time purchase",
       "highlight": false,
+      "url": "/dragon-professional-16",
       "features": [
         "Full offline speech recognition",
         "Command and control - accessibility",
@@ -108,6 +119,7 @@
       "price": "Contact us",
       "priceNote": "Subscription pricing - volume discounts available",
       "highlight": true,
+      "url": "/dragon-medical-one",
       "features": [
         "80+ medical specialty vocabularies",
         "Dictate from any device anywhere",
@@ -123,6 +135,7 @@
       "price": "Contact us",
       "priceNote": "Per user per year - volume pricing available",
       "highlight": false,
+      "url": "/dragon-professional-anywhere",
       "features": [
         "Cloud-based, always up to date",
         "Ideal for virtual and thin-client environments",
@@ -221,6 +234,7 @@
     }
   ],
   "footerLinks": [
+    { "label": "About", "url": "/about" },
     { "label": "Privacy Policy", "url": "/privacy" },
     { "label": "Terms", "url": "/terms" },
     { "label": "Contact", "url": "#final-cta" }
