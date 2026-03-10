@@ -1,32 +1,27 @@
 {
   "hero": {
     "key": "hero",
-    "r2Key": "",
-    "altText": "Dragon speech recognition software professional dictation Australia doctor lawyer office",
-    "prompt": "Professional Australian doctor or lawyer dictating by voice into a computer, Dragon speech recognition software interface visible, modern clinical or legal office, teal and dark tones, confident and efficient"
+    "r2Key": "default/2026/03/10/dragon-speech-recognition-doctor-australia-133a694c.png",
+    "altText": "Australian doctor dictating by voice into a computer, speech recognition software interface visible, modern clinical office"
   },
   "about-banner": {
     "key": "about-banner",
-    "r2Key": "",
-    "altText": "Voice Recognition Australia team 25 years Dragon speech recognition experience",
-    "prompt": "Australian enterprise technology team in a professional office, speech recognition software on screens, collaborative and expert environment, 25 years experience"
+    "r2Key": "default/2026/03/10/dragon-voice-recognition-australia-team-25-years-c90e7997.png",
+    "altText": "Australian enterprise technology team in a professional office, speech recognition software on screens, collaborative expert environment"
   },
   "feature-medical": {
     "key": "feature-medical",
-    "r2Key": "",
-    "altText": "Dragon Medical One cloud speech recognition doctor hospital clinical documentation",
-    "prompt": "Doctor using Dragon Medical One cloud speech recognition in a hospital or clinical setting, dictating patient notes hands-free, professional medical environment, teal accents"
+    "r2Key": "default/2026/03/10/dragon-medical-one-doctor-hospital-clinical-dictation-6bc215e2.png",
+    "altText": "Doctor using Dragon Medical One cloud speech recognition in a hospital clinical setting, dictating patient notes hands-free"
   },
   "feature-professional": {
     "key": "feature-professional",
-    "r2Key": "",
-    "altText": "Dragon Professional dictation software lawyer legal professional office voice to text",
-    "prompt": "Legal or business professional using Dragon Professional speech recognition software, dictating documents by voice, modern office environment, productivity and efficiency theme"
+    "r2Key": "default/2026/03/10/dragon-professional-lawyer-legal-dictation-office-081fb21d.png",
+    "altText": "Legal professional using Dragon Professional speech recognition software dictating documents by voice, modern office environment"
   },
   "cta-banner": {
     "key": "cta-banner",
-    "r2Key": "",
-    "altText": "Dragon speech recognition software authorised reseller Australia contact enquiry",
-    "prompt": "Professional Australian business consultation, speech recognition technology discussion, trusted expert advisor, dark navy and teal tones, confident"
+    "r2Key": "default/2026/03/10/dragon-speech-recognition-reseller-australia-contact-b6466ef4.png",
+    "altText": "Professional Australian business consultation, speech recognition technology discussion, trusted expert advisor"
   }
 }
