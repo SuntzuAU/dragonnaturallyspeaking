@@ -1,0 +1,78 @@
+---
+import site from "../site.config.json";
+const c = site.colours;
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Voice Recognition Australia -- {site.siteName}</title>
+    <meta name="description" content="Voice Recognition Australia has been Australia's trusted Dragon reseller for 25 years. Local onboarding, training and support for medical, legal, government and enterprise." />
+    <link rel="canonical" href={`${site.domain}/about`} />
+    <style is:inline>
+      *,*::before,*::after{box-sizing:border-box}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#fff;color:#0f172a;line-height:1.7}
+      header{border-bottom:1px solid #e2e8f0;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+      header a.logo{display:inline-block}
+      header img{height:40px;width:auto;display:block}
+      header a.back{font-size:14px;color:#0d1b2a;text-decoration:none;font-weight:600}
+      header a.back:hover{text-decoration:underline}
+      .wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px}
+      h1{font-size:32px;letter-spacing:-0.02em;margin:0 0 8px}
+      h2{font-size:20px;margin:36px 0 10px;color:#0d1b2a}
+      p,li{font-size:15px;color:#334155}
+      .meta{font-size:13px;color:#94a3b8;margin-bottom:32px}
+      .highlight{background:#e0f7fa;border-radius:12px;padding:20px;margin:28px 0}
+      .highlight p{margin:0;color:#006064;font-weight:500}
+      .cta-box{background:#0d1b2a;border-radius:14px;padding:32px;margin:40px 0;text-align:center}
+      .cta-box h3{color:white;margin:0 0 8px;font-size:22px}
+      .cta-box p{color:#94a3b8;margin:0 0 18px;font-size:15px}
+      .cta-btn{display:inline-block;background:#0097a7;color:#fff;font-weight:700;font-size:15px;padding:14px 28px;border-radius:10px;text-decoration:none}
+      .cta-btn:hover{background:#00838f}
+      footer{border-top:1px solid #e2e8f0;padding:24px;text-align:center;font-size:13px;color:#94a3b8}
+      footer a{color:#0d1b2a;text-decoration:none}
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="/"><img src="/logo.png" alt={site.siteName} onerror="this.style.display='none'" /></a>
+      <a class="back" href="/">Back to home</a>
+    </header>
+    <div class="wrap">
+      <h1>About Voice Recognition Australia</h1>
+      <p class="meta">25 years of Dragon deployment across Australian medical, legal, government and enterprise environments.</p>
+
+      <p>Voice Recognition Australia (VRA) has been Australia's trusted Dragon reseller and deployment partner since 1999. We provide genuine local support, onboarding, and deployment guidance for Dragon speech recognition products across every major professional sector.</p>
+
+      <p>Our team has hands-on experience deploying Dragon in Australian hospitals, GP practices, specialist clinics, law firms, legal chambers, government departments, and large enterprise environments. We do not just sell licence keys -- we help organisations get real productivity outcomes from speech recognition technology.</p>
+
+      <div class="highlight"><p>VRA is an independent, authorised reseller of Dragon Professional software. We are not Microsoft or Nuance Communications. Dragon and related marks are the property of Nuance Communications (Microsoft).</p></div>
+
+      <h2>What we do</h2>
+      <p>We supply, deploy and support the full range of Dragon speech recognition products for Australian professionals including Dragon Medical One, Dragon Professional 16, Dragon Professional Anywhere, Dragon Legal Anywhere, and Dragon Professional Group for enterprise.</p>
+
+      <p>Beyond licensing, we provide local onboarding, user training, microphone recommendations, EHR and practice management system integration guidance, and ongoing technical support -- all from Australia, in your timezone.</p>
+
+      <h2>Who we work with</h2>
+      <p>Our clients include GP practices and specialist clinics, hospital departments, law firms and barristers' chambers, government agencies and departments, universities and educational institutions, accounting and consulting firms, and organisations with accessibility and assistive technology requirements.</p>
+
+      <h2>Why Australian professionals choose VRA</h2>
+      <p>Purchasing Dragon through Voice Recognition Australia gives you Australian pricing in AUD, local onboarding and training, and access to a support team with 25 years of real-world Dragon deployment experience. For subscription and enterprise customers, we provide hands-on deployment support tailored to your specific environment and workflows.</p>
+
+      <div class="cta-box">
+        <h3>Ready to talk?</h3>
+        <p>Tell us about your team and we will recommend the right Dragon product with local onboarding and support.</p>
+        <a class="cta-btn" href="/#final-cta">Get in touch</a>
+      </div>
+    </div>
+    <footer>
+      <a href="/">{site.siteName}</a> --
+      <a href="/news">News</a> --
+      <a href="/privacy">Privacy</a> --
+      <a href="/terms">Terms</a> --
+      &copy; {year} Voice Recognition Australia
+    </footer>
+  </body>
+</html>
