@@ -1,0 +1,307 @@
+---
+import site from "../site.config.json";
+const c = site.colours;
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dragon Product Comparison Australia | All Products Side by Side | VRA</title>
+    <meta name="description" content="Compare Dragon Medical One, Dragon Professional 16, Dragon Professional Anywhere, Dragon Legal and Dragon for Education side by side. Plus Dragon vs Windows Voice Typing and Speech Recognition Cloud." />
+    <link rel="canonical" href={`${site.domain}/comparison`} />
+    <script define:vars={{ c }}>
+      const css = `.btn-primary{background:${c.accent};border-color:${c.accent};color:#fff}.btn-primary:hover{background:${c.accentHover};border-color:${c.accentHover}}.dark-bg{background:${c.primary};color:white}.neutral-bg{background:${c.neutral}}.nav-links a:hover,.dropdown-toggle:hover{color:${c.accent}}.dropdown-menu{border-top:2px solid ${c.accent}}.winner td{background:#e0f7fa!important;font-weight:600;color:#006064}`;
+      const el=document.createElement('style');el.textContent=css;document.head.appendChild(el);
+    </script>
+    <style is:inline>
+      *,*::before,*::after{box-sizing:border-box}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0f172a;line-height:1.6}
+      a{color:inherit;text-decoration:none}
+      img{max-width:100%;display:block}
+      .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+      header{position:sticky;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid #e2e8f0;z-index:100}
+      .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:16px}
+      .logo img{height:40px;width:auto}
+      .nav-links{display:flex;gap:18px;font-size:14px;font-weight:500;color:#334155;align-items:center}
+      .dropdown{position:relative}
+      .dropdown-toggle{cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap}
+      .dropdown-toggle svg{transition:transform .15s}
+      .dropdown:hover .dropdown-toggle svg{transform:rotate(180deg)}
+      .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,.1);min-width:240px;padding:8px 0 6px;z-index:200}
+      .dropdown:hover .dropdown-menu{display:block}
+      .dropdown-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:500;color:#334155;transition:background .1s}
+      .dropdown-menu a:hover{background:#e0f7fa;color:#006064}
+      .nav-ctas{display:flex;gap:10px;align-items:center;flex-shrink:0}
+      .btn{display:inline-block;padding:10px 20px;border-radius:8px;font-weight:700;font-size:14px;border:2px solid transparent;cursor:pointer;transition:all .15s;white-space:nowrap}
+      .btn-lg{padding:14px 28px;font-size:16px;border-radius:10px}
+      .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+      .hamburger span{display:block;width:22px;height:2px;background:#334155;border-radius:2px}
+      .mobile-nav{display:none;padding:12px 0 8px;border-top:1px solid #e2e8f0}
+      .mobile-nav a{display:block;padding:10px 0;font-size:15px;font-weight:500;color:#334155;border-bottom:1px solid #f1f5f9}
+      section{padding:48px 0}
+      .breadcrumb{font-size:13px;color:#64748b;margin-bottom:18px}
+      .breadcrumb a{color:#0097a7;font-weight:500}
+      .page-hero{padding:40px 0 12px}
+      .page-hero h1{font-size:32px;line-height:1.1;margin:0 0 10px;letter-spacing:-0.03em}
+      .page-hero p{font-size:15px;color:#475569;margin:0 0 0;max-width:700px}
+      .sh{margin-bottom:24px}
+      .sh h2{font-size:24px;letter-spacing:-0.02em;margin:0 0 6px}
+      .sh p{font-size:14px;margin:0;color:#475569;max-width:700px}
+      .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid #e2e8f0}
+      table{width:100%;border-collapse:collapse;min-width:700px}
+      th{text-align:left;padding:10px 12px;font-size:12px;font-weight:700;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc;white-space:nowrap}
+      td{padding:10px 12px;font-size:13px;border-bottom:1px solid #f1f5f9;vertical-align:top}
+      th:first-child,td:first-child{font-weight:600;color:#0f172a;min-width:160px;background:#fafafa;position:sticky;left:0;z-index:1}
+      .yes{color:#006064;font-weight:700}
+      .no{color:#94a3b8}
+      .note{font-size:11px;color:#64748b;display:block;margin-top:2px;font-weight:400}
+      .col-head{font-size:13px;font-weight:700;color:#0f172a}
+      .col-sub{font-size:11px;color:#64748b;font-weight:400;display:block}
+      .card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px}
+      .card h3{margin:0 0 6px;font-size:16px}
+      .card p{color:#475569;font-size:14px;margin:0}
+      .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+      .c6{grid-column:span 6}
+      .c4{grid-column:span 4}
+      .c7{grid-column:span 7}
+      .c5{grid-column:span 5}
+      .formbox{background:#fff;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px}
+      ._form_element{margin-bottom:10px}
+      ._form_element input,._form_element textarea{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;color:#0f172a;font-size:14px;font-family:system-ui,-apple-system,sans-serif;padding:10px 12px;width:100%}
+      ._submit{border:none;border-radius:8px;font-weight:700;font-size:15px;padding:12px 20px;width:100%;margin-top:8px;cursor:pointer;background:#0097a7;color:#fff}
+      ._submit:hover{background:#00838f}
+      .guide-card{border:2px solid #e2e8f0;border-radius:14px;padding:20px;transition:border-color .15s}
+      .guide-card:hover{border-color:#0097a7}
+      .guide-card h3{margin:0 0 4px;font-size:17px}
+      .guide-card .price{font-size:20px;font-weight:800;color:#0d1b2a;margin:6px 0 8px}
+      .guide-card p{font-size:13px;color:#475569;margin:0 0 12px;line-height:1.5}
+      .guide-card .btn{width:100%;text-align:center;font-size:13px;padding:10px}
+      footer{background:#0f172a;color:#64748b;padding:24px 0;font-size:13px}
+      .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+      .footer-links{display:flex;gap:18px}
+      .footer-links a:hover{color:white}
+      .footer-disclaimer{font-size:11px;color:#475569;line-height:1.6;margin-top:10px;padding-top:10px;border-top:1px solid #1e293b}
+      @media(max-width:900px){.c6,.c4,.c7,.c5{grid-column:span 12}.sh h2{font-size:22px}}
+      @media(max-width:600px){.nav-links{display:none}.hamburger{display:flex}section{padding:36px 0}.page-hero{padding:24px 0 8px}.page-hero h1{font-size:24px}.card,.guide-card,.formbox{padding:16px}.footer-inner{flex-direction:column;align-items:center;text-align:center}.footer-links{justify-content:center}}
+    </style>
+  </head>
+  <body>
+    <header><div class="wrap"><div class="nav"><div class="logo"><a href="/"><img src="/logo.png" alt={site.siteName} onerror="this.style.display='none'" /></a></div><nav class="nav-links" aria-label="Primary">{site.navDropdown && (<div class="dropdown"><span class="dropdown-toggle">{site.navDropdown.label}<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><div class="dropdown-menu">{site.navDropdown.items?.map((item) => <a href={item.url}>{item.label}</a>)}</div></div>)}{site.navItems?.map((item) => <a href={item.url}>{item.label}</a>)}</nav><div class="nav-ctas"><a class="btn btn-primary" href="/#final-cta">Enquire Now</a><button class="hamburger" aria-label="Open menu" onclick="var mn=this.closest('header').querySelector('.mobile-nav');mn.style.display=mn.style.display==='block'?'none':'block'"><span></span><span></span><span></span></button></div></div><nav class="mobile-nav" aria-label="Mobile"><a href="/">Home</a>{site.navDropdown?.items?.map((item) => <a href={item.url}>{item.label}</a>)}<a href="/comparison">Comparison</a><a href="/news">News</a></nav></div></header>
+
+    <main>
+      <section class="page-hero">
+        <div class="wrap">
+          <div class="breadcrumb"><a href="/">Home</a> > Feature Comparison</div>
+          <h1>Dragon Product Comparison - All Products Side by Side</h1>
+          <p>Compare every Dragon speech recognition product available in Australia. Find the right fit for your profession, team size and infrastructure, then see how Dragon compares to built-in dictation tools and cloud alternatives.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="sh"><h2>Dragon products compared</h2><p>Five products across medical, legal, professional and education sectors. All available through Voice Recognition Australia.</p></div>
+          <div class="tbl-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th><span class="col-head">Medical One</span><span class="col-sub">Cloud - subscription</span></th>
+                  <th><span class="col-head">Professional 16</span><span class="col-sub">Desktop - from $994</span></th>
+                  <th><span class="col-head">Anywhere</span><span class="col-sub">Cloud - subscription</span></th>
+                  <th><span class="col-head">Legal</span><span class="col-sub">Cloud - subscription</span></th>
+                  <th><span class="col-head">Education</span><span class="col-sub">Desktop - $545</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td colspan="6" style="background:#f0f9ff;font-weight:700;font-size:12px;color:#006064;text-transform:uppercase;letter-spacing:.05em">Deployment and Licensing</td></tr>
+                <tr><td>Deployment</td><td class="yes">Cloud</td><td>Locally installed</td><td class="yes">Cloud</td><td class="yes">Cloud</td><td>Locally installed</td></tr>
+                <tr><td>Works offline</td><td class="no">No - requires internet</td><td class="yes">Yes - after activation</td><td class="no">No - requires internet</td><td class="no">No - requires internet</td><td class="yes">Yes - after activation</td></tr>
+                <tr><td>Licence model</td><td>Subscription</td><td>Perpetual ($994) or annual ($595/yr)</td><td>Subscription</td><td>Subscription</td><td>Perpetual ($545)</td></tr>
+                <tr><td>PC install limit</td><td>Any device</td><td>Up to 2 (perpetual) or unlimited (subscription)</td><td>Any device</td><td>Any device</td><td>Up to 2</td></tr>
+                <tr><td>Free trial</td><td class="yes">Yes - via VRA</td><td class="no">No</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
+
+                <tr><td colspan="6" style="background:#f0f9ff;font-weight:700;font-size:12px;color:#006064;text-transform:uppercase;letter-spacing:.05em">Vocabulary and Specialisation</td></tr>
+                <tr><td>Medical vocabulary</td><td class="yes">80+ specialties built in</td><td class="no">General only - add custom</td><td class="no">General only - add custom</td><td class="no">General only</td><td class="no">General only - add custom</td></tr>
+                <tr><td>Legal vocabulary</td><td class="no">No</td><td class="no">Add via custom vocab</td><td class="no">Add via custom vocab</td><td class="yes">Built in</td><td class="no">Add via custom vocab</td></tr>
+                <tr><td>Custom vocabulary</td><td class="yes">Yes</td><td class="yes">Yes - deep customisation</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+                <tr><td>AutoText shortcuts</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+                <tr><td>Voice macros/commands</td><td>Limited</td><td class="yes">Full - advanced automation</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Full - advanced automation</td></tr>
+
+                <tr><td colspan="6" style="background:#f0f9ff;font-weight:700;font-size:12px;color:#006064;text-transform:uppercase;letter-spacing:.05em">Integration and Compatibility</td></tr>
+                <tr><td>EHR integration<span class="note">Best Practice, Medical Director</span></td><td class="yes">Yes - purpose-built</td><td class="no">Not medical-specific</td><td class="no">Not medical-specific</td><td class="no">Not medical-specific</td><td class="no">Not medical-specific</td></tr>
+                <tr><td>Microsoft 365 / Teams</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+                <tr><td>Citrix / Virtual desktop</td><td class="yes">Yes</td><td class="no">No - local install only<span class="note">See Anywhere or Group for VDI</span></td><td class="yes">Yes - designed for VDI</td><td class="yes">Yes</td><td class="no">No</td></tr>
+                <tr><td>Mobile app</td><td class="yes">Dragon Anywhere Mobile</td><td class="no">No</td><td class="yes">Dragon Anywhere Mobile</td><td class="yes">Dragon Anywhere Mobile</td><td class="no">No</td></tr>
+                <tr><td>Voice training needed</td><td class="yes">No - accurate from first use</td><td>Brief initial setup</td><td class="yes">No</td><td class="yes">No</td><td>Brief initial setup</td></tr>
+
+                <tr><td colspan="6" style="background:#f0f9ff;font-weight:700;font-size:12px;color:#006064;text-transform:uppercase;letter-spacing:.05em">Administration and Management</td></tr>
+                <tr><td>Centralised admin (NMC)</td><td class="yes">Yes</td><td class="no">No<span class="note">Group edition adds NMC</span></td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">No</td></tr>
+                <tr><td>Usage reporting</td><td class="yes">Yes</td><td class="no">No</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">No</td></tr>
+                <tr><td>Transcribe audio files<span class="note">Single speaker only</span></td><td class="no">No</td><td class="yes">Yes - MP3, WAV, WMA, DSS, DS2</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
+                <tr><td>Hands-free PC control</td><td class="no">Limited</td><td class="yes">Full - mouse, navigation, apps</td><td>Limited</td><td>Limited</td><td class="yes">Full - accessibility</td></tr>
+
+                <tr><td colspan="6" style="background:#f0f9ff;font-weight:700;font-size:12px;color:#006064;text-transform:uppercase;letter-spacing:.05em">Pricing (AUD inc GST)</td></tr>
+                <tr><td>Price</td><td>Contact VRA</td><td>$994 perpetual / $595 per yr</td><td>Contact VRA</td><td>Contact VRA</td><td>$545 perpetual</td></tr>
+                <tr><td>Upgrade from v15</td><td>N/A</td><td>$495</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+                <tr>
+                  <td>Buy / Enquire</td>
+                  <td><a href="https://www.voicerecognition.com.au/pages/dragon-medical-one" target="_blank" rel="noopener" style="color:#0097a7;font-weight:700;font-size:12px">Free Trial</a></td>
+                  <td><a href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-download" target="_blank" rel="noopener" style="color:#0097a7;font-weight:700;font-size:12px">Buy now</a></td>
+                  <td><a href="https://www.voicerecognition.com.au/products/dragon-professional-anywhere" target="_blank" rel="noopener" style="color:#0097a7;font-weight:700;font-size:12px">Enquire</a></td>
+                  <td><a href="/#final-cta" style="color:#0097a7;font-weight:700;font-size:12px">Enquire</a></td>
+                  <td><a href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-educational-student" target="_blank" rel="noopener" style="color:#0097a7;font-weight:700;font-size:12px">Buy now</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:11px;color:#94a3b8;margin-top:10px">Pricing from Voice Recognition Australia (March 2026). Feature information from official Nuance/Dragon documentation. Verify current pricing before purchase.</p>
+        </div>
+      </section>
+
+      <section class="neutral-bg">
+        <div class="wrap">
+          <div class="sh"><h2>Dragon vs alternatives</h2><p>How Dragon compares to Windows built-in dictation, Speech Recognition Cloud, and browser-based tools.</p></div>
+          <div class="tbl-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th><span class="col-head">Dragon Professional 16</span><span class="col-sub">Locally installed, Windows</span></th>
+                  <th><span class="col-head">Windows Voice Typing</span><span class="col-sub">Win+H, built-in</span></th>
+                  <th><span class="col-head">Speech Recognition Cloud</span><span class="col-sub">speechrecognition.cloud</span></th>
+                  <th><span class="col-head">Browser Dictation Tools</span><span class="col-sub">Web-based, various</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Works offline</td><td class="yes">Yes - after activation</td><td class="no">No - requires internet</td><td class="no">No - cloud-based</td><td class="no">No - browser/cloud</td></tr>
+                <tr><td>Works in any Windows app</td><td class="yes">Yes - Word, Outlook, Teams, EMRs</td><td>Limited app support</td><td class="yes">Yes - any Windows application</td><td class="no">Browser only<span class="note">Cut and paste to use elsewhere</span></td></tr>
+                <tr><td>Custom vocabulary</td><td class="yes">Deep customisation</td><td class="no">No</td><td class="no">AI-assisted</td><td class="no">No</td></tr>
+                <tr><td>Voice macros / automation</td><td class="yes">Full automation</td><td class="no">No</td><td class="yes">20+ AI commands</td><td class="no">No</td></tr>
+                <tr><td>Languages</td><td>English only<span class="note">AU, NZ, UK, US, CA, IN</span></td><td>English + others</td><td class="yes">57+ languages</td><td>Varies</td></tr>
+                <tr><td>Transcribe audio files</td><td class="yes">Yes - single speaker</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
+                <tr><td>Mac support</td><td class="no">Windows only</td><td class="no">Windows only</td><td class="no">Windows only</td><td class="yes">Most support Mac</td></tr>
+                <tr><td>Voice training needed</td><td>Brief setup</td><td class="yes">No</td><td class="yes">No - works instantly</td><td class="yes">No</td></tr>
+                <tr><td>Cost</td><td>From $495 AUD</td><td>Free (built-in)</td><td>Subscription<span class="note"><a href="https://www.speechrecognition.cloud" target="_blank" rel="noopener" style="color:#0097a7">See pricing</a></span></td><td>Free / low cost</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:11px;color:#94a3b8;margin-top:10px">Sources: Microsoft Support documentation, Google Docs Help, speechrecognition.cloud, and official Dragon Professional 16 documentation. Comparison reflects publicly available information (March 2026).</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="sh"><h2>Which Dragon product is right for you?</h2><p>A practical guide based on the most common buying scenarios.</p></div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+            <div class="guide-card">
+              <h3>Medical One</h3>
+              <div class="price">Contact VRA</div>
+              <p>Clinicians, GP practices, hospitals and specialist clinics. 80+ medical specialty vocabularies built in. Cloud-based with EHR integration. Free trial available.</p>
+              <a class="btn btn-primary" href="/dragon-medical-one">Learn more</a>
+            </div>
+            <div class="guide-card">
+              <h3>Professional 16</h3>
+              <div class="price">From $495</div>
+              <p>Business professionals, government, accounting. Locally installed, works offline. Custom voice commands and macro automation. Perpetual or subscription licence.</p>
+              <a class="btn btn-primary" href="/dragon-professional-16">Learn more</a>
+            </div>
+            <div class="guide-card">
+              <h3>Anywhere</h3>
+              <div class="price">Contact VRA</div>
+              <p>Enterprise and distributed teams. Cloud-native for Citrix and virtual desktop environments. Centralised admin via NMC. Voice profile roaming.</p>
+              <a class="btn btn-primary" href="/dragon-professional-anywhere">Learn more</a>
+            </div>
+            <div class="guide-card">
+              <h3>Legal</h3>
+              <div class="price">Contact VRA</div>
+              <p>Law firms, barristers, legal departments. Built-in legal vocabulary covering court terminology, legislation and case law. Cloud-based with firm-wide management.</p>
+              <a class="btn btn-primary" href="/dragon-legal">Learn more</a>
+            </div>
+            <div class="guide-card">
+              <h3>Education</h3>
+              <div class="price">$545</div>
+              <p>Students, educators and accessibility. Full Dragon Professional 16 at discounted pricing. NDIS eligible. Perpetual licence - own it beyond graduation.</p>
+              <a class="btn btn-primary" href="/dragon-education">Learn more</a>
+            </div>
+            <div class="guide-card">
+              <h3>Enterprise / Group</h3>
+              <div class="price">Enquire</div>
+              <p>Teams of 5 or more. Dragon Professional Group adds NMC, Active Directory/SSO, volume licensing, usage reporting, and Citrix/RDP support.</p>
+              <a class="btn btn-primary" href="https://www.voicerecognition.com.au/pages/dragon-professional-group-enterprise" target="_blank" rel="noopener">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="neutral-bg">
+        <div class="wrap">
+          <div class="sh"><h2>Dragon vs Windows built-in voice tools</h2><p>Windows 11 includes Voice Typing (Win+H) and Voice Access. Here is how they differ from Dragon.</p></div>
+          <div class="card">
+            <p style="font-size:14px;color:#334155;margin:0 0 12px">Windows Voice Typing requires an internet connection per Microsoft's own documentation. Dragon Professional 16, once installed and activated, operates without an internet connection. For professionals working with sensitive documents, in environments with limited connectivity, or requiring consistent accuracy with specialised vocabulary, this distinction matters.</p>
+            <p style="font-size:14px;color:#334155;margin:0 0 12px">Dragon adds professional-grade capabilities that built-in tools do not offer: custom vocabulary for industry-specific terms, AutoText for boilerplate insertion, voice macros for multi-step workflow automation, and single-speaker audio file transcription. For occasional, lightweight dictation where these features are not needed, Windows Voice Typing may be sufficient.</p>
+            <p style="font-size:14px;color:#334155;margin:0">Voice Access (Windows 11 22H2+) does enable some hands-free PC control without internet, but does not include Dragon's dictation accuracy tuning, custom vocabulary, or transcription capabilities.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="sh"><h2>Dragon vs Speech Recognition Cloud</h2><p>Dragon and Speech Recognition Cloud serve different needs.</p></div>
+          <div class="grid">
+            <div class="card c6">
+              <h3>Choose Dragon if you need...</h3>
+              <p style="margin-top:8px">Locally installed offline operation, deep custom vocabulary and voice macros, single-speaker audio transcription, enterprise management via NMC, or medical/legal specialty vocabularies. Dragon is English-only but deeply customisable for professional workflows.</p>
+            </div>
+            <div class="card c6">
+              <h3>Choose Speech Recognition Cloud if you need...</h3>
+              <p style="margin-top:8px">57+ language support, cloud-based access with no installation, instant setup with no voice training, AI-powered commands, or a simpler subscription model. SRC works in any Windows application and is designed for users who want fast, flexible cloud dictation.</p>
+              <p style="margin-top:8px"><a href="https://www.speechrecognition.cloud" target="_blank" rel="noopener" style="color:#0097a7;font-weight:600;font-size:13px">Visit speechrecognition.cloud</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="sh"><h2>What Dragon does not do</h2><p>Important limitations across all Dragon products.</p></div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+            <div class="card"><h3>Not for meetings</h3><p>All Dragon products are designed for single-speaker dictation. They will not reliably transcribe multi-speaker conversations, meetings, or interviews.</p></div>
+            <div class="card"><h3>Windows only</h3><p>Dragon Professional 16 and Education are Windows-only (Windows 10/11). Cloud products (Medical One, Anywhere, Legal) work via browser on other platforms. Nuance discontinued Dragon for Mac.</p></div>
+            <div class="card"><h3>English only (desktop)</h3><p>Dragon Professional 16 supports English across six regional variants. For 57+ languages, consider Speech Recognition Cloud as a cloud-based alternative.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="dark-bg">
+        <div class="wrap">
+          <div class="grid">
+            <div class="c7">
+              <h2 style="color:white;font-size:26px;margin:0 0 10px">Not sure which product is right?</h2>
+              <p style="color:#94a3b8;margin:0 0 16px;font-size:14px">Voice Recognition Australia has been deploying Dragon across medical, legal, government and enterprise environments for 25 years. Tell us your situation and we will recommend the right product.</p>
+              <p style="color:#94a3b8;margin:0;font-size:14px"><a href="https://www.voicerecognition.com.au" target="_blank" rel="noopener" style="color:#0097a7;font-weight:600">Buy from Voice Recognition Australia</a></p>
+            </div>
+            <div class="c5">
+              <div class="formbox">
+                <div style="font-weight:800;font-size:18px;color:#0f172a">Get a recommendation</div>
+                <div style="color:#475569;font-size:14px;margin-bottom:2px">Local Australian support. Fast response.</div>
+                <form method="POST" action="https://voicerecognition.activehosted.com/proc.php" novalidate>
+                  <input type="hidden" name="u" value={site.form.hiddenU} /><input type="hidden" name="f" value={site.form.hiddenF} /><input type="hidden" name="s" /><input type="hidden" name="c" value="0" /><input type="hidden" name="m" value="0" /><input type="hidden" name="act" value="sub" /><input type="hidden" name="v" value="2" /><input type="hidden" name="or" value={site.form.hiddenOr} />
+                  <div class="_form_element"><input type="text" name="firstname" placeholder="Your Name" required /></div>
+                  <div class="_form_element"><input type="text" name="email" placeholder="Your Email" required /></div>
+                  <div class="_form_element"><input type="text" name="phone" placeholder="Your Phone Number" /></div>
+                  <div class="_form_element"><input type="text" name="field[21]" placeholder="Number of Users" /></div>
+                  <div class="_form_element"><input type="text" name="field[35]" placeholder="Organisation" /></div>
+                  <div class="_form_element"><textarea name="field[18]" placeholder="Your profession, team size, and what you need Dragon for"></textarea></div>
+                  <button class="_submit" type="submit">{site.form.submitText}</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer><div class="wrap"><div class="footer-inner"><div>&copy; {year} {site.siteName}</div><div class="footer-links">{site.footerLinks?.map((l) => <a href={l.url}>{l.label}</a>)}</div></div><div class="footer-disclaimer">{site.branding.footerDisclaimer}</div></div></footer>
+  </body>
+</html>
