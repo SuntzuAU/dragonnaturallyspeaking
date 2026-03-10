@@ -72,45 +72,38 @@ const formattedDate = new Date(post.data.date).toLocaleDateString('en-AU', {
   </head>
   <body>
     <header>
-      <a class="logo" href="/"><img src="/logo.png" alt={site.siteName} onerror="this.style.display='none'" /></a>
+      <a class="logo" href="/"><img src="/logo.jpg" alt={site.siteName} onerror="this.style.display='none'" /></a>
       <a class="back" href="/news">All articles</a>
     </header>
-
     {post.data.heroImage && (
       <div class="hero-img">
         <img src={imgSrc(post.data.heroImage)} alt={post.data.heroImageAlt ?? post.data.title} loading="eager" decoding="async" />
       </div>
     )}
-
     <article class="article">
       <div class="meta">
         <span class="meta-date">{formattedDate}</span>
         <span class="meta-site">{site.siteName}</span>
       </div>
       <h1>{post.data.title}</h1>
-
       {post.data.breakImage1 && (
         <div class="img-break">
           <img src={imgSrc(post.data.breakImage1)} alt={post.data.breakImage1Alt ?? ''} loading="lazy" decoding="async" />
         </div>
       )}
-
       <div class="prose">
         <Content />
       </div>
-
       {post.data.breakImage2 && (
         <div class="img-break">
           <img src={imgSrc(post.data.breakImage2)} alt={post.data.breakImage2Alt ?? ''} loading="lazy" decoding="async" />
         </div>
       )}
-
       <div class="cta-strip">
         <p>Ready to explore Dragon speech recognition for your organisation? Get a free trial and tailored recommendation.</p>
         <a href="/#final-cta">Enquire Now</a>
       </div>
     </article>
-
     <footer>
       <a href="/">{site.siteName}</a> --
       <a href="/news">News</a> --

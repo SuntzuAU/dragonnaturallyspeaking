@@ -52,16 +52,14 @@ const imgSrc = (key?: string) => key ? `${R2_BASE}/${key}` : '';
   </head>
   <body>
     <header>
-      <a class="logo" href="/"><img src="/logo.png" alt={site.siteName} onerror="this.style.display='none'" /></a>
+      <a class="logo" href="/"><img src="/logo.jpg" alt={site.siteName} onerror="this.style.display='none'" /></a>
       <a class="home-link" href="/">Back to home</a>
     </header>
-
     <div class="wrap">
       <div class="page-header">
         <h1>News and Articles</h1>
         <p>Guides, updates and expert advice about Dragon speech recognition from {site.siteName}.</p>
       </div>
-
       {posts.length === 0 ? (
         <div class="empty">
           <h2>Articles coming soon</h2>
@@ -88,7 +86,6 @@ const imgSrc = (key?: string) => key ? `${R2_BASE}/${key}` : '';
         </div>
       )}
     </div>
-
     <footer>
       <a href="/">{site.siteName}</a> --
       <a href="/privacy">Privacy</a> --
