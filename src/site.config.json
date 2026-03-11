@@ -3,10 +3,10 @@
   "domain": "https://dragonnaturallyspeaking.com.au",
   "googleAnalyticsId": "",
   "branding": {
-    "industry": "Medical, Legal and Enterprise",
-    "region": "Australia",
-    "headline": "Dragon NaturallySpeaking Australia - Authorised Dragon Reseller",
-    "subheadline": "Looking for Dragon NaturallySpeaking or Dragon Dictate? The Dragon product range has evolved - Dragon Professional 16, Dragon Medical One and Dragon Professional Anywhere are the current solutions. Voice Recognition Australia has been Australia's authorised Dragon reseller for 25 years.",
+    "industry": "Dragon NaturallySpeaking is now the Dragon range",
+    "region": "Authorised Australian reseller since 1999",
+    "headline": "Dragon Speech Recognition Software in Australia",
+    "subheadline": "Still searching for Dragon NaturallySpeaking or Dragon Dictate? Those legacy names have evolved into today's Dragon solutions, including Dragon Professional 16, Dragon Medical One, and Dragon Anywhere. Compare the best option for medical, legal, business and enterprise use, with local Australian advice on pricing, setup and support.",
     "statsMessage": "Dragon NaturallySpeaking has evolved - dictate 3x faster than typing with up to 99% accuracy across medical, legal and enterprise",
     "benefitsHeading": "Why Australian professionals choose Dragon NaturallySpeaking products",
     "benefitsSubheading": "Purpose-built speech recognition for professionals who cannot afford documentation errors.",
@@ -109,7 +109,7 @@
     },
     {
       "title": "Specialist vocabulary built in",
-      "body": "Dragon Medical One includes 80+ medical specialty vocabularies. Dragon Legal includes legal terminology. No custom training required - accurate from day one in your professional context."
+      "body": "Dragon Medical One includes multiple medical specialty vocabularies. Dragon Legal includes legal terminology. No custom training required - accurate from day one in your professional context."
     },
     {
       "title": "Cloud or desktop - your choice",
@@ -145,7 +145,7 @@
       "highlight": true,
       "url": "/dragon-medical-one",
       "features": [
-        "80+ medical specialty vocabularies",
+        "Multiple medical specialty vocabularies",
         "Dictate from any device anywhere",
         "No voice profile training needed",
         "EHR and clinical system integration",
@@ -183,7 +183,7 @@
   "aboutEditions": [
     {
       "name": "Dragon Medical One",
-      "desc": "Cloud-based. 80+ medical specialties. Any device, anywhere. Subscription.",
+      "desc": "Cloud-based. Multiple medical specialties. Any device, anywhere. Subscription.",
       "highlight": true
     },
     {
@@ -223,7 +223,7 @@
     {
       "key": "feature-medical",
       "title": "Dragon Medical One - built for clinicians",
-      "body": "Dragon Medical One is the cloud-based medical speech recognition solution trusted by clinicians worldwide. With 80+ built-in medical specialty vocabularies covering cardiology, radiology, pathology and more, it requires no voice profile training and delivers accurate transcription from day one. Hosted on Microsoft Azure with HIPAA-aligned security."
+      "body": "Dragon Medical One is the cloud-based medical speech recognition solution trusted by clinicians worldwide. With multiple built-in medical specialty vocabularies covering cardiology, radiology, pathology and more, it requires no voice profile training and delivers accurate transcription from day one. Hosted on Microsoft Azure with HIPAA-aligned security."
     },
     {
       "key": "feature-professional",
