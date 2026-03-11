@@ -56,7 +56,6 @@ jobs:
           post_file = os.environ["POST_FILE"]
           worker_url = os.environ["WORKER_URL"]
 
-          # Read post frontmatter for title/sections
           with open(post_file) as f:
               content = f.read()
 
@@ -65,53 +64,54 @@ jobs:
               return m.group(1).strip() if m else ""
 
           title = fm_field("title") or post_file
-          section1 = fm_field("section1Title")
-          section2 = fm_field("section2Title")
+          site_name = "Dragon NaturallySpeaking Australia"
+
+          # IMPORTANT: Prompts engineered to avoid Gemini failure modes.
+          # Never name software/brands - Gemini renders them as logos on screens.
+          # Never ask for screen/UI shots - produces mockups.
+          # Always specify positive emotion for hero. Always end with NEGATIVE list.
+
+          NEGATIVE = (
+              "photorealistic DSLR photography, natural candid feel, "
+              "NO logos, NO brand names, NO text on screens, NO UI mockups, NO app interfaces, "
+              "NO stock photo poses, NO diagrams, NO charts, NO illustrations, NO clipart"
+          )
+
+          hero_scenes = [
+              "doctor smiling warmly at colleague while gesturing toward laptop on desk, modern clinic",
+              "two medical professionals having a positive conversation in a bright modern consultation room",
+              "confident GP at a clean modern desk looking relaxed and satisfied, warm natural light",
+              "clinician in smart attire walking through a bright modern hospital corridor, looking purposeful and positive",
+              "small medical team smiling and collaborating around a table in a light-filled meeting room",
+          ]
+
+          break_scenes = [
+              "close-up of clean modern desk with laptop and stethoscope in warm natural light, shallow depth of field",
+              "bright modern medical administration office, empty, clean, glass partitions, plants",
+              "hands resting on laptop keyboard in a tidy well-lit clinic environment",
+              "wide shot of a modern Australian healthcare office with natural light flooding in",
+              "professional leather notebook and pen beside a laptop on a clean wooden desk, soft light",
+          ]
 
           settings = [
-              "Australian medical clinic interior",
-              "modern hospital administration office",
-              "GP practice consultation room Australia",
-              "specialist medical rooms Sydney",
-              "corporate legal office Australia",
-              "professional services firm open plan office",
+              "modern Sydney CBD medical rooms with harbour view",
+              "contemporary Melbourne specialist clinic interior",
+              "bright Australian private hospital administration office",
+              "clean modern GP practice in suburban Australia",
+              "light-filled Australian healthcare professional workspace",
           ]
-          hero_compositions = [
-              "doctor smiling at camera wearing Bluetooth headset at desk with laptop",
-              "clinician dictating into microphone at computer in modern clinic",
-              "medical professional reviewing patient notes on screen looking satisfied",
-              "doctor and receptionist collaborating at front desk with computers",
-              "specialist dictating clinical notes hands-free in consultation room",
-          ]
-          break_compositions = [
-              "close up of medical software interface on screen sharp focus",
-              "doctor typing notes beside speech recognition microphone on desk",
-              "laptop screen showing clinical documentation software in clinic",
-              "hands-free microphone on desk beside stethoscope and notepad",
-              "close up of EHR patient record on modern desktop monitor",
-          ]
-          lighting = [
-              "warm natural window light",
-              "cool professional clinical lighting",
-              "bright modern workspace lighting",
-              "soft diffused overcast light",
-          ]
-          style = "photorealistic photography, Canon 5D quality, no text overlays, no diagrams, no clipart"
 
-          s1 = random.choice(settings)
-          s2 = random.choice([x for x in settings if x != s1])
-          s3 = random.choice([x for x in settings if x != s1 and x != s2])
-          c1 = random.choice(hero_compositions)
-          c2 = random.choice(break_compositions)
-          c3 = random.choice([x for x in break_compositions if x != c2])
-          l1 = random.choice(lighting)
-          l2 = random.choice([x for x in lighting if x != l1])
-          l3 = random.choice(lighting)
+          hero_scene = random.choice(hero_scenes)
+          break_scene1 = random.choice(break_scenes)
+          break_scene2 = random.choice([s for s in break_scenes if s != break_scene1])
+          setting1 = random.choice(settings)
+          setting2 = random.choice([s for s in settings if s != setting1])
+          setting3 = random.choice([s for s in settings if s != setting1 and s != setting2])
 
           prompts = {
-              "heroImage":   (f"{c1}, {s1}, {l1}, context: {title}, {style}", "hero"),
-              "breakImage1": (f"{c2}, {s2}, {l2}, {style}", "break1"),
-              "breakImage2": (f"{c3}, {s3}, {l3}, {style}", "break2"),
+              "heroImage":   (f"{hero_scene}, {setting1}. Editorial context: {site_name}. {NEGATIVE}", "hero"),
+              "breakImage1": (f"{break_scene1}, {setting2}. {NEGATIVE}", "break1"),
+              "breakImage2": (f"{break_scene2}, {setting3}. {NEGATIVE}", "break2"),
           }
 
           def call_worker(prompt, name):
@@ -122,3 +122,40 @@ jobs:
                   headers={"Content-Type": "application/json"},
                   method="POST"
               )
+              with urllib.request.urlopen(req, timeout=60) as resp:
+                  return json.loads(resp.read())
+
+          new_content = content
+          for field, (prompt, slug) in prompts.items():
+              print(f"Generating {field}...")
+              print(f"  Prompt: {prompt}")
+              result = call_worker(prompt, slug)
+              if not result.get("ok"):
+                  raise RuntimeError(f"Worker failed for {field}: {result}")
+              r2_key = result["r2"]["key"]
+              print(f"  R2 key: {r2_key}")
+              existing = re.search(rf'^{field}:.*$', new_content, re.MULTILINE)
+              if existing:
+                  new_content = re.sub(rf'^{field}:.*$', f'{field}: "{r2_key}"', new_content, flags=re.MULTILINE)
+              else:
+                  new_content = re.sub(
+                      r'^(metaDescription:[ \t]*.*)$',
+                      rf'\1\n{field}: "{r2_key}"',
+                      new_content,
+                      count=1,
+                      flags=re.MULTILINE
+                  )
+
+          with open(post_file, "w") as f:
+              f.write(new_content)
+
+          print("Done. Post updated.")
+          PYEOF
+
+      - name: Commit updated post
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/content/news/
+          git diff --staged --quiet || git commit -m "Add generated images to ${{ steps.find_post.outputs.post_file }}"
+          git push
