@@ -2,6 +2,7 @@
 title: "Speech to Text Software in Australia: Dragon vs the Free Options"
 date: "2026-03-11"
 metaDescription: "Comparing speech to text options for Australian professionals: Dragon NaturallySpeaking, Speech Recognition Cloud, Windows Speech Recognition, and more. What actually works."
+heroImage: "dragonnaturallyspeaking/2026/03/11/dragon-naturallyspeaking-australia-speech-text-software-aust-hero-95ee0903.jpg"
 heroImageAlt: "Speech to text software comparison for Australian professionals, Dragon NaturallySpeaking dictation on a desktop"
 breakImage1: "dragonnaturallyspeaking/2026/03/11/dragon-naturallyspeaking-australia-free-built-in-options-break1-583c4978.jpg"
 breakImage1Alt: "Dragon NaturallySpeaking professional dictation in an Australian office, voice recognition in use"
