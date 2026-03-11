@@ -153,9 +153,9 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
                 <div class="spec-card"><div class="spec-val">Up to 2</div><div class="spec-label">PC installs</div></div>
                 <div class="spec-card"><div class="spec-val">Perpetual</div><div class="spec-label">Own it forever</div></div>
               </div>
-              {imgSrc("feature-professional") && (
+              {imgSrc("hero-education") && (
                 <div style="border-radius:16px;overflow:hidden;margin-top:16px;box-shadow:0 16px 48px rgba(0,0,0,.12)">
-                  <img src={imgSrc("feature-professional")} alt="Student using Dragon Professional speech recognition software" loading="eager" decoding="async" />
+                  <img src={imgSrc("hero-education")} alt={imgAlt("hero-education")} loading="eager" decoding="async" />
                 </div>
               )}
             </div>

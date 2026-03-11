@@ -47,7 +47,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
                 <div class="spec-card"><div class="spec-val">Cloud</div><div class="spec-label">Anywhere access</div></div>
                 <div class="spec-card"><div class="spec-val">NMC</div><div class="spec-label">Central admin</div></div>
               </div>
-              {imgSrc("feature-professional") && (<div style="border-radius:14px;overflow:hidden;margin-top:14px;box-shadow:0 12px 40px rgba(0,0,0,.12)"><img src={imgSrc("feature-professional")} alt="Legal professional using Dragon speech recognition" loading="eager" decoding="async" /></div>)}
+              {imgSrc("hero-legal") && (<div style="border-radius:14px;overflow:hidden;margin-top:14px;box-shadow:0 12px 40px rgba(0,0,0,.12)"><img src={imgSrc("hero-legal")} alt={imgAlt("hero-legal")} loading="eager" decoding="async" /></div>)}
             </div>
           </div>
         </div>
