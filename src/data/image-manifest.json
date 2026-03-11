@@ -43,5 +43,23 @@
     "key": "cta-banner",
     "r2Key": "default/2026/03/10/dragon-speech-recognition-reseller-australia-contact-b6466ef4.png",
     "altText": "Professional Australian business consultation, speech recognition technology discussion, trusted expert advisor"
+  },
+  "blog/dragon-medical-upgrade/hero": {
+    "r2Key": "dragonnaturallyspeaking/2026/03/11/dragon-naturallyspeaking-australia-dragon-medical-upgrade-wh-hero-e066794f.jpg",
+    "seoFilename": "dragon-naturallyspeaking-australia-dragon-medical-upgrade-wh-hero-e066794f.jpg",
+    "altText": "Dragon NaturallySpeaking Australia editorial illustrating Dragon Medical Upgrade What Australian Clinicians Know",
+    "generatedAt": "2026-03-11T07:21:47.262Z"
+  },
+  "blog/dragon-medical-upgrade/break1": {
+    "r2Key": "dragonnaturallyspeaking/2026/03/11/dragon-naturallyspeaking-australia-dragon-medical-practice-e-break1-2c53e428.jpg",
+    "seoFilename": "dragon-naturallyspeaking-australia-dragon-medical-practice-e-break1-2c53e428.jpg",
+    "altText": "Dragon NaturallySpeaking Australia editorial illustrating Dragon Medical Practice Edition End Life Australian",
+    "generatedAt": "2026-03-11T07:22:09.918Z"
+  },
+  "blog/dragon-medical-upgrade/break2": {
+    "r2Key": "dragonnaturallyspeaking/2026/03/11/dragon-naturallyspeaking-australia-dragon-medical-one-curren-break2-bdc1fe69.jpg",
+    "seoFilename": "dragon-naturallyspeaking-australia-dragon-medical-one-curren-break2-bdc1fe69.jpg",
+    "altText": "Dragon NaturallySpeaking Australia editorial illustrating Dragon Medical One Current Upgrade Path Australian",
+    "generatedAt": "2026-03-11T07:22:32.295Z"
   }
 }
