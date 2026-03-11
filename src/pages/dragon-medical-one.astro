@@ -160,9 +160,9 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
               </div>
             </div>
             <div>
-              {imgSrc("feature-medical") ? (
+              {imgSrc("hero-medical-one") ? (
                 <div class="hero-img">
-                  <img src={imgSrc("feature-medical")} alt={imgAlt("feature-medical")} loading="eager" decoding="async" />
+                  <img src={imgSrc("hero-medical-one")} alt={imgAlt("hero-medical-one")} loading="eager" decoding="async" />
                 </div>
               ) : <div class="hero-img" style="background:#e0f7fa;display:flex;align-items:center;justify-content:center;color:#006064;font-size:14px;min-height:260px">Dragon Medical One</div>}
               <div class="spec-grid">
@@ -194,9 +194,9 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
               </div>
             </div>
             <div class="c5">
-              {imgSrc("hero") && (
+              {imgSrc("feature-medical") && (
                 <div style="border-radius:14px;overflow:hidden;margin-top:48px;box-shadow:0 8px 24px rgba(0,0,0,.08)">
-                  <img src={imgSrc("hero")} alt={imgAlt("hero")} loading="lazy" decoding="async" />
+                  <img src={imgSrc("feature-medical")} alt={imgAlt("feature-medical")} loading="lazy" decoding="async" />
                 </div>
               )}
             </div>
