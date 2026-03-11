@@ -1,4 +1,3 @@
-
 name: Generate Post Images
 
 on:
@@ -45,108 +44,81 @@ jobs:
             echo "skip=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Extract post metadata
-        id: metadata
+      - name: Generate all images and update post
         if: steps.check_images.outputs.skip == 'false'
-        run: |
-          POST_FILE="${{ steps.find_post.outputs.post_file }}"
-          TITLE=$(grep "^title:" "$POST_FILE" | head -1 | sed 's/title: //' | tr -d '"')
-          echo "title=$TITLE" >> $GITHUB_OUTPUT
-
-      - name: Build image prompts
-        id: prompts
-        if: steps.check_images.outputs.skip == 'false'
+        env:
+          POST_FILE: ${{ steps.find_post.outputs.post_file }}
+          WORKER_URL: https://master-image-generator.speech-recognition-cloud.workers.dev/generate
         run: |
           python3 << 'PYEOF'
-          import random, os
+          import random, os, json, urllib.request, re
 
-          title = os.environ.get("TITLE", "Dragon speech recognition software")
+          post_file = os.environ["POST_FILE"]
+          worker_url = os.environ["WORKER_URL"]
+
+          # Read post frontmatter for title/sections
+          with open(post_file) as f:
+              content = f.read()
+
+          def fm_field(name):
+              m = re.search(rf'^{name}:\s*"?([^"\n]+)"?', content, re.MULTILINE)
+              return m.group(1).strip() if m else ""
+
+          title = fm_field("title") or post_file
+          section1 = fm_field("section1Title")
+          section2 = fm_field("section2Title")
 
           settings = [
-            "Australian medical clinic interior",
-            "modern hospital administration office",
-            "GP practice consultation room Australia",
-            "specialist medical rooms Sydney",
-            "corporate legal office Australia",
-            "professional services firm open plan office",
+              "Australian medical clinic interior",
+              "modern hospital administration office",
+              "GP practice consultation room Australia",
+              "specialist medical rooms Sydney",
+              "corporate legal office Australia",
+              "professional services firm open plan office",
           ]
-
           hero_compositions = [
-            "doctor smiling at camera wearing Bluetooth headset at desk with laptop",
-            "clinician dictating into microphone at computer in modern clinic",
-            "medical professional reviewing patient notes on screen looking satisfied",
-            "doctor and receptionist collaborating at front desk with computers",
-            "specialist dictating clinical notes hands-free in consultation room",
+              "doctor smiling at camera wearing Bluetooth headset at desk with laptop",
+              "clinician dictating into microphone at computer in modern clinic",
+              "medical professional reviewing patient notes on screen looking satisfied",
+              "doctor and receptionist collaborating at front desk with computers",
+              "specialist dictating clinical notes hands-free in consultation room",
           ]
-
           break_compositions = [
-            "close up of medical software interface on screen sharp focus",
-            "doctor typing notes beside speech recognition microphone on desk",
-            "laptop screen showing clinical documentation software in clinic",
-            "hands-free microphone on desk beside stethoscope and notepad",
-            "close up of EHR patient record on modern desktop monitor",
+              "close up of medical software interface on screen sharp focus",
+              "doctor typing notes beside speech recognition microphone on desk",
+              "laptop screen showing clinical documentation software in clinic",
+              "hands-free microphone on desk beside stethoscope and notepad",
+              "close up of EHR patient record on modern desktop monitor",
           ]
-
           lighting = [
-            "warm natural window light",
-            "cool professional clinical lighting",
-            "bright modern workspace lighting",
-            "soft diffused overcast light",
+              "warm natural window light",
+              "cool professional clinical lighting",
+              "bright modern workspace lighting",
+              "soft diffused overcast light",
           ]
-
           style = "photorealistic photography, Canon 5D quality, no text overlays, no diagrams, no clipart"
 
-          s = random.choice(settings)
-          c = random.choice(hero_compositions)
-          l = random.choice(lighting)
-          hero = f"{c}, {s}, {l}, context: {title}, {style}"
-
-          s2 = random.choice([x for x in settings if x != s])
+          s1 = random.choice(settings)
+          s2 = random.choice([x for x in settings if x != s1])
+          s3 = random.choice([x for x in settings if x != s1 and x != s2])
+          c1 = random.choice(hero_compositions)
           c2 = random.choice(break_compositions)
-          l2 = random.choice([x for x in lighting if x != l])
-          break1 = f"{c2}, {s2}, {l2}, {style}"
-
-          s3 = random.choice([x for x in settings if x != s and x != s2])
           c3 = random.choice([x for x in break_compositions if x != c2])
+          l1 = random.choice(lighting)
+          l2 = random.choice([x for x in lighting if x != l1])
           l3 = random.choice(lighting)
-          break2 = f"{c3}, {s3}, {l3}, {style}"
 
-          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-            f.write(f"hero={hero}\n")
-            f.write(f"break1={break1}\n")
-            f.write(f"break2={break2}\n")
+          prompts = {
+              "heroImage":   (f"{c1}, {s1}, {l1}, context: {title}, {style}", "hero"),
+              "breakImage1": (f"{c2}, {s2}, {l2}, {style}", "break1"),
+              "breakImage2": (f"{c3}, {s3}, {l3}, {style}", "break2"),
+          }
 
-          print(f"Hero: {hero}")
-          print(f"Break1: {break1}")
-          print(f"Break2: {break2}")
-          PYEOF
-        env:
-          TITLE: ${{ steps.metadata.outputs.title }}
-
-      - name: Generate hero image
-        id: hero
-        if: steps.check_images.outputs.skip == 'false'
-        run: |
-          RESPONSE=$(curl -s -X POST "https://master-image-generator.speech-recognition-cloud.workers.dev/generate" \
-            -H "Content-Type: application/json" \
-            -d "{\"prompt\": \"${{ steps.prompts.outputs.hero }}\", \"name\": \"hero\"}")
-          KEY=$(echo $RESPONSE | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['r2']['key'])" 2>/dev/null)
-          if [ -z "$KEY" ]; then echo "ERROR: Hero failed. Response: $RESPONSE"; exit 1; fi
-          echo "key=$KEY" >> $GITHUB_OUTPUT
-
-      - name: Generate break image 1
-        id: break1
-        if: steps.check_images.outputs.skip == 'false'
-        run: |
-          RESPONSE=$(curl -s -X POST "https://master-image-generator.speech-recognition-cloud.workers.dev/generate" \
-            -H "Content-Type: application/json" \
-            -d "{\"prompt\": \"${{ steps.prompts.outputs.break1 }}\", \"name\": \"break1\"}")
-          KEY=$(echo $RESPONSE | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['r2']['key'])" 2>/dev/null)
-          if [ -z "$KEY" ]; then echo "ERROR: Break1 failed. Response: $RESPONSE"; exit 1; fi
-          echo "key=$KEY" >> $GITHUB_OUTPUT
-
-      - name: Generate break image 2
-        id: break2
-        if: steps.check_images.outputs.skip == 'false'
-        run: |
-          RESPONSE=$(curl -s -X POST "https://
+          def call_worker(prompt, name):
+              payload = json.dumps({"prompt": prompt, "name": name}).encode()
+              req = urllib.request.Request(
+                  worker_url,
+                  data=payload,
+                  headers={"Content-Type": "application/json"},
+                  method="POST"
+              )
