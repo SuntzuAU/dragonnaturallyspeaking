@@ -8,8 +8,8 @@ const year = new Date().getFullYear();
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Voice Recognition Australia -- {site.siteName}</title>
-    <meta name="description" content="Voice Recognition Australia has been Australia's trusted Dragon reseller for 25 years. Local onboarding, training and support for medical, legal, government and enterprise." />
+    <title>About Voice Recognition Australia | Russell Bewsell | Dragon Specialist Since 1999</title>
+    <meta name="description" content="Voice Recognition Australia has deployed Dragon speech recognition across Australian hospitals, law firms and government since 1999. Founded by Russell Bewsell, Australia's longest-serving Dragon specialist." />
     <link rel="canonical" href={`${site.domain}/about`} />
     <style is:inline>
       *,*::before,*::after{box-sizing:border-box}
@@ -22,10 +22,22 @@ const year = new Date().getFullYear();
       .wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px}
       h1{font-size:32px;letter-spacing:-0.02em;margin:0 0 8px}
       h2{font-size:20px;margin:36px 0 10px;color:#0d1b2a}
+      h3{font-size:17px;margin:24px 0 8px;color:#0d1b2a}
       p,li{font-size:15px;color:#334155}
+      ul{padding-left:20px;margin:0 0 16px}
+      li{margin-bottom:4px}
       .meta{font-size:13px;color:#94a3b8;margin-bottom:32px}
       .highlight{background:#e0f7fa;border-radius:12px;padding:20px;margin:28px 0}
       .highlight p{margin:0;color:#006064;font-weight:500}
+      .founder-box{border:1px solid #e2e8f0;border-radius:14px;padding:28px;margin:36px 0;display:flex;flex-direction:column;gap:14px}
+      .founder-name{font-size:20px;font-weight:800;color:#0d1b2a;margin:0}
+      .founder-title{font-size:13px;color:#0097a7;font-weight:600;margin:0}
+      .founder-body{font-size:15px;color:#334155;margin:0}
+      .founder-credentials{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+      .cred-tag{background:#f1f5f9;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#334155}
+      .founder-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:4px}
+      .founder-links a{font-size:14px;font-weight:600;color:#0097a7;text-decoration:none}
+      .founder-links a:hover{text-decoration:underline}
       .cta-box{background:#0d1b2a;border-radius:14px;padding:32px;margin:40px 0;text-align:center}
       .cta-box h3{color:white;margin:0 0 8px;font-size:22px}
       .cta-box p{color:#94a3b8;margin:0 0 18px;font-size:15px}
@@ -33,6 +45,11 @@ const year = new Date().getFullYear();
       .cta-btn:hover{background:#00838f}
       footer{border-top:1px solid #e2e8f0;padding:24px;text-align:center;font-size:13px;color:#94a3b8}
       footer a{color:#0d1b2a;text-decoration:none}
+      @media(max-width:600px){
+        .wrap{padding:32px 16px 60px}
+        h1{font-size:26px}
+        .founder-box{padding:20px}
+      }
     </style>
   </head>
   <body>
@@ -43,16 +60,46 @@ const year = new Date().getFullYear();
     <div class="wrap">
       <h1>About Voice Recognition Australia</h1>
       <p class="meta">25 years of Dragon deployment across Australian medical, legal, government and enterprise environments.</p>
+
       <p>Voice Recognition Australia (VRA) has been Australia's trusted Dragon reseller and deployment partner since 1999. We provide genuine local support, onboarding, and deployment guidance for Dragon speech recognition products across every major professional sector.</p>
+
       <p>Our team has hands-on experience deploying Dragon in Australian hospitals, GP practices, specialist clinics, law firms, legal chambers, government departments, and large enterprise environments. We do not just sell licence keys -- we help organisations get real productivity outcomes from speech recognition technology.</p>
+
       <div class="highlight"><p>VRA is an independent, authorised reseller of Dragon Professional software. We are not Microsoft or Nuance Communications. Dragon and related marks are the property of Nuance Communications (Microsoft).</p></div>
+
       <h2>What we do</h2>
       <p>We supply, deploy and support the full range of Dragon speech recognition products for Australian professionals including Dragon Medical One, Dragon Professional 16, Dragon Professional Anywhere, Dragon Legal Anywhere, and Dragon Professional Group for enterprise.</p>
       <p>Beyond licensing, we provide local onboarding, user training, microphone recommendations, EHR and practice management system integration guidance, and ongoing technical support -- all from Australia, in your timezone.</p>
+
       <h2>Who we work with</h2>
       <p>Our clients include GP practices and specialist clinics, hospital departments, law firms and barristers' chambers, government agencies and departments, universities and educational institutions, accounting and consulting firms, and organisations with accessibility and assistive technology requirements.</p>
+      <p>VRA has supported over 40,000 customers and more than 15,000 Dragon users, making us the largest Dragon reseller in the Southern Hemisphere by customer volume. Our deployment history includes evaluations across State and Federal government involving thousands of users, and ongoing support of clinical teams in high-pressure environments including emergency departments and specialist services.</p>
+
       <h2>Why Australian professionals choose VRA</h2>
       <p>Purchasing Dragon through Voice Recognition Australia gives you Australian pricing in AUD, local onboarding and training, and access to a support team with 25 years of real-world Dragon deployment experience. For subscription and enterprise customers, we provide hands-on deployment support tailored to your specific environment and workflows.</p>
+
+      <h2>The person behind VRA</h2>
+      <div class="founder-box">
+        <div>
+          <p class="founder-name">Russell Bewsell</p>
+          <p class="founder-title">Founder and CEO, Voice Recognition Australia</p>
+        </div>
+        <p class="founder-body">Russell has worked in speech recognition since 1998 and founded Voice Recognition Australia shortly after. Over 25 years he has personally deployed Dragon across Australian hospitals, law firms, government agencies and large enterprises -- from individual clinicians to enterprise rollouts spanning thousands of users.</p>
+        <p class="founder-body">His deployment work has spanned some of Australia's most demanding environments, including the Australian Taxation Office, Federal Parliament, State Parliaments, the Department of Defence, and justice environments including the Federal Court and the High Court of Australia.</p>
+        <p class="founder-body">Russell's approach is straightforward: be conservative where accuracy matters, be accountable for outcomes, and support people properly when the stakes are high. That philosophy shapes how VRA operates today -- and how it approaches the introduction of AI into clinical and legal documentation workflows.</p>
+        <div class="founder-credentials">
+          <span class="cred-tag">Speech recognition since 1998</span>
+          <span class="cred-tag">40,000+ customers supported</span>
+          <span class="cred-tag">Federal and State government deployments</span>
+          <span class="cred-tag">Certified Nuance / Microsoft partner</span>
+          <span class="cred-tag">Medical, legal and enterprise specialist</span>
+        </div>
+        <div class="founder-links">
+          <a href="https://www.linkedin.com/in/rbewsell/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.voicerecognition.com.au/pages/speech-recognition-leaders-australia" target="_blank" rel="noopener">Full authority profile</a>
+        </div>
+      </div>
+
       <div class="cta-box">
         <h3>Ready to talk?</h3>
         <p>Tell us about your team and we will recommend the right Dragon product with local onboarding and support.</p>
