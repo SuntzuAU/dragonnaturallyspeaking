@@ -1,1 +1,3 @@
-# Dragon NaturallySpeaking Australia\n\nGateway site for dragonnaturallyspeaking.com.au\n
+# Dragon NaturallySpeaking Australia
+
+Gateway site for dragonnaturallyspeaking.com.au
