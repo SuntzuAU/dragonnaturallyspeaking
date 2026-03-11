@@ -1,1 +1,55 @@
+name: Generate Images + Build Site
 
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: generate-images
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate site + blog images
+        env:
+          IMAGE_WORKER_URL: https://master-image-generator.speech-recognition-cloud.workers.dev/generate
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+          R2_PUBLIC_BASE: ${{ vars.R2_PUBLIC_BASE }}
+          SITE_ID: dragonnaturallyspeaking
+        run: node generate-images.js
+
+      - name: Commit updated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git stash
+          git pull --rebase origin main
+          git stash pop
+          git add -A
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "chore: update images and manifest [skip ci]"
+          git push
+
+      - name: Build Astro site
+        env:
+          PUBLIC_R2_BASE: ${{ vars.R2_PUBLIC_BASE }}
+        run: npm run build
