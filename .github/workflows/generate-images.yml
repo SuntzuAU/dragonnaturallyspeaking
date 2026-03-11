@@ -46,7 +46,7 @@ jobs:
           git stash pop
           git add -A
           git diff --cached --quiet && echo "No changes to commit" && exit 0
-          git commit -m "chore: update images and manifest [skip ci]"
+          git commit -m "chore: update images and manifest"
           git push
 
       - name: Build Astro site
