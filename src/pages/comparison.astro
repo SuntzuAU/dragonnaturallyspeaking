@@ -12,7 +12,7 @@ const year = new Date().getFullYear();
     <meta name="description" content="Compare Dragon Medical One, Dragon Professional 16, Dragon Professional Anywhere, Dragon Legal and Dragon for Education side by side. Plus Dragon vs Windows Voice Typing and Speech Recognition Cloud." />
     <link rel="canonical" href={`${site.domain}/comparison`} />
     <script define:vars={{ c }}>
-      const css = `.btn-primary{background:${c.accent};border-color:${c.accent};color:#fff}.btn-primary:hover{background:${c.accentHover};border-color:${c.accentHover}}.dark-bg{background:${c.primary};color:white}.neutral-bg{background:${c.neutral}}.nav-links a:hover,.dropdown-toggle:hover{color:${c.accent}}.dropdown-menu{border-top:2px solid ${c.accent}}.winner td{background:#e0f7fa!important;font-weight:600;color:#006064}`;
+      const css = `.btn-primary{background:${c.accent};border-color:${c.accent};color:#fff}.btn-primary:hover{background:${c.accentHover};border-color:${c.accentHover}}.dark-bg{background:${c.primary};color:white}.neutral-bg{background:${c.neutral}}.nav-links a:hover,.dropdown-toggle:hover{color:${c.accent}}.dropdown-menu{border-top:2px solid ${c.accent}}`;
       const el=document.createElement('style');el.textContent=css;document.head.appendChild(el);
     </script>
     <style is:inline>
@@ -49,16 +49,37 @@ const year = new Date().getFullYear();
       .sh{margin-bottom:24px}
       .sh h2{font-size:24px;letter-spacing:-0.02em;margin:0 0 6px}
       .sh p{font-size:14px;margin:0;color:#475569;max-width:700px}
-      .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid #e2e8f0}
+      .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid #cbd5e1}
+
+      /* ── Table base ── */
       table{width:100%;border-collapse:collapse;min-width:700px}
-      th{text-align:left;padding:10px 12px;font-size:12px;font-weight:700;color:#475569;border-bottom:2px solid #e2e8f0;background:#f8fafc;white-space:nowrap}
+
+      /* Dark navy header row */
+      thead tr{background:#0d1b2a}
+      th{text-align:left;padding:12px 14px;font-size:12px;font-weight:700;color:#94a3b8;border-bottom:none;white-space:nowrap}
+      th .col-head{font-size:13px;font-weight:700;color:#fff;display:block}
+      th .col-sub{font-size:11px;color:#64748b;font-weight:400;display:block;margin-top:2px}
+      th:first-child{color:#cbd5e1;background:#0d1b2a;position:sticky;left:0;z-index:2}
+
+      /* Medical One = col 2, Legal = col 5 */
+      thead th:nth-child(2){background:#004d56}
+      thead th:nth-child(5){background:#3d2e00}
+
+      /* Body rows */
       td{padding:10px 12px;font-size:13px;border-bottom:1px solid #f1f5f9;vertical-align:top}
-      th:first-child,td:first-child{font-weight:600;color:#0f172a;min-width:160px;background:#fafafa;position:sticky;left:0;z-index:1}
+      td:first-child{font-weight:600;color:#0f172a;min-width:160px;background:#fafafa;position:sticky;left:0;z-index:1}
+
+      /* Column tints on body cells — Medical One (col 2) teal, Legal (col 5) amber */
+      tbody tr td:nth-child(2){background:#f0fbfc}
+      tbody tr td:nth-child(5){background:#fffbeb}
+
+      /* Section divider rows — stronger than before */
+      .section-divider td{background:#1e3a5f!important;color:#e0f2fe!important;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:8px 12px;border-bottom:none}
+
       .yes{color:#006064;font-weight:700}
       .no{color:#94a3b8}
       .note{font-size:11px;color:#64748b;display:block;margin-top:2px;font-weight:400}
-      .col-head{font-size:13px;font-weight:700;color:#0f172a}
-      .col-sub{font-size:11px;color:#64748b;font-weight:400;display:block}
+
       .card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px}
       .card h3{margin:0 0 6px;font-size:16px}
       .card p{color:#475569;font-size:14px;margin:0}
@@ -115,34 +136,34 @@ const year = new Date().getFullYear();
                 </tr>
               </thead>
               <tbody>
-                <tr><td colspan="6" style="background:#f0f9ff;font-weight:700;font-size:12px;color:#006064;text-transform:uppercase;letter-spacing:.05em">Deployment and Licensing</td></tr>
+                <tr class="section-divider"><td colspan="6">Deployment and Licensing</td></tr>
                 <tr><td>Deployment</td><td class="yes">Cloud</td><td>Locally installed</td><td class="yes">Cloud</td><td class="yes">Cloud</td><td>Locally installed</td></tr>
                 <tr><td>Works offline</td><td class="no">No - requires internet</td><td class="yes">Yes - after activation</td><td class="no">No - requires internet</td><td class="no">No - requires internet</td><td class="yes">Yes - after activation</td></tr>
                 <tr><td>Licence model</td><td>Subscription</td><td>Perpetual ($994) or annual ($595/yr)</td><td>Subscription</td><td>Subscription</td><td>Perpetual ($545)</td></tr>
                 <tr><td>PC install limit</td><td>Any device</td><td>Up to 2 (perpetual) or unlimited (subscription)</td><td>Any device</td><td>Any device</td><td>Up to 2</td></tr>
                 <tr><td>Free trial</td><td class="yes">Yes - via VRA</td><td class="no">No</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
 
-                <tr><td colspan="6" style="background:#f0f9ff;font-weight:700;font-size:12px;color:#006064;text-transform:uppercase;letter-spacing:.05em">Vocabulary and Specialisation</td></tr>
+                <tr class="section-divider"><td colspan="6">Vocabulary and Specialisation</td></tr>
                 <tr><td>Medical vocabulary</td><td class="yes">Multiple medical specialties built in</td><td class="no">General only - add custom</td><td class="no">General only - add custom</td><td class="no">General only</td><td class="no">General only - add custom</td></tr>
                 <tr><td>Legal vocabulary</td><td class="no">No</td><td class="no">Add via custom vocab</td><td class="no">Add via custom vocab</td><td class="yes">Built in</td><td class="no">Add via custom vocab</td></tr>
                 <tr><td>Custom vocabulary</td><td class="yes">Yes</td><td class="yes">Yes - deep customisation</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
                 <tr><td>AutoText shortcuts</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
                 <tr><td>Voice macros/commands</td><td>Limited</td><td class="yes">Full - advanced automation</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Full - advanced automation</td></tr>
 
-                <tr><td colspan="6" style="background:#f0f9ff;font-weight:700;font-size:12px;color:#006064;text-transform:uppercase;letter-spacing:.05em">Integration and Compatibility</td></tr>
+                <tr class="section-divider"><td colspan="6">Integration and Compatibility</td></tr>
                 <tr><td>EHR integration<span class="note">Best Practice, Medical Director</span></td><td class="yes">Yes - purpose-built</td><td class="no">Not medical-specific</td><td class="no">Not medical-specific</td><td class="no">Not medical-specific</td><td class="no">Not medical-specific</td></tr>
                 <tr><td>Microsoft 365 / Teams</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
                 <tr><td>Citrix / Virtual desktop</td><td class="yes">Yes</td><td class="no">No - local install only<span class="note">See Anywhere or Group for VDI</span></td><td class="yes">Yes - designed for VDI</td><td class="yes">Yes</td><td class="no">No</td></tr>
                 <tr><td>Mobile app</td><td class="yes">PowerMic Mobile</td><td class="no">No</td><td class="yes">Dragon Anywhere Mobile</td><td class="yes">Dragon Anywhere Mobile</td><td class="no">No</td></tr>
                 <tr><td>Voice training needed</td><td class="yes">No - accurate from first use</td><td>Brief initial setup</td><td class="yes">No</td><td class="yes">No</td><td>Brief initial setup</td></tr>
 
-                <tr><td colspan="6" style="background:#f0f9ff;font-weight:700;font-size:12px;color:#006064;text-transform:uppercase;letter-spacing:.05em">Administration and Management</td></tr>
+                <tr class="section-divider"><td colspan="6">Administration and Management</td></tr>
                 <tr><td>Centralised admin (NMC)</td><td class="yes">Yes</td><td class="no">No<span class="note">Group edition adds NMC</span></td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">No</td></tr>
                 <tr><td>Usage reporting</td><td class="yes">Yes</td><td class="no">No</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">No</td></tr>
                 <tr><td>Transcribe audio files<span class="note">Single speaker only</span></td><td class="no">No</td><td class="yes">Yes - MP3, WAV, WMA, DSS, DS2</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
                 <tr><td>Hands-free PC control</td><td class="no">Limited</td><td class="yes">Full - mouse, navigation, apps</td><td>Limited</td><td>Limited</td><td class="yes">Full - accessibility</td></tr>
 
-                <tr><td colspan="6" style="background:#f0f9ff;font-weight:700;font-size:12px;color:#006064;text-transform:uppercase;letter-spacing:.05em">Pricing (AUD inc GST)</td></tr>
+                <tr class="section-divider"><td colspan="6">Pricing (AUD inc GST)</td></tr>
                 <tr><td>Price</td><td>Contact VRA</td><td>$994 perpetual / $595 per yr</td><td>Contact VRA</td><td>Contact VRA</td><td>$545 perpetual</td></tr>
                 <tr><td>Upgrade from v15</td><td>N/A</td><td>$495</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
                 <tr>
