@@ -119,9 +119,18 @@ function buildPrompt(type, title, section1, section2, siteName) {
   return `${base}Professional editorial photo illustrating: ${section2 || section1 || title}. Modern Australian workplace, technology in use, no text overlays.`;
 }
 
-function updateFrontmatterField(content, field, value) {
-  const re = new RegExp(`(^---[\\s\\S]*?\n)(${field}:)([ \t]*)([^\n]+)(\n[\\s\\S]*?---)`);
-  return content.replace(re, (_, pre, f, _sp, _old, post) => `${pre}${f} "${value}"${post}`);
+// Fix: insert field after metaDescription if it doesn't exist; replace if it does
+function setFrontmatterField(content, field, value) {
+  // If field already exists, replace its value
+  const existingRe = new RegExp(`^(${field}:)[ \\t]*.*$`, 'm');
+  if (existingRe.test(content)) {
+    return content.replace(existingRe, `${field}: "${value}"`);
+  }
+  // Field doesn't exist — insert after metaDescription line
+  return content.replace(
+    /^(metaDescription:[ \t]*.*)/m,
+    `$1\n${field}: "${value}"`
+  );
 }
 
 async function phase2() {
@@ -161,7 +170,7 @@ async function phase2() {
           altText,
           generatedAt: new Date().toISOString(),
         };
-        content = updateFrontmatterField(content, field, r2.key);
+        content = setFrontmatterField(content, field, r2.key);
         console.log(`  [${type}] R2: ${r2.key}`);
         count++;
       } catch (e) { console.error(`  [${type}] FAILED: ${e.message}`); }
