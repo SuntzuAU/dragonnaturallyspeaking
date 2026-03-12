@@ -16,7 +16,7 @@ internalLinks:
     anchor: "Dragon Medical One for Australian clinicians"
 externalLinks:
   - to: "voicerecognition.com.au"
-    anchor: "full range of Dragon-certified microphones"
+    anchor: "USB microphones for speech recognition"
     url: "https://www.voicerecognition.com.au/collections/usb-microphones"
   - to: "dragonprofessional16.com.au"
     anchor: "Dragon Professional 16"
@@ -41,7 +41,7 @@ The Andrea NC series uses the company's PureAudio noise-cancellation technology 
 
 For education environments in particular, Andrea headsets handle the practical realities well: they are robust enough for daily use across multiple users, straightforward to set up, and accurate enough that students and staff can focus on their work rather than correcting transcription errors.
 
-The [full Andrea range is available through Voice Recognition Australia](https://www.voicerecognition.com.au/collections/usb-microphones).
+The full Andrea range and all other Dragon-certified headsets are available through Voice Recognition Australia's [USB microphones for speech recognition](https://www.voicerecognition.com.au/collections/usb-microphones) collection.
 
 ### Addasound Epic Series
 
@@ -67,8 +67,6 @@ Philips produces a range of handheld microphones widely used in medical and lega
 
 Philips offers both corded and wireless handheld options. The wireless models give genuine freedom of movement while maintaining the audio quality Dragon requires. In medical environments particularly, the ability to dictate while moving around a patient or referring to physical documents is a practical advantage that a headset or desktop mic cannot replicate. For [Dragon Medical One for Australian clinicians](/dragon-medical-one), the Philips wireless handheld range is worth considering as part of the overall setup.
 
-For a full look at the Philips handheld range alongside headset and desktop options, the [Voice Recognition Australia microphone collection](https://www.voicerecognition.com.au/collections/usb-microphones) covers all categories.
-
 ## Microphones and the Full Documentation Workflow
 
 A quality microphone and Dragon together cover the input side of professional documentation. Many professionals find the next bottleneck is on the output side -- managing, editing, and distributing the documents that voice workflows produce.
@@ -87,4 +85,4 @@ The right microphone depends on your environment and workflow:
 
 If you are experiencing accuracy problems with Dragon and have not recently evaluated your microphone, that is the first thing to look at. Switching to a Dragon-certified headset resolves a significant proportion of accuracy complaints without any changes to Dragon itself.
 
-Voice Recognition Australia stocks the full range across all categories -- [browse the microphone collection](https://www.voicerecognition.com.au/collections/usb-microphones) or contact them directly for advice on the right combination for your specific environment and Dragon product.
+Voice Recognition Australia stocks the full range across all categories -- contact them directly for advice on the right combination for your specific environment and Dragon product.
