@@ -1,0 +1,44 @@
+{
+  "_readme": [
+    "PER-SITE IMAGE PROMPTS - dragonnaturallyspeaking.com.au",
+    "Pick scenes from image-prompt-library.json using the 'scene' field.",
+    "Set 'type' to 'hero' or 'break' to choose the right variant.",
+    "Override with a custom 'prompt' if no library scene fits - 'scene' is ignored when 'prompt' is set.",
+    "Override 'altText' to customise the HTML alt text for SEO.",
+    "Run: Actions > Generate Site Images (manual trigger) after editing.",
+    "To regenerate one image: delete its r2Key from image-manifest.json, re-run workflow.",
+    "DO NOT change 'key' values - referenced by index.astro.",
+    "No emoji or special characters in this file."
+  ],
+  "_availableScenes": [
+    "doctor-surgery", "hospital-office", "lawyer-office", "legal-team",
+    "office-general", "office-executive", "government-office", "clinic-desk",
+    "student-study", "box-shot", "microphone-closeup", "pdf-workflow", "medical-admin"
+  ],
+  "images": [
+    {
+      "key": "hero",
+      "role": "hero",
+      "scene": "doctor-surgery",
+      "type": "hero",
+      "altText": "Doctor dictating patient notes using Dragon speech recognition software in a modern Australian clinic"
+    },
+    {
+      "key": "feat1",
+      "role": "feat1",
+      "scene": "clinic-desk",
+      "type": "break",
+      "altText": "Modern Australian clinic administration desk with Dragon voice recognition headset"
+    },
+    {
+      "key": "feat2",
+      "role": "feat2",
+      "scene": "microphone-closeup",
+      "type": "break",
+      "altText": "Professional desktop microphone for Dragon speech recognition software"
+    }
+  ],
+  "_siteConfig": {
+    "note": "Dragon / speech recognition sites use: hero=doctor-surgery, feat1=clinic-desk, feat2=microphone-closeup"
+  }
+}
