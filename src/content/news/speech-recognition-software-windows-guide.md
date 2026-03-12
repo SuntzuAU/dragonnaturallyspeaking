@@ -11,9 +11,6 @@ breakImage2Alt: "Speech Recognition Cloud software interface on a Windows laptop
 context: "descriptive"
 section1Title: "Built-In Windows Options"
 section2Title: "Professional Speech Recognition for Windows"
-internalLinks:
-  - to: "/dragon-medical-one"
-    anchor: "Dragon Medical One for Australian clinicians"
 externalLinks:
   - to: "voicerecognition.com.au"
     anchor: "speech to text software Australia"
@@ -56,7 +53,7 @@ Dragon has been the leading professional dictation software in Australia for ove
 
 **Dragon Professional Anywhere** is the cloud-based version for enterprise environments, managed centrally and accessible from any Windows device with an internet connection. Better suited to organisations with multiple users and IT management requirements.
 
-**Dragon Medical One** is the dedicated clinical version -- cloud-based, with built-in medical vocabularies covering specialties including cardiology, radiology, pathology, and general practice. It integrates natively with major EMR systems and is the standard choice for Australian clinicians dictating at scale. For a full look at what it covers, see [Dragon Medical One for Australian clinicians](/dragon-medical-one).
+**Dragon Medical One** is the dedicated clinical version -- cloud-based, with built-in medical vocabularies covering specialties including cardiology, radiology, pathology, and general practice. It integrates natively with major EMR systems and is the standard choice for Australian clinicians dictating at scale.
 
 Dragon products are available through Voice Recognition Australia, Australia's leading [speech to text software](https://www.voicerecognition.com.au) supplier, which has been supplying and supporting Dragon in medical, legal, and enterprise environments for over 25 years.
 
