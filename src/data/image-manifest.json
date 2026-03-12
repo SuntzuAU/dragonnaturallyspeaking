@@ -151,5 +151,21 @@
     "seoFilename": "dragon-naturallyspeaking-australia-when-students-need-profes-break2-03a14bd8.jpg",
     "altText": "Dragon NaturallySpeaking Australia editorial illustrating When Students Software Australian workplace technology use",
     "generatedAt": "2026-03-12T04:29:26.342Z"
+  },
+  "feat1": {
+    "key": "feat1",
+    "r2Key": "dragonnaturallyspeaking/2026/03/12/images-dragonnaturallyspeaking-feat1-baad8e7f-4f2fa991.jpg",
+    "altText": "Modern Australian clinic administration desk with Dragon voice recognition headset",
+    "scene": "clinic-desk",
+    "generatedAt": "2026-03-12T22:23:55.475Z",
+    "site": "dragonnaturallyspeaking"
+  },
+  "feat2": {
+    "key": "feat2",
+    "r2Key": "dragonnaturallyspeaking/2026/03/12/images-dragonnaturallyspeaking-feat2-80bfb6df-13ebe10c.jpg",
+    "altText": "Professional desktop microphone for Dragon speech recognition software",
+    "scene": "microphone-closeup",
+    "generatedAt": "2026-03-12T22:24:14.565Z",
+    "site": "dragonnaturallyspeaking"
   }
 }
