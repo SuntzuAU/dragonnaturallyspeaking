@@ -13,7 +13,7 @@ section1Title: "Free and Low-Cost Options for Students"
 section2Title: "When Students Need Professional Software"
 externalLinks:
   - to: "voicerecognition.com.au"
-    anchor: "Dragon student and education pricing Australia"
+    anchor: "speech to text software"
     url: "https://www.voicerecognition.com.au"
   - to: "speechrecognition.cloud"
     anchor: "Speech Recognition Cloud free trial"
@@ -73,7 +73,7 @@ Many Australian universities provide Dragon to eligible students at no cost or s
 
 Dragon Home is a lower-cost version of Dragon suited to students who need more than free tools but do not require the full professional feature set. It covers general vocabulary dictation without the advanced voice command macros of Dragon Professional. For students whose primary need is faster, more accurate dictation rather than full computer control by voice, Dragon Home is worth considering.
 
-Contact [Voice Recognition Australia](https://www.voicerecognition.com.au) for current student and education pricing across the Dragon range.
+For [speech to text software](https://www.voicerecognition.com.au) advice and current student and education pricing across the Dragon range, contact Voice Recognition Australia on 1300 255 900.
 
 ## Choosing the Right Option
 
