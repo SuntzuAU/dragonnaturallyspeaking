@@ -1,9 +1,12 @@
-name: Generate Images + Build Site
+name: Generate Site Images
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'all | site | blog | post:filename.md'
+        required: false
+        default: 'all'
 
 concurrency:
   group: generate-images
@@ -30,25 +33,20 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Generate site + blog images
+      - name: Generate images
         env:
           IMAGE_WORKER_URL: https://master-image-generator.speech-recognition-cloud.workers.dev/generate
           ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
           R2_PUBLIC_BASE: ${{ vars.R2_PUBLIC_BASE }}
           SITE_ID: dragonnaturallyspeaking
-        run: node generate-images.js
+        run: node generate-images.js ${{ github.event.inputs.mode }}
 
-      - name: Commit updated files
+      - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add -A
-          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "chore: update images and manifest"
           git push
-
-      - name: Build Astro site
-        env:
-          PUBLIC_R2_BASE: ${{ vars.R2_PUBLIC_BASE }}
-        run: npm run build
