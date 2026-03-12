@@ -16,7 +16,7 @@ internalLinks:
     anchor: "Dragon Medical One for Australian clinicians"
 externalLinks:
   - to: "voicerecognition.com.au"
-    anchor: "authorised Dragon reseller Australia"
+    anchor: "speech to text software Australia"
     url: "https://www.voicerecognition.com.au"
   - to: "speechrecognition.cloud"
     anchor: "Speech Recognition Cloud for Windows"
@@ -58,7 +58,7 @@ Dragon has been the leading professional dictation software in Australia for ove
 
 **Dragon Medical One** is the dedicated clinical version -- cloud-based, with built-in medical vocabularies covering specialties including cardiology, radiology, pathology, and general practice. It integrates natively with major EMR systems and is the standard choice for Australian clinicians dictating at scale. For a full look at what it covers, see [Dragon Medical One for Australian clinicians](/dragon-medical-one).
 
-Dragon products are available through Voice Recognition Australia, Australia's [authorised Dragon reseller](https://www.voicerecognition.com.au), which has been supplying and supporting Dragon in medical, legal, and enterprise environments for over 25 years.
+Dragon products are available through Voice Recognition Australia, Australia's leading [speech to text software](https://www.voicerecognition.com.au) supplier, which has been supplying and supporting Dragon in medical, legal, and enterprise environments for over 25 years.
 
 ### Speech Recognition Cloud -- The Modern Cloud Alternative
 
@@ -97,4 +97,4 @@ Both Dragon and SRC have been used extensively in Australia and handle Australia
 - Dragon Medical One and Dragon Professional Anywhere are the cloud enterprise options
 - Speech Recognition Cloud is a newer, lower-cost cloud alternative worth evaluating for general professional use
 - Microphone quality has a significant impact on accuracy regardless of software choice
-- Contact [Voice Recognition Australia](https://www.voicerecognition.com.au) for Dragon licensing, hardware, and deployment advice
+- Contact Voice Recognition Australia for Dragon licensing, hardware, and deployment advice
