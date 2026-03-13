@@ -1,14 +1,48 @@
 {
   "thisSite": "dragonnaturallyspeaking.com.au",
-  "lastRebuilt": "2026-03-10",
-  "_note": "Auto-rebuilt by GitHub Actions after every merge. Do not edit manually.",
-  "internal": [],
+  "lastRebuilt": "2026-03-13",
+  "_note": "Link audit from actual blog posts. Tracks external link coverage and anchor text variation.",
   "external": {
-    "voicerecognition.com.au": { "count": 0, "anchorsUsed": [] },
-    "pdfsoftware.com.au": { "count": 0, "anchorsUsed": [] },
-    "dragonprofessional16.com.au": { "count": 0, "anchorsUsed": [] },
-    "dictationsolutions.com.au": { "count": 0, "anchorsUsed": [] },
-    "speechrecognition.cloud": { "count": 0, "anchorsUsed": [] },
-    "cloudprinting.au": { "count": 0, "anchorsUsed": [] }
+    "voicerecognition.com.au": {
+      "count": 11,
+      "anchorsUsed": [
+        "Voice Recognition Australia",
+        "authorised Dragon reseller Australia",
+        "USB microphones for speech recognition",
+        "Voice Recognition Australia's",
+        "speech to text software Australia",
+        "speech to text software",
+        "Dragon NaturallySpeaking Australia"
+      ]
+    },
+    "pdfsoftware.com.au": {
+      "count": 1,
+      "anchorsUsed": [
+        "PDF software for clinical document workflows"
+      ]
+    },
+    "dragonprofessional16.com.au": {
+      "count": 4,
+      "anchorsUsed": [
+        "Dragon Professional 16"
+      ]
+    },
+    "dictationsolutions.com.au": {
+      "count": 0,
+      "anchorsUsed": []
+    },
+    "speechrecognition.cloud": {
+      "count": 7,
+      "anchorsUsed": [
+        "Speech Recognition Cloud",
+        "Speech Recognition Cloud free trial",
+        "free tier",
+        "Speech Recognition Cloud for Windows"
+      ]
+    },
+    "cloudprinting.au": {
+      "count": 0,
+      "anchorsUsed": []
+    }
   }
 }
