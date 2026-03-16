@@ -1,0 +1,197 @@
+---
+import site from "../site.config.json";
+import manifest from "../data/image-manifest.json";
+
+export function getStaticPaths() {
+  return site.products.map((p) => ({
+    params: { product: p.slug },
+    props: { product: p },
+  }));
+}
+
+const { product } = Astro.props;
+const c = site.colours;
+const year = new Date().getFullYear();
+const R2_BASE = import.meta.env.PUBLIC_R2_BASE || "";
+
+function imgSrc(key) {
+  const entry = manifest[key];
+  if (!entry?.r2Key || !R2_BASE) return "";
+  return `${R2_BASE.replace(/\/$/, "")}/${entry.r2Key}`;
+}
+function imgAlt(key) { return manifest[key]?.altText || ""; }
+
+// Build JSON-LD schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": product.faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const productSchema = product.ctaType === "buy" ? {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": product.schemaName,
+  "description": product.schemaDescription,
+  "category": product.schemaCategory,
+  "brand": { "@type": "Brand", "name": product.schemaBrand },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": product.schemaPriceCurrency,
+    "price": product.schemaPrice,
+    "availability": product.schemaAvailability,
+    "seller": { "@type": "Organization", "name": "Voice Recognition Australia", "url": "https://www.voicerecognition.com.au" }
+  }
+} : null;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{product.metaTitle}</title>
+    <meta name="description" content={product.metaDesc} />
+    <link rel="canonical" href={`${site.domain}/${product.slug}`} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    {productSchema && <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />}
+    <script define:vars={{ c }}>
+      const css = `.btn-primary{background:${c.accent};border-color:${c.accent};color:#fff}.btn-primary:hover{background:${c.accentHover};border-color:${c.accentHover}}.btn-trial{background:#0d1b2a;border-color:#0d1b2a;color:#fff}.btn-trial:hover{background:#1e3a5f}.dark-bg{background:${c.primary};color:white}.neutral-bg{background:${c.neutral}}.feature-check{color:${c.accent}}.spec-badge{background:${c.accent};color:#fff}.nav-links a:hover,.dropdown-toggle:hover{color:${c.accent}}.dropdown-menu{border-top:2px solid ${c.accent}}.info-link{color:${c.accent}}`;
+      const el=document.createElement('style');el.textContent=css;document.head.appendChild(el);
+    </script>
+    <style is:inline>
+      *,*::before,*::after{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0f172a;line-height:1.6}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{max-width:1080px;margin:0 auto;padding:0 24px}header{position:sticky;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid #e2e8f0;z-index:100}.nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:16px}.logo img{height:40px;width:auto}.nav-links{display:flex;gap:18px;font-size:14px;font-weight:500;color:#334155;align-items:center}.dropdown{position:relative}.dropdown-toggle{cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap}.dropdown-toggle svg{transition:transform .15s}.dropdown:hover .dropdown-toggle svg{transform:rotate(180deg)}.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,.1);min-width:240px;padding:8px 0 6px;z-index:200}.dropdown:hover .dropdown-menu{display:block}.dropdown-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:500;color:#334155;transition:background .1s}.dropdown-menu a:hover{background:#e0f7fa;color:#006064}.nav-ctas{display:flex;gap:10px;align-items:center;flex-shrink:0}.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:8px;font-weight:700;font-size:14px;border:2px solid transparent;cursor:pointer;transition:all .15s;white-space:nowrap}.btn-lg{padding:14px 28px;font-size:16px;border-radius:10px}.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}.hamburger span{display:block;width:22px;height:2px;background:#334155;border-radius:2px}.mobile-nav{display:none;padding:12px 0 8px;border-top:1px solid #e2e8f0}.mobile-nav a{display:block;padding:10px 0;font-size:15px;font-weight:500;color:#334155;border-bottom:1px solid #f1f5f9}section{padding:48px 0}.breadcrumb{font-size:13px;color:#64748b;margin-bottom:18px}.breadcrumb a{color:#0097a7;font-weight:500}.product-hero{padding:40px 0 36px}.product-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}.product-hero h1{font-size:32px;line-height:1.1;margin:0 0 12px;letter-spacing:-0.03em}.product-hero p{font-size:15px;line-height:1.7;margin:0 0 20px;color:#475569}.spec-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em}.price-display{font-size:36px;font-weight:800;line-height:1;margin:0 0 4px;color:#0d1b2a}.price-note{font-size:13px;color:#64748b;margin:0 0 18px}.spec-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}.spec-card{text-align:center;padding:12px;background:#f0f9ff;border-radius:10px}.spec-val{font-size:16px;font-weight:800;color:#0d1b2a}.spec-label{font-size:11px;color:#64748b}.sh{margin-bottom:28px}.sh h2{font-size:26px;letter-spacing:-0.02em;margin:0 0 6px}.sh p{font-size:15px;margin:0;color:#475569}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.c6{grid-column:span 6}.c4{grid-column:span 4}.c7{grid-column:span 7}.c5{grid-column:span 5}.card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px}.card h3{margin:0 0 6px;font-size:16px}.card p{color:#475569;font-size:14px}.feature-list{list-style:none;padding:0;margin:0}.feature-list li{padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:14px;display:flex;gap:8px;align-items:flex-start}.feature-list li:last-child{border-bottom:none}.feature-check{font-weight:700;flex-shrink:0;font-size:15px}.faq-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px}.faq-card h3{margin:0 0 6px;font-size:15px}.faq-card p{margin:0;font-size:14px;color:#475569}.info-link{font-size:13px;font-weight:600;text-decoration:underline;text-underline-offset:2px;display:inline-block;margin-top:10px}.buy-actions{display:flex;flex-direction:column;gap:10px;margin-top:4px}.formbox{background:#fff;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px}._form_element{margin-bottom:10px}._form_element input,._form_element textarea{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;color:#0f172a;font-size:14px;font-family:system-ui,-apple-system,sans-serif;padding:10px 12px;width:100%}._submit{border:none;border-radius:8px;font-weight:700;font-size:15px;padding:12px 20px;width:100%;margin-top:8px;cursor:pointer;background:#0097a7;color:#fff}._submit:hover{background:#00838f}footer{background:#0f172a;color:#64748b;padding:24px 0;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}.footer-links{display:flex;gap:18px}.footer-links a:hover{color:white}.footer-disclaimer{font-size:11px;color:#475569;line-height:1.6;margin-top:10px;padding-top:10px;border-top:1px solid #1e293b}@media(max-width:900px){.product-hero-inner{grid-template-columns:1fr}.c6,.c4,.c7,.c5{grid-column:span 12}.sh h2{font-size:22px}}@media(max-width:600px){.nav-links{display:none}.hamburger{display:flex}section{padding:36px 0}.product-hero{padding:24px 0}.product-hero h1{font-size:24px}.price-display{font-size:28px}.card,.faq-card,.formbox{padding:16px}.spec-grid{grid-template-columns:1fr}.footer-inner{flex-direction:column;align-items:center;text-align:center}.footer-links{justify-content:center}}
+    </style>
+  </head>
+  <body>
+    <header><div class="wrap"><div class="nav"><div class="logo"><a href="/"><img src="/logo.jpg" alt={site.siteName} onerror="this.style.display='none'" /></a></div><nav class="nav-links" aria-label="Primary">{site.navDropdown && (<div class="dropdown"><span class="dropdown-toggle">{site.navDropdown.label}<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><div class="dropdown-menu">{site.navDropdown.items?.map((item) => <a href={item.url}>{item.label}</a>)}</div></div>)}{site.navItems?.map((item) => <a href={item.url}>{item.label}</a>)}</nav><div class="nav-ctas">{product.ctaType === 'buy' ? <a class="btn btn-primary" href={product.vraUrl} target="_blank" rel="noopener">{product.ctaText}</a> : <a class="btn btn-primary" href="#cta">Get a Quote</a>}<button class="hamburger" aria-label="Open menu" onclick="var mn=this.closest('header').querySelector('.mobile-nav');mn.style.display=mn.style.display==='block'?'none':'block'"><span></span><span></span><span></span></button></div></div><nav class="mobile-nav" aria-label="Mobile"><a href="/">Home</a>{site.navDropdown?.items?.map((item) => <a href={item.url}>{item.label}</a>)}<a href="/comparison">Comparison</a><a href="/news">News</a></nav></div></header>
+
+    <main>
+      <section class="product-hero">
+        <div class="wrap">
+          <div class="breadcrumb"><a href="/">Home</a> &gt; <a href="/comparison">Products</a> &gt; {product.title}</div>
+          <div class="product-hero-inner">
+            <div>
+              <div class="spec-badge">{product.badge}</div>
+              <h1>{product.headline}</h1>
+              <p>{product.subheadline}</p>
+              <div class="price-display">{product.price}</div>
+              <div class="price-note">{product.priceNote}</div>
+              {product.ctaType === 'buy' ? (
+                <div class="buy-actions">
+                  <a class="btn btn-primary btn-lg" href={product.vraUrl} target="_blank" rel="noopener">{product.ctaText} &rarr;</a>
+                  <a class="btn btn-lg" href="#cta" style="border-color:#cbd5e1;color:#334155">Contact Us</a>
+                  <a href={product.infoUrl} target="_blank" rel="noopener" class="info-link">More information and pricing &rarr;</a>
+                </div>
+              ) : (
+                <div class="buy-actions">
+                  <a class="btn btn-trial btn-lg" href={product.trialUrl} target="_blank" rel="noopener">Free Trial &rarr;</a>
+                  <a class="btn btn-primary btn-lg" href="#cta">Get a Quote</a>
+                </div>
+              )}
+            </div>
+            <div>
+              {imgSrc(product.heroImageKey) && (
+                <div style="border-radius:14px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 12px 40px rgba(0,0,0,.12)">
+                  <img src={imgSrc(product.heroImageKey)} alt={imgAlt(product.heroImageKey) || product.title} loading="eager" decoding="async" style="width:100%;height:100%;object-fit:cover" />
+                </div>
+              )}
+              <div class="spec-grid">
+                {product.specCards.map(s => (
+                  <div class="spec-card"><div class="spec-val">{s.val}</div><div class="spec-label">{s.label}</div></div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="neutral-bg">
+        <div class="wrap">
+          <div class="sh"><h2>What {product.title} includes</h2></div>
+          <div class="grid">
+            <div class="c7">
+              <div class="card">
+                <ul class="feature-list">
+                  {product.features.map(f => (
+                    <li><span class="feature-check">&#10003;</span>{f}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div class="c5">
+              {imgSrc(product.featureImageKey) && (
+                <div style="border-radius:14px;overflow:hidden;margin-top:14px;box-shadow:0 8px 24px rgba(0,0,0,.08)">
+                  <img src={imgSrc(product.featureImageKey)} alt={imgAlt(product.featureImageKey) || product.title} loading="lazy" decoding="async" />
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="sh"><h2>Frequently asked questions</h2></div>
+          <div class="grid">
+            {product.faqs.map(f => (
+              <div class="faq-card c6"><h3>{f.q}</h3><p>{f.a}</p></div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="neutral-bg">
+        <div class="wrap">
+          <div class="sh"><h2>Other Dragon products</h2></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            {product.otherProducts.map(p => (
+              <a href={p.url} style="padding:8px 14px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:600;color:#334155">{p.label}</a>
+            ))}
+          </div>
+          <div style="margin-top:14px"><a class="btn btn-primary" href="/comparison">Compare all products</a></div>
+        </div>
+      </section>
+
+      <section id="cta" class="dark-bg">
+        <div class="wrap">
+          <div class="grid">
+            <div class="c7">
+              <h2 style="color:white;font-size:26px;margin:0 0 10px">{product.ctaSectionHeading}</h2>
+              <p style="color:#94a3b8;margin:0 0 16px;font-size:14px">{product.ctaSectionBody}</p>
+              <ul style="color:#94a3b8;margin:0;padding-left:20px;line-height:2;font-size:14px">
+                {product.ctaSectionBullets.map(b => <li>{b}</li>)}
+              </ul>
+              {product.ctaType === 'enquire' && (
+                <div style="margin-top:18px">
+                  <a class="btn btn-trial btn-lg" href={product.trialUrl} target="_blank" rel="noopener">Start Free Trial &rarr;</a>
+                </div>
+              )}
+            </div>
+            <div class="c5">
+              <div class="formbox">
+                <div style="font-weight:800;font-size:18px;color:#0f172a">Get in touch</div>
+                <div style="color:#475569;font-size:14px;margin-bottom:2px">Local Australian support. Fast response.</div>
+                <form method="POST" action="https://voicerecognition.activehosted.com/proc.php" novalidate>
+                  <input type="hidden" name="u" value={site.form.hiddenU} /><input type="hidden" name="f" value={site.form.hiddenF} /><input type="hidden" name="s" /><input type="hidden" name="c" value="0" /><input type="hidden" name="m" value="0" /><input type="hidden" name="act" value="sub" /><input type="hidden" name="v" value="2" /><input type="hidden" name="or" value={site.form.hiddenOr} />
+                  <div class="_form_element"><input type="text" name="firstname" placeholder="Your Name" required /></div>
+                  <div class="_form_element"><input type="text" name="email" placeholder="Your Email" required /></div>
+                  <div class="_form_element"><input type="text" name="phone" placeholder="Your Phone Number" /></div>
+                  <div class="_form_element"><input type="text" name="field[21]" placeholder={product.formPlaceholders.users} /></div>
+                  <div class="_form_element"><input type="text" name="field[35]" placeholder={product.formPlaceholders.org} /></div>
+                  <div class="_form_element"><textarea name="field[18]" placeholder={product.formPlaceholders.context}></textarea></div>
+                  <button class="_submit" type="submit">{site.form.submitText}</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer><div class="wrap"><div class="footer-inner"><div>&copy; {year} {site.siteName}</div><div class="footer-links">{site.footerLinks?.map((l) => <a href={l.url}>{l.label}</a>)}</div></div><div class="footer-disclaimer">{site.branding.footerDisclaimer}</div></div></footer>
+  </body>
+</html>

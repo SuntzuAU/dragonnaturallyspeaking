@@ -29,26 +29,10 @@
     "legacyHeading": "Looking for Dragon NaturallySpeaking?",
     "legacyBody": "Dragon NaturallySpeaking and Dragon Dictate were the original product names used by Nuance Communications for over two decades. Many Australian professionals still search for Dragon NaturallySpeaking when looking for speech recognition software. The product range has been updated and rebranded - but the technology is better than ever.",
     "legacyProducts": [
-      {
-        "old": "Dragon NaturallySpeaking Professional",
-        "new": "Dragon Professional 16",
-        "url": "/dragon-professional-16"
-      },
-      {
-        "old": "Dragon NaturallySpeaking Home",
-        "new": "Dragon Professional 16 (Home edition discontinued)",
-        "url": "/dragon-professional-16"
-      },
-      {
-        "old": "Dragon Medical Practice Edition",
-        "new": "Dragon Medical One",
-        "url": "/dragon-medical-one"
-      },
-      {
-        "old": "Dragon Dictate (Mac)",
-        "new": "Discontinued - see cloud alternatives",
-        "url": "/dragon-professional-anywhere"
-      }
+      { "old": "Dragon NaturallySpeaking Professional", "new": "Dragon Professional 16", "url": "/dragon-professional-16" },
+      { "old": "Dragon NaturallySpeaking Home", "new": "Dragon Professional 16 (Home edition discontinued)", "url": "/dragon-professional-16" },
+      { "old": "Dragon Medical Practice Edition", "new": "Dragon Medical One", "url": "/dragon-medical-one" },
+      { "old": "Dragon Dictate (Mac)", "new": "Discontinued - see cloud alternatives", "url": "/dragon-professional-anywhere" }
     ]
   },
   "form": {
@@ -58,10 +42,7 @@
     "hiddenF": "285",
     "hiddenOr": "065915c5-af50-4e67-8c65-7a0031f4e8c3"
   },
-  "heroVideo": {
-    "enabled": false,
-    "youtubeId": ""
-  },
+  "heroVideo": { "enabled": false, "youtubeId": "" },
   "colours": {
     "primary": "#0d1b2a",
     "background": "#ffffff",
@@ -94,81 +75,350 @@
       { "label": "Dragon for Education", "url": "/dragon-education" }
     ]
   },
-  "primaryCTA": {
-    "text": "Enquire Now",
-    "url": "#final-cta"
-  },
-  "secondaryCTA": {
-    "text": "Compare Products",
-    "url": "/comparison"
-  },
-  "benefits": [
+  "primaryCTA": { "text": "Enquire Now", "url": "#final-cta" },
+  "secondaryCTA": { "text": "Compare Products", "url": "/comparison" },
+  "products": [
     {
-      "title": "Dictate 3x faster than typing",
-      "body": "Dragon NaturallySpeaking products convert speech to text at up to 160 words per minute with 99% accuracy from first use. Clinicians, lawyers and business professionals reduce documentation time by 50% or more."
+      "slug": "dragon-medical-one",
+      "ctaType": "enquire",
+      "badge": "Cloud - Medical Speech Recognition",
+      "title": "Dragon Medical One",
+      "metaTitle": "Dragon Medical One Australia | Cloud Speech Recognition for Clinicians",
+      "metaDesc": "Dragon Medical One - cloud-based medical speech recognition with 80+ specialty vocabularies. Used by Australian GPs, specialists and hospitals. Free trial available.",
+      "schemaName": "Dragon Medical One",
+      "schemaDescription": "Cloud-based medical speech recognition platform with 80+ built-in specialty vocabularies. No voice training required. Used by Australian GPs, specialists and hospitals.",
+      "schemaCategory": "Medical Speech Recognition Software",
+      "schemaBrand": "Nuance / Microsoft",
+      "headline": "Dragon Medical One - Cloud Speech Recognition for Australian Clinicians",
+      "subheadline": "The cloud-based medical speech recognition platform trusted by clinicians worldwide. 80+ built-in medical specialty vocabularies. No voice profile training needed. Dictate from any device, anywhere. Hosted on Microsoft Azure.",
+      "price": "Contact us for pricing",
+      "priceNote": "Subscription - volume discounts for practices and hospitals",
+      "heroImageKey": "hero-medical-one",
+      "featureImageKey": "feature-medical",
+      "trialUrl": "https://www.voicerecognition.com.au/pages/dragon-medical-one",
+      "infoUrl": "https://www.voicerecognition.com.au/pages/dragon-medical-one",
+      "specCards": [
+        { "val": "80+", "label": "Medical specialties" },
+        { "val": "Cloud", "label": "Any device, anywhere" },
+        { "val": "No training", "label": "Accurate from day one" }
+      ],
+      "features": [
+        "80+ built-in medical specialty vocabularies (cardiology, radiology, pathology, oncology, general practice and more)",
+        "Cloud-based - dictate from any Windows, Mac, iOS or Android device",
+        "No voice profile training required - accurate transcription from first use",
+        "EHR and clinical system integration (Best Practice, Medical Director, hospital systems)",
+        "AutoText and custom commands for clinical templates and common phrases",
+        "Automatic updates - always the latest vocabulary and accuracy improvements",
+        "Centralised administration for practices and hospital departments",
+        "Dragon Anywhere Mobile companion app for dictation on the go"
+      ],
+      "faqs": [
+        { "q": "Is Dragon Medical One suitable for Australian GPs?", "a": "Yes. Dragon Medical One is used extensively by Australian GPs, specialists, and hospital clinicians. It includes specialty vocabularies for general practice, cardiology, radiology, oncology and many more. Contact us for a demonstration with your specific clinical software." },
+        { "q": "Does it integrate with Best Practice and Medical Director?", "a": "Dragon Medical One integrates with major Australian clinical software including Best Practice, Medical Director and hospital EHR systems. Contact us to confirm compatibility with your specific setup." },
+        { "q": "How is Dragon Medical One different from Dragon Professional?", "a": "Dragon Medical One is cloud-based with 80+ medical specialty vocabularies built in. Dragon Professional 16 is a locally installed desktop product designed for general professional use. Medical One requires no voice training and includes medical-specific EHR integrations." },
+        { "q": "What happened to Dragon Medical Practice Edition?", "a": "Dragon Medical Practice Edition (DMPE) has been discontinued by Nuance/Microsoft. Dragon Medical One is the current replacement with significant improvements including cloud access, no voice training, and automatic updates. VRA can help migrate from DMPE." },
+        { "q": "Can I trial Dragon Medical One?", "a": "Yes. Voice Recognition Australia offers a free trial of Dragon Medical One. We can arrange a demonstration in your clinical environment, including integration testing with your EHR system." },
+        { "q": "What are the security considerations?", "a": "Dragon Medical One is hosted on Microsoft Azure. For Australian healthcare organisations, discuss specific compliance requirements with our team during the evaluation process." }
+      ],
+      "otherProducts": [
+        { "label": "Dragon Professional 16", "url": "/dragon-professional-16" },
+        { "label": "Dragon Professional Anywhere", "url": "/dragon-professional-anywhere" },
+        { "label": "Dragon Legal", "url": "/dragon-legal" },
+        { "label": "Dragon for Education", "url": "/dragon-education" }
+      ],
+      "ctaSectionHeading": "Ready to see Dragon Medical One in your practice?",
+      "ctaSectionBody": "Voice Recognition Australia has deployed Dragon Medical One in Australian GP practices, specialist clinics and hospital departments. Tell us about your clinical environment and we will arrange a demonstration.",
+      "ctaSectionBullets": [
+        "Your specialty or clinical setting",
+        "EHR system (Best Practice, Medical Director, other)",
+        "Number of clinicians",
+        "Current documentation workflow"
+      ],
+      "formPlaceholders": {
+        "users": "Number of Clinicians",
+        "org": "Practice / Hospital Name",
+        "context": "Your specialty and current EHR system"
+      }
     },
     {
-      "title": "Specialist vocabulary built in",
-      "body": "Dragon Medical One includes multiple medical specialty vocabularies. Dragon Legal includes legal terminology. No custom training required - accurate from day one in your professional context."
+      "slug": "dragon-professional-16",
+      "ctaType": "buy",
+      "badge": "Desktop - Perpetual Licence",
+      "title": "Dragon Professional 16",
+      "metaTitle": "Dragon Professional 16 Australia | From $495 AUD | Buy, Upgrade, Subscribe",
+      "metaDesc": "Dragon Professional 16 for Windows. Perpetual licence $994, upgrade from v15 $495, annual subscription $695/yr auto-recurring. Works offline after activation. Local Australian support.",
+      "schemaName": "Dragon Professional 16",
+      "schemaDescription": "Professional speech recognition software for Windows. Perpetual licence. Dictate into any Windows application, transcribe single-speaker recordings, automate workflows. Works offline after activation.",
+      "schemaCategory": "Professional Speech Recognition Software",
+      "schemaBrand": "Nuance / Microsoft",
+      "schemaPriceCurrency": "AUD",
+      "schemaPrice": "994",
+      "schemaAvailability": "https://schema.org/InStock",
+      "headline": "Dragon Professional 16 - Desktop Speech Recognition for Windows",
+      "subheadline": "The locally installed professional speech recognition suite for Windows 10 and 11. Dictate into any application, transcribe single-speaker recordings, and automate workflows with custom voice commands. Works offline after activation.",
+      "price": "$994",
+      "priceNote": "AUD inc GST - one-time perpetual licence. Upgrade from v15: $495. Subscription from $695/yr.",
+      "heroImageKey": "feature-professional",
+      "featureImageKey": "feature-professional",
+      "vraUrl": "https://www.voicerecognition.com.au/cart/add?id=44931726508278&quantity=1",
+      "infoUrl": "https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-download",
+      "ctaText": "Buy Dragon Professional 16",
+      "specCards": [
+        { "val": "$994", "label": "Perpetual AUD" },
+        { "val": "Up to 2", "label": "PC installs" },
+        { "val": "Offline", "label": "After activation" }
+      ],
+      "features": [
+        "Real-time dictation into Word, Outlook, and hundreds of Windows applications",
+        "Transcribe single-speaker audio recordings (MP3, WAV, WMA, DSS, DS2)",
+        "Custom vocabulary - add industry terms, names, and shortcuts",
+        "AutoText - speak a short phrase to insert a full paragraph",
+        "Voice macros to automate multi-step Windows workflows",
+        "Works offline after installation and activation",
+        "Hands-free PC control, navigation, and mouse control",
+        "Windows 10 and Windows 11 (32-bit and 64-bit) compatible",
+        "Compatible with Microsoft 365, Google Docs, and Microsoft Teams"
+      ],
+      "faqs": [
+        { "q": "Does Dragon Professional 16 require internet to use?", "a": "No. After installation and activation, Dragon Professional 16 operates without an internet connection. An internet connection is required only for the initial download and product activation." },
+        { "q": "Can it transcribe audio recordings?", "a": "Yes - single-speaker recordings only. Supported formats include MP3, WAV, WMA, DS2, and DSS. It cannot transcribe multi-speaker conversations or meetings." },
+        { "q": "Which microphone should I use?", "a": "Dragon works with a range of USB and 3.5mm microphones. A dedicated dictation microphone or USB headset provides the best accuracy. Apple AirPods are not supported for dictation." },
+        { "q": "Does it work with Microsoft Teams?", "a": "Dragon Professional 16 includes support for dictating into Microsoft Teams. Some advanced voice commands may have limitations in Teams Home edition." },
+        { "q": "What is the difference between perpetual and subscription?", "a": "The perpetual licence ($994) owns the software outright but your voice profile is stored locally. The subscription ($695/yr auto-recurring) stores your profile in the cloud so it syncs to any PC, includes all new versions automatically, and allows unlimited PC installs." },
+        { "q": "Can I upgrade from an older version?", "a": "The upgrade ($495) is available for Dragon Professional Individual or Group version 15 only. It is not valid for older versions or other editions such as Dragon Home." }
+      ],
+      "otherProducts": [
+        { "label": "Dragon Medical One", "url": "/dragon-medical-one" },
+        { "label": "Dragon Professional Anywhere", "url": "/dragon-professional-anywhere" },
+        { "label": "Dragon Legal", "url": "/dragon-legal" },
+        { "label": "Dragon for Education", "url": "/dragon-education" }
+      ],
+      "ctaSectionHeading": "Questions about Dragon Professional 16?",
+      "ctaSectionBody": "Voice Recognition Australia has deployed Dragon Professional across Australian government, legal, and enterprise environments for 25 years. We can help you choose the right version and get set up quickly.",
+      "ctaSectionBullets": [
+        "Which licence type suits your needs",
+        "Upgrade eligibility from older versions",
+        "Enterprise deployment and management",
+        "Microphone recommendations"
+      ],
+      "formPlaceholders": {
+        "users": "Number of Users",
+        "org": "Company / Organisation",
+        "context": "Your profession and current dictation setup"
+      }
     },
     {
-      "title": "Cloud or desktop - your choice",
-      "body": "Dragon Professional 16 runs fully offline for complete privacy and command control. Dragon Professional Anywhere and Dragon Medical One are cloud-based for anywhere access and automatic updates."
+      "slug": "dragon-professional-anywhere",
+      "ctaType": "buy",
+      "badge": "Cloud - Enterprise",
+      "title": "Dragon Professional Anywhere",
+      "metaTitle": "Dragon Professional Anywhere Australia | Cloud Speech Recognition for Enterprise",
+      "metaDesc": "Dragon Professional Anywhere - cloud-based speech recognition for enterprise. $795 single purchase or $695/yr annual subscription. Virtual desktop and Citrix support. Australian support included.",
+      "schemaName": "Dragon Professional Anywhere",
+      "schemaDescription": "Cloud-native professional speech recognition for enterprise. Supports Citrix and virtual desktop environments. Voice profile syncs across devices. Annual subscription.",
+      "schemaCategory": "Enterprise Speech Recognition Software",
+      "schemaBrand": "Nuance / Microsoft",
+      "schemaPriceCurrency": "AUD",
+      "schemaPrice": "695",
+      "schemaAvailability": "https://schema.org/InStock",
+      "headline": "Dragon Professional Anywhere - Cloud Speech Recognition for Enterprise",
+      "subheadline": "Cloud-native speech recognition designed for enterprise and distributed teams. Always up to date, works in virtual desktop and Citrix environments, with centralised administration via Nuance Management Centre.",
+      "price": "$695",
+      "priceNote": "AUD inc GST per year - annual subscription (auto-recurring). Single purchase $795.",
+      "heroImageKey": "hero-anywhere",
+      "featureImageKey": "hero-anywhere",
+      "vraUrl": "https://www.voicerecognition.com.au/cart/add?id=39255167860918&selling_plan=7531921654&quantity=1",
+      "infoUrl": "https://www.voicerecognition.com.au/products/dragon-professional-anywhere",
+      "ctaText": "Buy Annual Subscription",
+      "specCards": [
+        { "val": "$695", "label": "Per year AUD" },
+        { "val": "Citrix", "label": "VDI supported" },
+        { "val": "Cloud", "label": "Always up to date" }
+      ],
+      "features": [
+        "Cloud-based - always the latest version, no local installation management",
+        "Anchor dictation - dictate into any Windows application from a floating dictation box",
+        "Virtual desktop and thin client support (Citrix, RDP environments)",
+        "Centralised administration via Nuance Management Centre (NMC)",
+        "Voice profile roaming - your profile follows you across devices",
+        "Dragon Anywhere Mobile app included for iOS and Android dictation",
+        "Custom vocabulary, AutoText, and voice commands",
+        "Microsoft 365 and Microsoft Teams integration",
+        "12 months email support and self-deployment guides included"
+      ],
+      "faqs": [
+        { "q": "Does Dragon Professional Anywhere work offline?", "a": "No. Dragon Professional Anywhere is a cloud-native product that requires an internet connection to function. For offline operation, Dragon Professional 16 is the appropriate choice." },
+        { "q": "Does it support Citrix and virtual desktops?", "a": "Yes. Dragon Professional Anywhere is designed for virtual desktop infrastructure including Citrix and Remote Desktop Protocol (RDP) environments. Contact us for deployment guidance." },
+        { "q": "What is the difference between single purchase and subscription?", "a": "Both give you full access for 12 months. The single purchase is $795 one-off. The annual subscription auto-renews at $695/yr - saving $100 per year. The subscription is better value if you plan to continue beyond the first year." },
+        { "q": "Can I use it on mobile devices?", "a": "Yes. Dragon Professional Anywhere includes the Dragon Anywhere Mobile companion app for iOS and Android, allowing you to dictate on the go with the same voice profile." },
+        { "q": "What is the Nuance Management Centre?", "a": "NMC is a server-based administration tool for IT teams to centrally manage Dragon deployments - assigning licences, managing user profiles, distributing custom vocabulary, and monitoring usage across the organisation." },
+        { "q": "Are discounts available for multiple users?", "a": "Yes. Discounts are available for 5 or more users. Contact us for volume pricing tailored to your organisation." }
+      ],
+      "otherProducts": [
+        { "label": "Dragon Medical One", "url": "/dragon-medical-one" },
+        { "label": "Dragon Professional 16", "url": "/dragon-professional-16" },
+        { "label": "Dragon Legal", "url": "/dragon-legal" },
+        { "label": "Dragon for Education", "url": "/dragon-education" }
+      ],
+      "ctaSectionHeading": "Ready to deploy Dragon Professional Anywhere?",
+      "ctaSectionBody": "Voice Recognition Australia has experience deploying Dragon Anywhere in government departments, legal chambers, and enterprise environments. Tell us about your infrastructure and we will provide a tailored recommendation.",
+      "ctaSectionBullets": [
+        "Number of users and locations",
+        "Virtual desktop environment (Citrix, RDP, other)",
+        "Current dictation or documentation workflow",
+        "IT management and procurement requirements"
+      ],
+      "formPlaceholders": {
+        "users": "Number of Users",
+        "org": "Organisation",
+        "context": "Your infrastructure (Citrix, RDP, etc) and deployment needs"
+      }
     },
     {
-      "title": "Local Australian support",
-      "body": "Voice Recognition Australia has deployed Dragon NaturallySpeaking products in Australian medical practices, law firms and government agencies for 25 years. We provide hands-on onboarding, training and ongoing support - in your timezone."
+      "slug": "dragon-legal",
+      "ctaType": "buy",
+      "badge": "Cloud - Legal Profession",
+      "title": "Dragon Legal Anywhere",
+      "metaTitle": "Dragon Legal Australia | Speech Recognition for Law Firms | $649 AUD",
+      "metaDesc": "Dragon Legal Anywhere - cloud-based speech recognition with built-in legal vocabulary. $649 AUD per year. Designed for Australian law firms, barristers, and legal professionals.",
+      "schemaName": "Dragon Legal Anywhere",
+      "schemaDescription": "Cloud-based speech recognition platform built for the legal profession. Built-in legal vocabulary covering court terminology, legislation, case law citations and legal drafting conventions.",
+      "schemaCategory": "Legal Speech Recognition Software",
+      "schemaBrand": "Nuance / Microsoft",
+      "schemaPriceCurrency": "AUD",
+      "schemaPrice": "649",
+      "schemaAvailability": "https://schema.org/InStock",
+      "headline": "Dragon Legal - Speech Recognition for Australian Law Firms",
+      "subheadline": "Dragon Legal Anywhere is the cloud-based speech recognition platform built specifically for the legal profession. Built-in legal vocabulary covers court terminology, legislation, case law citations, and legal drafting conventions.",
+      "price": "$649",
+      "priceNote": "AUD inc GST per year. Volume pricing available for 5+ users.",
+      "heroImageKey": "hero-legal",
+      "featureImageKey": "hero-legal",
+      "vraUrl": "https://www.voicerecognition.com.au/cart/add?id=47328886358262&quantity=1",
+      "infoUrl": "https://www.voicerecognition.com.au/products/dragon-legal-anywhere",
+      "ctaText": "Buy Dragon Legal",
+      "specCards": [
+        { "val": "$649", "label": "Per year AUD" },
+        { "val": "Legal", "label": "Built-in vocabulary" },
+        { "val": "Cloud", "label": "Anywhere access" }
+      ],
+      "features": [
+        "Built-in legal vocabulary - court terminology, legislation, case law citations, legal drafting",
+        "Cloud-based - dictate from any device, anywhere",
+        "Custom vocabulary for firm-specific terms, client names, and matter references",
+        "AutoText for standard clauses, correspondence templates, and court forms",
+        "Centralised administration via Nuance Management Centre",
+        "Voice profile roaming across devices",
+        "Dragon Anywhere Mobile app for dictation on the go",
+        "Microsoft 365 and document management system integration"
+      ],
+      "faqs": [
+        { "q": "What is the difference between Dragon Legal and Dragon Professional?", "a": "Dragon Legal Anywhere includes everything in Dragon Professional Anywhere plus built-in legal vocabulary covering court terminology, legislation, case law citations and legal drafting conventions." },
+        { "q": "Is there a desktop version of Dragon Legal?", "a": "Dragon Legal Anywhere is cloud-based. For locally installed desktop use with legal vocabulary, Dragon Professional 16 can be customised with legal terms via custom vocabulary - though this requires manual setup rather than built-in legal dictionaries." },
+        { "q": "Can it integrate with legal practice management software?", "a": "Dragon Legal Anywhere works with Windows applications including common legal practice management and document management systems. Contact us to discuss compatibility with your specific software." },
+        { "q": "How does firm-wide deployment work?", "a": "Dragon Legal Anywhere is managed via the Nuance Management Centre (NMC). IT teams can provision users, distribute shared vocabulary and AutoText, manage licences, and monitor usage across the firm." },
+        { "q": "Are discounts available for firms with multiple users?", "a": "Yes. Volume pricing is available for firms with 5 or more users. Contact us for a tailored quote based on your firm size." },
+        { "q": "Does Dragon Legal work offline?", "a": "No. Dragon Legal Anywhere is cloud-based and requires an internet connection. For offline use, Dragon Professional 16 with custom legal vocabulary is the alternative." }
+      ],
+      "otherProducts": [
+        { "label": "Dragon Medical One", "url": "/dragon-medical-one" },
+        { "label": "Dragon Professional 16", "url": "/dragon-professional-16" },
+        { "label": "Dragon Professional Anywhere", "url": "/dragon-professional-anywhere" },
+        { "label": "Dragon for Education", "url": "/dragon-education" }
+      ],
+      "ctaSectionHeading": "Ready to deploy Dragon Legal in your firm?",
+      "ctaSectionBody": "Voice Recognition Australia has deployed Dragon in Australian legal chambers, law firms, and government legal departments. Tell us about your practice and we will provide a tailored recommendation.",
+      "ctaSectionBullets": [
+        "Number of fee earners and support staff",
+        "Practice management system in use",
+        "Desktop or virtual desktop environment",
+        "Current dictation workflow"
+      ],
+      "formPlaceholders": {
+        "users": "Number of Users",
+        "org": "Firm / Chambers Name",
+        "context": "Practice area and current dictation workflow"
+      }
+    },
+    {
+      "slug": "dragon-education",
+      "ctaType": "buy",
+      "badge": "Student and Education",
+      "title": "Dragon Professional 16 Student Edition",
+      "metaTitle": "Dragon Software for Education Australia | Student Pricing $545 | Speech Recognition",
+      "metaDesc": "Dragon Professional 16 Student Edition for Australian students and educators. $545 AUD perpetual licence. Full version, no feature restrictions. Ideal for dyslexia, RSI and accessibility needs.",
+      "schemaName": "Dragon Professional 16 Student Edition",
+      "schemaDescription": "Full Dragon Professional 16 speech recognition software at discounted pricing for Australian students and educators. Perpetual licence, no feature restrictions.",
+      "schemaCategory": "Educational Speech Recognition Software",
+      "schemaBrand": "Nuance / Microsoft",
+      "schemaPriceCurrency": "AUD",
+      "schemaPrice": "545",
+      "schemaAvailability": "https://schema.org/InStock",
+      "headline": "Dragon Software for Education - Student and Educator Pricing",
+      "subheadline": "The complete Dragon Professional 16 at a discounted price for students, educators and educational institutions. Dictate essays, assignments, research notes and course materials faster and more accurately than typing. Widely used for accessibility and assistive technology needs.",
+      "price": "$545",
+      "priceNote": "AUD inc GST - perpetual licence. Save $449 vs full price ($994).",
+      "heroImageKey": "hero-education",
+      "featureImageKey": "hero-education",
+      "vraUrl": "https://www.voicerecognition.com.au/cart/add?id=47759915122934&quantity=1",
+      "infoUrl": "https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-educational-student",
+      "ctaText": "Buy Student Edition",
+      "specCards": [
+        { "val": "$545", "label": "Student price AUD" },
+        { "val": "Up to 2", "label": "PC installs" },
+        { "val": "Perpetual", "label": "Own it forever" }
+      ],
+      "features": [
+        "Full Dragon Professional 16 - identical to the $994 version",
+        "Real-time dictation into Word, Google Docs, email and any Windows application",
+        "Transcribe single-speaker audio recordings (MP3, WAV, WMA, DSS, DS2)",
+        "Custom vocabulary - add subject-specific terms, names and abbreviations",
+        "AutoText shortcuts - speak a phrase to insert a full paragraph or citation template",
+        "Voice macros to automate repetitive formatting and editing tasks",
+        "Hands-free PC control - navigate, click, scroll and select by voice",
+        "Works offline after installation and activation",
+        "Windows 10 and Windows 11 compatible",
+        "Perpetual licence - pay once, own it for your entire degree and beyond"
+      ],
+      "faqs": [
+        { "q": "Is the Student Edition the full version?", "a": "Yes. The Student Edition is the complete Dragon Professional 16 with no feature restrictions. The only difference from the standard perpetual licence is the discounted price." },
+        { "q": "Do I need to prove student or educator status?", "a": "Contact Voice Recognition Australia when purchasing for specific eligibility requirements and any documentation needed." },
+        { "q": "Can Dragon help with dyslexia?", "a": "Yes. Dragon is widely used as an assistive technology tool for students with dyslexia. Dictating rather than typing removes the spelling barrier, and Dragon can read text back aloud to assist with proofreading." },
+        { "q": "Can NDIS fund Dragon software?", "a": "Dragon is commonly included in NDIS assistive technology plans. Contact Voice Recognition Australia for supporting documentation and quotes formatted for NDIS submissions." },
+        { "q": "Does it work on Mac?", "a": "Dragon Professional 16 is Windows only (Windows 10 and 11). There is no Mac version. Nuance discontinued Dragon for Mac." },
+        { "q": "Can I keep using it after I graduate?", "a": "Yes. The Student Edition is a perpetual licence - you own it permanently. It continues to work after you graduate or leave your educational institution." }
+      ],
+      "otherProducts": [
+        { "label": "Dragon Medical One", "url": "/dragon-medical-one" },
+        { "label": "Dragon Professional 16", "url": "/dragon-professional-16" },
+        { "label": "Dragon Professional Anywhere", "url": "/dragon-professional-anywhere" },
+        { "label": "Dragon Legal", "url": "/dragon-legal" }
+      ],
+      "ctaSectionHeading": "Questions about Dragon for education?",
+      "ctaSectionBody": "Whether you are a student, educator, disability support officer or IT department, we can help you choose the right Dragon product and assist with NDIS or institutional procurement.",
+      "ctaSectionBullets": [
+        "Student, educator or institution",
+        "Accessibility or assistive technology needs",
+        "NDIS funding documentation required",
+        "Volume licensing for departments"
+      ],
+      "formPlaceholders": {
+        "users": "Number of Users",
+        "org": "University / School / Organisation",
+        "context": "Student, educator or institution? Any accessibility needs?"
+      }
     }
   ],
+  "benefits": [
+    { "title": "Dictate 3x faster than typing", "body": "Dragon NaturallySpeaking products convert speech to text at up to 160 words per minute with 99% accuracy from first use. Clinicians, lawyers and business professionals reduce documentation time by 50% or more." },
+    { "title": "Specialist vocabulary built in", "body": "Dragon Medical One includes multiple medical specialty vocabularies. Dragon Legal includes legal terminology. No custom training required - accurate from day one in your professional context." },
+    { "title": "Cloud or desktop - your choice", "body": "Dragon Professional 16 runs fully offline for complete privacy and command control. Dragon Professional Anywhere and Dragon Medical One are cloud-based for anywhere access and automatic updates." },
+    { "title": "Local Australian support", "body": "Voice Recognition Australia has deployed Dragon NaturallySpeaking products in Australian medical practices, law firms and government agencies for 25 years. We provide hands-on onboarding, training and ongoing support - in your timezone." }
+  ],
   "pricing": [
-    {
-      "name": "Dragon Professional 16",
-      "platform": "Windows desktop - perpetual licence",
-      "price": "From $559",
-      "priceNote": "AUD inc GST - one-time purchase",
-      "highlight": false,
-      "url": "/dragon-professional-16",
-      "features": [
-        "Full offline speech recognition",
-        "Command and control - accessibility",
-        "Transcription of recorded audio files",
-        "Custom voice commands and macros",
-        "Microsoft 365 and Teams integration",
-        "Windows 10 and 11 optimised"
-      ]
-    },
-    {
-      "name": "Dragon Medical One",
-      "platform": "Cloud - subscription",
-      "price": "Contact us",
-      "priceNote": "Subscription pricing - volume discounts available",
-      "highlight": true,
-      "url": "/dragon-medical-one",
-      "features": [
-        "Multiple medical specialty vocabularies",
-        "Dictate from any device anywhere",
-        "No voice profile training needed",
-        "EHR and clinical system integration",
-        "Automatic updates and improvements",
-        "HIPAA-aligned security on Azure"
-      ]
-    },
-    {
-      "name": "Dragon Professional Anywhere",
-      "platform": "Cloud - subscription",
-      "price": "Contact us",
-      "priceNote": "Per user per year - volume pricing available",
-      "highlight": false,
-      "url": "/dragon-professional-anywhere",
-      "features": [
-        "Cloud-based, always up to date",
-        "Ideal for virtual and thin-client environments",
-        "Anchor dictation - work in any window",
-        "Dragon Anywhere Mobile app included",
-        "Centralised admin via Nuance Management Center",
-        "Microsoft 365 and Teams integration"
-      ]
-    }
+    { "name": "Dragon Professional 16", "platform": "Windows desktop - perpetual licence", "price": "From $495", "priceNote": "AUD inc GST - one-time purchase", "highlight": false, "url": "/dragon-professional-16", "features": ["Full offline speech recognition", "Command and control - accessibility", "Transcription of recorded audio files", "Custom voice commands and macros", "Microsoft 365 and Teams integration", "Windows 10 and 11 optimised"] },
+    { "name": "Dragon Medical One", "platform": "Cloud - subscription", "price": "Contact us", "priceNote": "Subscription pricing - volume discounts available", "highlight": true, "url": "/dragon-medical-one", "features": ["Multiple medical specialty vocabularies", "Dictate from any device anywhere", "No voice profile training needed", "EHR and clinical system integration", "Automatic updates and improvements", "HIPAA-aligned security on Azure"] },
+    { "name": "Dragon Professional Anywhere", "platform": "Cloud - subscription", "price": "$695/yr", "priceNote": "Per user per year - volume pricing available", "highlight": false, "url": "/dragon-professional-anywhere", "features": ["Cloud-based, always up to date", "Ideal for virtual and thin-client environments", "Anchor dictation - work in any window", "Dragon Anywhere Mobile app included", "Centralised admin via Nuance Management Center", "Microsoft 365 and Teams integration"] }
   ],
   "tco": {
     "heading": "Documentation time saved - 10 users over 12 months",
@@ -181,23 +431,10 @@
     ]
   },
   "aboutEditions": [
-    {
-      "name": "Dragon Medical One",
-      "desc": "Cloud-based. Multiple medical specialties. Any device, anywhere. Subscription.",
-      "highlight": true
-    },
-    {
-      "name": "Dragon Professional 16",
-      "desc": "Desktop. Perpetual licence. Full offline use. Command and control. Accessibility."
-    },
-    {
-      "name": "Dragon Professional Anywhere",
-      "desc": "Cloud. Enterprise deployment. Thin client and virtual environments. Subscription."
-    },
-    {
-      "name": "Dragon Legal Anywhere",
-      "desc": "Cloud. Legal vocabulary built in. Law firm deployment. Subscription."
-    }
+    { "name": "Dragon Medical One", "desc": "Cloud-based. Multiple medical specialties. Any device, anywhere. Subscription.", "highlight": true },
+    { "name": "Dragon Professional 16", "desc": "Desktop. Perpetual licence. Full offline use. Command and control. Accessibility." },
+    { "name": "Dragon Professional Anywhere", "desc": "Cloud. Enterprise deployment. Thin client and virtual environments. Subscription." },
+    { "name": "Dragon Legal Anywhere", "desc": "Cloud. Legal vocabulary built in. Law firm deployment. Subscription." }
   ],
   "proofPoints": [
     "Authorised Dragon NaturallySpeaking reseller since 1999",
@@ -206,56 +443,21 @@
     "Medical, Legal, Enterprise and Accessibility specialists"
   ],
   "steps": [
-    {
-      "title": "Tell us about your team",
-      "text": "Let us know your profession, number of users, and whether you prefer desktop or cloud. We recommend the right Dragon product for your workflow."
-    },
-    {
-      "title": "Trial and validate",
-      "text": "We set up a free trial in your environment. For medical teams, we can demonstrate Dragon Medical One with your EHR system."
-    },
-    {
-      "title": "Deploy with local support",
-      "text": "We handle licensing, installation and onboarding. Your team is dictating faster within days - with ongoing Australian support."
-    }
+    { "title": "Tell us about your team", "text": "Let us know your profession, number of users, and whether you prefer desktop or cloud. We recommend the right Dragon product for your workflow." },
+    { "title": "Trial and validate", "text": "We set up a free trial in your environment. For medical teams, we can demonstrate Dragon Medical One with your EHR system." },
+    { "title": "Deploy with local support", "text": "We handle licensing, installation and onboarding. Your team is dictating faster within days - with ongoing Australian support." }
   ],
   "features": [
-    {
-      "key": "feature-medical",
-      "title": "Dragon Medical One - built for clinicians",
-      "body": "Dragon Medical One is the cloud-based medical speech recognition solution trusted by clinicians worldwide. With multiple built-in medical specialty vocabularies covering cardiology, radiology, pathology and more, it requires no voice profile training and delivers accurate transcription from day one. Hosted on Microsoft Azure with HIPAA-aligned security."
-    },
-    {
-      "key": "feature-professional",
-      "title": "Dragon Professional - for business and legal teams",
-      "body": "Dragon Professional 16 and Dragon Professional Anywhere give business and legal professionals the speed and accuracy to eliminate documentation bottlenecks. Custom voice commands, macro automation, full Microsoft 365 integration and centralised team management make Dragon the productivity platform for document-intensive organisations."
-    }
+    { "key": "feature-medical", "title": "Dragon Medical One - built for clinicians", "body": "Dragon Medical One is the cloud-based medical speech recognition solution trusted by clinicians worldwide. With multiple built-in medical specialty vocabularies covering cardiology, radiology, pathology and more, it requires no voice profile training and delivers accurate transcription from day one. Hosted on Microsoft Azure with HIPAA-aligned security." },
+    { "key": "feature-professional", "title": "Dragon Professional - for business and legal teams", "body": "Dragon Professional 16 and Dragon Professional Anywhere give business and legal professionals the speed and accuracy to eliminate documentation bottlenecks. Custom voice commands, macro automation, full Microsoft 365 integration and centralised team management make Dragon the productivity platform for document-intensive organisations." }
   ],
   "faqs": [
-    {
-      "q": "Is Dragon NaturallySpeaking still available?",
-      "a": "Dragon NaturallySpeaking and Dragon Dictate were the original product names. The current product range includes Dragon Professional 16 (desktop), Dragon Professional Anywhere (cloud), Dragon Medical One (medical) and Dragon Legal Anywhere. All are available through Voice Recognition Australia and we can help you identify which current product matches your previous Dragon NaturallySpeaking version."
-    },
-    {
-      "q": "What happened to Dragon Dictate?",
-      "a": "Dragon Dictate was the Mac version of Dragon NaturallySpeaking. Nuance discontinued Dragon Dictate for Mac. Current alternatives include Dragon Professional Anywhere (cloud-based, works via browser) and Speech Recognition Cloud. Contact us to discuss the best replacement for your Mac workflow."
-    },
-    {
-      "q": "What is the difference between Dragon Professional 16 and Dragon Professional Anywhere?",
-      "a": "Dragon Professional 16 is a locally installed desktop application - it runs fully offline once activated, ideal for users who need command and control or work in secure environments. Dragon Professional Anywhere is cloud-based, always updated, and ideal for virtual desktops and distributed teams."
-    },
-    {
-      "q": "Is Dragon Medical One suitable for Australian GPs and specialists?",
-      "a": "Yes - Dragon Medical One is used extensively by Australian GPs, specialists, and hospital clinicians. It includes specialty vocabularies for general practice, cardiology, radiology, oncology and many more. Contact us for a demonstration with your specific EHR system."
-    },
-    {
-      "q": "Does Dragon Medical One integrate with Best Practice or Medical Director?",
-      "a": "Dragon Medical One integrates with major Australian clinical software including Best Practice, Medical Director and hospital EHR systems. Contact us to confirm compatibility with your specific setup."
-    },
-    {
-      "q": "Can I trial Dragon before purchasing?",
-      "a": "Yes - free trials are available for Dragon Professional 16 and Dragon Professional Anywhere. For Dragon Medical One, we can arrange a demonstration and trial in your clinical environment. Contact our Australian team to arrange access."
-    }
+    { "q": "Is Dragon NaturallySpeaking still available?", "a": "Dragon NaturallySpeaking and Dragon Dictate were the original product names. The current product range includes Dragon Professional 16 (desktop), Dragon Professional Anywhere (cloud), Dragon Medical One (medical) and Dragon Legal Anywhere. All are available through Voice Recognition Australia and we can help you identify which current product matches your previous Dragon NaturallySpeaking version." },
+    { "q": "What happened to Dragon Dictate?", "a": "Dragon Dictate was the Mac version of Dragon NaturallySpeaking. Nuance discontinued Dragon Dictate for Mac. Current alternatives include Dragon Professional Anywhere (cloud-based, works via browser) and Speech Recognition Cloud. Contact us to discuss the best replacement for your Mac workflow." },
+    { "q": "What is the difference between Dragon Professional 16 and Dragon Professional Anywhere?", "a": "Dragon Professional 16 is a locally installed desktop application - it runs fully offline once activated, ideal for users who need command and control or work in secure environments. Dragon Professional Anywhere is cloud-based, always updated, and ideal for virtual desktops and distributed teams." },
+    { "q": "Is Dragon Medical One suitable for Australian GPs and specialists?", "a": "Yes - Dragon Medical One is used extensively by Australian GPs, specialists, and hospital clinicians. It includes specialty vocabularies for general practice, cardiology, radiology, oncology and many more. Contact us for a demonstration with your specific EHR system." },
+    { "q": "Does Dragon Medical One integrate with Best Practice or Medical Director?", "a": "Dragon Medical One integrates with major Australian clinical software including Best Practice, Medical Director and hospital EHR systems. Contact us to confirm compatibility with your specific setup." },
+    { "q": "Can I trial Dragon before purchasing?", "a": "Yes - free trials are available for Dragon Professional 16 and Dragon Professional Anywhere. For Dragon Medical One, we can arrange a demonstration and trial in your clinical environment. Contact our Australian team to arrange access." }
   ],
   "footerLinks": [
     { "label": "About", "url": "/about" },
