@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.filter(p => p.slug !== '_placeholder').map(post => ({ params: { slug: post.slug }, props: { post } }));
+  const posts = await getCollection('news');
+  return posts.filter(p => !p.slug.startsWith('_')).map(post => ({ params: { slug: post.slug }, props: { post } }));
 }
 const { post } = Astro.props;
 ---
-<html><head><meta http-equiv="refresh" content="0;url=/news" /></head><body><a href="/news">Moved to /news</a></body></html>
+<html><head><meta http-equiv="refresh" content={`0;url=/news/${post.slug}`} /></head><body><a href={`/news/${post.slug}`}>Moved to /news/{post.slug}</a></body></html>
