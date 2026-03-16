@@ -6,6 +6,11 @@ const year = new Date().getFullYear();
 const R2_BASE = import.meta.env.PUBLIC_R2_BASE || "";
 function imgSrc(key) { const e = manifest[key]; if (!e?.r2Key || !R2_BASE) return ""; return `${R2_BASE.replace(/\/$/, "")}/${e.r2Key}`; }
 function imgAlt(key) { return manifest[key]?.altText || ""; }
+
+const CART_PERPETUAL = "https://www.voicerecognition.com.au/cart/add?id=44931726508278&quantity=1";
+const CART_UPGRADE = "https://www.voicerecognition.com.au/cart/add?id=44931746595062&quantity=1";
+const CART_SUBSCRIPTION = "https://www.voicerecognition.com.au/cart/add?id=46140825338102&selling_plan=7531921654&quantity=1";
+const CART_STUDENT = "https://www.voicerecognition.com.au/cart/add?id=47759915122934&quantity=1";
 ---
 <!doctype html>
 <html lang="en">
@@ -13,7 +18,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dragon Professional 16 Australia | From $495 AUD | Buy, Upgrade, Subscribe</title>
-    <meta name="description" content="Dragon Professional 16 for Windows. Perpetual licence $994, upgrade from v15 $495, annual subscription $595. Works offline after activation. Local Australian support from Voice Recognition Australia." />
+    <meta name="description" content="Dragon Professional 16 for Windows. Perpetual licence $994, upgrade from v15 $495, annual subscription $695/yr auto-recurring. Works offline after activation. Local Australian support from Voice Recognition Australia." />
     <link rel="canonical" href={`${site.domain}/dragon-professional-16`} />
     <script define:vars={{ c }}>
       const css = `.btn-primary{background:${c.accent};border-color:${c.accent};color:#fff}.btn-primary:hover{background:${c.accentHover};border-color:${c.accentHover}}.dark-bg{background:${c.primary};color:white}.neutral-bg{background:${c.neutral}}.feature-check{color:${c.accent}}.spec-badge{background:${c.accent};color:#fff}.nav-links a:hover,.dropdown-toggle:hover{color:${c.accent}}.dropdown-menu{border-top:2px solid ${c.accent}}`;
@@ -24,7 +29,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
     </style>
   </head>
   <body>
-    <header><div class="wrap"><div class="nav"><div class="logo"><a href="/"><img src="/logo.jpg" alt={site.siteName} onerror="this.style.display='none'" /></a></div><nav class="nav-links" aria-label="Primary">{site.navDropdown && (<div class="dropdown"><span class="dropdown-toggle">{site.navDropdown.label}<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><div class="dropdown-menu">{site.navDropdown.items?.map((item) => <a href={item.url}>{item.label}</a>)}</div></div>)}{site.navItems?.map((item) => <a href={item.url}>{item.label}</a>)}</nav><div class="nav-ctas"><a class="btn btn-primary" href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-download" target="_blank" rel="noopener">Buy Now</a><button class="hamburger" aria-label="Open menu" onclick="var mn=this.closest('header').querySelector('.mobile-nav');mn.style.display=mn.style.display==='block'?'none':'block'"><span></span><span></span><span></span></button></div></div><nav class="mobile-nav" aria-label="Mobile"><a href="/">Home</a>{site.navDropdown?.items?.map((item) => <a href={item.url}>{item.label}</a>)}<a href="/comparison">Comparison</a><a href="/news">News</a></nav></div></header>
+    <header><div class="wrap"><div class="nav"><div class="logo"><a href="/"><img src="/logo.jpg" alt={site.siteName} onerror="this.style.display='none'" /></a></div><nav class="nav-links" aria-label="Primary">{site.navDropdown && (<div class="dropdown"><span class="dropdown-toggle">{site.navDropdown.label}<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><div class="dropdown-menu">{site.navDropdown.items?.map((item) => <a href={item.url}>{item.label}</a>)}</div></div>)}{site.navItems?.map((item) => <a href={item.url}>{item.label}</a>)}</nav><div class="nav-ctas"><a class="btn btn-primary" href={CART_PERPETUAL} target="_blank" rel="noopener">Buy Now</a><button class="hamburger" aria-label="Open menu" onclick="var mn=this.closest('header').querySelector('.mobile-nav');mn.style.display=mn.style.display==='block'?'none':'block'"><span></span><span></span><span></span></button></div></div><nav class="mobile-nav" aria-label="Mobile"><a href="/">Home</a>{site.navDropdown?.items?.map((item) => <a href={item.url}>{item.label}</a>)}<a href="/comparison">Comparison</a><a href="/news">News</a></nav></div></header>
 
     <main>
       <section class="product-hero">
@@ -39,7 +44,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
               <div class="price-note">AUD inc GST - one-time perpetual licence</div>
               <div class="licence-note">Licensed per user. Install on up to 2 PCs. Upgrade from v15: $495.</div>
               <div style="display:flex;gap:10px;flex-wrap:wrap">
-                <a class="btn btn-primary btn-lg" href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-download" target="_blank" rel="noopener">Buy Dragon Professional 16</a>
+                <a class="btn btn-primary btn-lg" href={CART_PERPETUAL} target="_blank" rel="noopener">Buy Dragon Professional 16</a>
                 <a class="btn" href="#cta" style="border-color:#cbd5e1;color:#334155">Contact Us</a>
               </div>
             </div>
@@ -70,23 +75,23 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
                 <li>Cheaper over 2+ years</li>
                 <li>Upgrade from v15: $495</li>
               </ul>
-              <a class="btn btn-primary" href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-download" target="_blank" rel="noopener" style="text-align:center;width:100%">Buy Perpetual</a>
+              <a class="btn btn-primary" href={CART_PERPETUAL} target="_blank" rel="noopener" style="text-align:center;width:100%">Buy Perpetual</a>
             </div>
             <div class="compare-card">
               <div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">Annual Subscription</div>
               <h3>Flexible multi-PC access</h3>
-              <div class="price">$595</div>
-              <div class="note">AUD inc GST per year</div>
+              <div class="price">$695</div>
+              <div class="note">AUD inc GST per year - auto-recurring (save $100 vs $795 one-off)</div>
               <ul>
                 <li>Install on unlimited Windows PCs</li>
                 <li>One user, one voice profile</li>
                 <li>Nuance Management Centre compatible</li>
-                <li>Renews annually</li>
+                <li>Auto-renews annually</li>
               </ul>
-              <a class="btn btn-primary" href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-annual-subscription" target="_blank" rel="noopener" style="text-align:center;width:100%">Buy Subscription</a>
+              <a class="btn btn-primary" href={CART_SUBSCRIPTION} target="_blank" rel="noopener" style="text-align:center;width:100%">Buy Subscription</a>
             </div>
           </div>
-          <p style="font-size:12px;color:#94a3b8;margin-top:14px">Over 3 years: perpetual costs $994 once vs subscription at $1,785 ($595 x 3). The subscription suits users who need multi-PC flexibility or prefer annual billing. All prices AUD inc GST.</p>
+          <p style="font-size:12px;color:#94a3b8;margin-top:14px">Over 3 years: perpetual costs $994 once vs auto-recurring subscription at $2,085 ($695 x 3). The subscription suits users who need multi-PC flexibility or prefer annual billing. All prices AUD inc GST.</p>
         </div>
       </section>
 
@@ -115,12 +120,12 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
                 <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:14px;margin-bottom:8px">
                   <div style="color:#0097a7;font-weight:700;font-size:14px;margin-bottom:2px">Upgrade from v15 - $495</div>
                   <div style="font-size:13px;color:#cbd5e1">Existing Dragon Professional 15 users. Your profiles carry over.</div>
-                  <a href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-upgrade" target="_blank" rel="noopener" style="font-size:12px;color:#0097a7;font-weight:600;display:inline-block;margin-top:4px">Buy upgrade</a>
+                  <a href={CART_UPGRADE} target="_blank" rel="noopener" style="font-size:12px;color:#0097a7;font-weight:600;display:inline-block;margin-top:4px">Buy upgrade</a>
                 </div>
                 <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:14px;margin-bottom:8px">
                   <div style="color:#0097a7;font-weight:700;font-size:14px;margin-bottom:2px">Student / Education - $545</div>
                   <div style="font-size:13px;color:#cbd5e1">Full version at discounted pricing for students and educators.</div>
-                  <a href="/dragon-education" style="font-size:12px;color:#0097a7;font-weight:600;display:inline-block;margin-top:4px">Learn more</a>
+                  <a href={CART_STUDENT} target="_blank" rel="noopener" style="font-size:12px;color:#0097a7;font-weight:600;display:inline-block;margin-top:4px">Buy student edition</a>
                 </div>
                 <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:14px">
                   <div style="color:#0097a7;font-weight:700;font-size:14px;margin-bottom:2px">Enterprise / Group - Enquire</div>
@@ -153,7 +158,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
             <div class="faq-card c6"><h3>Can it transcribe audio recordings?</h3><p>Yes - single-speaker recordings only. Supported formats include MP3, WAV, WMA, DS2, and DSS. It cannot transcribe multi-speaker conversations or meetings.</p></div>
             <div class="faq-card c6"><h3>Which microphone should I use?</h3><p>Dragon works with a range of USB and 3.5mm microphones. A dedicated dictation microphone or USB headset provides the best accuracy. Apple AirPods are not supported for dictation.</p></div>
             <div class="faq-card c6"><h3>Does it work with Microsoft Teams?</h3><p>Dragon Professional 16 includes support for dictating into Microsoft Teams. Some advanced voice commands may have limitations in Teams Home edition.</p></div>
-            <div class="faq-card c6"><h3>What is the difference between perpetual and subscription?</h3><p>The perpetual licence ($994) lets you install on up to 2 PCs and own the software forever. The annual subscription ($595/yr) lets you install on unlimited PCs but renews each year. Over 2+ years, perpetual is cheaper.</p></div>
+            <div class="faq-card c6"><h3>What is the difference between perpetual and subscription?</h3><p>The perpetual licence ($994) lets you install on up to 2 PCs and own the software forever. The auto-recurring annual subscription ($695/yr) lets you install on unlimited PCs but renews each year. A one-off annual option is also available at $795. Over 2+ years, perpetual is cheaper.</p></div>
             <div class="faq-card c6"><h3>Can I upgrade from an older version?</h3><p>The upgrade ($495) is available for Dragon Professional Individual or Group version 15 only. It is not valid for older versions or other editions such as Dragon Home.</p></div>
           </div>
         </div>
