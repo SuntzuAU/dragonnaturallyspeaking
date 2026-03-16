@@ -18,9 +18,6 @@ externalLinks:
   - to: "speechrecognition.cloud"
     anchor: "Speech Recognition Cloud free trial"
     url: "https://speechrecognition.cloud"
-  - to: "dragonprofessional16.com.au"
-    anchor: "Dragon Professional 16"
-    url: "https://www.dragonprofessional16.com.au"
 ---
 
 Speech to text software has become genuinely useful for students in Australia -- for drafting essays, taking notes, managing study workloads, and as an accessibility tool for students with disabilities including dyslexia, RSI, and motor impairments. This guide covers the realistic options at different price points and who each one suits.
@@ -63,7 +60,7 @@ The Personal/Educational tier at $119/year AUD is worth considering for students
 
 For students with significant disabilities -- particularly dyslexia, RSI, motor impairments, or conditions that make typing difficult or impossible -- Dragon NaturallySpeaking is often the recommended tool by Australian disability support services.
 
-**[Dragon Professional 16](https://www.dragonprofessional16.com.au)** offers the deepest accuracy and the most capable voice command system available on Windows. For a student who needs to control their entire computer by voice -- not just dictate text but navigate applications, manage files, and interact with their university portal -- Dragon's voice command depth goes well beyond what SRC or free tools offer.
+**Dragon Professional 16** offers the deepest accuracy and the most capable voice command system available on Windows. For a student who needs to control their entire computer by voice -- not just dictate text but navigate applications, manage files, and interact with their university portal -- Dragon's voice command depth goes well beyond what SRC or free tools offer.
 
 Many Australian universities provide Dragon to eligible students at no cost or subsidised pricing through their disability support units. If you have a documented disability, contact your university's disability or accessibility services before purchasing anything -- you may be entitled to the software at no cost.
 
@@ -87,6 +84,6 @@ For [speech to text software](https://www.voicerecognition.com.au) advice and cu
 
 ## A Note on Australian Accents and Student Use
 
-Both Dragon and SRC perform well on Australian English. For students with strong regional accents or who mix languages, SRC's 57-language support and AI-based processing has an advantage -- it handles natural speech patterns including hesitations and self-corrections more gracefully than older acoustic models.
+Australian English creates accuracy challenges for models trained primarily on American or British speech. Both Dragon and SRC have addressed this. For students with strong regional accents or who mix languages, SRC's 57-language support and AI-based processing has an advantage -- it handles natural speech patterns including hesitations and self-corrections more gracefully than older acoustic models.
 
 The honest recommendation for most students: download the SRC free tier first. If it covers your needs, the Personal tier at $119/year is affordable. If you need deeper computer control, better offline capability, or have an accessibility need your university supports, Dragon is the step up worth making.

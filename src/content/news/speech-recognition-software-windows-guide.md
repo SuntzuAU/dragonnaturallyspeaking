@@ -18,9 +18,6 @@ externalLinks:
   - to: "speechrecognition.cloud"
     anchor: "Speech Recognition Cloud for Windows"
     url: "https://speechrecognition.cloud"
-  - to: "dragonprofessional16.com.au"
-    anchor: "Dragon Professional 16"
-    url: "https://www.dragonprofessional16.com.au"
 ---
 
 Windows is the dominant platform for professional dictation in Australia -- in medical practices, legal firms, government departments, and enterprise environments. This guide covers what is available, how the options compare, and what suits different professional use cases.
@@ -49,7 +46,7 @@ Browser-based and free via Chrome. Requires an internet connection and works onl
 
 Dragon has been the leading professional dictation software in Australia for over 25 years. For Windows users who need high accuracy, deep custom vocabulary, or offline capability, it remains the benchmark.
 
-**[Dragon Professional 16](https://www.dragonprofessional16.com.au)** is the flagship desktop product -- a perpetual licence that runs entirely on your Windows machine with no internet dependency. This matters in environments where data privacy is non-negotiable or where internet connectivity is unreliable. Dragon Professional 16 supports deep custom voice command macros: single spoken phrases that insert standard templates, signatures, or trigger complex actions across any Windows application.
+**Dragon Professional 16** is the flagship desktop product -- a perpetual licence that runs entirely on your Windows machine with no internet dependency. This matters in environments where data privacy is non-negotiable or where internet connectivity is unreliable. Dragon Professional 16 supports deep custom voice command macros: single spoken phrases that insert standard templates, signatures, or trigger complex actions across any Windows application.
 
 **Dragon Professional Anywhere** is the cloud-based version for enterprise environments, managed centrally and accessible from any Windows device with an internet connection. Better suited to organisations with multiple users and IT management requirements.
 

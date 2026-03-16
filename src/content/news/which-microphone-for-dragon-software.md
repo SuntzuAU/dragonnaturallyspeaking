@@ -18,9 +18,9 @@ externalLinks:
   - to: "voicerecognition.com.au"
     anchor: "USB microphones for speech recognition"
     url: "https://www.voicerecognition.com.au/collections/usb-microphones"
-  - to: "dragonprofessional16.com.au"
-    anchor: "Dragon Professional 16"
-    url: "https://www.dragonprofessional16.com.au"
+  - to: "pdfsoftware.com.au"
+    anchor: "PDF software"
+    url: "https://www.pdfsoftware.com.au"
 ---
 
 The microphone is the single most important factor in Dragon accuracy. Dragon's recognition engine is trained on clean, close-field audio. A poor microphone -- or a good microphone used incorrectly -- will drag accuracy down regardless of how well your voice profile is trained. This guide covers the main microphone categories available for Dragon users in Australia and which suits which environment.
@@ -57,7 +57,7 @@ For professionals who find headsets uncomfortable for extended wear, or who pref
 
 SpeechWare TableMikes and the TravelMike are designed specifically for speech recognition accuracy at desktop distances -- which is a meaningfully different engineering challenge from a headset boom that sits 2-3 cm from your mouth. Most desktop microphones pick up too much room noise at desk distances to be reliable for professional dictation. SpeechWare has addressed this through directional pickup patterns and processing specifically tuned for speech recognition applications.
 
-The SpeechWare 6-in-1 TableMike is the flagship model -- an award-winning device that combines a high-performance desktop microphone with a USB hub and multiple connectivity options. For professionals who want the highest possible accuracy without wearing a headset, and are prepared to invest accordingly, the 6-in-1 is the benchmark. It works particularly well with [Dragon Professional 16](https://www.dragonprofessional16.com.au) and is a popular choice among power users who dictate heavily throughout the day.
+The SpeechWare 6-in-1 TableMike is the flagship model -- an award-winning device that combines a high-performance desktop microphone with a USB hub and multiple connectivity options. For professionals who want the highest possible accuracy without wearing a headset, and are prepared to invest accordingly, the 6-in-1 is the benchmark. It works particularly well with Dragon Professional 16 and is a popular choice among power users who dictate heavily throughout the day.
 
 The TravelMike is a compact version designed for laptop users who move between locations -- same SpeechWare performance in a format that travels easily.
 
@@ -71,7 +71,7 @@ Philips offers both corded and wireless handheld options. The wireless models gi
 
 A quality microphone and Dragon together cover the input side of professional documentation. Many professionals find the next bottleneck is on the output side -- managing, editing, and distributing the documents that voice workflows produce.
 
-PDF software that handles document editing and output without an Adobe subscription compounds the time saving significantly. If you are dictating into documents and then need to convert, annotate, or distribute them as PDFs, combining Dragon or Speech Recognition Cloud with capable [PDF software](https://www.pdfsoftware.com.au) is worth considering.
+[PDF software](https://www.pdfsoftware.com.au) that handles document editing and output without an Adobe subscription compounds the time saving significantly. If you are dictating into documents and then need to convert, annotate, or distribute them as PDFs, combining Dragon or Speech Recognition Cloud with capable PDF tools is worth considering.
 
 ## Choosing the Right Microphone
 

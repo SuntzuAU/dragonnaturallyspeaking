@@ -18,9 +18,6 @@ externalLinks:
   - to: "speechrecognition.cloud"
     anchor: "Speech Recognition Cloud"
     url: "https://speechrecognition.cloud"
-  - to: "dragonprofessional16.com.au"
-    anchor: "Dragon Professional 16"
-    url: "https://www.dragonprofessional16.com.au"
 ---
 
 There is no single answer that suits everyone -- the best speech recognition software for Windows depends on your volume of use, whether you need specialised vocabulary, how important offline capability is, and what you are prepared to spend. This is a plain assessment of the realistic options for Australian users in 2026.
@@ -43,7 +40,7 @@ Before comparing products, it helps to know what the meaningful differences actu
 
 Dragon has been the benchmark for professional speech recognition in Australia for over 25 years. For users who need reliable accuracy across high volumes of dictation, it remains the most established option.
 
-**[Dragon Professional 16](https://www.dragonprofessional16.com.au)** is the flagship desktop product. It runs entirely on your Windows machine -- no internet connection required, no audio sent to external servers. Accuracy improves over time as it adapts to your voice and vocabulary. Deep custom voice command macros allow single spoken phrases to insert templates, trigger actions, or navigate applications. For professionals who dictate heavily every day, the productivity gains from these macros alone justify the investment for many users.
+**Dragon Professional 16** is the flagship desktop product. It runs entirely on your Windows machine -- no internet connection required, no audio sent to external servers. Accuracy improves over time as it adapts to your voice and vocabulary. Deep custom voice command macros allow single spoken phrases to insert templates, trigger actions, or navigate applications. For professionals who dictate heavily every day, the productivity gains from these macros alone justify the investment for many users.
 
 Dragon also offers cloud-based versions -- Dragon Professional Anywhere for enterprise environments and Dragon Medical One for clinical use -- for organisations that need centralised management or EMR integration.
 

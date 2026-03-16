@@ -18,9 +18,9 @@ externalLinks:
   - to: "speechrecognition.cloud"
     anchor: "Speech Recognition Cloud free trial"
     url: "https://speechrecognition.cloud"
-  - to: "voicerecognition.com.au"
-    anchor: "authorised Dragon reseller Australia"
-    url: "https://www.voicerecognition.com.au"
+  - to: "dictationsolutions.com.au"
+    anchor: "text dictation"
+    url: "https://www.dictationsolutions.com.au"
 ---
 
 If you are looking for speech to text software in Australia, you have more options today than ever before -- from free built-in tools to professional dictation software to newer cloud platforms that are a fraction of the cost of traditional products. Here is a plain-language comparison of what is actually available and who each option suits.
@@ -78,8 +78,6 @@ Dragon has been the leading professional dictation software in Australia for ove
 - Native EMR integration for Dragon Medical One in clinical environments
 - Separate products tuned specifically for legal and medical vocabulary
 
-For a detailed look at the flagship desktop product, see the [Dragon Professional 16 product page](https://www.dragonprofessional16.com.au).
-
 **Where Dragon's cost profile sits:** Dragon Professional 16 is a perpetual licence at a higher upfront price. Dragon Medical One and Dragon Professional Anywhere are subscription-based. For high-volume professional users who need offline capability or deep integration, the investment is often justified. For users who primarily need accurate cloud dictation without complex macros, newer alternatives like SRC may represent better value.
 
 ## Which Option Suits Which User?
@@ -90,9 +88,9 @@ For a detailed look at the flagship desktop product, see the [Dragon Professiona
 
 **Australian business professionals** dictating significant daily volumes -- SRC Professional at $239/year covers most workflows. For those needing offline capability or advanced voice macros, Dragon Professional 16 is the established option.
 
-**Australian clinicians** -- two realistic options depending on priority. SRC Medical Ultra at $659/year provides specialised medical vocabulary, ULTRA accuracy, and privacy-focused AI modes at a substantially lower price than Dragon Medical One. Dragon Medical One remains the choice for deep EMR integration and established clinical deployment support.
+**Australian clinicians** -- two realistic options depending on priority. SRC Medical Ultra at $659/year provides specialised medical vocabulary, ULTRA accuracy, and privacy-focused AI modes at a substantially lower price than Dragon Medical One. Dragon Medical One remains the choice for deep EMR integration and established clinical deployment support. For [Dragon Medical One for Australian clinicians](/dragon-medical-one), contact Voice Recognition Australia.
 
-**Legal professionals** -- Dragon Legal includes long-established legal vocabulary. SRC Professional with custom vocabulary is a lower-cost alternative worth evaluating.
+**Legal professionals and organisations with workflow needs** -- beyond simple dictation, professional [text dictation](https://www.dictationsolutions.com.au) solutions that integrate with document management and transcription workflows are worth evaluating.
 
 ## A Note on Australian Accents
 

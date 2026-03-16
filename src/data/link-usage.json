@@ -4,7 +4,7 @@
   "_note": "Link audit from actual blog posts. Tracks external link coverage and anchor text variation.",
   "external": {
     "voicerecognition.com.au": {
-      "count": 13,
+      "count": 11,
       "anchorsUsed": [
         "Voice Recognition Australia",
         "authorised Dragon reseller Australia",
@@ -18,9 +18,10 @@
       ]
     },
     "pdfsoftware.com.au": {
-      "count": 1,
+      "count": 2,
       "anchorsUsed": [
-        "PDF software for clinical document workflows"
+        "PDF software for clinical document workflows",
+        "PDF software"
       ]
     },
     "dragonprofessional16.com.au": {
@@ -31,8 +32,10 @@
       ]
     },
     "dictationsolutions.com.au": {
-      "count": 0,
-      "anchorsUsed": []
+      "count": 1,
+      "anchorsUsed": [
+        "text dictation"
+      ]
     },
     "speechrecognition.cloud": {
       "count": 8,
