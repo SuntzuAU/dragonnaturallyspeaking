@@ -4,11 +4,11 @@ date: "2026-03-16"
 metaDescription: "Dragon Professional 16 comes in five versions. Here's how to work out which one suits your situation - without reading a spec sheet."
 author: "Russell Bewsell"
 context: "descriptive"
-heroImage: "dictationsolutions/2026/03/16/which-version-dragon-professional-decision-hero-f1097ddd.png"
-heroImageAlt: "Australian professional weighing up Dragon software options at a modern office desk"
-breakImage1: "dictationsolutions/2026/03/16/which-version-dragon-licence-options-break1-c03abfd1.png"
-breakImage1Alt: "Dragon Professional 16 licence options on a Windows computer screen"
-breakImage2: "dictationsolutions/2026/03/16/which-version-dragon-enterprise-healthcare-break2-3ba6cdf8.png"
+heroImage: "dragonnaturallyspeaking/2026/03/12/dragon-naturallyspeaking-australia-speech-recognition-softwa-hero-8ff040f3.jpg"
+heroImageAlt: "Australian professional comparing Dragon speech recognition software versions at a Windows workstation"
+breakImage1: "dragonnaturallyspeaking/2026/03/12/dragon-naturallyspeaking-australia-comparing-accuracy-vocabu-break1-d91bf34d.jpg"
+breakImage1Alt: "Dragon Professional 16 licence options and version comparison on a Windows computer screen"
+breakImage2: "dragonnaturallyspeaking/2026/03/12/dragon-naturallyspeaking-australia-local-processing-vs-cloud-break2-fcc5fd1e.jpg"
 breakImage2Alt: "Australian healthcare team using enterprise Dragon speech recognition software in a medical practice"
 internalLinks:
   - to: "/"
@@ -78,7 +78,7 @@ For cloud-hosted or virtual desktop environments, Dragon Professional Anywhere i
 
 ## Still not sure?
 
-The full feature comparison across all five versions - including how Dragon stacks up against Windows Voice Typing, Speech Recognition Cloud, and browser-based dictation tools - is available on the [Dragon Professional 16 comparison page](https://www.dragonprofessional16.com.au/comparison/). All versions are available through Voice Recognition Australia - see the full range of [Dragon Professional 16 versions and pricing](https://www.voicerecognition.com.au/collections/dragon-professional).
+The full feature comparison across all five versions - including how Dragon stacks up against Windows Voice Typing, Speech Recognition Cloud, and browser-based dictation tools - is available on the [Dragon NaturallySpeaking Australia](/) overview page. All versions are available through Voice Recognition Australia - see the full range of [Dragon Professional 16 versions and pricing](https://www.voicerecognition.com.au/collections/dragon-professional).
 
 *All pricing accurate at time of publication, 16 March 2026. Software vendors may change pricing without notice. Verify current pricing directly with the vendor before making purchasing decisions.*
 
