@@ -6,3 +6,8 @@
 /post/* /news/:splat 301
 /blog /news 301
 /blog/* /news/:splat 301
+/contact-us /about 301
+/about-us /about 301
+/blog-1 /news 301
+/blog-1/* /news 301
+/corti-medical-transcription /dragon-medical-one 301
