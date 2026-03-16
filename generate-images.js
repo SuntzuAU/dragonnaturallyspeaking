@@ -5,18 +5,9 @@
  * MANUAL TRIGGER ONLY. Never runs on push.
  *
  * Phase 1: site images (hero, feat1, feat2)
- *   Reads src/image.prompts.json for slot->scene mapping
- *   Resolves scene prompts from src/image-prompt-library.json
- *   Skips slots that already have an r2Key in image-manifest.json
- *
  * Phase 2: blog post images (heroImage, breakImage1, breakImage2)
- *   Reads heroPrompt/breakPrompt1/breakPrompt2 from post frontmatter
- *   Falls back to library scene if heroScene/breakScene1/breakScene2 set in frontmatter
- *   Skips posts that already have all three images set
- *   Logs ACTION NEEDED for posts missing both prompts and scenes
  *
  * R2 key format: images/<site>/<role>-<shortid>.jpg
- * Short, flat, no date folders. Role = hero | feat1 | feat2 | break1 | break2 etc.
  *
  * Usage:
  *   node generate-images.js            run both phases
@@ -53,27 +44,19 @@ if (fs.existsSync(libraryPath)) {
   try { library = JSON.parse(fs.readFileSync(libraryPath, 'utf8')); } catch {}
 }
 
-function shortId() {
-  return crypto.randomBytes(4).toString('hex');
-}
+function shortId() { return crypto.randomBytes(4).toString('hex'); }
 
 function resolvePrompt(entry, fallbackType = 'hero') {
   const type = (entry.type || fallbackType).toLowerCase();
   const isHero = type === 'hero';
-
   if (entry.prompt) {
     const sfx = isHero ? library.heroSuffix : library.breakSuffix;
     return `${entry.prompt} ${library.suffix} ${sfx}`.trim();
   }
-
   const sceneName = entry.scene;
   if (!sceneName) return null;
   const scene = library.scenes?.[sceneName];
-  if (!scene) {
-    console.warn(`  Scene '${sceneName}' not found in library. Available: ${Object.keys(library.scenes || {}).join(', ')}`);
-    return null;
-  }
-
+  if (!scene) { console.warn(`  Scene '${sceneName}' not found.`); return null; }
   const base = isHero ? scene.hero : scene.break;
   const sfx = isHero ? library.heroSuffix : library.breakSuffix;
   return `${base} ${library.suffix} ${sfx}`.trim();
@@ -90,8 +73,7 @@ async function callWorker(prompt, r2Key) {
   const headers = { 'Content-Type': 'application/json' };
   if (WORKER_TOKEN) headers['Authorization'] = `Bearer ${WORKER_TOKEN}`;
   const res = await fetch(WORKER_URL, {
-    method: 'POST',
-    headers,
+    method: 'POST', headers,
     body: JSON.stringify({ prompt, name: r2Key, site: SITE }),
   });
   const json = await res.json().catch(() => null);
@@ -99,59 +81,29 @@ async function callWorker(prompt, r2Key) {
   return json;
 }
 
-// --- Phase 1: Site images ---------------------------------------------------
-
 async function phase1() {
-  if (!fs.existsSync(promptsPath)) {
-    console.warn('\nWARNING: src/image.prompts.json not found.');
-    console.warn('Copy from astro-gateway-master and update scenes for this site.\n');
-    return;
-  }
-
+  if (!fs.existsSync(promptsPath)) { console.warn('WARNING: src/image.prompts.json not found.'); return; }
   const config = JSON.parse(fs.readFileSync(promptsPath, 'utf8'));
-  if (!config?.images?.length) { console.log('No images defined in image.prompts.json.'); return; }
-
+  if (!config?.images?.length) { console.log('No images defined.'); return; }
   let count = 0;
   for (const img of config.images) {
     const { key, role } = img;
-    if (!key) { console.warn('Skipping entry with no key.'); continue; }
-
-    if (manifest[key]?.r2Key) {
-      console.log(`Skip (exists): ${key} -> ${manifest[key].r2Key}`);
-      continue;
-    }
-
+    if (!key) continue;
+    if (manifest[key]?.r2Key) { console.log(`Skip (exists): ${key}`); continue; }
     const type = img.type || 'hero';
     const prompt = resolvePrompt(img, type);
-    if (!prompt) {
-      console.warn(`Skip ${key}: could not resolve prompt (no 'prompt' or valid 'scene' field).`);
-      continue;
-    }
-
+    if (!prompt) { console.warn(`Skip ${key}: no prompt.`); continue; }
     const r2Key = `images/${SITE}/${role || key}-${shortId()}.jpg`;
     const altText = resolveAltText(img, img.scene, type);
-
-    console.log(`Generating: ${key} [scene:${img.scene || 'custom'}] -> ${r2Key}`);
+    console.log(`Generating: ${key} -> ${r2Key}`);
     try {
       const result = await callWorker(prompt, r2Key);
-      manifest[key] = {
-        key,
-        r2Key: result.r2?.key || r2Key,
-        altText,
-        scene: img.scene || 'custom',
-        generatedAt: new Date().toISOString(),
-        site: SITE,
-      };
-      console.log(`  Done: ${manifest[key].r2Key}`);
+      manifest[key] = { key, r2Key: result.r2?.key || r2Key, altText, scene: img.scene || 'custom', generatedAt: new Date().toISOString(), site: SITE };
       count++;
-    } catch (e) {
-      console.error(`  FAILED: ${e.message}`);
-    }
+    } catch (e) { console.error(`  FAILED: ${e.message}`); }
   }
   console.log(`Phase 1 done. Generated: ${count}`);
 }
-
-// --- Phase 2: Blog post images ----------------------------------------------
 
 function parseFrontmatter(content) {
   const match = content.match(/^---\n([\s\S]*?)\n---/);
@@ -173,122 +125,71 @@ function setFrontmatterField(content, field, value) {
 function resolvePostPrompt(fm, role) {
   const isHero = role === 'hero';
   const promptField = isHero ? 'heroPrompt' : (role === 'break1' ? 'breakPrompt1' : 'breakPrompt2');
-  const sceneField  = isHero ? 'heroScene'  : (role === 'break1' ? 'breakScene1'  : 'breakScene2');
-  const altField    = isHero ? 'heroImageAlt' : (role === 'break1' ? 'breakImage1Alt' : 'breakImage2Alt');
-
+  const sceneField = isHero ? 'heroScene' : (role === 'break1' ? 'breakScene1' : 'breakScene2');
+  const altField = isHero ? 'heroImageAlt' : (role === 'break1' ? 'breakImage1Alt' : 'breakImage2Alt');
   if (fm[promptField]) {
     const sfx = isHero ? library.heroSuffix : library.breakSuffix;
-    return {
-      prompt: `${fm[promptField]} ${library.suffix} ${sfx}`.trim(),
-      altText: fm[altField] || '',
-    };
+    return { prompt: `${fm[promptField]} ${library.suffix} ${sfx}`.trim(), altText: fm[altField] || '' };
   }
-
   if (fm[sceneField]) {
     const scene = library.scenes?.[fm[sceneField]];
-    if (!scene) {
-      console.warn(`  Scene '${fm[sceneField]}' not found in library.`);
-      return null;
-    }
+    if (!scene) return null;
     const base = isHero ? scene.hero : scene.break;
     const sfx = isHero ? library.heroSuffix : library.breakSuffix;
-    return {
-      prompt: `${base} ${library.suffix} ${sfx}`.trim(),
-      altText: fm[altField] || (isHero ? scene.altHero : scene.altBreak) || '',
-    };
+    return { prompt: `${base} ${library.suffix} ${sfx}`.trim(), altText: fm[altField] || (isHero ? scene.altHero : scene.altBreak) || '' };
   }
-
   return null;
 }
 
 async function processPost(file) {
   const filePath = path.join(newsDir, file);
-  if (!fs.existsSync(filePath)) { console.error(`Post not found: ${filePath}`); return 0; }
-
+  if (!fs.existsSync(filePath)) { console.error(`Not found: ${filePath}`); return 0; }
   const content = fs.readFileSync(filePath, 'utf8');
   const fm = parseFrontmatter(content);
   const slug = file.replace(/\.mdx?$/, '');
-
-  const hasHero = fm.heroImage   && !fm.heroImage.startsWith('default/');
-  const hasB1   = fm.breakImage1 && !fm.breakImage1.startsWith('default/');
-  const hasB2   = fm.breakImage2 && !fm.breakImage2.startsWith('default/');
-
+  const hasHero = fm.heroImage && !fm.heroImage.startsWith('default/');
+  const hasB1 = fm.breakImage1 && !fm.breakImage1.startsWith('default/');
+  const hasB2 = fm.breakImage2 && !fm.breakImage2.startsWith('default/');
   if (hasHero && hasB1 && hasB2) { console.log(`Skip (done): ${file}`); return 0; }
-
-  const hasHeroSource = fm.heroPrompt  || fm.heroScene;
-  const hasB1Source   = fm.breakPrompt1 || fm.breakScene1;
-  const hasB2Source   = fm.breakPrompt2 || fm.breakScene2;
-
-  if (!hasHeroSource && !hasB1Source && !hasB2Source) {
-    console.log(`\n  ACTION NEEDED: ${file}`);
-    console.log(`  Add heroScene, breakScene1, breakScene2 to this post's frontmatter.`);
-    console.log(`  Or use heroPrompt, breakPrompt1, breakPrompt2 for custom prompts.`);
-    console.log(`  Available scenes: ${Object.keys(library.scenes || {}).join(', ')}\n`);
+  if (!(fm.heroPrompt || fm.heroScene) && !(fm.breakPrompt1 || fm.breakScene1) && !(fm.breakPrompt2 || fm.breakScene2)) {
+    console.log(`  ACTION NEEDED: ${file} - add prompt/scene fields to frontmatter`);
     return 0;
   }
-
-  console.log(`Generating images for: ${file}`);
-  let updated = content;
-  let count = 0;
-
-  const tasks = [
-    { field: 'heroImage',   altField: 'heroImageAlt',   role: 'hero',   needs: !hasHero },
+  let updated = content, count = 0;
+  for (const { field, altField, role, needs } of [
+    { field: 'heroImage', altField: 'heroImageAlt', role: 'hero', needs: !hasHero },
     { field: 'breakImage1', altField: 'breakImage1Alt', role: 'break1', needs: !hasB1 },
     { field: 'breakImage2', altField: 'breakImage2Alt', role: 'break2', needs: !hasB2 },
-  ];
-
-  for (const { field, altField, role, needs } of tasks) {
+  ]) {
     if (!needs) continue;
     const resolved = resolvePostPrompt(fm, role);
-    if (!resolved) { console.log(`  Skip ${field}: no prompt or scene defined`); continue; }
-
+    if (!resolved) continue;
     const r2Key = `images/${SITE}/${slug}-${role}-${shortId()}.jpg`;
     try {
       const result = await callWorker(resolved.prompt, r2Key);
       const finalKey = result.r2?.key || r2Key;
       updated = setFrontmatterField(updated, field, finalKey);
       if (resolved.altText) updated = setFrontmatterField(updated, altField, resolved.altText);
-      console.log(`  [${role}] ${finalKey}`);
       count++;
-    } catch (e) {
-      console.error(`  [${role}] FAILED: ${e.message}`);
-    }
+    } catch (e) { console.error(`  [${role}] FAILED: ${e.message}`); }
   }
-
   fs.writeFileSync(filePath, updated, 'utf8');
   return count;
 }
 
 async function phase2() {
   if (!fs.existsSync(newsDir)) { console.log('No news dir.'); return; }
-  const files = fs.readdirSync(newsDir)
-    .filter(f => !f.startsWith('_') && (f.endsWith('.md') || f.endsWith('.mdx')));
+  const files = fs.readdirSync(newsDir).filter(f => !f.startsWith('_') && (f.endsWith('.md') || f.endsWith('.mdx')));
   let total = 0;
   for (const file of files) total += await processPost(file);
-  console.log(`Phase 2 done. Total blog images generated: ${total}`);
+  console.log(`Phase 2 done. Generated: ${total}`);
 }
-
-// --- Main -------------------------------------------------------------------
 
 async function main() {
   const mode = process.argv[2] || 'all';
-
-  if (mode === 'site' || mode === 'all') {
-    console.log('=== Phase 1: Site images ===');
-    await phase1();
-  }
-
-  if (mode === 'blog' || mode === 'all') {
-    console.log('\n=== Phase 2: Blog images ===');
-    await phase2();
-  }
-
-  if (mode.startsWith('post:')) {
-    const file = mode.replace('post:', '');
-    console.log(`=== Single post: ${file} ===`);
-    await processPost(file);
-  }
-
+  if (mode === 'site' || mode === 'all') { console.log('=== Phase 1: Site images ==='); await phase1(); }
+  if (mode === 'blog' || mode === 'all') { console.log('\n=== Phase 2: Blog images ==='); await phase2(); }
+  if (mode.startsWith('post:')) { await processPost(mode.replace('post:', '')); }
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
   console.log('\nDone. Manifest saved.');
 }
