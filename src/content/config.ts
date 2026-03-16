@@ -26,6 +26,5 @@ const newsSchema = z.object({
 });
 
 const news = defineCollection({ type: 'content', schema: newsSchema });
-const blog = defineCollection({ type: 'content', schema: newsSchema });
 
-export const collections = { news, blog };
+export const collections = { news };
