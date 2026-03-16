@@ -16,11 +16,14 @@ internalLinks:
     anchor: "Dragon Medical One for Australian clinicians"
 externalLinks:
   - to: "speechrecognition.cloud"
-    anchor: "Speech Recognition Cloud free trial"
+    anchor: "free speech to text software"
     url: "https://speechrecognition.cloud"
   - to: "dictationsolutions.com.au"
     anchor: "text dictation"
     url: "https://www.dictationsolutions.com.au"
+  - to: "voicerecognition.com.au"
+    anchor: "voice to text software Australia"
+    url: "https://www.voicerecognition.com.au/pages/speech-recognition-software"
 ---
 
 If you are looking for speech to text software in Australia, you have more options today than ever before -- from free built-in tools to professional dictation software to newer cloud platforms that are a fraction of the cost of traditional products. Here is a plain-language comparison of what is actually available and who each option suits.
@@ -45,7 +48,7 @@ Browser-based, free, requires Chrome and an internet connection. Useful for draf
 
 ## Speech Recognition Cloud -- The Affordable Modern Alternative
 
-[Speech Recognition Cloud](https://speechrecognition.cloud) (SRC) is a newer cloud platform that positions itself directly against legacy dictation software on price and simplicity.
+[Free speech to text software](https://speechrecognition.cloud) from Speech Recognition Cloud (SRC) starts with a genuine free tier -- 20 minutes per month, no credit card required -- and scales up to professional and medical tiers at a fraction of the cost of legacy products.
 
 **How it works differently:** rather than typing each word as you speak, SRC processes full sentences using cloud AI, then delivers fully punctuated text in one pass. No voice training, no setup, no dictation box commands needed. Automatic punctuation is handled by AI -- no need to say "comma" or "full stop". Just speak naturally and the software handles the rest.
 
@@ -65,8 +68,6 @@ Browser-based, free, requires Chrome and an internet connection. Useful for draf
 
 **Current limitations to be aware of:** Windows only at this stage (Mac and mobile in development). Medical Ultra is English only. Cloud-dependent -- requires an internet connection.
 
-For professionals already using cloud-based clinical or legal software, SRC is worth trialling before committing to a more expensive product. The [free tier](https://speechrecognition.cloud) requires no credit card and can be downloaded and tested immediately.
-
 ## Dragon NaturallySpeaking -- The Established Professional Standard
 
 Dragon has been the leading professional dictation software in Australia for over 25 years. For workflows requiring deep offline capability or complex voice command macros, it remains the benchmark.
@@ -84,7 +85,7 @@ Dragon has been the leading professional dictation software in Australia for ove
 
 **Occasional personal use** -- free built-in tools or the SRC Free tier. Apple Dictation on a modern Mac is genuinely capable for general writing.
 
-**Students and everyday users** -- SRC Personal at $119/year is hard to beat. Unlimited dictation, no training, works across all Windows applications.
+**Students and everyday users** -- SRC Personal at $119/year is hard to beat. Unlimited dictation, works everywhere, no training required.
 
 **Australian business professionals** dictating significant daily volumes -- SRC Professional at $239/year covers most workflows. For those needing offline capability or advanced voice macros, Dragon Professional 16 is the established option.
 
@@ -94,13 +95,7 @@ Dragon has been the leading professional dictation software in Australia for ove
 
 ## A Note on Australian Accents
 
-Australian English creates accuracy challenges for models trained primarily on American or British speech. Both Dragon and SRC have addressed this. The honest recommendation: test both products on your own voice before committing. SRC offers a free tier with no credit card required. Dragon offers free trials through Voice Recognition Australia.
-
-## Getting Started
-
-[Speech Recognition Cloud](https://speechrecognition.cloud) offers a free tier with no credit card required -- download and test it immediately.
-
-[Voice Recognition Australia](https://www.voicerecognition.com.au) supplies and supports Dragon products across Australia with specific expertise in medical and legal deployments. Free trials and demonstrations are available.
+Australian English creates accuracy challenges for models trained primarily on American or British speech. Both Dragon and SRC have addressed this. The honest recommendation: test both products on your own voice before committing. SRC offers a free tier with no credit card required. Dragon offers free trials through [voice to text software Australia](https://www.voicerecognition.com.au/pages/speech-recognition-software).
 
 ## Summary
 
@@ -108,4 +103,3 @@ Australian English creates accuracy challenges for models trained primarily on A
 - SRC is a newer, significantly lower-cost cloud alternative with a genuine free tier -- from $119/year AUD for Personal up to $659/year for Medical Ultra
 - Dragon remains the benchmark for offline capability, deep EMR integration, and complex voice macros
 - For most Australian professionals, both SRC and Dragon are worth trialling before deciding
-- Download [Speech Recognition Cloud](https://speechrecognition.cloud) free, or contact [Voice Recognition Australia](https://www.voicerecognition.com.au) for Dragon pricing and demonstrations

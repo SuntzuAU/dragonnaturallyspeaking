@@ -11,10 +11,13 @@ breakImage2Alt: "Doctor using cloud-based Dragon Medical One speech recognition 
 context: "descriptive"
 section1Title: "Free Built-In Windows Dictation Tools"
 section2Title: "Dragon and Cloud Platforms for Enterprise Use"
+internalLinks:
+  - to: "/news/which-microphone-for-dragon-software"
+    anchor: "choosing the right microphone for Dragon on Windows"
 externalLinks:
   - to: "voicerecognition.com.au"
-    anchor: "speech to text software Australia"
-    url: "https://www.voicerecognition.com.au"
+    anchor: "speech recognition software for Windows"
+    url: "https://www.voicerecognition.com.au/pages/speech-recognition-software-windows-buyers-guide"
   - to: "speechrecognition.cloud"
     anchor: "Speech Recognition Cloud for Windows"
     url: "https://speechrecognition.cloud"
@@ -52,7 +55,7 @@ Dragon has been the leading professional dictation software in Australia for ove
 
 **Dragon Medical One** is the dedicated clinical version -- cloud-based, with built-in medical vocabularies covering specialties including cardiology, radiology, pathology, and general practice. It integrates natively with major EMR systems and is the standard choice for Australian clinicians dictating at scale.
 
-Dragon products are available through Voice Recognition Australia, Australia's leading [speech to text software](https://www.voicerecognition.com.au) supplier, which has been supplying and supporting Dragon in medical, legal, and enterprise environments for over 25 years.
+Dragon products are available through Voice Recognition Australia, a specialist [speech recognition software for Windows](https://www.voicerecognition.com.au/pages/speech-recognition-software-windows-buyers-guide) supplier with over 25 years of deployment experience in medical, legal, and enterprise environments.
 
 ### Speech Recognition Cloud -- The Modern Cloud Alternative
 
@@ -78,7 +81,7 @@ For most Australian professionals working in connected environments, either appr
 
 Regardless of which software you choose, accuracy on Windows is heavily influenced by microphone quality. The built-in microphone on a laptop is not adequate for professional dictation volumes -- it picks up too much ambient noise and sits too far from your mouth for consistent close-field audio.
 
-A Dragon-certified USB headset eliminates most input variability. Voice Recognition Australia stocks a range of USB microphones tested for use with Dragon and other professional dictation software on Windows.
+A Dragon-certified USB headset eliminates most input variability. For more detail on [choosing the right microphone for Dragon on Windows](/news/which-microphone-for-dragon-software), see our dedicated guide covering headsets, desktop mics, and handheld options.
 
 ## A Note on Australian Accents
 
@@ -91,4 +94,3 @@ Both Dragon and SRC have been used extensively in Australia and handle Australia
 - Dragon Medical One and Dragon Professional Anywhere are the cloud enterprise options
 - Speech Recognition Cloud is a newer, lower-cost cloud alternative worth evaluating for general professional use
 - Microphone quality has a significant impact on accuracy regardless of software choice
-- Contact Voice Recognition Australia for Dragon licensing, hardware, and deployment advice

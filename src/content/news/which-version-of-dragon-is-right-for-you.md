@@ -15,7 +15,7 @@ internalLinks:
     anchor: "Dragon NaturallySpeaking Australia"
 externalLinks:
   - to: "voicerecognition.com.au"
-    anchor: "Dragon Professional 16 versions and pricing"
+    anchor: "Dragon Professional 16 Australia"
     url: "https://www.voicerecognition.com.au/collections/dragon-professional"
   - to: "speechrecognition.cloud"
     anchor: "Speech Recognition Cloud"
@@ -78,7 +78,7 @@ For cloud-hosted or virtual desktop environments, Dragon Professional Anywhere i
 
 ## Still not sure?
 
-The full feature comparison across all five versions - including how Dragon stacks up against Windows Voice Typing, Speech Recognition Cloud, and browser-based dictation tools - is available on the [Dragon NaturallySpeaking Australia](/) overview page. All versions are available through Voice Recognition Australia - see the full range of [Dragon Professional 16 versions and pricing](https://www.voicerecognition.com.au/collections/dragon-professional).
+The full feature comparison across all five versions is available on the [Dragon NaturallySpeaking Australia](/) overview page. All versions are available through Voice Recognition Australia - see the full range of [Dragon Professional 16 Australia](https://www.voicerecognition.com.au/collections/dragon-professional).
 
 *All pricing accurate at time of publication, 16 March 2026. Software vendors may change pricing without notice. Verify current pricing directly with the vendor before making purchasing decisions.*
 

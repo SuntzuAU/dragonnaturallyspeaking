@@ -1,20 +1,17 @@
 {
   "thisSite": "dragonnaturallyspeaking.com.au",
   "lastRebuilt": "2026-03-16",
-  "_note": "Link audit from actual blog posts. Tracks external link coverage and anchor text variation.",
+  "_note": "Reconciled from actual post frontmatter. All counts and anchors reflect committed posts.",
   "external": {
     "voicerecognition.com.au": {
-      "count": 11,
+      "count": 6,
       "anchorsUsed": [
-        "Voice Recognition Australia",
-        "authorised Dragon reseller Australia",
-        "USB microphones for speech recognition",
-        "Voice Recognition Australia's",
-        "speech to text software Australia",
-        "speech to text software",
-        "Dragon NaturallySpeaking Australia",
-        "Dragon Medical One",
-        "Dragon Professional 16 versions and pricing"
+        "medical speech recognition Australia",
+        "speech recognition software for Windows",
+        "voice to text software Australia",
+        "NDIS registered speech recognition provider",
+        "speech recognition specialists Australia",
+        "Dragon Professional 16 Australia"
       ]
     },
     "pdfsoftware.com.au": {
@@ -25,11 +22,8 @@
       ]
     },
     "dragonprofessional16.com.au": {
-      "count": 5,
-      "anchorsUsed": [
-        "Dragon Professional 16",
-        "Dragon Professional 16 comparison page"
-      ]
+      "count": 0,
+      "anchorsUsed": []
     },
     "dictationsolutions.com.au": {
       "count": 1,
@@ -38,12 +32,13 @@
       ]
     },
     "speechrecognition.cloud": {
-      "count": 8,
+      "count": 5,
       "anchorsUsed": [
+        "free speech to text software",
+        "best speech to text software for students",
+        "Speech Recognition Cloud for Windows",
         "Speech Recognition Cloud",
-        "Speech Recognition Cloud free trial",
-        "free tier",
-        "Speech Recognition Cloud for Windows"
+        "Speech Recognition Cloud"
       ]
     },
     "cloudprinting.au": {

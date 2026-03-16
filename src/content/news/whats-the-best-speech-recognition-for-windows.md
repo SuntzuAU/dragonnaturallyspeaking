@@ -11,10 +11,13 @@ breakImage2Alt: "Split screen showing free Windows Voice Access versus paid Spee
 context: "descriptive"
 section1Title: "Comparing Accuracy and Vocabulary Support"
 section2Title: "Local Processing vs Cloud Dictation Platforms"
+internalLinks:
+  - to: "/news/speech-to-text"
+    anchor: "comparing speech to text options for Australian professionals"
 externalLinks:
   - to: "voicerecognition.com.au"
-    anchor: "Dragon NaturallySpeaking Australia"
-    url: "https://www.voicerecognition.com.au"
+    anchor: "speech recognition specialists Australia"
+    url: "https://www.voicerecognition.com.au/pages/speech-recognition-leaders-australia"
   - to: "speechrecognition.cloud"
     anchor: "Speech Recognition Cloud"
     url: "https://speechrecognition.cloud"
@@ -44,7 +47,7 @@ Dragon has been the benchmark for professional speech recognition in Australia f
 
 Dragon also offers cloud-based versions -- Dragon Professional Anywhere for enterprise environments and Dragon Medical One for clinical use -- for organisations that need centralised management or EMR integration.
 
-[Voice Recognition Australia](https://www.voicerecognition.com.au) has been supplying and supporting Dragon across Australian medical, legal, and enterprise environments for over 25 years and can advise on the right product and setup for your situation.
+For purchasing options, demonstrations, and deployment advice, [speech recognition specialists Australia](https://www.voicerecognition.com.au/pages/speech-recognition-leaders-australia) at Voice Recognition Australia have over 25 years of experience across medical, legal, and enterprise environments.
 
 ## Speech Recognition Cloud -- The Modern Alternative
 
@@ -62,7 +65,7 @@ Windows 10 and 11 include speech recognition at no extra cost -- Windows Speech 
 
 Google Docs Voice Typing is a similar story -- free and functional for casual drafting in Google Docs, not suited to clinical or legal documentation or use across Windows applications generally.
 
-These tools are useful for deciding whether speech recognition suits your workflow before investing in a dedicated product. They are not the answer for sustained professional dictation volumes.
+These tools are useful for deciding whether speech recognition suits your workflow before investing in a dedicated product. For a full breakdown of how the options compare, see our guide to [comparing speech to text options for Australian professionals](/news/speech-to-text).
 
 ## How They Compare for Australian Users
 

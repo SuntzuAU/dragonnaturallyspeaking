@@ -11,12 +11,15 @@ breakImage2Alt: "University student with disability using Dragon NaturallySpeaki
 context: "descriptive"
 section1Title: "Free and Low-Cost Options for Students"
 section2Title: "When Students Need Professional Software"
+internalLinks:
+  - to: "/news/which-version-of-dragon-is-right-for-you"
+    anchor: "which version of Dragon is right for you"
 externalLinks:
   - to: "voicerecognition.com.au"
-    anchor: "speech to text software"
-    url: "https://www.voicerecognition.com.au"
+    anchor: "NDIS registered speech recognition provider"
+    url: "https://www.voicerecognition.com.au/pages/ndis-approved-supplier"
   - to: "speechrecognition.cloud"
-    anchor: "Speech Recognition Cloud free trial"
+    anchor: "best speech to text software for students"
     url: "https://speechrecognition.cloud"
 ---
 
@@ -30,7 +33,7 @@ The use cases are broader than most people expect:
 
 **Note-taking** -- dictating notes from readings or lectures rather than typing them.
 
-**Accessibility** -- for students with dyslexia, ADHD, RSI, or physical disabilities, speech to text is often not a preference but a necessity. Australian universities are required to provide reasonable adjustments, and many now support or fund speech recognition software for eligible students.
+**Accessibility** -- for students with dyslexia, ADHD, RSI, or physical disabilities, speech to text is often not a necessity but a requirement. Australian universities are required to provide reasonable adjustments, and many now support or fund speech recognition software for eligible students.
 
 **Reducing fatigue** -- students with heavy workloads or part-time jobs alongside study often find dictation reduces the physical and cognitive load of writing.
 
@@ -48,9 +51,9 @@ On a Mac, iPad, or iPhone, Apple Dictation has improved considerably and works o
 
 Free via Chrome, works within Google Docs. Many students already work in Google Docs, which makes this an easy starting point. No custom vocabulary, requires internet, and does not work outside the browser -- but for drafting assignments it is usable.
 
-### Speech Recognition Cloud -- Free Tier
+### Speech Recognition Cloud -- Best Free Tier for Students
 
-[Speech Recognition Cloud](https://speechrecognition.cloud) (SRC) offers a genuine free tier -- 20 minutes of dictation per month, no credit card required. For students wanting to try a dedicated speech recognition platform before spending anything, this is the most straightforward starting point.
+For students wanting the [best speech to text software for students](https://speechrecognition.cloud) without spending anything upfront, Speech Recognition Cloud (SRC) offers a genuine free tier -- 20 minutes of dictation per month, no credit card required.
 
 The Personal/Educational tier at $119/year AUD is worth considering for students who dictate regularly. Unlimited dictation, custom vocabulary, text replacements, works across all Windows applications including Word, Google Docs in Chrome, and your university's learning management system. Automatic punctuation is handled by AI -- you speak naturally without saying "full stop" or "new paragraph." 57 languages supported, which matters for students who write in languages other than English.
 
@@ -64,13 +67,13 @@ For students with significant disabilities -- particularly dyslexia, RSI, motor 
 
 Many Australian universities provide Dragon to eligible students at no cost or subsidised pricing through their disability support units. If you have a documented disability, contact your university's disability or accessibility services before purchasing anything -- you may be entitled to the software at no cost.
 
-**NDIS funding** is another avenue for eligible students. Voice Recognition Australia is an NDIS-registered provider and can advise on using NDIS funding to purchase Dragon or other assistive speech recognition software.
+**NDIS funding** is another avenue for eligible students. As an [NDIS registered speech recognition provider](https://www.voicerecognition.com.au/pages/ndis-approved-supplier), Voice Recognition Australia can advise on using NDIS funding to purchase Dragon or other assistive speech recognition software.
 
 ### Dragon Home -- The Entry-Level Option
 
 Dragon Home is a lower-cost version of Dragon suited to students who need more than free tools but do not require the full professional feature set. It covers general vocabulary dictation without the advanced voice command macros of Dragon Professional. For students whose primary need is faster, more accurate dictation rather than full computer control by voice, Dragon Home is worth considering.
 
-For [speech to text software](https://www.voicerecognition.com.au) advice and current student and education pricing across the Dragon range, contact Voice Recognition Australia on 1300 255 900.
+For advice on [which version of Dragon is right for you](/news/which-version-of-dragon-is-right-for-you) and current student and education pricing, contact Voice Recognition Australia on 1300 255 900.
 
 ## Choosing the Right Option
 
