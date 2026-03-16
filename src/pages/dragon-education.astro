@@ -11,6 +11,9 @@ function imgSrc(key) {
   return `${R2_BASE.replace(/\/$/, "")}/${entry.r2Key}`;
 }
 function imgAlt(key) { return manifest[key]?.altText || ""; }
+
+const CART_STUDENT = "https://www.voicerecognition.com.au/cart/add?id=47759915122934&quantity=1";
+const VRA_STUDENT_PAGE = "https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-educational-student";
 ---
 <!doctype html>
 <html lang="en">
@@ -61,6 +64,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
       .price-display{font-size:48px;font-weight:800;line-height:1;margin:0 0 4px;color:#0d1b2a}
       .price-note{font-size:14px;color:#64748b;margin:0 0 6px}
       .price-save{font-size:14px;color:#006064;font-weight:600;background:#e0f7fa;padding:6px 12px;border-radius:8px;display:inline-block;margin-bottom:16px}
+      .info-link{font-size:12px;color:#0097a7;font-weight:600;text-decoration:underline;text-underline-offset:2px}
       .spec-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:16px}
       .spec-card{text-align:center;padding:14px;background:#f0f9ff;border-radius:10px}
       .spec-val{font-size:18px;font-weight:800;color:#0d1b2a}
@@ -110,7 +114,7 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
             <a href="/#final-cta">Contact</a>
           </nav>
           <div class="nav-ctas">
-            <a class="btn btn-primary" href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-educational-student" target="_blank" rel="noopener">Buy Student Edition</a>
+            <a class="btn btn-primary" href={CART_STUDENT} target="_blank" rel="noopener">Buy Student Edition</a>
             <button class="hamburger" aria-label="Open menu" onclick="var mn=this.closest('header').querySelector('.mobile-nav');mn.style.display=mn.style.display==='block'?'none':'block'"><span></span><span></span><span></span></button>
           </div>
         </div>
@@ -143,9 +147,10 @@ function imgAlt(key) { return manifest[key]?.altText || ""; }
               <div class="price-save">Save $449 compared to full price ($994)</div>
               <div style="font-size:13px;color:#64748b;margin-bottom:20px;padding:10px 14px;background:#f8fafc;border-radius:8px;border-left:3px solid #e2e8f0">Full version. No feature restrictions. Licensed per user. Install on up to 2 PCs.</div>
               <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-                <a class="btn btn-primary btn-lg" href="https://www.voicerecognition.com.au/collections/dragon-professional/products/dragon-professional-16-educational-student" target="_blank" rel="noopener">Buy Student Edition</a>
+                <a class="btn btn-primary btn-lg" href={CART_STUDENT} target="_blank" rel="noopener">Buy Student Edition</a>
                 <a class="btn btn-lg" href="#cta" style="border-color:#cbd5e1;color:#334155">Contact Us</a>
               </div>
+              <div style="margin-top:12px"><a href={VRA_STUDENT_PAGE} target="_blank" rel="noopener" class="info-link">Get more info and pricing &rarr;</a></div>
             </div>
             <div>
               <div class="spec-grid">
