@@ -11,3 +11,5 @@
 /blog-1 /news 301
 /blog-1/* /news 301
 /corti-medical-transcription /dragon-medical-one 301
+/dragon-medical /dragon-medical-one 301
+/dragon-medical-practice-edition /dragon-medical-one 301
