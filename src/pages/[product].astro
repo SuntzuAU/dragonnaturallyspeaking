@@ -47,6 +47,34 @@ const productSchema = product.ctaType === "buy" ? {
     "seller": { "@type": "Organization", "name": "Voice Recognition Australia", "url": "https://www.voicerecognition.com.au" }
   }
 } : null;
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Voice Recognition Australia",
+  "url": "https://www.voicerecognition.com.au",
+  "description": "Australia's longest-serving authorised Dragon reseller. 25+ years deploying speech recognition across healthcare, legal, government and enterprise.",
+  "foundingDate": "2000",
+  "sameAs": [
+    "https://dragonprofessional16.com.au",
+    "https://dragonnaturallyspeaking.com.au",
+    "https://dragonmedicalone.au",
+    "https://dictationsolutions.com.au",
+    "https://cloudprinting.au",
+    "https://speechrecognition.cloud",
+    "https://pdfsoftware.com.au"
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": site.domain },
+    { "@type": "ListItem", "position": 2, "name": "Products", "item": `${site.domain}/comparison` },
+    { "@type": "ListItem", "position": 3, "name": product.title, "item": `${site.domain}/${product.slug}` }
+  ]
+};
 ---
 
 <!doctype html>
@@ -59,6 +87,8 @@ const productSchema = product.ctaType === "buy" ? {
     <link rel="canonical" href={`${site.domain}/${product.slug}`} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
     {productSchema && <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />}
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     <script define:vars={{ c }}>
       const css = `.btn-primary{background:${c.accent};border-color:${c.accent};color:#fff}.btn-primary:hover{background:${c.accentHover};border-color:${c.accentHover}}.btn-trial{background:#0d1b2a;border-color:#0d1b2a;color:#fff}.btn-trial:hover{background:#1e3a5f}.dark-bg{background:${c.primary};color:white}.neutral-bg{background:${c.neutral}}.feature-check{color:${c.accent}}.spec-badge{background:${c.accent};color:#fff}.nav-links a:hover,.dropdown-toggle:hover{color:${c.accent}}.dropdown-menu{border-top:2px solid ${c.accent}}.info-link{color:${c.accent}}`;
       const el=document.createElement('style');el.textContent=css;document.head.appendChild(el);
