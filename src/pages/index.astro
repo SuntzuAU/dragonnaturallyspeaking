@@ -16,6 +16,46 @@ function imgAlt(key) {
 
 const c = site.colours;
 const formId = site.form.id;
+
+// --- Schema markup ---
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": site.faqs?.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  })) || []
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Voice Recognition Australia",
+  "url": "https://www.voicerecognition.com.au",
+  "description": "Australia's longest-serving authorised Dragon reseller. 25+ years deploying speech recognition across healthcare, legal, government and enterprise.",
+  "foundingDate": "2000",
+  "sameAs": [
+    "https://dragonprofessional16.com.au",
+    "https://dragonnaturallyspeaking.com.au",
+    "https://dragonmedicalone.au",
+    "https://dictationsolutions.com.au",
+    "https://cloudprinting.au",
+    "https://speechrecognition.cloud",
+    "https://pdfsoftware.com.au"
+  ]
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": site.siteName,
+  "url": site.domain,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Voice Recognition Australia"
+  }
+};
 ---
 
 <!doctype html>
@@ -26,6 +66,11 @@ const formId = site.form.id;
  <title>{site.branding.metaTitle ?? site.siteName}</title>
     <meta name="description" content={site.branding.metaDesc ?? site.branding.subheadline} />
     <link rel="canonical" href={site.domain} />
+
+    <!-- Schema markup -->
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
 
     {site.googleAnalyticsId && (
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsId}`}></script>
@@ -142,7 +187,7 @@ const formId = site.form.id;
       .pricing-note{font-size:11px;color:#64748b;margin:0 0 14px}
       .pricing-features{list-style:none;padding:0;margin:0 0 16px;flex:1}
       .pricing-features li{padding:4px 0;border-bottom:1px solid #f1f5f9;font-size:12px;color:#334155;display:flex;gap:5px;align-items:flex-start}
-      .pricing-features li::before{content:"✓";color:#0097a7;font-weight:700;flex-shrink:0}
+      .pricing-features li::before{content:"\2713";color:#0097a7;font-weight:700;flex-shrink:0}
       .pricing-btns{display:flex;flex-direction:column;gap:6px}
       .pricing-btns .btn{text-align:center;font-size:12px;padding:8px 12px}
       .tco-table{width:100%;border-collapse:collapse;margin-top:20px}
