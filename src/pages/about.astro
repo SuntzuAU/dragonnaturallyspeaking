@@ -2,6 +2,38 @@
 import site from "../site.config.json";
 const c = site.colours;
 const year = new Date().getFullYear();
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Voice Recognition Australia",
+  "url": "https://www.voicerecognition.com.au",
+  "description": "Australia's longest-serving authorised Dragon reseller. 25+ years deploying speech recognition across healthcare, legal, government and enterprise.",
+  "foundingDate": "2000",
+  "founder": {
+    "@type": "Person",
+    "name": "Russell Bewsell",
+    "jobTitle": "Founder and CEO"
+  },
+  "sameAs": [
+    "https://dragonprofessional16.com.au",
+    "https://dragonnaturallyspeaking.com.au",
+    "https://dragonmedicalone.au",
+    "https://dictationsolutions.com.au",
+    "https://cloudprinting.au",
+    "https://speechrecognition.cloud",
+    "https://pdfsoftware.com.au"
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": site.domain },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": `${site.domain}/about` }
+  ]
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -11,6 +43,8 @@ const year = new Date().getFullYear();
     <title>About Voice Recognition Australia | Russell Bewsell | Dragon Specialist Since 1999</title>
     <meta name="description" content="Voice Recognition Australia has deployed Dragon speech recognition across Australian hospitals, law firms and government since 1999. Founded by Russell Bewsell, Australia's longest-serving Dragon specialist." />
     <link rel="canonical" href={`${site.domain}/about`} />
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     <style is:inline>
       *,*::before,*::after{box-sizing:border-box}
       body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#fff;color:#0f172a;line-height:1.7}
