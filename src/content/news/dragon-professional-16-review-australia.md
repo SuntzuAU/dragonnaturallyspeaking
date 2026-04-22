@@ -2,7 +2,7 @@
 title: "Dragon Professional 16 in 2026: What Australian Professionals Actually Need to Know"
 date: "2026-04-22"
 metaDescription: "A plain-language review of Dragon Professional 16 for Australian professionals. Perpetual licence, offline use, and when a cheaper cloud alternative may make more sense."
-heroImage: "general/2026/04/22/images-dragonnaturallyspeaking-dragon-professional-16-review-4ab02ff5.jpg"
+heroImage: ""
 heroImageAlt: "Australian legal professional dictating into Dragon Professional 16 at a desktop workstation"
 breakImage1: ""
 breakImage1Alt: "Professional desktop dictation setup with USB microphone and laptop"
@@ -11,10 +11,10 @@ breakImage2Alt: "Modern Australian government office workspace with Dragon Profe
 context: "professional"
 section1Title: "What Dragon Professional 16 Actually Is"
 section2Title: "When Perpetual Still Beats Subscription"
-imagesPending: false
+imagesPending: true
 heroAspectRatio: "16:9"
-breakAspectRatio1: "3:1"
-breakAspectRatio2: "3:1"
+breakAspectRatio1: "21:9"
+breakAspectRatio2: "21:9"
 heroPrompt: "Australian lawyer at his desk in a premium law firm office, dictating into a desktop USB microphone. Warm late-afternoon sunlight through floor-to-ceiling windows. City skyline beyond. Bookshelves of leather-bound legal volumes behind him. Word document visible on a large monitor. Shallow depth of field, 50mm lens, editorial photography."
 breakPrompt1: "Flat-lay on a dark walnut executive desk: professional USB microphone on a stand, closed laptop, printed legal document with handwritten annotations, fountain pen, leather notebook, espresso cup. Warm golden window light from one side. Shallow depth of field, no people, editorial product photography."
 breakPrompt2: "Wide interior of a modern Australian government office at mid-morning. Empty workstations with ergonomic chairs and monitors. Natural light through large windows, polished timber floor, indoor plants. Warm grey and navy palette. No people. Wide lens, architectural photography."
