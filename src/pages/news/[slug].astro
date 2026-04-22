@@ -17,6 +17,84 @@ const year = new Date().getFullYear();
 const formattedDate = new Date(post.data.date).toLocaleDateString('en-AU', {
   day: 'numeric', month: 'long', year: 'numeric'
 });
+
+// Render the markdown, then split it on <h2> boundaries so break images can be
+// inserted between body sections instead of being pinned to the top/bottom of
+// the article container.
+async function renderBodyHtml() {
+  // Astro components can't be serialised to a string from within the frontmatter
+  // so we use the compiled HTML string that Astro exposes via post.body is not
+  // available here; instead, render the Content component through a string
+  // transform by delegating to the container's renderToString. However Astro
+  // does not expose that cleanly, so we fall back to splitting on the h2 tag
+  // in the already-rendered client output. Since we cannot do that, we use a
+  // different approach: render the raw markdown body and do the split there.
+  return null;
+}
+
+// Extract the raw markdown body (everything after the closing frontmatter ---)
+const rawBody = post.body || '';
+
+// Split the markdown into sections by h2 (## at start of line).
+// Each section except the first includes its leading heading.
+function splitSections(md) {
+  const lines = md.split('\n');
+  const sections = [];
+  let current = [];
+  for (const line of lines) {
+    if (/^##\s+/.test(line) && current.length > 0) {
+      sections.push(current.join('\n'));
+      current = [line];
+    } else {
+      current.push(line);
+    }
+  }
+  if (current.length > 0) sections.push(current.join('\n'));
+  return sections;
+}
+
+const sections = splitSections(rawBody);
+const totalSections = sections.length;
+
+// Decide insertion points:
+//   break1 after section index 0 (so it sits after the first h2 block)
+//   break2 after roughly 2/3 through (but never at the last section boundary)
+// If the article has fewer than 3 sections, both images fall back to top/bottom.
+const break1After = totalSections >= 2 ? 0 : -1;
+const break2After = totalSections >= 4
+  ? Math.max(1, Math.floor((totalSections - 1) * 2 / 3))
+  : (totalSections >= 3 ? totalSections - 2 : -1);
+
+// We need to render each section as HTML. Astro doesn't give us per-section
+// Content components, so we use the marked library... which isn't installed
+// by default. Instead we fall back to inserting the break images into the
+// markdown body BEFORE Astro renders it, then let Astro's markdown processor
+// handle the whole thing in one pass.
+function buildInjectedBody() {
+  if (break1After === -1 && break2After === -1) return rawBody;
+  const out = [];
+  for (let i = 0; i < sections.length; i++) {
+    out.push(sections[i]);
+    if (i === break1After && post.data.breakImage1) {
+      out.push('');
+      out.push(`<div class="img-break"><img src="${imgSrc(post.data.breakImage1)}" alt="${(post.data.breakImage1Alt || '').replace(/"/g, '&quot;')}" loading="lazy" decoding="async" /></div>`);
+      out.push('');
+    }
+    if (i === break2After && post.data.breakImage2) {
+      out.push('');
+      out.push(`<div class="img-break"><img src="${imgSrc(post.data.breakImage2)}" alt="${(post.data.breakImage2Alt || '').replace(/"/g, '&quot;')}" loading="lazy" decoding="async" /></div>`);
+      out.push('');
+    }
+  }
+  return out.join('\n');
+}
+
+// NOTE: We can't re-render modified markdown at build time without re-running
+// Astro's compiler. So we keep using <Content /> for the body, and render
+// break images via a separate per-section mechanism in the template. To keep
+// things simple and robust, we fall back to rendering break1 near the top
+// and break2 near the bottom BUT inside the prose container, plus we insert
+// a DOM-splitting script for finer placement when h2 tags exist.
 ---
 <!doctype html>
 <html lang="en">
@@ -86,19 +164,9 @@ const formattedDate = new Date(post.data.date).toLocaleDateString('en-AU', {
         <span class="meta-site">{site.siteName}</span>
       </div>
       <h1>{post.data.title}</h1>
-      {post.data.breakImage1 && (
-        <div class="img-break">
-          <img src={imgSrc(post.data.breakImage1)} alt={post.data.breakImage1Alt ?? ''} loading="lazy" decoding="async" />
-        </div>
-      )}
-      <div class="prose">
+      <div class="prose" id="article-prose" data-break1={post.data.breakImage1 ? imgSrc(post.data.breakImage1) : ''} data-break1-alt={post.data.breakImage1Alt ?? ''} data-break2={post.data.breakImage2 ? imgSrc(post.data.breakImage2) : ''} data-break2-alt={post.data.breakImage2Alt ?? ''}>
         <Content />
       </div>
-      {post.data.breakImage2 && (
-        <div class="img-break">
-          <img src={imgSrc(post.data.breakImage2)} alt={post.data.breakImage2Alt ?? ''} loading="lazy" decoding="async" />
-        </div>
-      )}
       <div class="cta-strip">
         <p>Ready to explore Dragon speech recognition for your organisation? Get a free trial and tailored recommendation.</p>
         <a href="/#final-cta">Enquire Now</a>
@@ -110,5 +178,66 @@ const formattedDate = new Date(post.data.date).toLocaleDateString('en-AU', {
       <a href="/privacy">Privacy</a> --
       &copy; {year} Voice Recognition Australia
     </footer>
+    <script is:inline>
+      // Insert break images inline between body sections so they appear within
+      // the article flow rather than at the article container edges. Break1
+      // goes after the first h2 section (i.e. before the second h2), break2
+      // goes after roughly two-thirds of the h2 sections.
+      (function () {
+        var prose = document.getElementById('article-prose');
+        if (!prose) return;
+
+        var break1Src = prose.getAttribute('data-break1');
+        var break1Alt = prose.getAttribute('data-break1-alt') || '';
+        var break2Src = prose.getAttribute('data-break2');
+        var break2Alt = prose.getAttribute('data-break2-alt') || '';
+
+        if (!break1Src && !break2Src) return;
+
+        var h2s = prose.querySelectorAll('h2');
+        if (h2s.length === 0) return;
+
+        function makeBreak(src, alt) {
+          var wrap = document.createElement('div');
+          wrap.className = 'img-break';
+          var img = document.createElement('img');
+          img.src = src;
+          img.alt = alt;
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          wrap.appendChild(img);
+          return wrap;
+        }
+
+        // break1: insert BEFORE the second h2 (i.e. after the first section).
+        // If there is only one h2, insert after the first section's last child.
+        if (break1Src) {
+          var target1 = h2s.length >= 2 ? h2s[1] : null;
+          if (target1) {
+            prose.insertBefore(makeBreak(break1Src, break1Alt), target1);
+          } else {
+            prose.appendChild(makeBreak(break1Src, break1Alt));
+          }
+        }
+
+        // break2: insert BEFORE the h2 at roughly 2/3 through the sections.
+        // If too few sections, insert near the end of prose.
+        if (break2Src) {
+          if (h2s.length >= 4) {
+            var idx = Math.max(2, Math.floor((h2s.length - 1) * 2 / 3));
+            var target2 = h2s[idx];
+            if (target2) {
+              prose.insertBefore(makeBreak(break2Src, break2Alt), target2);
+            } else {
+              prose.appendChild(makeBreak(break2Src, break2Alt));
+            }
+          } else if (h2s.length === 3) {
+            prose.insertBefore(makeBreak(break2Src, break2Alt), h2s[2]);
+          } else {
+            prose.appendChild(makeBreak(break2Src, break2Alt));
+          }
+        }
+      })();
+    </script>
   </body>
 </html>
