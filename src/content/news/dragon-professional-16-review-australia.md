@@ -1,7 +1,7 @@
 ---
 title: "Dragon Professional 16 in 2026: What Australian Professionals Actually Need to Know"
 date: "2026-04-22"
-metaDescription: "A plain-language review of Dragon Professional 16 for Australian professionals. Perpetual licence, offline use, and when a cheaper cloud alternative may make more sense."
+metaDescription: "A plain-language review of Dragon Professional 16 for Australian professionals. Perpetual licence, offline use, and when an annual subscription alternative may suit you better."
 heroImage: "general/2026/04/22/images-dragonnaturallyspeaking-dragon-professional-16-review-45cc47ab.jpg"
 heroImageAlt: "Australian lawyer dictating into Dragon Professional 16 at a city law firm desk"
 breakImage1: "general/2026/04/22/images-dragonnaturallyspeaking-dragon-professional-16-review-5bed2f6d.jpg"
@@ -33,7 +33,7 @@ externalLinks:
     url: "https://www.speechrecognition.cloud"
 ---
 
-If you have been quietly wondering whether there is still a good reason to buy Dragon Professional 16 in 2026 when every new speech recognition product seems to be cloud-only and subscription-based, this article answers that question directly. The short answer is yes - for a specific set of users. For everyone else, there is now a genuinely cheaper cloud alternative worth looking at first.
+If you have been quietly wondering whether there is still a good reason to buy Dragon Professional 16 in 2026 when every new speech recognition product seems to be cloud-only and subscription-based, this article answers that question directly. The short answer is yes - for a specific set of users. For everyone else, there is now a genuinely cheaper annual-subscription alternative worth looking at first.
 
 ## What Dragon Professional 16 Actually Is
 
@@ -58,24 +58,31 @@ The industry narrative is that cloud subscription is the future and perpetual de
 
 **Heavy macro and automation users.** Dragon Professional 16 has a deep custom command system. Users who have spent years building voice macros that drive their specific workflow - inserting templated text, controlling software, chaining actions - are often far more productive on Professional 16 than they would be on any cloud product that sandboxes scripting.
 
-**Deep Windows integration.** Dragon Professional 16 drives Windows applications directly. You can control menus, fill forms, and transcribe into any editable text field in any Windows program. Cloud products that work through a browser or a dedicated app do not have this reach.
+**Deep Windows integration.** Dragon Professional 16 drives Windows applications directly. You can control menus, fill forms, and transcribe into any editable text field in any Windows program. Newer cloud products still do this too, but the breadth of application support and the depth of scripting is something Dragon has refined over many years.
 
 ## The Cheaper Alternative Worth Knowing About
 
 Here is the honest trade-off most reviews avoid. Dragon Professional 16 is currently around 994 AUD for the perpetual licence. That is real money, and for a lot of users it is more than they need.
 
-If you only need speech-to-text for a year or two, or your workflow does not depend on the four perpetual-only advantages listed above, a cloud alternative like [free speech to text software](https://www.speechrecognition.cloud) from Speech Recognition Cloud is worth looking at first.
+If you only need speech-to-text for a year or two, or your workflow does not depend on the four perpetual-only advantages listed above, a cloud-based annual subscription alternative like [free speech to text software](https://www.speechrecognition.cloud) from Speech Recognition Cloud is worth looking at first. Full disclosure: Speech Recognition Cloud is a product from the same Australian team behind Voice Recognition Australia, built on 28 years of deploying Dragon, specifically to give professionals a cheaper modern option.
 
-Speech Recognition Cloud runs in the browser and works on both Windows and Mac. Its Pro Edition sits in the 159 to 239 AUD per year range, and there is also a Medical Edition for clinicians who need medical vocabulary without the Dragon Medical One price tag. There is a free tier to trial the product before paying anything.
+Speech Recognition Cloud is a Windows desktop application (Windows 10 and 11) that uses cloud-based AI for transcription. You install it, press a hotkey, dictate, and the text types at your cursor in any Windows program. The tiers are:
 
-The comparison is straightforward:
+- **Starter** - free, 20 minutes of dictation per month, no credit card, stays free
+- **Personal / Educational** - USD 79 per year, unlimited dictation, custom vocabulary
+- **Professional** - USD 159 per year, Ultra Accuracy mode, AI productivity modes, screen OCR
+- **Medical** - USD 439 per year, specialised medical vocabularies, Ultra Accuracy Medical mode, dedicated support, one-on-one training, 30-day free trial of the Medical edition
 
-- Dragon Professional 16 perpetual: approximately 994 AUD, one payment, own it forever, offline, Windows only
-- Speech Recognition Cloud Pro: 159 to 239 AUD per year, cloud-based, works on Mac and Windows, free tier available
+Prices are listed in USD and convert to your local currency at checkout. All paid plans are annual, cancel anytime, no lock-in.
 
-Over one year, Speech Recognition Cloud is roughly a fifth of the cost. Over two years, still under half. You cross over to Dragon Professional 16 paying for itself somewhere around the four-to-five-year mark, assuming you stay on the same major Dragon version that entire time without upgrading.
+The comparison for most users is straightforward:
 
-For a solo practitioner, a freelancer, a student, a Mac user, or anyone who is not in the specific categories where perpetual desktop matters, the cloud option makes the initial investment much smaller and the switching cost much lower.
+- **Dragon Professional 16 perpetual**: approximately 994 AUD, one payment, own it forever, offline, Windows only
+- **Speech Recognition Cloud Professional**: USD 159 per year, cloud-processed, Windows only, free tier available to trial before committing
+
+Over one year, Speech Recognition Cloud Professional is roughly a quarter of the cost of a Dragon Professional 16 perpetual licence. You would need to stay on the same major Dragon version for five or six years without upgrading before the perpetual licence becomes the cheaper option.
+
+For a solo practitioner, a freelancer, a student, or anyone who is not in the specific categories where the perpetual-licence advantages matter, the annual subscription route makes the initial investment much smaller and the switching cost much lower.
 
 ## Who Dragon Professional 16 Suits
 
@@ -89,19 +96,18 @@ Put concretely, Dragon Professional 16 is the right choice if you are:
 
 ## Who Should Look at Speech Recognition Cloud Instead
 
-It is not the right product for:
+It is probably not the right product for you if you are:
 
-- Mac users - Dragon Professional 16 is Windows only, and Speech Recognition Cloud works on both platforms
-- Clinicians requiring medical vocabulary - Speech Recognition Cloud has a Medical Edition, or Dragon Medical One for more demanding clinical use
-- Casual users who need dictation a few hours a week - a cloud subscription costs a fraction of the perpetual licence
-- Users working across multiple devices who need their dictation to follow them - cloud products handle this natively
-- Anyone who only needs dictation for a specific project or a limited time period
+- A casual user who needs dictation a few hours a week - an annual subscription costs a fraction of the perpetual licence
+- A clinician who wants medical-grade vocabulary without the full Dragon Medical One commitment - Speech Recognition Cloud Medical at USD 439 a year is the cheaper starting point
+- Someone who only needs dictation for a specific project or a limited time period
+- Someone who wants to trial serious dictation software before investing - the Speech Recognition Cloud Starter tier is permanently free for 20 minutes a month with no credit card
+
+Note that both products are **Windows only**. If you need dictation on a Mac, neither Dragon Professional 16 nor Speech Recognition Cloud will help you today. Mac support is on the Speech Recognition Cloud roadmap but there is no confirmed release date.
 
 ## What About the Upgrade Path From Older Dragon Versions
 
-If you are currently running Dragon Professional Individual 15, there is a discounted upgrade path to Professional 16 rather than paying full price. If you are on anything older than 15 - Dragon 13, 14, or the original Dragon NaturallySpeaking products - you will need to purchase the full Professional 16 licence. No upgrade pricing extends back that far.
-
-If you are running Dragon Home or Dragon Anywhere, those are separate product lines and do not qualify for a Professional 16 upgrade either.
+If you are currently running an older Dragon Professional or Dragon NaturallySpeaking version, upgrade eligibility and pricing vary depending on exactly which version you are on. Dragon Home and Dragon Anywhere are separate product lines and typically do not qualify for Professional upgrade pricing. For the definitive answer on whether your existing licence qualifies for an upgrade discount, contact Voice Recognition Australia with your current product details.
 
 ## Pricing and Where to Look
 
@@ -110,7 +116,7 @@ Dragon Professional 16 pricing moves with the exchange rate and periodic promoti
 For broader Dragon procurement across the range including enterprise and volume licensing, [buy Dragon software in Australia](https://www.voicerecognition.com.au/collections/dragon-software) is the direct contact point for Australian buyers.
 
 <div style="background:#0d1b2a;border-radius:14px;padding:28px 32px;margin:40px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
-<p style="margin:0;color:#cbd5e1;font-size:15px;max-width:520px;line-height:1.6;">Not sure if you need the full perpetual licence? Try Speech Recognition Cloud first - there is a free tier to test before committing.</p>
+<p style="margin:0;color:#cbd5e1;font-size:15px;max-width:520px;line-height:1.6;">Not sure if you need the full perpetual licence? Try Speech Recognition Cloud first - the Starter tier is permanently free with no credit card.</p>
 <a href="https://www.speechrecognition.cloud" style="display:inline-block;background:#ff6b35;color:#ffffff;font-weight:700;font-size:14px;padding:14px 28px;border-radius:8px;text-decoration:none;white-space:nowrap;letter-spacing:0.02em;">Try Free Speech to Text</a>
 </div>
 
@@ -118,7 +124,8 @@ For broader Dragon procurement across the range including enterprise and volume 
 
 - Dragon Professional 16 is a Windows desktop, perpetual-licence product at approximately 994 AUD
 - Right choice for offline work, security-sensitive environments, heavy macro users, and five-plus-year horizons
-- For most other users, Speech Recognition Cloud at 159 to 239 AUD per year is dramatically cheaper
-- Speech Recognition Cloud works on Mac and Windows and has a free tier; Dragon Professional 16 is Windows only
-- Upgrade pricing available from Professional 15; older versions require a full purchase
+- For most other users, Speech Recognition Cloud Professional at USD 159 per year is dramatically cheaper
+- Both products are Windows only - no Mac support from either today
+- Speech Recognition Cloud has a permanently free Starter tier; Dragon Professional 16 has no free version
+- Upgrade pricing from older Dragon versions depends on exactly which version you are on - contact Voice Recognition Australia to check
 - Confirm current Australian pricing at the point of purchase - it moves with exchange rates and promotions
