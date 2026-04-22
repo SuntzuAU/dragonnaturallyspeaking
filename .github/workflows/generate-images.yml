@@ -1,3 +1,5 @@
+# Generate Site Images
+# Manual workflow for regenerating site-wide image assets.
 name: Generate Site Images
 
 on:
