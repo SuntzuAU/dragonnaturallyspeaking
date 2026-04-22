@@ -27,7 +27,7 @@ externalLinks:
     url: "https://www.dragonprofessional16.com.au"
   - to: "voicerecognition.com.au"
     anchor: "buy Dragon software in Australia"
-    url: "https://www.voicerecognition.com.au/collections/speech-to-text-software"
+    url: "https://www.voicerecognition.com.au/collections/dragon-software"
   - to: "speechrecognition.cloud"
     anchor: "free speech to text software"
     url: "https://www.speechrecognition.cloud"
@@ -45,7 +45,7 @@ If you have never used desktop Dragon before, the value proposition is simple: y
 
 <div style="background:#0d1b2a;border-radius:14px;padding:28px 32px;margin:40px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
 <p style="margin:0;color:#cbd5e1;font-size:15px;max-width:520px;line-height:1.6;">Ready to compare pricing, check upgrade eligibility, or buy Dragon Professional 16 for Australian delivery?</p>
-<a href="https://www.voicerecognition.com.au/collections/speech-to-text-software" style="display:inline-block;background:#0097a7;color:#ffffff;font-weight:700;font-size:14px;padding:14px 28px;border-radius:8px;text-decoration:none;white-space:nowrap;letter-spacing:0.02em;">View Dragon Pricing</a>
+<a href="https://www.voicerecognition.com.au/collections/dragon-software" style="display:inline-block;background:#0097a7;color:#ffffff;font-weight:700;font-size:14px;padding:14px 28px;border-radius:8px;text-decoration:none;white-space:nowrap;letter-spacing:0.02em;">View Dragon Pricing</a>
 </div>
 
 ## When Perpetual Still Beats Subscription
@@ -74,6 +74,11 @@ Speech Recognition Cloud is a Windows application that uses cloud AI for transcr
 - **Medical** - secure, medical-vocabulary edition for clinicians
 
 The Professional tier sits in roughly the 159 to 239 AUD per year range. Pricing for all tiers should be confirmed on the product page at the point of purchase.
+
+<div style="background:#0d1b2a;border-radius:14px;padding:28px 32px;margin:40px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+<p style="margin:0;color:#cbd5e1;font-size:15px;max-width:520px;line-height:1.6;">Clinician after a secure, Australian-hosted medical speech-to-text option? Speech Recognition Cloud Medical is purpose-built for clinical vocabulary and workflow.</p>
+<a href="https://www.voicerecognition.com.au/pages/medical-speech-to-text-software" style="display:inline-block;background:#ff6b35;color:#ffffff;font-weight:700;font-size:14px;padding:14px 28px;border-radius:8px;text-decoration:none;white-space:nowrap;letter-spacing:0.02em;">Explore Medical Edition</a>
+</div>
 
 The comparison for most users is straightforward:
 
@@ -113,7 +118,7 @@ If you are currently running an older Dragon Professional or Dragon NaturallySpe
 
 Dragon Professional 16 pricing moves with the exchange rate and periodic promotional cycles, so the specific figure should be confirmed at the point of purchase rather than assumed from a review article. The Australian Dragon Professional 16 resource at [Dragon Professional 16](https://www.dragonprofessional16.com.au) covers detailed product specifications, pricing tiers, and how to purchase.
 
-For the broader Australian speech-to-text software range across Dragon, Speech Recognition Cloud, and related products, [buy Dragon software in Australia](https://www.voicerecognition.com.au/collections/speech-to-text-software) is the direct contact point for Australian buyers.
+For broader Dragon procurement across the range including enterprise and volume licensing, [buy Dragon software in Australia](https://www.voicerecognition.com.au/collections/dragon-software) is the direct contact point for Australian buyers.
 
 <div style="background:#0d1b2a;border-radius:14px;padding:28px 32px;margin:40px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
 <p style="margin:0;color:#cbd5e1;font-size:15px;max-width:520px;line-height:1.6;">Not sure if you need the full perpetual licence? Try Speech Recognition Cloud first - there is a free edition with no credit card required.</p>
