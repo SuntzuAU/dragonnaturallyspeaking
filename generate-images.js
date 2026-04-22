@@ -25,6 +25,16 @@ const WORKER_URL = process.env.IMAGE_WORKER_URL ||
 const WORKER_TOKEN = process.env.ADMIN_TOKEN || '';
 const SITE = process.env.SITE_ID || 'default';
 
+// Aspect ratios per role, matching .claude/IMAGE-STANDARDS.md
+// hero + break1 + break2 default to their standard shapes; can be overridden per-post in frontmatter
+const DEFAULT_ASPECT_RATIOS = {
+  hero: '16:9',
+  break1: '3:1',
+  break2: '3:1',
+  feat1: '16:9',
+  feat2: '16:9',
+};
+
 const cwd = process.cwd();
 const dataDir = path.join(cwd, 'src', 'data');
 const manifestPath = path.join(dataDir, 'image-manifest.json');
@@ -69,12 +79,14 @@ function resolveAltText(entry, sceneName, type) {
   return (type === 'hero' ? scene.altHero : scene.altBreak) || '';
 }
 
-async function callWorker(prompt, r2Key) {
+async function callWorker(prompt, r2Key, aspectRatio) {
   const headers = { 'Content-Type': 'application/json' };
   if (WORKER_TOKEN) headers['Authorization'] = `Bearer ${WORKER_TOKEN}`;
+  const payload = { prompt, name: r2Key, site: SITE };
+  if (aspectRatio) payload.aspectRatio = aspectRatio;
   const res = await fetch(WORKER_URL, {
     method: 'POST', headers,
-    body: JSON.stringify({ prompt, name: r2Key, site: SITE }),
+    body: JSON.stringify(payload),
   });
   const json = await res.json().catch(() => null);
   if (!res.ok || !json?.ok) throw new Error(`Worker error ${res.status}: ${JSON.stringify(json)}`);
@@ -95,10 +107,11 @@ async function phase1() {
     if (!prompt) { console.warn(`Skip ${key}: no prompt.`); continue; }
     const r2Key = `images/${SITE}/${role || key}-${shortId()}.jpg`;
     const altText = resolveAltText(img, img.scene, type);
-    console.log(`Generating: ${key} -> ${r2Key}`);
+    const aspectRatio = img.aspectRatio || DEFAULT_ASPECT_RATIOS[role] || DEFAULT_ASPECT_RATIOS[type] || '16:9';
+    console.log(`Generating: ${key} -> ${r2Key} (${aspectRatio})`);
     try {
-      const result = await callWorker(prompt, r2Key);
-      manifest[key] = { key, r2Key: result.r2?.key || r2Key, altText, scene: img.scene || 'custom', generatedAt: new Date().toISOString(), site: SITE };
+      const result = await callWorker(prompt, r2Key, aspectRatio);
+      manifest[key] = { key, r2Key: result.r2?.key || r2Key, altText, scene: img.scene || 'custom', aspectRatio, generatedAt: new Date().toISOString(), site: SITE };
       count++;
     } catch (e) { console.error(`  FAILED: ${e.message}`); }
   }
@@ -141,6 +154,15 @@ function resolvePostPrompt(fm, role) {
   return null;
 }
 
+function resolvePostAspectRatio(fm, role) {
+  // Per-role frontmatter override field: heroAspectRatio, breakAspectRatio1, breakAspectRatio2
+  const frontmatterField = role === 'hero' ? 'heroAspectRatio'
+    : role === 'break1' ? 'breakAspectRatio1'
+    : 'breakAspectRatio2';
+  if (fm[frontmatterField]) return fm[frontmatterField];
+  return DEFAULT_ASPECT_RATIOS[role] || '16:9';
+}
+
 async function processPost(file) {
   const filePath = path.join(newsDir, file);
   if (!fs.existsSync(filePath)) { console.error(`Not found: ${filePath}`); return 0; }
@@ -164,9 +186,11 @@ async function processPost(file) {
     if (!needs) continue;
     const resolved = resolvePostPrompt(fm, role);
     if (!resolved) continue;
+    const aspectRatio = resolvePostAspectRatio(fm, role);
     const r2Key = `images/${SITE}/${slug}-${role}-${shortId()}.jpg`;
+    console.log(`  Generating ${role} (${aspectRatio}) -> ${r2Key}`);
     try {
-      const result = await callWorker(resolved.prompt, r2Key);
+      const result = await callWorker(resolved.prompt, r2Key, aspectRatio);
       const finalKey = result.r2?.key || r2Key;
       updated = setFrontmatterField(updated, field, finalKey);
       if (resolved.altText) updated = setFrontmatterField(updated, altField, resolved.altText);
