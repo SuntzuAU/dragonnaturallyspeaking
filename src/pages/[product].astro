@@ -192,7 +192,10 @@ const breadcrumbSchema = {
           <div class="grid">
             <div class="c7">
               <h2 style="color:white;font-size:26px;margin:0 0 10px">{product.ctaSectionHeading}</h2>
-              <p style="color:#94a3b8;margin:0 0 16px;font-size:14px">{product.ctaSectionBody}</p>
+              <p style="color:#94a3b8;margin:0 0 16px;font-size:14px" set:html={product.slug === 'dragon-medical-one'
+                ? product.ctaSectionBody + ' For dedicated Australian clinical support and deployment, visit <a href="https://dragonmedicalone.au" style="color:#67e8f9;text-decoration:underline">Dragon Medical One Australia</a>.'
+                : product.ctaSectionBody
+              } />
               <ul style="color:#94a3b8;margin:0;padding-left:20px;line-height:2;font-size:14px">
                 {product.ctaSectionBullets.map(b => <li>{b}</li>)}
               </ul>
