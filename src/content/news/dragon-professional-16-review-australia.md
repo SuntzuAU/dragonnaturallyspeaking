@@ -2,7 +2,7 @@
 title: "Dragon Professional 16 in 2026: What Australian Professionals Actually Need to Know"
 date: "2026-04-22"
 metaDescription: "A plain-language review of Dragon Professional 16 for Australian professionals. Perpetual licence, offline use, and when a cheaper cloud alternative may make more sense."
-heroImage: ""
+heroImage: "general/2026/04/22/images-dragonnaturallyspeaking-dragon-professional-16-review-4ab02ff5.jpg"
 heroImageAlt: "Australian legal professional dictating into Dragon Professional 16 at a desktop workstation"
 breakImage1: ""
 breakImage1Alt: "Professional desktop dictation setup with USB microphone and laptop"
@@ -11,7 +11,7 @@ breakImage2Alt: "Modern Australian government office workspace with Dragon Profe
 context: "professional"
 section1Title: "What Dragon Professional 16 Actually Is"
 section2Title: "When Perpetual Still Beats Subscription"
-imagesPending: true
+imagesPending: false
 heroAspectRatio: "16:9"
 breakAspectRatio1: "3:1"
 breakAspectRatio2: "3:1"
