@@ -33,7 +33,7 @@
     "legacyProducts": [
       { "old": "Dragon NaturallySpeaking Professional", "new": "Dragon Professional 16", "url": "/dragon-professional-16" },
       { "old": "Dragon NaturallySpeaking Home", "new": "Dragon Professional 16 (Home edition discontinued)", "url": "/dragon-professional-16" },
-      { "old": "Dragon Medical Practice Edition", "new": "Dragon Medical One", "url": "/dragon-medical-one" },
+      { "old": "Dragon Medical Practice Edition", "new": "Dragon Medical One", "url": "https://dragonmedicalone.au/" },
       { "old": "Dragon Dictate (Mac)", "new": "Discontinued - see cloud alternatives", "url": "/dragon-professional-anywhere" }
     ]
   },
@@ -88,7 +88,7 @@
       "metaTitle": "Is Dragon Medical One Right for Your Practice? | Australian GP Guide",
       "metaDesc": "Honest guide to Dragon Medical One for Australian GPs and specialists. 80+ specialty vocabularies, Best Practice and Medical Director integration. Free trial available.",
       "schemaName": "Dragon Medical One",
-      "schemaDescription": "Cloud-based medical speech recognition platform with 80+ built-in specialty vocabularies. No voice training required. Used by Australian GPs, specialists and hospitals.",
+      "schemaDescription": "Cloud-based medical speech recognition platform with 80+ built-in specialty vocabularies. No voice profile training required. Used by Australian GPs, specialists and hospitals.",
       "schemaCategory": "Medical Speech Recognition Software",
       "schemaBrand": "Nuance / Microsoft",
       "headline": "Dragon Medical One - Cloud Speech Recognition for Australian Clinicians",
@@ -190,7 +190,7 @@
         { "q": "Can I upgrade from an older version?", "a": "The upgrade ($495) is available for Dragon Professional Individual or Group version 15 only. It is not valid for older versions or other editions such as Dragon Home." }
       ],
       "otherProducts": [
-        { "label": "Dragon Medical One", "url": "/dragon-medical-one" },
+        { "label": "Dragon Medical One", "url": "https://dragonmedicalone.au/" },
         { "label": "Dragon Professional Anywhere", "url": "/dragon-professional-anywhere" },
         { "label": "Dragon Legal", "url": "/dragon-legal" },
         { "label": "Dragon for Education", "url": "/dragon-education" }
