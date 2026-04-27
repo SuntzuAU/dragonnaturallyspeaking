@@ -7,6 +7,10 @@
 // Re-skin: a single <style is:global> block AFTER AC's <style> overrides background,
 // borders, button colour, and fonts to match the site palette. Targets #_form_285_
 // only. Does not modify AC's selectors.
+//
+// Override selectors are prefixed with `body` and chain the form's actual classes
+// (._inline-form._form_285) to ensure higher specificity than AC's rules and win
+// regardless of how Astro orders the global style blocks in the final bundle.
 ---
 
 <!-- AC's stylesheet imports (AC's exact code) -->
@@ -18,12 +22,14 @@
 #_form_285_ ._submit{margin-top:15px;margin-bottom:7px}#_form_285_ ._x31455613 input{margin-top:15px;margin-bottom:7px}#_form_285_ ._x81578100 input{margin-top:15px;margin-bottom:7px}#_form_285_ ._x15938165 input{margin-top:15px}
 </style>
 
-<!-- Site re-skin overrides. Targets #_form_285_ only. AC's selectors use !important on
-     background, button colour, and border-radius - we match that with !important.
+<!-- Site re-skin overrides. High specificity - prefixed with `body` and chaining the
+     form's actual classes (._inline-form._form_285) so we win regardless of how
+     Astro orders the global style blocks in the bundled output.
      Goal: white card, navy text, teal accent button. Visually consistent with the
      surrounding section. -->
 <style is:global>
-  #_form_285_{
+  body #_form_285_._inline-form._form_285,
+  body #_form_285_ {
     background:#ffffff !important;
     color:#0f172a !important;
     max-width:100% !important;
@@ -33,44 +39,62 @@
     border-radius:14px !important;
     font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif !important;
   }
-  #_form_285_ ._form-label,
-  #_form_285_._inline-form ._form-label,
-  #_form_285_._inline-form ._row span:not(.field-required),
-  #_form_285_._inline-form ._row label{
+  body #_form_285_._inline-form._form_285 ._form-label,
+  body #_form_285_._inline-form ._form-label,
+  body #_form_285_._inline-form ._form-emailidentifier,
+  body #_form_285_._inline-form ._form-checkbox-option-label,
+  body #_form_285_._inline-form ._row span:not(.field-required),
+  body #_form_285_._inline-form ._row label,
+  body #_form_285_ ._form-label {
     color:#0f172a !important;
     font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif !important;
   }
-  #_form_285_ input[type="text"],
-  #_form_285_ input[type="tel"],
-  #_form_285_ textarea{
+  body #_form_285_._inline-form ._html-code,
+  body #_form_285_._inline-form .sms_consent_message,
+  body #_form_285_._inline-form ._form-thank-you,
+  body #_form_285_ ._form-thank-you {
+    color:#0f172a !important;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif !important;
+    font-size:16px !important;
+    background:#ffffff !important;
+    padding:24px !important;
+    border-radius:14px !important;
+  }
+  body #_form_285_ input[type="text"],
+  body #_form_285_ input[type="tel"],
+  body #_form_285_ textarea {
     background:#f8fafc !important;
     border:1px solid #e2e8f0 !important;
     border-radius:8px !important;
     color:#0f172a !important;
     font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif !important;
   }
-  #_form_285_ input::placeholder,
-  #_form_285_ textarea::placeholder{
+  body #_form_285_ input::placeholder,
+  body #_form_285_ textarea::placeholder {
     color:#64748b !important;
   }
-  #_form_285_ ._submit{
+  body #_form_285_._inline-form._form_285 ._submit,
+  body #_form_285_._inline-form ._submit,
+  body #_form_285_ ._button-wrapper ._submit,
+  body #_form_285_ ._submit {
     background:#0097a7 !important;
     border:1px solid #0097a7 !important;
     border-radius:8px !important;
+    color:#ffffff !important;
     font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif !important;
     font-weight:700 !important;
     font-size:15px !important;
     padding:12px 20px !important;
     width:100% !important;
   }
-  #_form_285_ ._submit:hover{
+  body #_form_285_ ._submit:hover {
     background:#00838f !important;
     border-color:#00838f !important;
   }
-  #_form_285_ ._submit.processing::before{
+  body #_form_285_ ._submit.processing::before {
     background-image:linear-gradient(#0097a7, #0097a7), conic-gradient(#0097a7, #FFFFFF) !important;
   }
-  #_form_285_ .iti input{
+  body #_form_285_ .iti input {
     border:1px solid #e2e8f0 !important;
     border-radius:8px !important;
   }
