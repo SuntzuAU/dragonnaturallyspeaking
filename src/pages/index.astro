@@ -1,6 +1,7 @@
 ---
 import site from "../site.config.json";
 import manifest from "../data/image-manifest.json";
+import ACForm from "../components/ACForm.astro";
 
 const year = new Date().getFullYear();
 const R2_BASE = import.meta.env.PUBLIC_R2_BASE || "";
@@ -104,8 +105,6 @@ const webSiteSchema = {
         .tco-table tr.winner td { background: #e0f7fa; font-weight: 700; color: ${c.primary}; }
         .step-num { background: ${c.accent}; color: #fff; }
         .edition-name { color: ${c.accent}; font-weight: 700; margin-bottom: 4px; font-size: 15px; }
-        ._submit { background: ${c.accent}; color: #fff; }
-        ._submit:hover { background: ${c.accentHover}; }
       `;
       const el = document.createElement('style');
       el.textContent = css;
@@ -198,10 +197,6 @@ const webSiteSchema = {
       .step-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-weight:800;font-size:15px;margin-bottom:12px}
       .edition{background:rgba(255,255,255,.08);border-radius:12px;padding:14px;margin-bottom:8px}
       .edition-desc{font-size:13px;color:#cbd5e1;line-height:1.5}
-      .formbox{background:#fff;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px}
-      ._form_element{margin-bottom:12px}
-      ._form_element input,._form_element textarea{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;color:#0f172a;font-size:14px;font-family:system-ui,-apple-system,sans-serif;padding:10px 12px;width:100%}
-      ._submit{border:none;border-radius:8px;font-weight:700;font-size:15px;padding:12px 20px;width:100%;margin-top:8px;cursor:pointer}
       .footer-disclaimer{font-size:11px;color:#475569;line-height:1.6;margin-top:12px;padding-top:12px;border-top:1px solid #1e293b}
       footer{background:#0f172a;color:#64748b;padding:28px 0;font-size:14px}
       .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
@@ -235,7 +230,6 @@ const webSiteSchema = {
         .hero-btns .btn-lg{width:100%;text-align:center;padding:12px 20px}
         .card{padding:16px}
         .pricing-card{padding:16px}
-        .formbox{padding:18px}
         .tco-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px}
         .tco-table th,.tco-table td{padding:8px 10px;font-size:11px;white-space:nowrap}
         .stats-items{flex-direction:column;gap:6px;align-items:center}
@@ -558,30 +552,7 @@ const webSiteSchema = {
               </ul>
             </div>
             <div class="c5">
-              <div class="formbox">
-                <div style="font-weight:800;font-size:20px;color:#0f172a">Get in touch</div>
-                <div style="color:#475569;font-size:14px;margin-bottom:4px">Local Australian support. Fast response.</div>
-                <form method="POST" action="https://voicerecognition.activehosted.com/proc.php" id={`_form_${formId}_`} class="_form _inline-form" novalidate>
-                  <input type="hidden" name="u" value={site.form.hiddenU} />
-                  <input type="hidden" name="f" value={site.form.hiddenF} />
-                  <input type="hidden" name="s" />
-                  <input type="hidden" name="c" value="0" />
-                  <input type="hidden" name="m" value="0" />
-                  <input type="hidden" name="act" value="sub" />
-                  <input type="hidden" name="v" value="2" />
-                  <input type="hidden" name="or" value={site.form.hiddenOr} />
-                  <div class="_form-content">
-                    <div class="_form_element"><input type="text" name="firstname" placeholder="Your Name" required /></div>
-                    <div class="_form_element"><input type="text" name="email" placeholder="Your Email" required /></div>
-                  <div class="_form_element"><input type="text" id="field36" name="field[36]" placeholder="Your Phone Number" autocomplete="off" /></div>
-                    <div class="_form_element"><input type="text" name="field[21]" placeholder="Number of Users" /></div>
-                    <div class="_form_element"><input type="text" name="field[35]" placeholder="Company / Organisation" /></div>
-                    <div class="_form_element"><textarea name="field[18]" placeholder="Your profession and current dictation setup"></textarea></div>
-                    <button class="_submit" type="submit">{site.form.submitText}</button>
-                  </div>
-                  <div class="_form-thank-you" style="display:none;"></div>
-                </form>
-              </div>
+              <ACForm />
             </div>
           </div>
         </div>

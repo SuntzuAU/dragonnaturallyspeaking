@@ -1,5 +1,6 @@
 ---
 import site from "../site.config.json";
+import ACForm from "../components/ACForm.astro";
 const c = site.colours;
 const year = new Date().getFullYear();
 ---
@@ -51,7 +52,7 @@ const year = new Date().getFullYear();
       .sh p{font-size:14px;margin:0;color:#475569;max-width:700px}
       .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid #cbd5e1}
 
-      /* ── Table base ── */
+      /* Table base */
       table{width:100%;border-collapse:collapse;min-width:700px}
 
       /* Dark navy header row */
@@ -69,11 +70,11 @@ const year = new Date().getFullYear();
       td{padding:10px 12px;font-size:13px;border-bottom:1px solid #f1f5f9;vertical-align:top}
       td:first-child{font-weight:600;color:#0f172a;min-width:160px;background:#fafafa;position:sticky;left:0;z-index:1}
 
-      /* Column tints on body cells — Medical One (col 2) teal, Legal (col 5) amber */
+      /* Column tints on body cells */
       tbody tr td:nth-child(2){background:#f0fbfc}
       tbody tr td:nth-child(5){background:#fffbeb}
 
-      /* Section divider rows — stronger than before */
+      /* Section divider rows */
       .section-divider td{background:#1e3a5f!important;color:#e0f2fe!important;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:8px 12px;border-bottom:none}
 
       .yes{color:#006064;font-weight:700}
@@ -88,11 +89,6 @@ const year = new Date().getFullYear();
       .c4{grid-column:span 4}
       .c7{grid-column:span 7}
       .c5{grid-column:span 5}
-      .formbox{background:#fff;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px}
-      ._form_element{margin-bottom:10px}
-      ._form_element input,._form_element textarea{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;color:#0f172a;font-size:14px;font-family:system-ui,-apple-system,sans-serif;padding:10px 12px;width:100%}
-      ._submit{border:none;border-radius:8px;font-weight:700;font-size:15px;padding:12px 20px;width:100%;margin-top:8px;cursor:pointer;background:#0097a7;color:#fff}
-      ._submit:hover{background:#00838f}
       .guide-card{border:2px solid #e2e8f0;border-radius:14px;padding:20px;transition:border-color .15s}
       .guide-card:hover{border-color:#0097a7}
       .guide-card h3{margin:0 0 4px;font-size:17px}
@@ -105,7 +101,7 @@ const year = new Date().getFullYear();
       .footer-links a:hover{color:white}
       .footer-disclaimer{font-size:11px;color:#475569;line-height:1.6;margin-top:10px;padding-top:10px;border-top:1px solid #1e293b}
       @media(max-width:900px){.c6,.c4,.c7,.c5{grid-column:span 12}.sh h2{font-size:22px}}
-      @media(max-width:600px){.nav-links{display:none}.hamburger{display:flex}section{padding:36px 0}.page-hero{padding:24px 0 8px}.page-hero h1{font-size:24px}.card,.guide-card,.formbox{padding:16px}.footer-inner{flex-direction:column;align-items:center;text-align:center}.footer-links{justify-content:center}}
+      @media(max-width:600px){.nav-links{display:none}.hamburger{display:flex}section{padding:36px 0}.page-hero{padding:24px 0 8px}.page-hero h1{font-size:24px}.card,.guide-card{padding:16px}.footer-inner{flex-direction:column;align-items:center;text-align:center}.footer-links{justify-content:center}}
     </style>
   </head>
   <body>
@@ -304,20 +300,7 @@ const year = new Date().getFullYear();
               <p style="color:#94a3b8;margin:0;font-size:14px"><a href="https://www.voicerecognition.com.au" target="_blank" rel="noopener" style="color:#0097a7;font-weight:600">Buy from Voice Recognition Australia</a></p>
             </div>
             <div class="c5">
-              <div class="formbox">
-                <div style="font-weight:800;font-size:18px;color:#0f172a">Get a recommendation</div>
-                <div style="color:#475569;font-size:14px;margin-bottom:2px">Local Australian support. Fast response.</div>
-                <form method="POST" action="https://voicerecognition.activehosted.com/proc.php" novalidate>
-                  <input type="hidden" name="u" value={site.form.hiddenU} /><input type="hidden" name="f" value={site.form.hiddenF} /><input type="hidden" name="s" /><input type="hidden" name="c" value="0" /><input type="hidden" name="m" value="0" /><input type="hidden" name="act" value="sub" /><input type="hidden" name="v" value="2" /><input type="hidden" name="or" value={site.form.hiddenOr} />
-                  <div class="_form_element"><input type="text" name="firstname" placeholder="Your Name" required /></div>
-                  <div class="_form_element"><input type="text" name="email" placeholder="Your Email" required /></div>
-                  <div class="_form_element"><input type="text" name="phone" placeholder="Your Phone Number" /></div>
-                  <div class="_form_element"><input type="text" name="field[21]" placeholder="Number of Users" /></div>
-                  <div class="_form_element"><input type="text" name="field[35]" placeholder="Organisation" /></div>
-                  <div class="_form_element"><textarea name="field[18]" placeholder="Your profession, team size, and what you need Dragon for"></textarea></div>
-                  <button class="_submit" type="submit">{site.form.submitText}</button>
-                </form>
-              </div>
+              <ACForm />
             </div>
           </div>
         </div>
