@@ -1,6 +1,6 @@
 ---
 title: "Which Version of Dragon Is Right for You in 2026?"
-date: "2026-03-16"
+date: "2026-05-11"
 metaDescription: "Dragon Professional 16 comes in five versions. Here's how to work out which one suits your situation - without reading a spec sheet."
 author: "Russell Bewsell"
 context: "descriptive"
@@ -30,7 +30,7 @@ I've been deploying Dragon across Australian healthcare, legal, and government e
 
 Dragon Professional 16 comes in two fundamental models - perpetual licence (you buy it once and own it) and annual subscription (you pay yearly).
 
-The perpetual licence costs $994. The subscription costs $595 per year. If you plan to use Dragon for more than two years - and most people who commit to dictation do - the perpetual licence is cheaper over time. If you want flexibility or need to install it on multiple machines, the subscription is worth considering.
+The perpetual licence costs $994. The subscription is $695 per year on auto-recurring renewal, or $795 for a single one-off year. If you plan to use Dragon for more than about eighteen months - and most people who commit to dictation do - the perpetual licence is cheaper over time. If you want flexibility or need to install it on multiple machines, the subscription is worth considering.
 
 That one question rules out most of the confusion.
 
@@ -48,13 +48,13 @@ If you are currently running Dragon Professional Individual or Group version 15,
 
 This is only available to confirmed v15 licence holders. You will need your v15 licence key at installation.
 
-## The annual subscription - $595 per year
+## The annual subscription - from $695 per year
 
 The subscription's distinguishing feature is unlimited PC installs on a single user licence. One voice profile, one person - but you can install it on as many Windows computers as you need. If you regularly move between a desktop at work, a laptop at home, and perhaps a third machine at a second location, this is the only Dragon licence that handles that cleanly.
 
-It also includes access to local VRA support, which the standard perpetual licence does not.
+Voice Recognition Australia sells it two ways. The $695 price is the auto-recurring annual subscription - it renews automatically each year and saves you $100 compared to the alternative. The $795 price is a one-off single year with no auto-renewal. Both give the identical software; the only difference is whether you want it to renew without you having to think about it. The subscription also includes Enhanced Direct Support, which the standard perpetual licence does not.
 
-The catch is cost over time. Two years of subscription exceeds the perpetual price. If you are committing to Dragon long term and mostly use one or two machines, the perpetual licence wins on value.
+The catch is cost over time. If you are committing to Dragon long term and mostly use one or two machines, the perpetual licence wins on value - over three years it costs less than half what the subscription does.
 
 ## The student edition - $545
 
@@ -80,7 +80,7 @@ For cloud-hosted or virtual desktop environments, Dragon Professional Anywhere i
 
 The full feature comparison across all five versions is available on the [Dragon NaturallySpeaking Australia](/) overview page. All versions are available through Voice Recognition Australia - see the full range of [Dragon Professional 16 Australia](https://www.voicerecognition.com.au/collections/dragon-professional).
 
-*All pricing accurate at time of publication, 16 March 2026. Software vendors may change pricing without notice. Verify current pricing directly with the vendor before making purchasing decisions.*
+*All pricing accurate at time of publication, 11 May 2026. Software vendors may change pricing without notice. Verify current pricing directly with the vendor before making purchasing decisions.*
 
 ## Frequently asked questions
 
