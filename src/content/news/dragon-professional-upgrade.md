@@ -18,7 +18,7 @@ internalLinks:
 externalLinks:
   - to: "voicerecognition.com.au"
     anchor: "buy Dragon software in Australia"
-    url: "https://www.voicerecognition.com.au/collections/upgrades"
+    url: "https://www.voicerecognition.com.au/collections/upgrades/products/dragon-professional-16-upgrade"
   - to: "dragonprofessional16.com.au"
     anchor: "Dragon Professional desktop licence"
     url: "https://www.dragonprofessional16.com.au"
@@ -107,11 +107,11 @@ The installer will upgrade your existing v15 installation in place, retain your 
 
 ## Where to Buy the Upgrade
 
-Voice Recognition Australia is the authorised Australian Dragon distributor and handles upgrade purchases, eligibility verification, and licence key recovery. For licensed Dragon professional products including Professional 16, the upgrade pathway, and Dragon Professional Anywhere subscription options, you can [buy Dragon software in Australia](https://www.voicerecognition.com.au/collections/upgrades) through the upgrades collection.
+Voice Recognition Australia is the authorised Australian Dragon distributor and handles upgrade purchases, eligibility verification, and licence key recovery. You can [buy Dragon software in Australia](https://www.voicerecognition.com.au/collections/upgrades/products/dragon-professional-16-upgrade) directly from the Dragon Professional 16 upgrade product page.
 
 For broader context on the desktop perpetual licence — features, what it includes, who it suits — the dedicated [Dragon Professional desktop licence](https://www.dragonprofessional16.com.au) site covers the full product detail.
 
-<p style="text-align:center;margin:2.5rem 0;"><a href="https://www.voicerecognition.com.au/collections/upgrades" style="display:inline-block;padding:1rem 2.5rem;background:#c8102e;color:#fff;text-decoration:none;font-weight:600;font-size:1.125rem;border-radius:6px;">Buy Dragon Professional 16 Upgrade Now</a></p>
+<p style="text-align:center;margin:2.5rem 0;"><a href="https://www.voicerecognition.com.au/collections/upgrades/products/dragon-professional-16-upgrade" style="display:inline-block;padding:1rem 2.5rem;background:#c8102e;color:#fff;text-decoration:none;font-weight:600;font-size:1.125rem;border-radius:6px;">Buy Dragon Professional 16 Upgrade Now</a></p>
 
 ## Frequently Asked Questions
 
