@@ -1,17 +1,18 @@
 {
   "thisSite": "dragonnaturallyspeaking.com.au",
-  "lastRebuilt": "2026-03-16",
+  "lastRebuilt": "2026-05-18",
   "_note": "Reconciled from actual post frontmatter. All counts and anchors reflect committed posts.",
   "external": {
     "voicerecognition.com.au": {
-      "count": 6,
+      "count": 7,
       "anchorsUsed": [
         "medical speech recognition Australia",
         "speech recognition software for Windows",
         "voice to text software Australia",
         "NDIS registered speech recognition provider",
         "speech recognition specialists Australia",
-        "Dragon Professional 16 Australia"
+        "Dragon Professional 16 Australia",
+        "Dragon Dictate"
       ]
     },
     "pdfsoftware.com.au": {
@@ -32,13 +33,14 @@
       ]
     },
     "speechrecognition.cloud": {
-      "count": 5,
+      "count": 6,
       "anchorsUsed": [
         "free speech to text software",
         "best speech to text software for students",
         "Speech Recognition Cloud for Windows",
         "Speech Recognition Cloud",
-        "Speech Recognition Cloud"
+        "Speech Recognition Cloud",
+        "cloud-based speech recognition platform"
       ]
     },
     "cloudprinting.au": {
