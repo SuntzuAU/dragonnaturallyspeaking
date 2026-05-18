@@ -5,18 +5,25 @@ metaDescription: "Dragon Dictate is no longer sold. The Windows product became D
 context: "descriptive"
 heroImage: "dragonnaturallyspeaking/2026/03/12/dragon-naturallyspeaking-australia-speech-recognition-softwa-hero-8ff040f3.jpg"
 heroImageAlt: "Australian professional dictating into a Windows computer using current-generation Dragon speech recognition software"
+breakImage1: "dragonnaturallyspeaking/2026/03/12/dragon-naturallyspeaking-australia-comparing-accuracy-vocabu-break1-d91bf34d.jpg"
+breakImage1Alt: "Dragon Professional 16 licence options and version comparison on a Windows computer screen"
+breakImage2: "dragonnaturallyspeaking/2026/03/12/dragon-naturallyspeaking-australia-local-processing-vs-cloud-break2-fcc5fd1e.jpg"
+breakImage2Alt: "Comparing local and cloud dictation options for Australian professionals on Windows and Mac"
 section1Title: "What Was Dragon Dictate?"
 section2Title: "What Replaces Dragon Dictate"
 section3Title: "Where to Buy It Today"
 internalLinks:
-  - to: "/news/which-version-of-dragon-is-right-for-you"
-    anchor: "which version of Dragon is right for you"
+  - to: "/news/dragon-professional-16-review-australia"
+    anchor: "Dragon Professional 16 in 2026"
 externalLinks:
   - to: "voicerecognition.com.au"
     anchor: "Dragon Dictate"
     url: "https://www.voicerecognition.com.au/collections/dragon-software"
+  - to: "dragonprofessional16.com.au"
+    anchor: "Dragon Professional 16"
+    url: "https://www.dragonprofessional16.com.au"
   - to: "speechrecognition.cloud"
-    anchor: "cloud-based speech recognition platform"
+    anchor: "speech to text software"
     url: "https://www.speechrecognition.cloud"
 ---
 
@@ -54,11 +61,11 @@ The right replacement depends on what you were doing with Dragon Dictate and whi
 
 ### If you used Dragon Dictate on Windows
 
-The direct successor is **Dragon Professional 16**. It is the current name for what was Dragon Dictate, then Dragon NaturallySpeaking, then Dragon Professional Individual. Dragon Professional 16 is a desktop application for Windows 10 and Windows 11. It runs locally on your PC, does not require an internet connection after activation, and is sold as a perpetual licence.
+The direct successor is [Dragon Professional 16](https://www.dragonprofessional16.com.au). It is the current name for what was Dragon Dictate, then Dragon NaturallySpeaking, then Dragon Professional Individual. Dragon Professional 16 is a desktop application for Windows 10 and Windows 11. It runs locally on your PC, does not require an internet connection after activation, and is sold as a perpetual licence.
 
 It includes all the capabilities that made Dragon Dictate valuable: real-time dictation into Microsoft Word, Outlook, web browsers, clinical software, legal practice management, and over 100 other Windows applications; custom voice command macros for inserting templates and signatures; AutoText shortcuts; offline operation after activation; and deep Windows integration that lets you control applications by voice as well as dictate text.
 
-The Australian price for Dragon Professional 16 as of 2026 is $994 for the perpetual licence and from $695 per year for the annual subscription. Upgrade pricing from Dragon Professional 15 is roughly half the perpetual price. For a side-by-side breakdown of all the available editions, see [which version of Dragon is right for you](/news/which-version-of-dragon-is-right-for-you).
+The Australian price for Dragon Professional 16 as of 2026 is $994 for the perpetual licence and from $695 per year for the annual subscription. Upgrade pricing from Dragon Professional 15 is roughly half the perpetual price. For a deeper look at what to expect from the current product, see [Dragon Professional 16 in 2026](/news/dragon-professional-16-review-australia).
 
 If you need cloud-based deployment, multi-machine access, or enterprise central management, **Dragon Professional Anywhere** is the subscription-based cloud equivalent. It suits organisations rolling out dictation across multiple users and locations.
 
@@ -74,7 +81,7 @@ This is the hardest case to answer honestly, because there is no current Nuance 
 
 Mac users have three realistic options in 2026.
 
-The first is a [cloud-based speech recognition platform](https://www.speechrecognition.cloud), which can be used on a Mac via Parallels Desktop or VMware Fusion. It supports more than 50 languages, requires no voice training, has automatic punctuation, and includes a mobile companion app for iOS and Android. A free tier is available for testing.
+The first is a [speech to text software](https://www.speechrecognition.cloud) that can be used on a Mac via Parallels Desktop or VMware Fusion. It supports more than 50 languages, requires no voice training, has automatic punctuation, and includes a mobile companion app for iOS and Android. A free tier is available for testing.
 
 The second is **Apple's built-in Voice Control**, included free in macOS Monterey and newer. It handles basic dictation system-wide and includes voice commands for navigation. Accuracy is reasonable for conversational English but falls short for specialised vocabulary, fast speech, and strong accents. Suitable for casual dictation, not professional documentation workflows.
 
@@ -91,7 +98,7 @@ If your goal is to buy the modern equivalent of what Dragon Dictate used to do, 
 - **Dragon Medical One** — clinical dictation with built-in medical vocabularies
 - **Dragon Legal Anywhere** — legal professionals with specialised legal vocabulary
 
-For specialist medical pricing, multi-user licensing, NDIS-funded purchases, or trial access, call Voice Recognition Australia on 1300 255 900.
+<p style="text-align:center;margin:2.5rem 0;"><a href="https://www.voicerecognition.com.au/collections/dragon-professional" style="display:inline-block;padding:1rem 2.5rem;background:#c8102e;color:#fff;text-decoration:none;font-weight:600;font-size:1.125rem;border-radius:6px;">Buy Dragon Professional 16 Now</a></p>
 
 ## Frequently Asked Questions
 
