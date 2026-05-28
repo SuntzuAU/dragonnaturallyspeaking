@@ -19,6 +19,11 @@ If your organisation owns Dragon Professional Group licences, the licences thems
 
 This article covers what M&S actually gives you, what happens when it lapses, and where to get a quote in Australia.
 
+<div style="background:#0d1b2a;border-radius:14px;padding:28px 32px;margin:40px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+<p style="margin:0;color:#cbd5e1;font-size:15px;max-width:520px;line-height:1.6;">Need to renew your Dragon Professional Group M&S, reinstate a lapsed contract, or check eligibility for backdating? Voice Recognition Australia handles renewals for federal, state and territory government agencies.</p>
+<a href="https://www.voicerecognition.com.au/pages/dragon-professional-group-renewals-maintenance-and-support" style="display:inline-block;background:#0097a7;color:#ffffff;font-weight:700;font-size:14px;padding:14px 28px;border-radius:8px;text-decoration:none;white-space:nowrap;letter-spacing:0.02em;">Get a Renewal Quote</a>
+</div>
+
 ## What Maintenance and Support Actually Covers
 
 Maintenance and Support is two things bundled into one annual fee.
