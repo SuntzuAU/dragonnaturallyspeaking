@@ -1,10 +1,10 @@
 {
   "thisSite": "dragonnaturallyspeaking.com.au",
-  "lastRebuilt": "2026-05-18",
+  "lastRebuilt": "2026-06-26",
   "_note": "Reconciled from actual post frontmatter. All counts and anchors reflect committed posts.",
   "external": {
     "voicerecognition.com.au": {
-      "count": 8,
+      "count": 11,
       "anchorsUsed": [
         "medical speech recognition Australia",
         "speech recognition software for Windows",
@@ -13,7 +13,10 @@
         "speech recognition specialists Australia",
         "Dragon Professional 16 Australia",
         "Dragon Dictate",
-        "buy Dragon software in Australia"
+        "buy Dragon software in Australia",
+        "Dragon Professional 16 Australia",
+        "medical speech recognition Australia",
+        "speech recognition software for Windows"
       ]
     },
     "pdfsoftware.com.au": {
@@ -24,9 +27,10 @@
       ]
     },
     "dragonprofessional16.com.au": {
-      "count": 2,
+      "count": 3,
       "anchorsUsed": [
         "Dragon Professional 16",
+        "Dragon Professional desktop licence",
         "Dragon Professional desktop licence"
       ]
     },
@@ -37,14 +41,23 @@
       ]
     },
     "speechrecognition.cloud": {
-      "count": 6,
+      "count": 9,
       "anchorsUsed": [
         "free speech to text software",
         "best speech to text software for students",
         "Speech Recognition Cloud for Windows",
         "Speech Recognition Cloud",
         "Speech Recognition Cloud",
-        "speech to text software"
+        "speech to text software",
+        "cloud dictation for legal professionals",
+        "Speech Recognition Cloud for Windows",
+        "Speech Recognition Cloud Medical"
+      ]
+    },
+    "dragonmedicalone.au": {
+      "count": 1,
+      "anchorsUsed": [
+        "Dragon Medical One for Australian clinicians"
       ]
     },
     "cloudprinting.au": {
