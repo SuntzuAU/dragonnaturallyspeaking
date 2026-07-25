@@ -84,3 +84,4 @@ That experience is why this article tells you where Dragon is the wrong answer a
 ---
 
 *Dragon and Dragon NaturallySpeaking are registered trademarks of Microsoft Corporation. This site is independently operated by Voice Recognition Australia, an authorised Dragon reseller.*
+
