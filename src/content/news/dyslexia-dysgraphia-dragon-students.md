@@ -1,7 +1,7 @@
 ---
 title: "Dyslexia, Dysgraphia and Dragon: Which Students Can Actually Use Speech Recognition"
 date: "2026-07-25"
-metaDescription: "Dictation can transform schoolwork for students with dyslexia or dysgraphia. Here is where Dragon fits, where it does not, and how to work out which students it suits."
+metaDescription: "Dictation can transform schoolwork for students with dyslexia or dysgraphia. Compare Dragon and Speech Recognition Cloud on cost, voice profiles and school volume pricing."
 context: "descriptive"
 imagesPending: false
 heroImage: "general/2026/07/25/images-dragonnaturallyspeaking-dyslexia-dysgraphia-dragon-st-a123a05b.jpg"
@@ -24,9 +24,12 @@ externalLinks:
   - to: "voicerecognition.com.au"
     anchor: "Dragon student and academic licensing"
     url: "https://www.voicerecognition.com.au/collections/education-academic-student"
+  - to: "voicerecognition.com.au"
+    anchor: "volume licensing for schools"
+    url: "https://www.voicerecognition.com.au/collections/speech-recognition-cloud-academic-volume-licensing"
   - to: "speechrecognition.cloud"
-    anchor: "dictation for students with dysgraphia"
-    url: "https://www.speechrecognition.cloud/learn/speech-recognition-students-dysgraphia"
+    anchor: "Speech Recognition Cloud"
+    url: "https://www.speechrecognition.cloud/students"
 ---
 
 The question we are asked most often by Australian schools is not "does dictation work?" It is narrower and more practical than that: *this particular student is bright, articulate, and handing in written work that is nowhere near what they are capable of — would speech recognition help, and is Dragon the right tool for them?*
@@ -57,9 +60,44 @@ There are two practical reasons Dragon does not suit every student, and it is be
 
 **The second is the age of the voice.** Speech recognition systems are built and tuned predominantly on adult speech, and children's and younger teenagers' voices are measurably harder for any speech recognition system to handle — higher pitch, developing articulation, more variable pace and volume. The published research on child speech recognition is consistent that accuracy tends to improve as students get older, rather than being uniform across ages. In practice this means a Year 11 student will usually have a smoother experience with a traditional voice-profile system than a Year 4 student will, and it is why the old advice to "put the child on Dragon" sometimes ended with the software quietly shelved and the student back to fighting the pen.
 
-This is not a knock on Dragon so much as a statement about what it was designed for. It is a professional tool built for professional users, and it is excellent at that job. For younger students, or for a family who simply wants to find out whether dictation helps before spending several hundred dollars, a lower-cost option that requires no voice-profile training is usually the more sensible first step — which is the reasoning behind [dictation for students with dysgraphia](https://www.speechrecognition.cloud/learn/speech-recognition-students-dysgraphia) using cloud-based speech recognition instead.
+This is not a knock on Dragon so much as a statement about what it was designed for. It is a professional tool built for professional users, and it is very good at that job. But it does mean a second option needs to be on the table for schools and families — and for most of the students described at the top of this article, it is the one to try first.
 
-If Dragon *is* the right fit — and for hands-free control it very often is — we supply it. Voice Recognition Australia is an authorised Australian Dragon reseller and handles [Dragon student and academic licensing](https://www.voicerecognition.com.au/collections/education-academic-student), including academic pricing, volume packs for schools, and advice on NDIS-funded purchases. We would rather put a student on the correct tool than the expensive one.
+### Speech Recognition Cloud — the option built with younger students in mind
+
+[Speech Recognition Cloud](https://www.speechrecognition.cloud/students) is the alternative we point most schools and families to when the requirement is dictation rather than hands-free control of the computer. It requires no voice-profile training and no calibration — the student puts the cursor where the text should go, presses a hotkey, speaks, and punctuated text appears in Word, Google Docs, or an online assignment form. Removing the voice-profile step matters for younger students in particular, because that setup process was often where a primary or early-secondary trial fell over before the student ever got as far as the writing.
+
+It is also priced so that finding out whether dictation helps costs nothing. The free edition gives 20 minutes of dictation a month — enough to work out whether a student takes to it before any money changes hands.
+
+<div style="overflow-x:auto;margin:36px 0;">
+<table style="width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;">
+<thead>
+<tr style="background:#0d1b2a;color:#ffffff;">
+<th style="text-align:left;padding:14px 16px;font-weight:600;"></th>
+<th style="text-align:left;padding:14px 16px;font-weight:600;">Dragon Professional 16</th>
+<th style="text-align:left;padding:14px 16px;font-weight:600;">Speech Recognition Cloud</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:12px 16px;font-weight:600;">Suits the student who</td><td style="padding:12px 16px;">needs to run the whole PC by voice</td><td style="padding:12px 16px;">needs to get words onto the page</td></tr>
+<tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;"><td style="padding:12px 16px;font-weight:600;">Voice profile training</td><td style="padding:12px 16px;">Required</td><td style="padding:12px 16px;">Not required</td></tr>
+<tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:12px 16px;font-weight:600;">Younger voices</td><td style="padding:12px 16px;">Tuned primarily on adult speech</td><td style="padding:12px 16px;">No profile step to get through first</td></tr>
+<tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;"><td style="padding:12px 16px;font-weight:600;">Full Windows voice control, macros</td><td style="padding:12px 16px;"><strong>Yes</strong> &mdash; the main reason to choose it</td><td style="padding:12px 16px;">No</td></tr>
+<tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:12px 16px;font-weight:600;">Works offline</td><td style="padding:12px 16px;"><strong>Yes</strong></td><td style="padding:12px 16px;">No &mdash; cloud based</td></tr>
+<tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;"><td style="padding:12px 16px;font-weight:600;">Australian price</td><td style="padding:12px 16px;">A$994, or A$545 educational/student</td><td style="padding:12px 16px;">Free tier, or A$149/year student edition</td></tr>
+<tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:12px 16px;font-weight:600;">Licence</td><td style="padding:12px 16px;">Perpetual &mdash; own it outright</td><td style="padding:12px 16px;">Annual subscription</td></tr>
+<tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;"><td style="padding:12px 16px;font-weight:600;">Try before buying</td><td style="padding:12px 16px;">Trial available</td><td style="padding:12px 16px;">Free edition, 20 min/month</td></tr>
+<tr><td style="padding:12px 16px;font-weight:600;">School volume pricing</td><td style="padding:12px 16px;">Academic and lab packs on quote</td><td style="padding:12px 16px;">5, 25 and 100-user annual packs</td></tr>
+</tbody>
+</table>
+</div>
+
+*Australian pricing including GST from Voice Recognition Australia, current as at July 2026. Verify current pricing before purchase.*
+
+### For schools buying more than one licence
+
+Where a school wants dictation available to a group rather than to one student at a time, Speech Recognition Cloud is sold in annual volume packs, and the per-student cost falls as the numbers rise — A$695 a year for 5 users (A$139 each), A$3,135 for 25 users (A$125 each), and A$9,895 for 100 users. For a learning support team wanting to offer dictation across a cohort rather than rationing it to the few students with the most documentation behind them, that is the difference between a pilot and a programme. Current [volume licensing for schools](https://www.voicerecognition.com.au/collections/speech-recognition-cloud-academic-volume-licensing) is listed online, and we quote larger deployments directly.
+
+And if Dragon is the right fit — for hands-free control it very often is — we supply that too. Voice Recognition Australia is an authorised Australian Dragon reseller and handles [Dragon student and academic licensing](https://www.voicerecognition.com.au/collections/education-academic-student), including academic pricing, lab packs for schools, and advice on NDIS-funded purchases. We would rather put a student on the correct tool than the expensive one.
 
 ## Making Dictation Work in Practice
 
