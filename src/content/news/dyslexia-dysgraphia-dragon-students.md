@@ -3,10 +3,10 @@ title: "Dyslexia, Dysgraphia and Dragon: Which Students Can Actually Use Speech 
 date: "2026-07-25"
 metaDescription: "Dictation can transform schoolwork for students with dyslexia or dysgraphia. Here is where Dragon fits, where it does not, and how to work out which students it suits."
 context: "descriptive"
-imagesPending: true
-heroImage: ""
+imagesPending: false
+heroImage: "general/2026/07/25/images-dragonnaturallyspeaking-dyslexia-dysgraphia-dragon-st-a123a05b.jpg"
 heroImageAlt: "An Australian secondary student dictating an essay into a laptop with a slim headset while a learning support teacher looks on"
-breakImage1: ""
+breakImage1: "general/2026/07/25/images-dragonnaturallyspeaking-dyslexia-dysgraphia-dragon-st-b87e32cd.jpg"
 breakImage1Alt: "A learning support teacher and a student reviewing dictated text together on a school laptop"
 breakImage2: ""
 breakImage2Alt: ""
