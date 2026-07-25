@@ -99,6 +99,11 @@ Where a school wants dictation available to a group rather than to one student a
 
 And if Dragon is the right fit — for hands-free control it very often is — we supply that too. Voice Recognition Australia is an authorised Australian Dragon reseller and handles [Dragon student and academic licensing](https://www.voicerecognition.com.au/collections/education-academic-student), including academic pricing, lab packs for schools, and advice on NDIS-funded purchases. We would rather put a student on the correct tool than the expensive one.
 
+<div style="background:#0d1b2a;border-radius:14px;padding:28px 32px;margin:40px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+<p style="margin:0;color:#cbd5e1;font-size:15px;max-width:520px;line-height:1.6;">Working out what one student needs, or what a whole cohort needs? Tell us about the student and we will tell you which of the two is the right fit — and quote school pricing for either.</p>
+<a href="/#final-cta" style="display:inline-block;background:#0097a7;color:#ffffff;font-weight:700;font-size:14px;padding:14px 28px;border-radius:8px;text-decoration:none;white-space:nowrap;letter-spacing:0.02em;">Get School Pricing</a>
+</div>
+
 ## Making Dictation Work in Practice
 
 Whichever product a student ends up with, the same practical factors decide whether it succeeds.
