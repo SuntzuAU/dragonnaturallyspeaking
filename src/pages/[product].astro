@@ -109,7 +109,10 @@ const breadcrumbSchema = {
             <div>
               <div class="spec-badge">{product.badge}</div>
               <h1>{product.headline}</h1>
-              <p>{product.subheadline}</p>
+              <p set:html={product.slug === 'dragon-medical-one'
+                ? product.subheadline + ' Full Australian product detail, pricing options and trial access: <a href="https://dragonmedicalone.au" style="color:#0097a7;font-weight:600;text-decoration:underline">Dragon Medical One Australia</a>.'
+                : product.subheadline
+              } />
               <div class="price-display">{product.price}</div>
               <div class="price-note">{product.priceNote}</div>
               {product.ctaType === 'buy' ? (
@@ -122,6 +125,9 @@ const breadcrumbSchema = {
                 <div class="buy-actions">
                   <a class="btn btn-trial btn-lg" href={product.trialUrl} target="_blank" rel="noopener">Free Trial &rarr;</a>
                   <a class="btn btn-primary btn-lg" href="#cta">Get a Quote</a>
+                  {product.slug === 'dragon-medical-one' && (
+                    <a href="https://dragonmedicalone.au" class="info-link">Dragon Medical One Australia</a>
+                  )}
                 </div>
               )}
             </div>
