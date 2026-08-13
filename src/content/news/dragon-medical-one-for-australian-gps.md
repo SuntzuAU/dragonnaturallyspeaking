@@ -36,6 +36,8 @@ Key things it does that older Dragon Medical products did not:
 - **EMR integration.** Dragon Medical One is designed to work with major Australian clinical software platforms so that dictated text goes directly into the note field, not into a separate document you have to paste from.
 - **Automatic updates.** No manual version installs. Improvements happen in the background.
 
+Australian pricing, the clinical software it integrates with, and how a trial is arranged are all set out on [Dragon Medical One](https://dragonmedicalone.au).
+
 ## How It Compares to Dragon Medical Practice Edition
 
 If you came from Dragon Medical Practice Edition (DMPE), the most important thing to understand is that DMPE was a perpetual desktop licence. You bought it once. Dragon Medical One is a subscription. That feels like a step backward until you factor in the accuracy improvement and the removal of the maintenance overhead.
