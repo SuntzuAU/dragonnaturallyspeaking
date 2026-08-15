@@ -190,7 +190,6 @@
         { "q": "Can I upgrade from an older version?", "a": "The upgrade ($495) is available for Dragon Professional Individual or Group version 15 only. It is not valid for older versions or other editions such as Dragon Home." }
       ],
       "otherProducts": [
-        { "label": "Dragon Medical One", "url": "https://dragonmedicalone.au/" },
         { "label": "Dragon Professional Anywhere", "url": "/dragon-professional-anywhere" },
         { "label": "Dragon Legal", "url": "/dragon-legal" },
         { "label": "Dragon for Education", "url": "/dragon-education" }
