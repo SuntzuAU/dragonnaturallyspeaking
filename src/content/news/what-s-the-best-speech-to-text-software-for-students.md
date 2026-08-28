@@ -55,7 +55,7 @@ Free via Chrome, works within Google Docs. Many students already work in Google 
 
 For students wanting the [best speech to text software for students](https://speechrecognition.cloud) without spending anything upfront, Speech Recognition Cloud (SRC) offers a genuine free tier -- 20 minutes of dictation per month, no credit card required.
 
-The Personal/Educational tier at $119/year AUD is worth considering for students who dictate regularly. Unlimited dictation, custom vocabulary, text replacements, works across all Windows applications including Word, Google Docs in Chrome, and your university's learning management system. Automatic punctuation is handled by AI -- you speak naturally without saying "full stop" or "new paragraph." 57 languages supported, which matters for students who write in languages other than English.
+There is a Student / Academic tier at $149/year AUD for verified students and schools, and a Personal/Educational tier at $159/year AUD. Both are worth considering for students who dictate regularly. Unlimited dictation, custom vocabulary, text replacements, works across all Windows applications including Word, Google Docs in Chrome, and your university's learning management system. Automatic punctuation is handled by AI -- you speak naturally without saying "full stop" or "new paragraph." 57 languages supported, which matters for students who write in languages other than English.
 
 ## When Students Need Professional Software
 
@@ -79,7 +79,7 @@ For advice on [which version of Dragon is right for you](/news/which-version-of-
 
 **Trying speech recognition for the first time** -- start with Windows Voice Access, Apple Dictation, or the SRC free tier. Cost nothing, install in minutes, gives you a realistic sense of whether voice dictation suits your workflow.
 
-**Regular dictation for assignments and notes** -- SRC Personal at $119/year is hard to beat at this price point. Unlimited dictation, works everywhere, no training required.
+**Regular dictation for assignments and notes** -- SRC Student / Academic at $149/year is hard to beat at this price point. Unlimited dictation, works everywhere, no training required.
 
 **Significant disability or accessibility need** -- speak to your university disability support unit first. Dragon Professional 16 through your institution or NDIS funding may be available at no personal cost.
 
@@ -89,4 +89,4 @@ For advice on [which version of Dragon is right for you](/news/which-version-of-
 
 Australian English creates accuracy challenges for models trained primarily on American or British speech. Both Dragon and SRC have addressed this. For students with strong regional accents or who mix languages, SRC's 57-language support and AI-based processing has an advantage -- it handles natural speech patterns including hesitations and self-corrections more gracefully than older acoustic models.
 
-The honest recommendation for most students: download the SRC free tier first. If it covers your needs, the Personal tier at $119/year is affordable. If you need deeper computer control, better offline capability, or have an accessibility need your university supports, Dragon is the step up worth making.
+The honest recommendation for most students: download the SRC free tier first. If it covers your needs, the Student / Academic tier at $149/year is affordable. If you need deeper computer control, better offline capability, or have an accessibility need your university supports, Dragon is the step up worth making.

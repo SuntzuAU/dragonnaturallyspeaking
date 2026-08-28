@@ -54,7 +54,8 @@ Browser-based, free, requires Chrome and an internet connection. Useful for draf
 
 **Pricing** (AUD inc GST):
 - **Free** -- 20 minutes per month, no credit card required. A genuine free tier for trying the product before spending a cent.
-- **Personal / Educational** -- $119/year. Unlimited dictation, custom vocabulary, text replacements, works in any Windows application. 57 languages supported.
+- **Student / Academic** -- $149/year. Same features as Personal, for verified students and schools. Available in 5, 25 and 100 user packs.
+- **Personal / Educational** -- $159/year. Unlimited dictation, custom vocabulary, text replacements, works in any Windows application. 57 languages supported.
 - **Professional** -- $239/year. Everything in Personal plus ULTRA Accuracy Mode, templates, AI modes, and Screen OCR that adds vocabulary context automatically. 57 languages supported.
 - **Medical Ultra** -- $659/year. Specialised medical vocabularies, ULTRA Accuracy Medical Mode, restricted AI modes for privacy, dedicated remote support, and one-on-one training. English only.
 
@@ -85,7 +86,7 @@ Dragon has been the leading professional dictation software in Australia for ove
 
 **Occasional personal use** -- free built-in tools or the SRC Free tier. Apple Dictation on a modern Mac is genuinely capable for general writing.
 
-**Students and everyday users** -- SRC Personal at $119/year is hard to beat. Unlimited dictation, works everywhere, no training required.
+**Students and everyday users** -- SRC Student / Academic at $149/year, or Personal at $159/year, is hard to beat. Unlimited dictation, works everywhere, no training required.
 
 **Australian business professionals** dictating significant daily volumes -- SRC Professional at $239/year covers most workflows. For those needing offline capability or advanced voice macros, Dragon Professional 16 is the established option.
 
@@ -100,6 +101,6 @@ Australian English creates accuracy challenges for models trained primarily on A
 ## Summary
 
 - Free built-in tools suit casual or occasional use
-- SRC is a newer, significantly lower-cost cloud alternative with a genuine free tier -- from $119/year AUD for Personal up to $659/year for Medical Ultra
+- SRC is a newer, significantly lower-cost cloud alternative with a genuine free tier -- from $149/year AUD for Student / Academic and $159/year for Personal, up to $659/year for Medical Ultra
 - Dragon remains the benchmark for offline capability, deep EMR integration, and complex voice macros
 - For most Australian professionals, both SRC and Dragon are worth trialling before deciding
