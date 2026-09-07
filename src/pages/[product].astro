@@ -171,6 +171,14 @@ const breadcrumbSchema = {
         </div>
       </section>
 
+      {product.bodyNote && (
+        <section>
+          <div class="wrap">
+            <div class="card" set:html={product.bodyNote} />
+          </div>
+        </section>
+      )}
+
       <section>
         <div class="wrap">
           <div class="sh"><h2>Frequently asked questions</h2></div>

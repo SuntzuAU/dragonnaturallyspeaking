@@ -74,7 +74,8 @@
       { "label": "Dragon Professional 16", "url": "/dragon-professional-16" },
       { "label": "Dragon Professional Anywhere", "url": "/dragon-professional-anywhere" },
       { "label": "Dragon Legal", "url": "/dragon-legal" },
-      { "label": "Dragon for Education", "url": "/dragon-education" }
+      { "label": "Dragon for Education", "url": "/dragon-education" },
+      { "label": "Dragon Professional Group", "url": "/dragon-professional-group" }
     ]
   },
   "primaryCTA": { "text": "Enquire Now", "url": "#final-cta" },
@@ -408,6 +409,113 @@
         "org": "University / School / Organisation",
         "context": "Student, educator or institution? Any accessibility needs?"
       }
+    },
+    {
+          "slug": "dragon-professional-group",
+          "ctaType": "enquire",
+          "badge": "Volume - Government & Enterprise",
+          "title": "Dragon Professional Group",
+          "metaTitle": "Dragon Professional Group Australia | Renewals, M&S and Volume Licensing",
+          "metaDesc": "Dragon Professional Group for Australian government and enterprise. What Maintenance and Support (M&S) covers, how renewals work, what happens when M&S lapses, and how to get a quote.",
+          "schemaName": "Dragon Professional Group",
+          "schemaDescription": "Volume-licensed edition of Dragon Professional for Australian government and enterprise, with Nuance Management Centre, Active Directory integration and an annual Maintenance and Support entitlement.",
+          "schemaCategory": "Enterprise Speech Recognition Software",
+          "schemaBrand": "Nuance / Microsoft",
+          "schemaPriceCurrency": "AUD",
+          "schemaPrice": "",
+          "schemaAvailability": "https://schema.org/InStock",
+          "headline": "Dragon Professional Group - Volume Licensing, Maintenance and Support",
+          "subheadline": "The volume-licensed edition of Dragon Professional used across Australian federal, state and territory government. Centrally managed through Nuance Management Centre, with an annual Maintenance and Support entitlement that is renewed separately from the licences themselves.",
+          "price": "Quote",
+          "priceNote": "Volume licensing and Maintenance and Support renewals are quoted per organisation. Call 1300 255 900 or request a quote.",
+          "heroImageKey": "hero-anywhere",
+          "featureImageKey": "feature-professional",
+          "vraUrl": "https://www.voicerecognition.com.au/pages/dragon-professional-group-enterprise",
+          "infoUrl": "https://www.voicerecognition.com.au/pages/dragon-professional-group-enterprise",
+          "ctaText": "Request a quote",
+          "specCards": [
+                {
+                      "val": "5+",
+                      "label": "Minimum seats"
+                },
+                {
+                      "val": "NMC",
+                      "label": "Central management"
+                },
+                {
+                      "val": "Annual",
+                      "label": "M&S renewal"
+                }
+          ],
+          "features": [
+                "Volume licensing for teams of five or more, managed as a single agreement",
+                "Nuance Management Centre (NMC) for central administration, user provisioning and usage reporting",
+                "Active Directory and single sign-on integration",
+                "Shared custom vocabularies and commands deployed across the organisation",
+                "Citrix and Remote Desktop Protocol (RDP) environment support",
+                "Licences are perpetual - they do not expire",
+                "Maintenance and Support (M&S) is a separate annual entitlement covering upgrades and vendor support",
+                "M&S appears in older Nuance documentation as Maintenance and Upgrade Assurance (MUA) - it is the same entitlement",
+                "Australian government procurement and invoicing supported"
+          ],
+          "bodyNote": "<h2 style=\"font-size:20px;margin:0 0 12px\">Renewals: what actually expires</h2><p style=\"font-size:14px;color:#334155;margin:0 0 12px\">The most common misunderstanding about Dragon Professional Group is that the licences expire. They do not. The licences are perpetual. What expires every twelve months is the <strong>Maintenance and Support (M&amp;S)</strong> contract attached to them, and that is what entitles your organisation to version upgrades and vendor support. Older Nuance paperwork calls the same entitlement Maintenance and Upgrade Assurance (MUA).</p><p style=\"font-size:14px;color:#334155;margin:0 0 12px\">If your M&amp;S has already lapsed, it can often be reinstated by backdating the renewal rather than repurchasing licences outright. That is worth checking before a procurement team raises a new purchase order.</p><p style=\"font-size:14px;color:#334155;margin:0\">We have written this up in full, including what a renewal quote needs to contain, in <a href=\"/news/dragon-professional-group-renewals\" style=\"color:#0097a7;font-weight:600\">Dragon Professional Group renewals in Australia: Maintenance and Support explained</a>.</p>",
+          "faqs": [
+                {
+                      "q": "What is the difference between Dragon Professional Group and Dragon Professional 16?",
+                      "a": "Dragon Professional 16 is the single-user product. Dragon Professional Group is the volume-licensed edition of the same software, adding Nuance Management Centre for central administration, Active Directory integration, shared vocabularies, usage reporting and organisation-wide deployment. It is intended for five or more users."
+                },
+                {
+                      "q": "Do Dragon Professional Group licences expire?",
+                      "a": "No. The licences themselves are perpetual. What renews annually is the Maintenance and Support (M&S) contract attached to them, which is what entitles your organisation to upgrades and vendor support."
+                },
+                {
+                      "q": "What does Maintenance and Support cover?",
+                      "a": "M&S covers entitlement to version upgrades and vendor support for the term. In older Nuance documentation the same entitlement is called Maintenance and Upgrade Assurance (MUA). Without current M&S your existing installation keeps working, but you are not entitled to upgrades or support."
+                },
+                {
+                      "q": "What happens if our Maintenance and Support has lapsed?",
+                      "a": "Lapsed M&S can often be reinstated by backdating the renewal rather than repurchasing licences outright, depending on how long it has been lapsed. It is worth asking before assuming you need to buy again."
+                },
+                {
+                      "q": "Can Australian government agencies still renew Dragon Professional Group?",
+                      "a": "Yes. Voice Recognition Australia continues to process Dragon Professional Group Maintenance and Support renewals for federal, state and territory government agencies, with quotes and invoicing in the format procurement requires."
+                },
+                {
+                      "q": "Is Dragon Professional Group the same as Dragon Professional Anywhere?",
+                      "a": "No. Dragon Professional Group is locally installed and centrally managed, and works offline once activated. Dragon Professional Anywhere is cloud-native and requires an internet connection."
+                }
+          ],
+          "otherProducts": [
+                {
+                      "label": "Dragon Professional 16",
+                      "url": "/dragon-professional-16"
+                },
+                {
+                      "label": "Dragon Professional Anywhere",
+                      "url": "/dragon-professional-anywhere"
+                },
+                {
+                      "label": "Dragon Medical One",
+                      "url": "/dragon-medical-one"
+                },
+                {
+                      "label": "Dragon Legal",
+                      "url": "/dragon-legal"
+                }
+          ],
+          "ctaSectionHeading": "Renewing or expanding Dragon Professional Group?",
+          "ctaSectionBody": "Voice Recognition Australia has processed Dragon Professional Group licensing and Maintenance and Support renewals for Australian government agencies since 1999. Tell us your agency and roughly how many seats you hold and we will prepare a quote in the format your procurement team needs.",
+          "ctaSectionBullets": [
+                "Number of Dragon Professional Group seats held",
+                "Whether your Maintenance and Support is current or has lapsed",
+                "Your renewal or financial year date",
+                "Procurement and invoicing requirements"
+          ],
+          "formPlaceholders": {
+                "users": "Number of Seats",
+                "org": "Agency or Organisation",
+                "context": "Current M&S status, renewal date and procurement requirements"
+          }
     }
   ],
   "benefits": [
