@@ -47,7 +47,7 @@ Dragon has been the benchmark for professional speech recognition in Australia f
 
 Dragon also offers cloud-based versions -- Dragon Professional Anywhere for enterprise environments and Dragon Medical One for clinical use -- for organisations that need centralised management or EMR integration.
 
-For purchasing options, demonstrations, and deployment advice, [speech recognition specialists Australia](https://www.voicerecognition.com.au/pages/speech-recognition-leaders-australia) at Voice Recognition Australia have over 25 years of experience across medical, legal, and enterprise environments.
+For purchasing options, demonstrations, and deployment advice, [speech recognition specialists Australia](https://www.voicerecognition.com.au/pages/speech-recognition-leaders-australia) at Voice Recognition Australia have deployment experience since 2003 across medical, legal, and enterprise environments.
 
 ## Speech Recognition Cloud -- The Modern Alternative
 

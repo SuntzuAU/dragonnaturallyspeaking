@@ -55,7 +55,7 @@ Dragon has been the leading professional dictation software in Australia for ove
 
 **Dragon Medical One** is the dedicated clinical version -- cloud-based, with built-in medical vocabularies covering specialties including cardiology, radiology, pathology, and general practice. It integrates natively with major EMR systems and is the standard choice for Australian clinicians dictating at scale.
 
-Dragon products are available through Voice Recognition Australia, a specialist [speech recognition software for Windows](https://www.voicerecognition.com.au/pages/speech-recognition-software-windows-buyers-guide) supplier with over 25 years of deployment experience in medical, legal, and enterprise environments.
+Dragon products are available through Voice Recognition Australia, a specialist [speech recognition software for Windows](https://www.voicerecognition.com.au/pages/speech-recognition-software-windows-buyers-guide) supplier deploying since 2003 in medical, legal, and enterprise environments.
 
 ### Speech Recognition Cloud -- The Modern Cloud Alternative
 

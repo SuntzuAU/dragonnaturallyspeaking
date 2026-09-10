@@ -120,7 +120,7 @@ Whichever product a student ends up with, the same practical factors decide whet
 
 ## Why We Take This Position
 
-Voice Recognition Australia has been supplying speech recognition to Australian schools, universities, students and families since 1999 — through every version of Dragon released in this country, and alongside the teachers, learning support staff and occupational therapists who actually implement it. Russell Bewsell, our founder, has 28 years of experience in the speech recognition industry, and a great deal of that has been spent on exactly this question: which student needs which tool.
+Voice Recognition Australia has been supplying speech recognition to Australian schools, universities, students and families since 2003 — through every version of Dragon released in this country, and alongside the teachers, learning support staff and occupational therapists who actually implement it. Russell Bewsell, our founder, has 28 years of experience in the speech recognition industry, and a great deal of that has been spent on exactly this question: which student needs which tool.
 
 That experience is why this article tells you where Dragon is the wrong answer as readily as where it is the right one. A school that buys the wrong tool does not just waste a budget line — it usually concludes that dictation "did not work" for a student it would have helped enormously. If you want to talk through a specific student or a whole-school deployment, or compare [speech to text options for students](/news/what-s-the-best-speech-to-text-software-for-students) and [Dragon for education and students](/dragon-education), we are happy to give you a straight answer.
 
