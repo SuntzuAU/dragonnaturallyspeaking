@@ -6,7 +6,7 @@
     "metaTitle": "Dragon NaturallySpeaking - Speech-to-Text",
     "metaDesc": "Dragon NaturallySpeaking has been rebranded. Compare all current Dragon products for medical, legal, business and education use in Australia. Local support from Voice Recognition Australia.",
     "industry": "Dragon NaturallySpeaking is now the Dragon range",
-    "region": "Authorised Australian reseller since 1999",
+    "region": "Authorised Australian reseller since 2003",
     "headline": "Dragon Speech Recognition Software in Australia",
     "subheadline": "Still searching for Dragon NaturallySpeaking or Dragon Dictate? Those legacy names have evolved into today's Dragon solutions, including Dragon Professional 16, Dragon Medical One, and Dragon Anywhere. Compare the best option for medical, legal, business and enterprise use, with local Australian advice on pricing, setup and support.",
     "statsMessage": "Dragon NaturallySpeaking has evolved - dictate 3x faster than typing with up to 99% accuracy across medical, legal and enterprise",
@@ -14,8 +14,8 @@
     "benefitsSubheading": "Purpose-built speech recognition for professionals who cannot afford documentation errors.",
     "pricingHeading": "Dragon products for every professional",
     "pricingSubheading": "Desktop and cloud options for individuals, teams and enterprise. Contact us for volume and medical pricing.",
-    "aboutHeading": "25 years deploying Dragon NaturallySpeaking in Australia",
-    "aboutBody": "Voice Recognition Australia has been the trusted Dragon NaturallySpeaking reseller for Australian medical practices, law firms, government agencies and enterprises since 1999. From the original Dragon Dictate to today's Dragon Professional and Dragon Medical One, we provide local onboarding, training and ongoing support.",
+    "aboutHeading": "Deploying Dragon NaturallySpeaking in Australia since 2003",
+    "aboutBody": "Voice Recognition Australia has been the trusted Dragon NaturallySpeaking reseller for Australian medical practices, law firms, government agencies and enterprises since 2003. From the original Dragon Dictate to today's Dragon Professional and Dragon Medical One, we provide local onboarding, training and ongoing support.",
     "howItWorksSubheading": "From enquiry to dictating in days - we handle licensing, setup and training locally.",
     "featuresHeading": "Purpose-built for demanding professional environments",
     "featuresSubheading": "Specialist vocabulary, cloud flexibility and enterprise-grade security - built for Australian healthcare and legal workflows.",
@@ -196,7 +196,7 @@
         { "label": "Dragon for Education", "url": "/dragon-education" }
       ],
       "ctaSectionHeading": "Questions about Dragon Professional 16?",
-      "ctaSectionBody": "Voice Recognition Australia has deployed Dragon Professional across Australian government, legal, and enterprise environments for 25 years. We can help you choose the right version and get set up quickly.",
+      "ctaSectionBody": "Voice Recognition Australia has deployed Dragon Professional across Australian government, legal, and enterprise environments since 2003. We can help you choose the right version and get set up quickly.",
       "ctaSectionBullets": [
         "Which licence type suits your needs",
         "Upgrade eligibility from older versions",
@@ -504,7 +504,7 @@
                 }
           ],
           "ctaSectionHeading": "Renewing or expanding Dragon Professional Group?",
-          "ctaSectionBody": "Voice Recognition Australia has processed Dragon Professional Group licensing and Maintenance and Support renewals for Australian government agencies since 1999. Tell us your agency and roughly how many seats you hold and we will prepare a quote in the format your procurement team needs.",
+          "ctaSectionBody": "Voice Recognition Australia has processed Dragon Professional Group licensing and Maintenance and Support renewals for Australian government agencies since 2003. Tell us your agency and roughly how many seats you hold and we will prepare a quote in the format your procurement team needs.",
           "ctaSectionBullets": [
                 "Number of Dragon Professional Group seats held",
                 "Whether your Maintenance and Support is current or has lapsed",
@@ -522,7 +522,7 @@
     { "title": "Dictate 3x faster than typing", "body": "Dragon NaturallySpeaking products convert speech to text at up to 160 words per minute with 99% accuracy from first use. Clinicians, lawyers and business professionals reduce documentation time by 50% or more." },
     { "title": "Specialist vocabulary built in", "body": "Dragon Medical One includes multiple medical specialty vocabularies. Dragon Legal includes legal terminology. No custom training required - accurate from day one in your professional context." },
     { "title": "Cloud or desktop - your choice", "body": "Dragon Professional 16 runs fully offline for complete privacy and command control. Dragon Professional Anywhere and Dragon Medical One are cloud-based for anywhere access and automatic updates." },
-    { "title": "Local Australian support", "body": "Voice Recognition Australia has deployed Dragon NaturallySpeaking products in Australian medical practices, law firms and government agencies for 25 years. We provide hands-on onboarding, training and ongoing support - in your timezone." }
+    { "title": "Local Australian support", "body": "Voice Recognition Australia has deployed Dragon NaturallySpeaking products in Australian medical practices, law firms and government agencies since 2003. We provide hands-on onboarding, training and ongoing support - in your timezone." }
   ],
   "pricing": [
     { "name": "Dragon Professional 16", "platform": "Windows desktop - perpetual licence", "price": "From $495", "priceNote": "AUD inc GST - one-time purchase", "highlight": false, "url": "/dragon-professional-16", "features": ["Full offline speech recognition", "Command and control - accessibility", "Transcription of recorded audio files", "Custom voice commands and macros", "Microsoft 365 and Teams integration", "Windows 10 and 11 optimised"] },
@@ -546,7 +546,7 @@
     { "name": "Dragon Legal Anywhere", "desc": "Cloud. Legal vocabulary built in. Law firm deployment. Subscription." }
   ],
   "proofPoints": [
-    "Authorised Dragon NaturallySpeaking reseller since 1999",
+    "Authorised Dragon NaturallySpeaking reseller since 2003",
     "Deployed in Australian hospitals, law firms and government",
     "Local onboarding, training and support",
     "Medical, Legal, Enterprise and Accessibility specialists"
