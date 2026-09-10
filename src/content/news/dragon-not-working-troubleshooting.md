@@ -11,7 +11,7 @@ breakImage2Alt: "Australian professional successfully dictating into a cloud spe
 context: "professional"
 section1Title: "The Most Common Dragon Problems"
 section2Title: "When Troubleshooting Is Not Worth It"
-imagesPending: true
+imagesPending: false
 heroAspectRatio: "16:9"
 breakAspectRatio1: "21:9"
 breakAspectRatio2: "21:9"

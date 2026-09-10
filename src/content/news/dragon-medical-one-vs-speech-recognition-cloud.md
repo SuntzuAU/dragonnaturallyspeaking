@@ -11,7 +11,7 @@ breakImage2Alt: "Australian allied health professional dictating case notes on a
 context: "medical"
 section1Title: "What Each Product Is"
 section2Title: "Where Each One Wins"
-imagesPending: true
+imagesPending: false
 heroAspectRatio: "16:9"
 breakAspectRatio1: "21:9"
 breakAspectRatio2: "21:9"
