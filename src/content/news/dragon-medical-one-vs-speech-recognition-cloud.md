@@ -49,7 +49,7 @@ Key characteristics: Azure-hosted in Australian data centres (Azure Australia Ea
 
 ### Speech Recognition Cloud Medical
 
-Speech Recognition Cloud Medical is a cloud-based Windows dictation product from Voice Recognition Australia — the same Australian team that has been reselling Dragon software for over 25 years. It runs on a different architecture: a small Windows desktop application captures audio, streams it to cloud AI (Deepgram Medical) for transcription, and types the result directly at the cursor position in any Windows application.
+Speech Recognition Cloud Medical is a cloud-based Windows dictation product from Voice Recognition Australia — the same Australian team that has been reselling Dragon software since 2003. It runs on a different architecture: a small Windows desktop application captures audio, streams it to cloud AI (Deepgram Medical) for transcription, and types the result directly at the cursor position in any Windows application.
 
 Key characteristics: US-hosted infrastructure (Cloudflare and LeaseWeb), no audio or text retention after transcription, Australian Privacy Principles compliant, cursor-based operation in any Windows application without EHR-specific integration, and a meaningfully lower price point than Dragon Medical One.
 

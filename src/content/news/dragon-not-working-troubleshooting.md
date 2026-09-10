@@ -107,7 +107,7 @@ There is a class of Dragon user for whom troubleshooting is always going to be a
 
 [Speech Recognition Cloud for Windows](https://www.speechrecognition.cloud) is worth a trial before committing to anything. The free edition gives you 20 minutes of dictation per month — enough to verify whether the accuracy and workflow suit you — with no credit card required. It installs as a small Windows application, presses a hotkey to activate, and types at your cursor in any Windows program. No dictation box, no profile training, no serial number.
 
-For users who need to stay on Dragon, the right path depends on which version you are on and what the specific problem is. [Speech recognition software for Windows](https://www.voicerecognition.com.au) advice, upgrade eligibility checks, and Dragon support are available through Voice Recognition Australia, which has been deploying Dragon in Australian businesses for over 25 years.
+For users who need to stay on Dragon, the right path depends on which version you are on and what the specific problem is. [Speech recognition software for Windows](https://www.voicerecognition.com.au) advice, upgrade eligibility checks, and Dragon support are available through Voice Recognition Australia, which has been deploying Dragon in Australian businesses since 2003.
 
 ## Summary
 

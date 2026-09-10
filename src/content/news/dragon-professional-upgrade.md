@@ -147,4 +147,4 @@ Likely yes. Voice Recognition Australia can retrieve your v15 licence key from y
 
 Dragon Professional 16 is the desktop perpetual product — installs locally, runs offline after activation, owned outright. Dragon Professional Anywhere is the cloud subscription product — runs from Nuance's cloud servers, requires internet, billed annually. They are different products at different price points serving different deployment needs. An upgrade from v15 desktop goes to v16 desktop, not to Dragon Professional Anywhere.
 
-*Voice Recognition Australia is the authorised Australian Dragon distributor since 1999. Dragon and related marks are the property of Nuance Communications (Microsoft). All pricing requires verification before purchase.*
+*Voice Recognition Australia is the authorised Australian Dragon distributor since 2003. Dragon and related marks are the property of Nuance Communications (Microsoft). All pricing requires verification before purchase.*

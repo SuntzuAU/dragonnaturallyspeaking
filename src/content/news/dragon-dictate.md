@@ -130,4 +130,4 @@ Functionally, Dragon Professional 16 is the modern descendant of what Dragon Dic
 
 For Windows, Voice Access (built into Windows 11) provides basic dictation at no cost. For Mac, Apple's built-in Voice Control is free and reasonable for conversational dictation. Both fall short of Dragon-level accuracy on specialised vocabulary and complex voice commands. For users wanting to test a modern cloud alternative before committing, Speech Recognition Cloud offers a free tier with no credit card required.
 
-*Voice Recognition Australia is the authorised Australian Dragon distributor since 1999. Dragon and related marks are the property of Nuance Communications (Microsoft).*
+*Voice Recognition Australia is the authorised Australian Dragon distributor since 2003. Dragon and related marks are the property of Nuance Communications (Microsoft).*
