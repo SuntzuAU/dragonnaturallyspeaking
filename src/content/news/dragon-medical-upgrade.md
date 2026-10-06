@@ -15,9 +15,12 @@ internalLinks:
   - to: "/dragon-medical-one"
     anchor: "Dragon Medical One for Australian clinicians"
 externalLinks:
+  - to: "dragonmedicalone.au"
+    anchor: "upgrading to Dragon Medical One"
+    url: "https://www.dragonmedicalone.au"
   - to: "voicerecognition.com.au"
     anchor: "medical speech recognition Australia"
-    url: "https://www.voicerecognition.com.au/pages/dragon-medical-one"
+    url: "https://www.voicerecognition.com.au/products/dragon-medical-one"
   - to: "pdfsoftware.com.au"
     anchor: "PDF software for clinical document workflows"
     url: "https://www.pdfsoftware.com.au"
@@ -49,13 +52,13 @@ For a solo GP or small group practice, the subscription model is a genuine chang
 
 That said, the accuracy on Dragon Medical One is meaningfully better than older DMPE versions, particularly for users who dictate quickly or have strong accents. The cloud model draws on a much larger training dataset than any desktop product could carry.
 
-For practices already using cloud-based clinical software, Dragon Medical One fits naturally into an existing workflow.
+For practices already using cloud-based clinical software, Dragon Medical One fits naturally into an existing workflow. If you are weighing up [upgrading to Dragon Medical One](https://www.dragonmedicalone.au), there is a dedicated Australian guide covering pricing and integration with Best Practice, Genie and MedicalDirector.
 
 ## What to Do If You Are Still on an Old Version
 
 If you are running DMPE 4 or earlier, the honest advice is to start planning the transition rather than waiting for something to break. Compatibility issues will compound over time.
 
-For current pricing, demonstration options, and advice on whether Dragon Medical One makes sense for your practice size and workflow, contact the team at [medical speech recognition Australia](https://www.voicerecognition.com.au/pages/dragon-medical-one) directly.
+For current pricing, demonstration options, and advice on whether Dragon Medical One makes sense for your practice size and workflow, contact the team at [medical speech recognition Australia](https://www.voicerecognition.com.au/products/dragon-medical-one) directly.
 
 Professionals who dictate heavily often find that managing the documents voice workflows produce is the next productivity bottleneck. [PDF software for clinical document workflows](https://www.pdfsoftware.com.au) that handles editing, annotations, and secure sharing without an Adobe subscription compounds the time saving significantly.
 
@@ -64,4 +67,4 @@ Professionals who dictate heavily often find that managing the documents voice w
 - Dragon Medical Practice Edition is end-of-life - no new versions coming
 - Dragon Medical One is the current product - cloud, subscription, multi-device
 - Accuracy and medical vocabulary coverage are better than older desktop versions
-- Contact the team via the [Dragon Medical One page](https://www.voicerecognition.com.au/pages/dragon-medical-one) for current Australian pricing and a free demonstration
+- Contact the team via the [Dragon Medical One page](https://www.voicerecognition.com.au/products/dragon-medical-one) for current Australian pricing and a free demonstration

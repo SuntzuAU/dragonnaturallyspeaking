@@ -14,6 +14,9 @@ internalLinks:
   - to: "/"
     anchor: "Dragon NaturallySpeaking Australia"
 externalLinks:
+  - to: "dragonmedicalone.au"
+    anchor: "the cloud medical edition"
+    url: "https://www.dragonmedicalone.au"
   - to: "voicerecognition.com.au"
     anchor: "Dragon Professional 16 Australia"
     url: "https://www.voicerecognition.com.au/collections/dragon-professional"
@@ -66,7 +69,7 @@ Requires proof of student or educator status.
 
 Once you are deploying Dragon to five or more users, the retail versions stop making sense. The Enterprise Group licence adds the tools IT departments need - a web management console, Active Directory and Single Sign-On integration, centralised vocabulary and command distribution, usage reporting, volume licensing, and Citrix and Remote Desktop support.
 
-Government agencies, legal chambers, and healthcare organisations with managed Windows environments should always be looking at Enterprise Group, not buying individual retail licences. For healthcare specifically, if you are deploying clinical documentation tools at scale, speak to Voice Recognition Australia about [Dragon Medical One](https://www.voicerecognition.com.au/pages/dragon-medical-one) - a cloud-based solution purpose-built for clinical environments with built-in medical vocabulary across 40+ specialties.
+Government agencies, legal chambers, and healthcare organisations with managed Windows environments should always be looking at Enterprise Group, not buying individual retail licences. For healthcare specifically, if you are deploying clinical documentation tools at scale, speak to Voice Recognition Australia about [Dragon Medical One](https://www.voicerecognition.com.au/products/dragon-medical-one) - a cloud-based solution purpose-built for clinical environments with built-in medical vocabulary across 40+ specialties. There is a dedicated Australian guide to [the cloud medical edition](https://www.dragonmedicalone.au) covering pricing and clinical software integrations.
 
 ## What Dragon Professional 16 does not do
 

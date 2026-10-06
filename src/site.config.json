@@ -98,8 +98,8 @@
       "priceNote": "Subscription - volume discounts for practices and hospitals",
       "heroImageKey": "hero-medical-one",
       "featureImageKey": "feature-medical",
-      "trialUrl": "https://www.voicerecognition.com.au/pages/dragon-medical-one",
-      "infoUrl": "https://www.voicerecognition.com.au/pages/dragon-medical-one",
+      "trialUrl": "https://www.voicerecognition.com.au/products/dragon-medical-one",
+      "infoUrl": "https://www.voicerecognition.com.au/products/dragon-medical-one",
       "specCards": [
         { "val": "80+", "label": "Medical specialties" },
         { "val": "Cloud", "label": "Any device, anywhere" },
