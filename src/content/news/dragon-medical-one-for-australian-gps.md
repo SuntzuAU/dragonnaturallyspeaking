@@ -23,6 +23,8 @@ If you are a GP or specialist in Australia asking whether Dragon Medical One is 
 
 The short version: for most Australian clinicians who are currently handwriting notes, typing themselves, or running an end-of-life desktop Dragon Medical product, Dragon Medical One is worth serious consideration. For others, it may be more than you need.
 
+Looking further ahead, Microsoft's [Dragon Copilot](https://dragoncopilot.com.au) is coming to Australia in early 2027, adding ambient AI note generation on top of Dragon Medical One's dictation. Dragon Medical One remains the starting point for clinical dictation today.
+
 ## What Dragon Medical One Actually Does
 
 [Dragon Medical One](/dragon-medical-one) is a cloud-based speech recognition product built specifically for clinical documentation. You dictate - into a microphone on your desktop, a headset, or a smartphone app - and the text appears in your clinical software.
